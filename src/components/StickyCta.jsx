@@ -1,7 +1,7 @@
 const StickyCta = () => {
   return (
     <div className="sticky-cta" role="navigation" aria-label="Quick actions">
-      <a href="#products" className="btn-primary">
+      <a href="#engineering" className="btn-primary">
         Work
       </a>
       <a href="#contact" className="btn-ghost">

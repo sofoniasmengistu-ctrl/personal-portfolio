@@ -5,12 +5,12 @@ const Products = () => {
   return (
     <section id="products" className="section products">
       <div className="container">
-        <p className="section__label">01 — Selected work</p>
+        <p className="section__label">01 — Products I own</p>
         <h2 className="section__title">
-          Products I <span className="text-gradient">own</span>
+          Builder side — <span className="text-gradient">live systems</span>
         </h2>
         <p className="section__lead">
-          Three live systems. Each with a Mini App, a bot, and a community.
+          Three chat-native products. Each with a Mini App, a bot, and a community.
         </p>
 
         <div className="products__track">

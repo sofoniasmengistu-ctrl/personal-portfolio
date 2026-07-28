@@ -3,8 +3,9 @@ import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { name: 'Products', href: '#products' },
+  { name: 'Engineering', href: '#engineering' },
+  { name: 'Clients', href: '#clients' },
   { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -14,7 +15,17 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'products', 'ecosystem', 'about', 'skills', 'contact'];
+      const sections = [
+        'home',
+        'products',
+        'engineering',
+        'clients',
+        'presence',
+        'ecosystem',
+        'about',
+        'skills',
+        'contact',
+      ];
       let current = '#home';
 
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 80) {
@@ -31,12 +42,17 @@ const Header = () => {
         }
       }
 
-      const navHash = current === '#ecosystem' ? '#products' : current;
+      const map = {
+        '#presence': '#products',
+        '#ecosystem': '#products',
+        '#skills': '#about',
+      };
+      const navHash = map[current] || current;
       setActiveHash(navHash);
 
       if (current === '#home') {
         window.history.replaceState(null, '', window.location.pathname);
-      } else if (current !== '#ecosystem') {
+      } else if (!map[current]) {
         window.history.replaceState(null, '', current);
       }
     };
