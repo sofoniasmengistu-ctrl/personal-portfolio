@@ -5,7 +5,7 @@ const pillars = [
   {
     num: '01',
     title: 'Integrated platforms',
-    body: 'Cloud, Kubernetes, CI/CD, and security as one system — not disconnected tickets.',
+    body: 'Cloud, Kubernetes, CI/CD, and security as one system, not disconnected tickets.',
   },
   {
     num: '02',
@@ -15,7 +15,7 @@ const pillars = [
   {
     num: '03',
     title: 'Multi-cloud delivery',
-    body: 'AWS, Azure, GCP — Terraform, GitOps, and DevSecOps for teams that ship.',
+    body: 'AWS, Azure, GCP with Terraform, GitOps, and DevSecOps for teams that ship.',
   },
 ];
 
@@ -23,12 +23,12 @@ const Approach = () => {
   return (
     <section id="approach" className="section section--tight approach section--muted">
       <div className="container">
-        <p className="section__label">03 — How I operate</p>
+        <p className="section__label">03 How I operate</p>
         <h2 className="section__title">
           DevOps craft that <span className="text-accent">stays invisible</span>
         </h2>
         <p className="section__lead">
-          Same discipline on client platforms and my own products — secure,
+          Same discipline on client platforms and my own products: secure,
           automated, observable.
         </p>
 

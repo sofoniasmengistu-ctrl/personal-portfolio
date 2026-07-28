@@ -1,30 +1,39 @@
-import { ArrowUpRight, Github } from 'lucide-react';
+import { ArrowUpRight, Github, MoveRight } from 'lucide-react';
 import { clientDeliveries, githubFeatured } from '../data/products';
 
 const Work = () => {
   return (
     <section id="work" className="section work">
       <div className="container">
-        <p className="section__label">01 — Cloud DevOps · Engineering</p>
-        <h2 className="section__title">
-          The work hiring managers <span className="text-accent">should see</span>
-        </h2>
-        <p className="section__lead">
-          Production infra, Kubernetes, and platform delivery — open-source and
-          client work. This is the Cloud DevOps profile.
-        </p>
+        <div className="section-head section-head--row">
+          <div className="section-head__copy">
+            <p className="section__label">01 Cloud DevOps · Engineering</p>
+            <h2 className="section__title">
+              The work hiring managers <span className="text-accent">should see</span>
+            </h2>
+            <p className="section__lead section__lead--tight">
+              Production infra, Kubernetes, and platform delivery: open source and
+              client work. This is the Cloud DevOps profile.
+            </p>
+          </div>
+          <a
+            href="https://github.com/Sofoniasm"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="fancy-arrow"
+          >
+            <span className="fancy-arrow__label">GitHub</span>
+            <span className="fancy-arrow__track" aria-hidden="true">
+              <span className="fancy-arrow__line" />
+              <MoveRight className="fancy-arrow__tip" size={22} strokeWidth={2.25} />
+            </span>
+          </a>
+        </div>
 
         <div className="band">
           <div className="band__head">
             <h3 className="band__title">GitHub · selected engineering</h3>
-            <a
-              href="https://github.com/Sofoniasm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="band__link"
-            >
-              <Github size={16} /> 97+ projects
-            </a>
+            <p className="band__meta mono h-track-hint">Swipe for more</p>
           </div>
           <div className="h-track">
             {githubFeatured.map((repo) => (

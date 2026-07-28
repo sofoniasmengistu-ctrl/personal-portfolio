@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Download, Linkedin } from 'lucide-react';
+import { ArrowRight, Check, Download, Linkedin, MoveRight } from 'lucide-react';
 import { credentials } from '../data/products';
 
 const Hero = () => {
@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="container hero__stage">
         <div className="hero__copy">
           <p className="hero__eyebrow">
-            Open to Cloud DevOps roles · Remote worldwide · Addis Ababa
+            Open to roles · Consulting · Builds · Remote worldwide
           </p>
 
           <h1 className="hero__brand">
@@ -20,34 +20,34 @@ const Hero = () => {
 
           <p className="hero__headline">
             Production cloud &amp; Kubernetes.{' '}
-            <span className="text-accent">Hire-ready.</span>
+            <span className="text-accent">Hire ready.</span>
           </p>
 
           <p className="hero__sub">
-            16+ years in IT. Multi-cloud DevSecOps for real teams — plus
-            founder-built products that prove I ship. Looking for a Cloud DevOps
-            role where reliability, security, and delivery matter.
+            16+ years in IT. Multi-cloud DevSecOps for real teams, plus
+            founder-built products that prove I ship. Hire me full time, bring a
+            consulting brief, or ask me to build your platform.
           </p>
 
           <ul className="hero__checks">
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>Only CNCF Kubestronaut in Ethiopia</strong> — featured in
+                <strong>Only CNCF Kubestronaut in Ethiopia</strong>, featured in
                 Kubestronaut in Orbit
               </span>
             </li>
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>AWS · Azure · GCP</strong> — Terraform, CI/CD, GitOps,
+                <strong>AWS · Azure · GCP</strong>: Terraform, CI/CD, GitOps,
                 DevSecOps, data platforms
               </span>
             </li>
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>30k+ LinkedIn · 97+ GitHub projects</strong> — and live
+                <strong>30k+ LinkedIn · 97+ GitHub projects</strong>, and live
                 client delivery via Upwork
               </span>
             </li>
@@ -55,7 +55,7 @@ const Hero = () => {
 
           <div className="hero__actions">
             <a href="#contact" className="btn-primary">
-              Hire me <ArrowRight size={18} />
+              Hire or build <MoveRight size={18} strokeWidth={2.25} />
             </a>
             <a
               href="/Sofonias_Mengistu_Resume.pdf"
@@ -65,7 +65,7 @@ const Hero = () => {
               <Download size={16} /> Download CV
             </a>
             <a href="#work" className="btn-ghost">
-              Engineering work
+              Engineering work <ArrowRight size={16} />
             </a>
           </div>
         </div>
@@ -93,16 +93,16 @@ const Hero = () => {
               </li>
               <li>
                 <strong>02</strong>
-                <span>Kubestronaut-level cluster craft — not slideware</span>
+                <span>Kubestronaut level cluster craft, not slideware</span>
               </li>
               <li>
                 <strong>03</strong>
-                <span>Builder mindset — I run products in production myself</span>
+                <span>Builder mindset: I run products in production myself</span>
               </li>
             </ul>
             <div className="hero__panel-actions">
               <a href="#contact" className="btn-primary">
-                Start a conversation
+                Start a conversation <MoveRight size={16} />
               </a>
               <a
                 href={credentials.linkedIn}

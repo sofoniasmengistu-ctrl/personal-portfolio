@@ -63,7 +63,10 @@ const Header = () => {
             </a>
           ))}
           <a href="#contact" className="btn-dark nav-desktop__cta">
-            Hire me →
+            Contact
+            <svg className="btn-arrow" viewBox="0 0 28 12" aria-hidden="true">
+              <path d="M0 6h22M17 1l6 5-6 5" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
           </a>
         </nav>
 
@@ -89,7 +92,10 @@ const Header = () => {
               </a>
             ))}
             <a href="#contact" className="btn-dark" onClick={() => setIsOpen(false)}>
-              Hire me →
+              Contact
+              <svg className="btn-arrow" viewBox="0 0 28 12" aria-hidden="true">
+                <path d="M0 6h22M17 1l6 5-6 5" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </a>
           </nav>
         )}

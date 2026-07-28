@@ -2,14 +2,10 @@ const StickyCta = () => {
   return (
     <div className="sticky-cta" role="navigation" aria-label="Quick actions">
       <a href="#contact" className="btn-primary">
-        Hire me
+        Contact
       </a>
-      <a
-        href="/Sofonias_Mengistu_Resume.pdf"
-        download="Sofonias_Mengistu_Resume.pdf"
-        className="btn-ghost"
-      >
-        CV
+      <a href="https://wa.me/251912215057" className="btn-ghost" target="_blank" rel="noopener noreferrer">
+        WhatsApp
       </a>
     </div>
   );

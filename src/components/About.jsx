@@ -1,3 +1,4 @@
+import { ArrowUpRight, MoveRight } from 'lucide-react';
 import { credentials } from '../data/products';
 
 const timeline = [
@@ -8,7 +9,7 @@ const timeline = [
       'Seeking Cloud DevOps roles. Consulting via Upwork. Kubernetes delivery (Safaricom / Gebeya). Products in production.',
   },
   {
-    year: '2010–18',
+    year: '2010 to 18',
     role: 'Network & systems · ECX',
     description: 'On-prem infrastructure and security at Ethiopia Commodity Exchange.',
   },
@@ -38,14 +39,26 @@ const About = () => {
   return (
     <section id="about" className="section about">
       <div className="container">
-        <p className="section__label">04 — Profile</p>
-        <h2 className="section__title">
-          Cloud DevOps Engineer — <span className="text-accent">Sofonias Mengistu</span>
-        </h2>
-        <p className="section__lead">
-          Job-ready Cloud DevOps engineer. Kubestronaut. Also ships products —
-          so you know I own production, not just tickets.
-        </p>
+        <div className="section-head section-head--row">
+          <div className="section-head__copy">
+            <p className="section__label">04 Profile</p>
+            <h2 className="section__title">
+              Cloud DevOps Engineer{' '}
+              <span className="text-accent">Sofonias Mengistu</span>
+            </h2>
+            <p className="section__lead section__lead--tight">
+              Job ready Cloud DevOps engineer. Kubestronaut. Also ships products
+              so you know I own production, not just tickets.
+            </p>
+          </div>
+          <a href="#contact" className="fancy-arrow" aria-label="Go to contact">
+            <span className="fancy-arrow__label">Contact</span>
+            <span className="fancy-arrow__track" aria-hidden="true">
+              <span className="fancy-arrow__line" />
+              <MoveRight className="fancy-arrow__tip" size={22} strokeWidth={2.25} />
+            </span>
+          </a>
+        </div>
 
         <div className="about__layout about__layout--media">
           <div className="about__media">
@@ -71,7 +84,7 @@ const About = () => {
             </p>
             <p>
               Based in Addis Ababa. I design and operate secure multi-cloud
-              systems — Kubernetes, Terraform, CI/CD, DevSecOps — for teams that
+              systems (Kubernetes, Terraform, CI/CD, DevSecOps) for teams that
               need reliability. Available for full-time Cloud DevOps roles and
               high-trust consulting (including Upwork).
             </p>
@@ -108,6 +121,7 @@ const About = () => {
               </a>
               <a className="btn-dark" href="#contact">
                 Contact for roles
+                <ArrowUpRight size={16} />
               </a>
             </p>
 
