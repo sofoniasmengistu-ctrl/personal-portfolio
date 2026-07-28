@@ -5,12 +5,13 @@ const Products = () => {
   return (
     <section id="products" className="section products">
       <div className="container">
-        <p className="section__label">01 — Products I own</p>
+        <p className="section__label">02 — Also a builder</p>
         <h2 className="section__title">
-          Builder side — <span className="text-gradient">live systems</span>
+          Products I run — <span className="text-accent">same ops mindset</span>
         </h2>
         <p className="section__lead">
-          Three chat-native products. Each with a Mini App, a bot, and a community.
+          I don&apos;t only talk about platforms. I operate live systems in
+          Telegram — proof that Cloud DevOps skills transfer to shipping.
         </p>
 
         <div className="h-track products__track">

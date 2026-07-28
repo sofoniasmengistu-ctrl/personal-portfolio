@@ -6,14 +6,28 @@ const Footer = () => {
     <footer id="contact" className="contact">
       <div className="container">
         <p className="section__label" style={{ textAlign: 'center' }}>
-          05 — Contact
+          05 — Hire / contact
         </p>
         <h2 className="section__title" style={{ textAlign: 'center' }}>
-          Let&apos;s talk
+          Looking for a <span className="text-accent">Cloud DevOps Engineer?</span>
         </h2>
         <p className="section__lead" style={{ margin: '0 auto 1.5rem', textAlign: 'center' }}>
-          DevOps consulting, Upwork projects, or product partnerships.
+          Open to full-time roles and consulting. Kubestronaut · multi-cloud ·
+          production Kubernetes. Reach out with a role or project.
         </p>
+
+        <div className="contact__actions">
+          <a href="mailto:sofoniasmengistu@gmail.com" className="btn-primary">
+            Email me
+          </a>
+          <a
+            href="/Sofonias_Mengistu_Resume.pdf"
+            download="Sofonias_Mengistu_Resume.pdf"
+            className="btn-dark"
+          >
+            Download CV
+          </a>
+        </div>
 
         <div className="contact__socials">
           <a
@@ -58,7 +72,7 @@ const Footer = () => {
         </div>
 
         <div className="contact__company">
-          <p className="contact__company-label mono">WeRemoteIT · company</p>
+          <p className="contact__company-label mono">Also building · WeRemoteIT</p>
           <div className="contact__company-links">
             {companyChannels.map((c) => (
               <a key={c.id} href={c.href} target="_blank" rel="noopener noreferrer">
@@ -69,7 +83,7 @@ const Footer = () => {
         </div>
 
         <p className="contact__copy">
-          © {new Date().getFullYear()} Sofonias Mengistu · Addis Ababa
+          © {new Date().getFullYear()} Sofonias Mengistu · Cloud DevOps Engineer · Addis Ababa
         </p>
       </div>
     </footer>

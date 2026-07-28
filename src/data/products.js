@@ -71,27 +71,27 @@ export const credentials = {
     'https://www.cncf.io/blog/2024/12/31/kubestronaut-in-orbit-sofonias-mengistu/',
 };
 
-/** Social / platform proof — curated, not dumped */
+/** Social / platform proof — curated for hiring managers */
 export const trustMetrics = [
+  {
+    value: 'Kubestronaut',
+    label: 'Only in Ethiopia · CNCF',
+    href: 'https://www.cncf.io/training/kubestronaut/?_sft_lf-country=et',
+  },
+  {
+    value: '16+',
+    label: 'Years in IT / DevOps',
+    href: null,
+  },
+  {
+    value: '97+',
+    label: 'GitHub engineering projects',
+    href: 'https://github.com/Sofoniasm',
+  },
   {
     value: '30k+',
     label: 'LinkedIn network',
     href: 'https://www.linkedin.com/in/sofonias-mengistu-b5394179/',
-  },
-  {
-    value: '97+',
-    label: 'GitHub projects',
-    href: 'https://github.com/Sofoniasm',
-  },
-  {
-    value: '16+',
-    label: 'Years in IT',
-    href: null,
-  },
-  {
-    value: '1',
-    label: 'Kubestronaut in Ethiopia',
-    href: 'https://www.cncf.io/training/kubestronaut/?_sft_lf-country=et',
   },
 ];
 

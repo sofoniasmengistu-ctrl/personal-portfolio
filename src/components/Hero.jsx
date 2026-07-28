@@ -1,4 +1,5 @@
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, Download, Linkedin } from 'lucide-react';
+import { credentials } from '../data/products';
 
 const Hero = () => {
   return (
@@ -6,48 +7,62 @@ const Hero = () => {
       <div className="container hero__stage">
         <div className="hero__copy">
           <p className="hero__eyebrow">
-            Cloud DevOps · Products · Consulting
+            Open to Cloud DevOps roles · Remote worldwide · Addis Ababa
           </p>
+
           <h1 className="hero__brand">
             Sofonias<span className="text-accent">.</span>
           </h1>
 
-          <p className="hero__headline">
-            Infrastructure that lasts.{' '}
-            <span className="text-accent">Simplified.</span>
+          <p className="hero__role-badge">
+            Cloud DevOps Engineer <span aria-hidden="true">·</span> Kubestronaut
           </p>
+
+          <p className="hero__headline">
+            Production cloud &amp; Kubernetes.{' '}
+            <span className="text-accent">Hire-ready.</span>
+          </p>
+
           <p className="hero__sub">
-            Kubestronaut and founder — shipping Telegram-native platforms while
-            delivering multi-cloud DevSecOps for teams across Africa and beyond.
+            16+ years in IT. Multi-cloud DevSecOps for real teams — plus
+            founder-built products that prove I ship. Looking for a Cloud DevOps
+            role where reliability, security, and delivery matter.
           </p>
 
           <ul className="hero__checks">
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>Only Kubestronaut in Ethiopia:</strong> CNCF-registered —
-                production Kubernetes, end to end.
+                <strong>Only CNCF Kubestronaut in Ethiopia</strong> — featured in
+                Kubestronaut in Orbit
               </span>
             </li>
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>Proof at scale:</strong> 30k+ LinkedIn network · 97+
-                GitHub engineering projects.
+                <strong>AWS · Azure · GCP</strong> — Terraform, CI/CD, GitOps,
+                DevSecOps, data platforms
               </span>
             </li>
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>Client delivery:</strong> Upwork & consulting — cloud,
-                CI/CD, data platforms.
+                <strong>30k+ LinkedIn · 97+ GitHub projects</strong> — and live
+                client delivery via Upwork
               </span>
             </li>
           </ul>
 
           <div className="hero__actions">
-            <a href="#products" className="btn-primary">
-              Products <ArrowRight size={18} />
+            <a href="#contact" className="btn-primary">
+              Hire me <ArrowRight size={18} />
+            </a>
+            <a
+              href="/Sofonias_Mengistu_Resume.pdf"
+              download="Sofonias_Mengistu_Resume.pdf"
+              className="btn-ghost"
+            >
+              <Download size={16} /> Download CV
             </a>
             <a href="#work" className="btn-ghost">
               Engineering work
@@ -57,29 +72,40 @@ const Hero = () => {
 
         <aside className="hero__aside">
           <div
-            className="hero__visual"
+            className="hero__visual hero__visual--lift"
             role="img"
             aria-label="Sofonias in CNCF Kubestronaut jacket"
           />
-          <div className="hero__panel">
-            <p className="hero__panel-title">Let&apos;s talk</p>
+          <div className="hero__panel hero__panel--lift">
+            <p className="hero__panel-kicker mono">For hiring managers</p>
+            <p className="hero__panel-title">What you get</p>
             <ul className="hero__panel-list">
               <li>
                 <strong>01</strong>
-                <span>DevOps consulting & Upwork projects</span>
+                <span>Cloud DevOps who owns Kubernetes, pipelines, and uptime</span>
               </li>
               <li>
                 <strong>02</strong>
-                <span>Product partnerships & Telegram builds</span>
+                <span>Kubestronaut-level cluster craft — not slideware</span>
               </li>
               <li>
                 <strong>03</strong>
-                <span>Multi-cloud Kubernetes delivery</span>
+                <span>Builder mindset — I run products in production myself</span>
               </li>
             </ul>
-            <a href="#contact" className="btn-primary">
-              Contact me
-            </a>
+            <div className="hero__panel-actions">
+              <a href="#contact" className="btn-primary">
+                Start a conversation
+              </a>
+              <a
+                href={credentials.linkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero__panel-link"
+              >
+                <Linkedin size={16} /> LinkedIn profile
+              </a>
+            </div>
           </div>
         </aside>
       </div>
