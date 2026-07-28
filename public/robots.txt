@@ -7,4 +7,13 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+User-agent: msnbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
 Sitemap: https://www.sofoniasdevops.com/sitemap.xml
