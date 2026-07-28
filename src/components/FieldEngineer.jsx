@@ -1,15 +1,39 @@
-import { MoveRight } from 'lucide-react';
+import { Check, MoveRight, Plus } from 'lucide-react';
 import { CountUp } from './CountUp';
 
-const ribbon = [
+const regions = [
   'Great Britain',
   'USA',
   'Dubai',
   'Singapore',
   'Pakistan',
+];
+
+const scope = [
+  'Design',
+  'Install',
+  'Cutover',
+  'Stabilize',
+];
+
+const projects = [
+  {
+    kicker: '01 National banking',
+    title: 'Visa routers across all Ethiopian banks',
+    body: 'Nationwide Visa connectivity so banks shared one production ready network path.',
+  },
+  {
+    kicker: '02 Diplomatic site',
+    title: 'American Embassy Huawei to Ubiquiti',
+    body: 'Removed Huawei completely and installed Ubiquiti so the site finished in one pass.',
+  },
+];
+
+const ribbon = [
+  ...regions,
   'Visa routers for Ethiopian banks',
   'American Embassy Ubiquiti cutover',
-  'Network Engineer field support',
+  'Managed source partners',
 ];
 
 const FieldEngineer = () => {
@@ -25,41 +49,70 @@ const FieldEngineer = () => {
         <div className="field__veil" aria-hidden="true" />
 
         <div className="container field__inner">
-          <div className="field__copy">
-            <p className="field__label mono">Network Engineer and field support</p>
-            <h2 className="field__title">
-              I supported{' '}
-              <span className="field__stat">
-                <CountUp end={37} suffix="" />
-              </span>{' '}
-              tech companies as a Network Engineer across Great Britain, the USA,
-              Dubai, Singapore, and Pakistan.
-            </h2>
-            <p className="field__lead">
-              Managed source partners engaged me for on site network support. The
-              work was full Network Engineer delivery: design, install, cutover,
-              and stabilize for enterprise networks. Not ticket only support.
-              Two projects stand out.
-            </p>
+          <p className="field__label mono">Network Engineer and field support</p>
 
-            <ul className="field__projects">
-              <li>
-                <span className="field__project-kicker mono">National banking</span>
-                <strong>Visa router deployment across all Ethiopian banks</strong>
-                <span>
-                  I rolled out Visa connectivity nationwide so banks shared a
-                  consistent production ready network path.
+          <div className="field__layout">
+            <div className="field__intro">
+              <div className="field__metric" aria-label="37 tech companies">
+                <span className="field__metric-value">
+                  <CountUp end={37} suffix="" />
                 </span>
-              </li>
-              <li>
-                <span className="field__project-kicker mono">Diplomatic site</span>
-                <strong>American Embassy: Huawei removed, Ubiquiti installed</strong>
-                <span>
-                  I removed the Huawei equipment completely and replaced it with
-                  Ubiquiti so the site finished the migration in one pass.
-                </span>
-              </li>
-            </ul>
+                <span className="field__metric-label">tech companies</span>
+              </div>
+
+              <div className="field__intro-copy">
+                <h2 className="field__title">
+                  Network Engineer for on site support across five regions
+                </h2>
+                <p className="field__lead">
+                  Managed source partners engaged me for enterprise network work.
+                  Full Network Engineer delivery, not ticket only support.
+                </p>
+              </div>
+            </div>
+
+            <div className="field__blocks">
+              <div className="field__block">
+                <p className="field__block-label mono">Regions covered</p>
+                <ul className="field__checks">
+                  {regions.map((region) => (
+                    <li key={region} className="field__check">
+                      <span className="field__check-mark" aria-hidden="true">
+                        <Check size={14} strokeWidth={3} />
+                      </span>
+                      <span>{region}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="field__block">
+                <p className="field__block-label mono">What I delivered</p>
+                <ul className="field__pluses">
+                  {scope.map((item) => (
+                    <li key={item} className="field__plus">
+                      <span className="field__plus-mark" aria-hidden="true">
+                        <Plus size={14} strokeWidth={3} />
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="field__projects-wrap">
+              <p className="field__block-label mono">Standout projects</p>
+              <div className="field__projects">
+                {projects.map((project) => (
+                  <article key={project.kicker} className="field__project">
+                    <p className="field__project-kicker mono">{project.kicker}</p>
+                    <h3 className="field__project-title">{project.title}</h3>
+                    <p className="field__project-body">{project.body}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
 
             <a href="#contact" className="btn-primary field__cta">
               Talk network engineering

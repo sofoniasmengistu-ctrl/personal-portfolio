@@ -897,7 +897,7 @@ h1, h2, h3, h4 {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  min-height: clamp(32rem, 72vh, 40rem);
+  min-height: clamp(34rem, 78vh, 44rem);
   display: flex;
   align-items: center;
 }
@@ -920,8 +920,8 @@ h1, h2, h3, h4 {
     linear-gradient(
       105deg,
       rgba(255, 255, 255, 0.97) 0%,
-      rgba(255, 255, 255, 0.92) 42%,
-      rgba(255, 255, 255, 0.55) 68%,
+      rgba(255, 255, 255, 0.94) 38%,
+      rgba(255, 255, 255, 0.62) 68%,
       rgba(74, 21, 57, 0.28) 100%
     );
 }
@@ -930,10 +930,7 @@ h1, h2, h3, h4 {
   position: relative;
   z-index: 2;
   padding-block: clamp(2.5rem, 6vw, 4.5rem);
-}
-
-.field__copy {
-  max-width: 36rem;
+  max-width: 58rem;
 }
 
 .field__label {
@@ -941,45 +938,172 @@ h1, h2, h3, h4 {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--magenta);
-  margin-bottom: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.field__layout {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.field__intro {
+  display: grid;
+  gap: 1.25rem;
+  align-items: end;
+}
+
+@media (min-width: 720px) {
+  .field__intro {
+    grid-template-columns: auto 1fr;
+    gap: 1.75rem;
+    align-items: center;
+  }
+}
+
+.field__metric {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 7.5rem;
+  padding-right: 1.25rem;
+  border-right: 2px solid var(--magenta);
+}
+
+.field__metric-value {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 5rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  color: var(--magenta);
+}
+
+.field__metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 .field__title {
   font-family: var(--font-display);
-  font-size: clamp(1.55rem, 3.2vw, 2.35rem);
+  font-size: clamp(1.45rem, 2.8vw, 2.05rem);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.03em;
   color: var(--ink);
-  margin-bottom: 1rem;
-}
-
-.field__stat {
-  color: var(--magenta);
-  white-space: nowrap;
+  margin-bottom: 0.65rem;
+  max-width: 22ch;
 }
 
 .field__lead {
   color: var(--text-secondary);
-  font-size: 1.02rem;
+  font-size: 0.98rem;
   line-height: 1.55;
-  margin-bottom: 1.5rem;
-  max-width: 34rem;
+  max-width: 36rem;
+  margin: 0;
+}
+
+.field__blocks {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 720px) {
+  .field__blocks {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.field__block-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+  margin-bottom: 0.7rem;
+}
+
+.field__checks,
+.field__pluses {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.field__check,
+.field__plus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.75rem 0.45rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+  backdrop-filter: blur(6px);
+  animation: field-pop 0.55s ease both;
+}
+
+.field__check:nth-child(1) { animation-delay: 0.05s; }
+.field__check:nth-child(2) { animation-delay: 0.1s; }
+.field__check:nth-child(3) { animation-delay: 0.15s; }
+.field__check:nth-child(4) { animation-delay: 0.2s; }
+.field__check:nth-child(5) { animation-delay: 0.25s; }
+.field__plus:nth-child(1) { animation-delay: 0.12s; }
+.field__plus:nth-child(2) { animation-delay: 0.18s; }
+.field__plus:nth-child(3) { animation-delay: 0.24s; }
+.field__plus:nth-child(4) { animation-delay: 0.3s; }
+
+.field__check-mark,
+.field__plus-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 0.3rem;
+  flex-shrink: 0;
+}
+
+.field__check-mark {
+  background: color-mix(in srgb, var(--magenta) 12%, #fff);
+  color: var(--magenta);
+  border: 1px solid color-mix(in srgb, var(--magenta) 35%, var(--line));
+}
+
+.field__plus-mark {
+  background: var(--plum);
+  color: #fff;
+  border-radius: 999px;
+}
+
+.field__projects-wrap {
+  margin-top: 0.25rem;
 }
 
 .field__projects {
-  list-style: none;
   display: grid;
-  gap: 1.15rem;
-  margin: 0 0 1.75rem;
-  padding: 0;
+  gap: 0.85rem;
 }
 
-.field__projects li {
-  display: grid;
-  gap: 0.3rem;
-  padding-left: 0.9rem;
-  border-left: 2px solid var(--magenta);
+@media (min-width: 720px) {
+  .field__projects {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+.field__project {
+  padding: 1.1rem 1.15rem;
+  border-top: 2px solid var(--magenta);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
 }
 
 .field__project-kicker {
@@ -987,24 +1111,30 @@ h1, h2, h3, h4 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--magenta);
+  margin-bottom: 0.4rem;
 }
 
-.field__projects strong {
+.field__project-title {
   font-size: 1.05rem;
-  color: var(--ink);
+  font-weight: 800;
   letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
 }
 
-.field__projects span:last-child {
+.field__project-body {
   color: var(--text-secondary);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.5;
+  margin: 0;
 }
 
 .field__cta {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
+  width: fit-content;
 }
 
 .field__ribbon {
@@ -1031,10 +1161,10 @@ h1, h2, h3, h4 {
 }
 
 .field__ribbon-item::before {
-  content: '◆';
+  content: '+';
   color: var(--magenta);
   margin-right: 0.75rem;
-  font-size: 0.55rem;
+  font-weight: 700;
   vertical-align: middle;
 }
 
@@ -1056,9 +1186,22 @@ h1, h2, h3, h4 {
   }
 }
 
+@keyframes field-pop {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .field__visual,
-  .field__ribbon-track {
+  .field__ribbon-track,
+  .field__check,
+  .field__plus {
     animation: none;
   }
 }
@@ -1069,13 +1212,20 @@ h1, h2, h3, h4 {
       linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.96) 0%,
-        rgba(255, 255, 255, 0.9) 55%,
-        rgba(255, 255, 255, 0.72) 100%
+        rgba(255, 255, 255, 0.92) 55%,
+        rgba(255, 255, 255, 0.78) 100%
       );
   }
 
   .field__visual {
     background-position: center;
+  }
+
+  .field__metric {
+    border-right: none;
+    border-bottom: 2px solid var(--magenta);
+    padding-right: 0;
+    padding-bottom: 0.85rem;
   }
 }
 
