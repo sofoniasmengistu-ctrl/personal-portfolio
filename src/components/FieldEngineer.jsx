@@ -2,11 +2,14 @@ import { MoveRight } from 'lucide-react';
 import { CountUp } from './CountUp';
 
 const ribbon = [
+  'Great Britain',
+  'USA',
+  'Dubai',
+  'Singapore',
+  'Pakistan',
   'Visa · Ethiopian banks',
   'American Embassy · Ubiquiti',
-  'Field engineer · 257+ companies',
-  'Network specialist · global delivery',
-  'Cisco · LAN/WAN · security',
+  'Network Engineer · field support',
 ];
 
 const FieldEngineer = () => {
@@ -17,24 +20,26 @@ const FieldEngineer = () => {
           className="field__visual"
           style={{ backgroundImage: "url('/field-engineer-bg.png')" }}
           role="img"
-          aria-label="Network racks and field engineering infrastructure"
+          aria-label="Network engineering infrastructure background"
         />
         <div className="field__veil" aria-hidden="true" />
 
         <div className="container field__inner">
           <div className="field__copy">
-            <p className="field__label mono">Network specialist · Field engineer</p>
+            <p className="field__label mono">Network Engineer · Field support</p>
             <h2 className="field__title">
-              Engaged across{' '}
+              Network Engineer for{' '}
               <span className="field__stat">
-                <CountUp end={257} suffix="+" />
+                <CountUp end={37} suffix="" />
               </span>{' '}
-              companies worldwide as a field engineer — deploying what teams
-              needed on site, under deadline.
+              tech companies across GB, USA, Dubai, Singapore, and Pakistan —
+              engaged through managed-source partners for on-site network
+              support.
             </h2>
             <p className="field__lead">
-              Network Specialist work that goes beyond tickets: design, install,
-              cutover, and stabilize. Two of the largest deliveries:
+              Full Network Engineer delivery: design, install, cutover, and
+              stabilize. Field engineer support for enterprise networks — not
+              ticket-only work. Two standout projects:
             </p>
 
             <ul className="field__projects">
@@ -57,14 +62,14 @@ const FieldEngineer = () => {
             </ul>
 
             <a href="#contact" className="btn-primary field__cta">
-              Talk field / network delivery
+              Talk network engineering
               <MoveRight size={16} />
             </a>
           </div>
         </div>
       </div>
 
-      <div className="field__ribbon" aria-label="Field delivery themes">
+      <div className="field__ribbon" aria-label="Regions and delivery themes">
         <div className="field__ribbon-track">
           {[...ribbon, ...ribbon].map((item, i) => (
             <span key={`${item}-${i}`} className="field__ribbon-item">

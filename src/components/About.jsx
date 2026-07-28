@@ -18,7 +18,7 @@ const timeline = [
     year: '2010 to 18',
     role: 'Network & systems · ECX + field',
     description:
-      'Ethiopia Commodity Exchange and field engineer for 257+ technology companies across networking and infrastructure.',
+      'Ethiopia Commodity Exchange and Network Engineer field support for 37 tech companies across GB, USA, Dubai, Singapore, and Pakistan.',
   },
 ];
 
@@ -94,7 +94,8 @@ const About = () => {
             </p>
             <p>
               Based in Addis Ababa. Career path: IT support and networking into
-              DevOps and cloud. Field engineer for 257+ technology companies, then
+              DevOps and cloud. Network Engineer field support for 37 tech
+              companies across GB, USA, Dubai, Singapore, and Pakistan, then
               six plus years designing and automating infrastructure on AWS,
               Azure, GCP, and production Kubernetes end to end.
             </p>

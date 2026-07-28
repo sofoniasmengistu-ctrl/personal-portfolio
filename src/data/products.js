@@ -140,10 +140,10 @@ export const trustMetrics = [
     href: null,
   },
   {
-    value: '257+',
-    count: 257,
-    suffix: '+',
-    label: 'Companies delivered as field engineer',
+    value: '37',
+    count: 37,
+    suffix: '',
+    label: 'Tech companies · Network Engineer field support',
     href: null,
   },
   {
@@ -198,7 +198,7 @@ export const experienceHighlights = [
   {
     title: 'Network & systems · ECX and field',
     outcome:
-      'Field engineer for 257+ technology companies worldwide; network admin and IT support at Ethiopia Commodity Exchange.',
+      'Network Engineer field support for 37 tech companies across GB, USA, Dubai, Singapore, and Pakistan via managed-source partners; network admin and IT support at Ethiopia Commodity Exchange.',
     tags: ['Cisco', 'LAN/WAN', 'Security', 'On prem'],
     channel: '2010 to 2018 · ECX + field',
   },
@@ -279,7 +279,7 @@ export const clientDeliveries = [
   {
     title: 'Enterprise networking to cloud',
     outcome:
-      '257+ company field delivery plus ECX network/systems foundation before the DevOps transition.',
+      '37 tech companies across GB, USA, Dubai, Singapore, and Pakistan as Network Engineer field support, plus ECX network/systems foundation before the DevOps transition.',
     tags: ['Networking', 'Cisco', 'Hybrid cloud'],
     channel: 'Field + ECX',
   },
