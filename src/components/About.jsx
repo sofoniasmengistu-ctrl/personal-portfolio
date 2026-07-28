@@ -3,9 +3,9 @@ import { credentials } from '../data/products';
 const timeline = [
   {
     year: 'Now',
-    role: 'DevOps · Founder · Kubestronaut',
+    role: 'Cloud DevOps · Kubestronaut · Open to roles',
     description:
-      'Products + consulting. Kubernetes for Safaricom via Gebeya. Multi-cloud delivery.',
+      'Seeking Cloud DevOps roles. Consulting via Upwork. Kubernetes delivery (Safaricom / Gebeya). Products in production.',
   },
   {
     year: '2010–18',
@@ -21,6 +21,7 @@ const timeline = [
 
 const highlights = [
   'Kubestronaut',
+  'Cloud DevOps',
   '12× Azure',
   'AWS Architect',
   'Cisco Security',
@@ -39,10 +40,11 @@ const About = () => {
       <div className="container">
         <p className="section__label">04 — Profile</p>
         <h2 className="section__title">
-          Sofonias <span className="text-gradient">Mengistu</span>
+          Cloud DevOps Engineer — <span className="text-accent">Sofonias Mengistu</span>
         </h2>
         <p className="section__lead">
-          Cloud DevOps engineer and builder — not one or the other.
+          Job-ready Cloud DevOps engineer. Kubestronaut. Also ships products —
+          so you know I own production, not just tickets.
         </p>
 
         <div className="about__layout about__layout--media">
@@ -65,21 +67,22 @@ const About = () => {
 
           <div className="about__bio">
             <p className="about__roles">
-              Cloud DevOps Engineer · Product Builder · Kubestronaut
+              Cloud DevOps Engineer · Kubestronaut · Open to remote roles
             </p>
             <p>
-              Based in Addis Ababa. I deliver secure cloud and Kubernetes systems
-              for clients (including via Upwork), and I ship chat-native products
-              used inside Telegram.
+              Based in Addis Ababa. I design and operate secure multi-cloud
+              systems — Kubernetes, Terraform, CI/CD, DevSecOps — for teams that
+              need reliability. Available for full-time Cloud DevOps roles and
+              high-trust consulting (including Upwork).
             </p>
             <p>
               Featured in{' '}
               <a href={credentials.cncfOrbit} target="_blank" rel="noopener noreferrer">
                 CNCF Kubestronaut in Orbit
               </a>
-              . Active on{' '}
+              . Proof on{' '}
               <a href={credentials.linkedIn} target="_blank" rel="noopener noreferrer">
-                LinkedIn (30k+ network)
+                LinkedIn (30k+)
               </a>{' '}
               and{' '}
               <a href={credentials.github} target="_blank" rel="noopener noreferrer">
@@ -95,14 +98,21 @@ const About = () => {
             >
               {credentials.kubestronautNote}
             </a>
-            <p>
-              <a href="/Sofonias_Mengistu_Resume.pdf" download="Sofonias_Mengistu_Resume.pdf">
-                Download CV →
+            <p className="about__cta-row">
+              <a
+                className="btn-primary"
+                href="/Sofonias_Mengistu_Resume.pdf"
+                download="Sofonias_Mengistu_Resume.pdf"
+              >
+                Download CV
+              </a>
+              <a className="btn-dark" href="#contact">
+                Contact for roles
               </a>
             </p>
 
             <div className="about__skills" id="skills">
-              <p className="band__title">Selected capabilities</p>
+              <p className="band__title">Capabilities for Cloud DevOps roles</p>
               <div className="skills__chips">
                 {highlights.map((skill) => (
                   <span key={skill} className="skill-chip">

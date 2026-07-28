@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Products', href: '#products' },
   { name: 'Work', href: '#work' },
+  { name: 'Products', href: '#products' },
   { name: 'Approach', href: '#approach' },
   { name: 'About', href: '#about' },
 ];
@@ -14,7 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'products', 'work', 'approach', 'about', 'contact'];
+      const sections = ['home', 'work', 'products', 'approach', 'about', 'contact'];
       let current = '#home';
 
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 80) {
@@ -63,7 +63,7 @@ const Header = () => {
             </a>
           ))}
           <a href="#contact" className="btn-dark nav-desktop__cta">
-            Talk to me →
+            Hire me →
           </a>
         </nav>
 
@@ -89,7 +89,7 @@ const Header = () => {
               </a>
             ))}
             <a href="#contact" className="btn-dark" onClick={() => setIsOpen(false)}>
-              Talk to me →
+              Hire me →
             </a>
           </nav>
         )}

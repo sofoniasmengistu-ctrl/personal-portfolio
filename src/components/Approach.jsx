@@ -4,18 +4,18 @@ import { companyChannels } from '../data/products';
 const pillars = [
   {
     num: '01',
-    title: 'Mini Apps + bots',
-    body: 'Telegram-native surfaces with wallets, hiring flows, and AI.',
+    title: 'Integrated platforms',
+    body: 'Cloud, Kubernetes, CI/CD, and security as one system — not disconnected tickets.',
   },
   {
     num: '02',
-    title: 'Owned communities',
-    body: 'Channels and groups per product — updates and support in-chat.',
+    title: 'Production ownership',
+    body: 'I run live products myself, so I design infra the way operators actually need it.',
   },
   {
     num: '03',
-    title: 'Operated end-to-end',
-    body: 'Cloud, Kubernetes, CI/CD, security — the stack that keeps them live.',
+    title: 'Multi-cloud delivery',
+    body: 'AWS, Azure, GCP — Terraform, GitOps, and DevSecOps for teams that ship.',
   },
 ];
 
@@ -23,12 +23,13 @@ const Approach = () => {
   return (
     <section id="approach" className="section section--tight approach section--muted">
       <div className="container">
-        <p className="section__label">03 — Approach</p>
+        <p className="section__label">03 — How I operate</p>
         <h2 className="section__title">
-          Built where people <span className="text-gradient">already are</span>
+          DevOps craft that <span className="text-accent">stays invisible</span>
         </h2>
         <p className="section__lead">
-          Chat is the interface. Infrastructure stays invisible.
+          Same discipline on client platforms and my own products — secure,
+          automated, observable.
         </p>
 
         <div className="split-row">
