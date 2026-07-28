@@ -1,49 +1,67 @@
-import React from 'react';
 import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
-    return (
-        <footer id="contact" style={{
-            backgroundColor: 'var(--bg-secondary)',
-            padding: '4rem 0',
-            borderTop: '1px solid rgba(255,255,255,0.05)'
-        }}>
-            <div className="container" style={{ textAlign: 'center' }}>
-                <h2 style={{ marginBottom: '1rem' }}>Let's Work Together</h2>
-                <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', maxWidth: '500px', margin: '0 auto 2rem' }}>
-                    Interested in optimizing your cloud infrastructure or securing your deployment pipeline? Reach out!
-                </p>
+  return (
+    <footer id="contact" className="contact">
+      <div className="container">
+        <p className="section__label" style={{ textAlign: 'center' }}>
+          05 — Contact
+        </p>
+        <h2 className="section__title" style={{ textAlign: 'center' }}>
+          Let&apos;s talk
+        </h2>
+        <p className="section__lead" style={{ margin: '0 auto 1.5rem', textAlign: 'center' }}>
+          Products, partnerships, or infrastructure consulting.
+        </p>
 
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '2rem' }}>
-                    <a href="https://www.linkedin.com/in/sofonias-mengistu-b5394179/" target="_blank" rel="noopener noreferrer" style={{ padding: '1rem', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '50%' }}>
-                        <Linkedin size={24} />
-                    </a>
-                    <a href="https://github.com/Sofoniasm" target="_blank" rel="noopener noreferrer" style={{ padding: '1rem', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '50%' }}>
-                        <Github size={24} />
-                    </a>
-                    <a href="mailto:sofoniasmengistu@gmail.com" style={{ padding: '1rem', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '50%' }}>
-                        <Mail size={24} />
-                    </a>
-                    <a href="https://wa.me/251912215057" target="_blank" rel="noopener noreferrer" style={{ padding: '1rem', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '50%' }}>
-                        <MessageCircle size={24} />
-                    </a>
-                </div>
+        <div className="contact__socials">
+          <a
+            href="https://www.linkedin.com/in/sofonias-mengistu-b5394179/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact__social"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={22} />
+          </a>
+          <a
+            href="https://github.com/Sofoniasm"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact__social"
+            aria-label="GitHub"
+          >
+            <Github size={22} />
+          </a>
+          <a
+            href="mailto:sofoniasmengistu@gmail.com"
+            className="contact__social"
+            aria-label="Email"
+          >
+            <Mail size={22} />
+          </a>
+          <a
+            href="https://wa.me/251912215057"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact__social"
+            aria-label="WhatsApp"
+          >
+            <MessageCircle size={22} />
+          </a>
+        </div>
 
-                <div style={{ marginBottom: '3rem', color: 'var(--text-secondary)' }}>
-                    <p style={{ marginBottom: '0.5rem' }}>📞 +251 912 215 057</p>
-                    <p style={{ marginBottom: '0.5rem' }}>📞 +251 946 699 350</p>
-                    <p>✉️ sofoniasmengistu@gmail.com</p>
-                </div>
+        <div className="contact__details">
+          <a href="mailto:sofoniasmengistu@gmail.com">sofoniasmengistu@gmail.com</a>
+          <a href="tel:+251912215057">+251 912 215 057</a>
+        </div>
 
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '2rem' }}>
-                    Providing professional <strong>Cloud Engineering</strong> & <strong>DevOps Consulting</strong> in <strong>Addis Ababa, Ethiopia</strong> and virtually across <strong>Africa</strong>.
-                </p>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '1rem' }}>
-                    © {new Date().getFullYear()} Sofonias Mengistu. All rights reserved.
-                </p>
-            </div>
-        </footer>
-    );
+        <p className="contact__copy">
+          © {new Date().getFullYear()} Sofonias Mengistu · Addis Ababa
+        </p>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

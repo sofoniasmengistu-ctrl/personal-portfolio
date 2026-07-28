@@ -1,166 +1,69 @@
-import React from 'react';
-import { Briefcase, GraduationCap, Server, Network } from 'lucide-react';
+const timeline = [
+  {
+    year: 'Now',
+    role: 'Founder · Kubestronaut',
+    description: 'Shipping chat-native products. Multi-cloud & Kubernetes consulting.',
+  },
+  {
+    year: '2010–18',
+    role: 'Network & systems · ECX',
+    description: 'On-prem infrastructure and security at Ethiopia Commodity Exchange.',
+  },
+  {
+    year: '2010',
+    role: 'BSc Computer Science',
+    description: 'HiLCoE School of Computer Science and Technology.',
+  },
+];
 
 const About = () => {
-    const timeline = [
-        {
-            year: "2018 - Present",
-            role: "DevOps Engineer & Kubestronaut",
-            description: "Specializing in Kubernetes, Cloud Native technologies, and DevSecOps. Achieved 'Kubestronaut' status (KCSA, KCNA, CKA, CKAD, CKS) and holding All 12 Azure Certifications.",
-            icon: <Server size={20} />
-        },
-        {
-            year: "2010 - 2018",
-            role: "Network & System Admin at ECX",
-            description: "Managed on-premise infrastructure at the Ethiopia Commodity Exchange (ECX). Responsible for network security and system administration. Certifications: Cisco (CCNA, CCNP, CCNA Security, CCNP Security).",
-            icon: <Network size={20} />
-        },
-        {
-            year: "2010",
-            role: "BSc in Computer Science",
-            description: "Graduated from HiLCoE School of Computer Science and Technology.",
-            icon: <GraduationCap size={20} />
-        }
-    ];
+  return (
+    <section id="about" className="section about">
+      <div className="container">
+        <p className="section__label">03 — Profile</p>
+        <h2 className="section__title">
+          Sofonias <span className="text-gradient">Mengistu</span>
+        </h2>
+        <p className="section__lead">
+          Brief by design. Detail lives in the work — and in the CV on request.
+        </p>
 
-    return (
-        <section id="about" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-            <div className="container">
-                <h2 style={{ marginBottom: '3rem' }}>About <span className="text-gradient">Me</span></h2>
+        <div className="about__layout">
+          <img
+            src="/profile.jpg"
+            alt="Sofonias Mengistu"
+            className="about__photo"
+            width={180}
+            height={180}
+          />
+          <div className="about__bio">
+            <p className="about__roles">
+              Founder · DevSecOps · Kubestronaut
+            </p>
+            <p>
+              Based in Addis Ababa. I build products people use in Telegram,
+              and advise teams on cloud, Kubernetes, and secure delivery across Africa.
+            </p>
+            <p>
+              <a href="/Sofonias_Mengistu_Resume.pdf" download="Sofonias_Mengistu_Resume.pdf">
+                Download CV →
+              </a>
+            </p>
+          </div>
+        </div>
 
-                <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '4rem',
-                    alignItems: 'center'
-                }}>
-                    {/* Bio Section */}
-                    <div style={{
-                        display: 'flex',
-                        gap: '3rem',
-                        alignItems: 'center',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center'
-                    }}>
-                        <img
-                            src="/profile.jpg"
-                            alt="Sofonias Mengistu"
-                            style={{
-                                width: '250px',
-                                height: '250px',
-                                borderRadius: '50%',
-                                objectFit: 'cover',
-                                border: '4px solid var(--accent-primary)',
-                                boxShadow: '0 0 20px rgba(100, 108, 255, 0.3)'
-                            }}
-                        />
-                        <div style={{ maxWidth: '600px' }}>
-                            <h3 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Sofonias Mengistu</h3>
-                            <p style={{ color: 'var(--accent-primary)', fontWeight: '600', marginBottom: '1.5rem' }}>
-                                DevSecOps | Cloud | Data | ML & MLOps | Network Engineer | Trainer
-                            </p>
-                            <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-                                With over 16+ years of IT experience, my career began in IT support and progressed through roles as a Network Engineer and Network Specialist. I am based in Ethiopia and have worked as a Field Engineer for over 35 technology companies, successfully delivering a wide range of networking and infrastructure projects locally and internationally.
-                            </p>
-                            <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-                                In the last 6 years, I transitioned into DevOps and cloud technologies, excelling in designing, deploying, and automating robust infrastructure solutions across AWS, Azure, GCP, and on-premises Kubernetes environments.
-                            </p>
-                            <p style={{ color: 'var(--text-secondary)' }}>
-                                A proud Kubestronaut and active member of the open-source community, I am always exploring innovative solutions to complex challenges. Currently serving as a DevOps Engineer at Gebeya.INC, spearheading Kubernetes engineering for Safaricom projects.
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Timeline Section */}
-                    <div style={{ width: '100%', maxWidth: '800px' }}>
-                        <h3 style={{ marginBottom: '2rem', textAlign: 'center' }}>My Journey</h3>
-                        {timeline.map((item, index) => (
-                            <div key={index} style={{
-                                display: 'flex',
-                                gap: '2rem',
-                                marginBottom: '3rem',
-                                position: 'relative'
-                            }}>
-                                {/* Timeline Line */}
-                                {index !== timeline.length - 1 && (
-                                    <div style={{
-                                        position: 'absolute',
-                                        left: '24px',
-                                        top: '50px',
-                                        bottom: '-50px',
-                                        width: '2px',
-                                        backgroundColor: 'rgba(255,255,255,0.1)'
-                                    }} />
-                                )}
-
-                                <div style={{
-                                    width: '50px',
-                                    height: '50px',
-                                    borderRadius: '50%',
-                                    backgroundColor: 'rgba(100, 108, 255, 0.1)',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    color: 'var(--accent-primary)',
-                                    flexShrink: 0,
-                                    zIndex: 1
-                                }}>
-                                    {item.icon}
-                                </div>
-
-                                <div>
-                                    <span style={{
-                                        color: 'var(--accent-secondary)',
-                                        fontSize: '0.9rem',
-                                        fontWeight: '600',
-                                        display: 'block',
-                                        marginBottom: '0.5rem'
-                                    }}>
-                                        {item.year}
-                                    </span>
-                                    <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>{item.role}</h3>
-                                    <p style={{ color: 'var(--text-secondary)' }}>{item.description}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                {/* FAQ Section */}
-                <div style={{ width: '100%', maxWidth: '800px', marginTop: '2rem' }}>
-                    <h3 style={{ marginBottom: '2rem', textAlign: 'center' }}>Frequently Asked Questions</h3>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                        <div style={{
-                            backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                            padding: '1.5rem',
-                            borderRadius: '12px',
-                            border: '1px solid rgba(255, 255, 255, 0.05)'
-                        }}>
-                            <h4 style={{ color: 'var(--accent-primary)', marginBottom: '0.5rem' }}>Do you provide Cloud & DevOps support in Ethiopia?</h4>
-                            <p style={{ color: 'var(--text-secondary)' }}>Yes, I am based in Ethiopia and provide on-site and remote Cloud, DevOps, and Infrastructure support for local businesses and international companies operating in Ethiopia.</p>
-                        </div>
-                        <div style={{
-                            backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                            padding: '1.5rem',
-                            borderRadius: '12px',
-                            border: '1px solid rgba(255, 255, 255, 0.05)'
-                        }}>
-                            <h4 style={{ color: 'var(--accent-primary)', marginBottom: '0.5rem' }}>Are you available for freelance projects?</h4>
-                            <p style={{ color: 'var(--text-secondary)' }}>Yes, I am available for freelance consulting, short-term contracts, and specialized project-based work for Data Engineering, Cloud Migration, and Network Security.</p>
-                        </div>
-                        <div style={{
-                            backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                            padding: '1.5rem',
-                            borderRadius: '12px',
-                            border: '1px solid rgba(255, 255, 255, 0.05)'
-                        }}>
-                            <h4 style={{ color: 'var(--accent-primary)', marginBottom: '0.5rem' }}>What specific services do you offer?</h4>
-                            <p style={{ color: 'var(--text-secondary)' }}>I offer a wide range of services including Cloud Migration (AWS, Azure, GCP), Kubernetes Management, CI/CD Pipeline Setup, Network Infrastructure Design, and Data Engineering solutions.</p>
-                        </div>
-                    </div>
-                </div>
+        <div className="timeline">
+          {timeline.map((item) => (
+            <div key={item.year} className="timeline__item">
+              <span className="timeline__year">{item.year}</span>
+              <h3 className="timeline__role">{item.role}</h3>
+              <p className="timeline__desc">{item.description}</p>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default About;

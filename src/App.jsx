@@ -1,13 +1,13 @@
-import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
+import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Projects from './components/Projects';
+import Products from './components/Products';
+import Proof from './components/Proof';
+import About from './components/About';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
-
-import About from './components/About';
-
-import { Analytics } from "@vercel/analytics/react"
+import StickyCta from './components/StickyCta';
 
 function App() {
   return (
@@ -15,11 +15,13 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Products />
+        <Proof />
         <About />
-        <Projects />
         <Skills />
       </main>
       <Footer />
+      <StickyCta />
       <Analytics />
     </div>
   );

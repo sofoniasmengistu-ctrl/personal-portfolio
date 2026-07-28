@@ -1,139 +1,94 @@
-import React, { useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
-import '../index.css';
+import { useEffect, useState } from 'react';
+import { Menu, X } from 'lucide-react';
+
+const navLinks = [
+  { name: 'Products', href: '#products' },
+  { name: 'About', href: '#about' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Contact', href: '#contact' },
+];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeHash, setActiveHash] = useState('#home');
 
-  const [activeHash, setActiveHash] = useState(window.location.hash || '#home');
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'projects', 'skills', 'contact'];
-      let currentSection = '';
+      const sections = ['home', 'products', 'ecosystem', 'about', 'skills', 'contact'];
+      let current = '#home';
 
-      // Check if we are at the bottom of the page
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
-        currentSection = '#contact';
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 80) {
+        current = '#contact';
       } else {
-        for (const section of sections) {
-          const element = document.getElementById(section);
-          if (element) {
-            const rect = element.getBoundingClientRect();
-            if (rect.top <= 150 && rect.bottom >= 150) {
-              currentSection = '#' + section;
-              break;
-            }
+        for (const id of sections) {
+          const el = document.getElementById(id);
+          if (!el) continue;
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 140 && rect.bottom >= 140) {
+            current = `#${id}`;
+            break;
           }
         }
       }
 
-      if (currentSection && currentSection !== activeHash) {
-        setActiveHash(currentSection);
-        if (currentSection === '#home') {
-          window.history.replaceState(null, null, window.location.pathname);
-        } else {
-          window.history.replaceState(null, null, currentSection);
-        }
+      const navHash = current === '#ecosystem' ? '#products' : current;
+      setActiveHash(navHash);
+
+      if (current === '#home') {
+        window.history.replaceState(null, '', window.location.pathname);
+      } else if (current !== '#ecosystem') {
+        window.history.replaceState(null, '', current);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [activeHash]);
-
-  const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
-  ];
+  }, []);
 
   return (
-    <header style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      backgroundColor: 'rgba(10, 10, 10, 0.9)',
-      backdropFilter: 'blur(10px)',
-      zIndex: 1000,
-      borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
-    }}>
-      <div className="container" style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        height: '80px'
-      }}>
-        <a href="#home" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
-          Sofonias<span className="text-gradient">DevSecOps</span>
+    <header className="site-header">
+      <div className="container site-header__inner">
+        <a href="#home" className="brand">
+          Sofonias<span>DevSecOps</span>
         </a>
 
-        {/* Desktop Nav */}
-        <nav className="desktop-nav" style={{ display: 'none' }}>
-          <ul style={{ display: 'flex', gap: '2rem' }}>
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <a
-                  href={link.href}
-                  style={{
-                    fontWeight: '500',
-                    color: activeHash === link.href ? 'var(--accent-primary)' : 'inherit',
-                    transition: 'color 0.3s ease'
-                  }}
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+        <nav className="nav-desktop" aria-label="Primary">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className={activeHash === link.href ? 'is-active' : undefined}
+            >
+              {link.name}
+            </a>
+          ))}
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button className="mobile-menu-btn" onClick={toggleMenu} style={{ color: 'white' }}>
+        <button
+          className="nav-toggle"
+          onClick={() => setIsOpen((o) => !o)}
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isOpen}
+        >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Mobile Nav Overlay */}
         {isOpen && (
-          <div style={{
-            position: 'absolute',
-            top: '80px',
-            left: 0,
-            right: 0,
-            backgroundColor: 'var(--bg-secondary)',
-            padding: '2rem',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
-          }}>
-            <ul style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'center' }}>
-              {navLinks.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    onClick={toggleMenu}
-                    style={{
-                      fontSize: '1.2rem',
-                      color: activeHash === link.href ? 'var(--accent-primary)' : 'inherit'
-                    }}
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <nav className="nav-mobile" aria-label="Mobile">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className={activeHash === link.href ? 'is-active' : undefined}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
         )}
       </div>
-
-      <style>{`
-        @media (min-width: 768px) {
-          .desktop-nav { display: block !important; }
-          .mobile-menu-btn { display: none !important; }
-        }
-      `}</style>
     </header>
   );
 };
