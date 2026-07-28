@@ -7,7 +7,7 @@ import {
   MoveRight,
   Send,
 } from 'lucide-react';
-import { companyChannels } from '../data/products';
+import { companyChannels, products } from '../data/products';
 import ContactForm from './ContactForm';
 import { Reveal } from './Reveal';
 
@@ -49,10 +49,40 @@ const jumpLinks = [
   { href: '#pricing', label: 'Pricing' },
   { href: '#about', label: 'About' },
   { href: '#addis-ababa', label: 'Addis Ababa' },
+  { href: '#products', label: 'Live products' },
 ];
 
 const Footer = () => {
   const year = new Date().getFullYear();
+
+  const slideItems = [
+    ...jumpLinks.map((link) => ({
+      id: `jump-${link.href}`,
+      label: link.label,
+      href: link.href,
+      external: false,
+    })),
+    ...products.map((product) => ({
+      id: `bot-${product.id}`,
+      label: product.bot,
+      href: product.botUrl,
+      external: true,
+    })),
+    ...companyChannels.map((channel) => ({
+      id: `channel-${channel.id}`,
+      label: channel.label,
+      href: channel.href,
+      external: true,
+    })),
+    {
+      id: 'copy',
+      label: `© ${year} Sofonias Mengistu · Addis Ababa`,
+      href: '#home',
+      external: false,
+    },
+  ];
+
+  const loop = [...slideItems, ...slideItems];
 
   return (
     <footer id="contact" className="site-footer">
@@ -129,28 +159,21 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="site-footer__bar">
-        <div className="container site-footer__bar-inner">
-          <nav className="site-footer__nav" aria-label="Footer">
-            {jumpLinks.map((link) => (
-              <a key={link.href} href={link.href}>
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
-          <div className="site-footer__company">
-            <span className="mono">Live products</span>
-            {companyChannels.map((c) => (
-              <a key={c.id} href={c.href} target="_blank" rel="noopener noreferrer">
-                {c.label}
-              </a>
-            ))}
-          </div>
-
-          <p className="site-footer__copy">
-            © {year} Sofonias Mengistu · Addis Ababa
-          </p>
+      <div className="site-footer__slide" aria-label="Footer links">
+        <div className="site-footer__slide-track">
+          {loop.map((item, i) => (
+            <a
+              key={`${item.id}-${i}`}
+              href={item.href}
+              className="site-footer__slide-item"
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noopener noreferrer' : undefined}
+              tabIndex={i >= slideItems.length ? -1 : undefined}
+              aria-hidden={i >= slideItems.length ? true : undefined}
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
       </div>
     </footer>

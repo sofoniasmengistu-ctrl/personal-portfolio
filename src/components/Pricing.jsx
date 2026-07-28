@@ -112,40 +112,44 @@ const Pricing = () => {
           </a>
         </Reveal>
 
-        <div className="pricing__grid pricing__grid--4">
-          {plans.map((plan, index) => {
-            const Icon = plan.icon;
-            return (
-              <Reveal
-                key={plan.id}
-                className={`pricing__card${plan.featured ? ' pricing__card--featured' : ''}`}
-                delay={index * 80}
-              >
-                <p className="pricing__card-kicker mono">
-                  <Icon size={16} strokeWidth={2.25} />
-                  {plan.name}
-                </p>
-                <p className="pricing__amount">{plan.price}</p>
-                <p className="pricing__amount-note">{plan.priceNote}</p>
-                <p className="pricing__blurb">{plan.blurb}</p>
-                <ul className="pricing__points">
-                  {plan.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
-                <a
-                  href={plan.href}
-                  className={plan.featured ? 'btn-primary' : 'btn-dark'}
-                  target={plan.external ? '_blank' : undefined}
-                  rel={plan.external ? 'noopener noreferrer' : undefined}
+        <Reveal delay={40}>
+          <p className="band__meta mono h-track-hint">Swipe plans on mobile</p>
+          <div className="h-track pricing__track">
+            {plans.map((plan, index) => {
+              const Icon = plan.icon;
+              return (
+                <Reveal
+                  key={plan.id}
+                  as="article"
+                  className={`pricing__card h-track__item${plan.featured ? ' pricing__card--featured' : ''}`}
+                  delay={index * 80}
                 >
-                  {plan.cta}
-                  <MoveRight size={16} />
-                </a>
-              </Reveal>
-            );
-          })}
-        </div>
+                  <p className="pricing__card-kicker mono">
+                    <Icon size={16} strokeWidth={2.25} />
+                    {plan.name}
+                  </p>
+                  <p className="pricing__amount">{plan.price}</p>
+                  <p className="pricing__amount-note">{plan.priceNote}</p>
+                  <p className="pricing__blurb">{plan.blurb}</p>
+                  <ul className="pricing__points">
+                    {plan.points.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                  <a
+                    href={plan.href}
+                    className={plan.featured ? 'btn-primary' : 'btn-dark'}
+                    target={plan.external ? '_blank' : undefined}
+                    rel={plan.external ? 'noopener noreferrer' : undefined}
+                  >
+                    {plan.cta}
+                    <MoveRight size={16} />
+                  </a>
+                </Reveal>
+              );
+            })}
+          </div>
+        </Reveal>
 
         <Reveal className="pricing__footnote">
           <p>
