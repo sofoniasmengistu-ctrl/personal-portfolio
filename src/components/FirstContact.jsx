@@ -1,4 +1,5 @@
 import { MoveRight, PhoneCall } from 'lucide-react';
+import { Reveal } from './Reveal';
 
 const needs = [
   'DevOps Engineer',
@@ -15,7 +16,7 @@ const FirstContact = () => {
   return (
     <section id="addis-ababa" className="first-contact" aria-labelledby="first-contact-heading">
       <div className="container first-contact__inner">
-        <div className="first-contact__copy">
+        <Reveal className="first-contact__copy">
           <p className="first-contact__label mono">Addis Ababa first contact</p>
           <h2 id="first-contact-heading" className="first-contact__title">
             If you need it in Addis Ababa,{' '}
@@ -24,11 +25,19 @@ const FirstContact = () => {
           <p className="first-contact__lead">
             One local contact for DevOps, Network Engineer work, IT support, cloud
             support, Kubernetes, and builds. On site in Addis Ababa. Remote for
-            teams worldwide.
+            teams worldwide. First 15 minutes are free.
           </p>
           <div className="first-contact__actions">
-            <a href="#contact" className="btn-primary">
-              Contact Sofonias <MoveRight size={16} />
+            <a
+              href="https://wa.me/251912215057?text=Hi%20Sofonias%2C%20I%20want%20a%20free%2015%20minute%20consultation"
+              className="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Free 15 min consult <MoveRight size={16} />
+            </a>
+            <a href="#pricing" className="btn-dark">
+              See pricing
             </a>
             <a
               href="https://wa.me/251912215057"
@@ -39,9 +48,9 @@ const FirstContact = () => {
               <PhoneCall size={16} /> WhatsApp now
             </a>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="first-contact__needs">
+        <Reveal className="first-contact__needs" delay={120}>
           <p className="first-contact__needs-label mono">What people call for</p>
           <ul className="first-contact__list">
             {needs.map((need) => (
@@ -53,7 +62,7 @@ const FirstContact = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
