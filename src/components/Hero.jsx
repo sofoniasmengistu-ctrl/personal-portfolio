@@ -1,18 +1,7 @@
-import { useRef, useState } from 'react';
-import { ArrowRight, Check, Download, Linkedin, MoveRight, Volume2 } from 'lucide-react';
+import { ArrowRight, Check, Download, Linkedin, MoveRight } from 'lucide-react';
 import { credentials } from '../data/products';
 
 const Hero = () => {
-  const shortRef = useRef(null);
-  const [showFull, setShowFull] = useState(false);
-
-  const openFull = () => {
-    setShowFull(true);
-    if (shortRef.current) {
-      shortRef.current.pause();
-    }
-  };
-
   return (
     <section id="home" className="hero">
       <div className="container hero__stage">
@@ -86,39 +75,13 @@ const Hero = () => {
 
         <aside className="hero__aside">
           <div className="hero__media hero__visual--lift">
-            {!showFull ? (
-              <>
-                <video
-                  ref={shortRef}
-                  className="hero__video"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  poster="/intro-poster.jpg"
-                  aria-label="Short muted introduction from Sofonias Mengistu"
-                >
-                  <source src="/intro-short.mp4" type="video/mp4" />
-                </video>
-                <button type="button" className="hero__watch-full" onClick={openFull}>
-                  <Volume2 size={16} />
-                  Watch full intro
-                </button>
-              </>
-            ) : (
-              <video
-                className="hero__video"
-                controls
-                autoPlay
-                playsInline
-                preload="metadata"
-                poster="/intro-poster.jpg"
-                aria-label="Full introduction video from Sofonias Mengistu"
-              >
-                <source src="/intro.mp4" type="video/mp4" />
-              </video>
-            )}
+            <img
+              className="hero__photo"
+              src="/kubestronaut-portrait.png"
+              alt="Sofonias Mengistu, Cloud DevOps Engineer and Kubestronaut"
+              width={640}
+              height={800}
+            />
           </div>
           <div className="hero__panel hero__panel--lift">
             <p className="hero__panel-kicker mono">For hiring managers</p>
