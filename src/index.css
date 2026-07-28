@@ -549,8 +549,16 @@ h1, h2, h3, h4 {
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: var(--radius-sm);
   padding: 0.45rem 0.85rem;
-  margin-bottom: 1.15rem;
+  margin-bottom: 0.85rem;
   animation: rise-in 0.7s var(--ease) both;
+}
+
+.hero__seo-line {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 1rem;
+  max-width: 32rem;
 }
 
 .hero__headline {
@@ -1477,6 +1485,73 @@ a.work-card:hover {
   font-size: 0.78rem;
   font-family: var(--font-mono);
   text-align: center;
+}
+
+/* ——— SEO content ——— */
+.seo__grid {
+  display: grid;
+  gap: 0.85rem;
+  margin-bottom: 2.25rem;
+}
+
+@media (min-width: 800px) {
+  .seo__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+.seo__card {
+  padding: 1.35rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-align: left;
+}
+
+.seo__card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.55rem;
+  color: var(--ink);
+}
+
+.seo__card p {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.seo__faq-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.seo__faq-list {
+  display: grid;
+  gap: 0.85rem;
+  text-align: left;
+}
+
+.seo__faq-item {
+  padding: 1.15rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.seo__faq-item dt {
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 0.45rem;
+  font-size: 1rem;
+}
+
+.seo__faq-item dd {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0;
 }
 
 /* ——— Sticky CTA ——— */

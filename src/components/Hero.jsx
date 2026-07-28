@@ -13,6 +13,9 @@ const Hero = () => {
           <h1 className="hero__brand">
             Sofonias<span className="text-accent">.</span>
           </h1>
+          <p className="hero__seo-line">
+            Cloud DevOps Engineer in Ethiopia · Kubestronaut · Addis Ababa
+          </p>
 
           <p className="hero__role-badge">
             Cloud DevOps Engineer <span aria-hidden="true">·</span> Kubestronaut
