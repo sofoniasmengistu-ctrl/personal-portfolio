@@ -10,13 +10,15 @@ const Hero = () => {
             Addis Ababa first contact. Remote worldwide.
           </p>
 
-          <h1 className="hero__brand">
-            Sofonias<span className="text-accent">.</span>
+          <h1 className="hero__title">
+            <span className="hero__brand">
+              Sofonias<span className="text-accent">.</span>
+            </span>
+            <span className="hero__seo-line">
+              DevOps Engineer, Network Engineer, IT support, and Kubestronaut in
+              Addis Ababa, Ethiopia
+            </span>
           </h1>
-          <p className="hero__seo-line">
-            DevOps Engineer, Network Engineer, IT support, and Kubestronaut in
-            Addis Ababa, Ethiopia
-          </p>
 
           <p className="hero__role-badge">
             Your first call in Addis Ababa

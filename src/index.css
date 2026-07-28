@@ -559,7 +559,14 @@ h1, h2, h3, h4 {
   margin-bottom: 1.25rem;
 }
 
+.hero__title {
+  margin: 0 0 0.85rem;
+  font: inherit;
+  color: inherit;
+}
+
 .hero__brand {
+  display: block;
   font-size: clamp(2.6rem, 6.5vw, 4.1rem);
   font-weight: 800;
   letter-spacing: -0.03em;
