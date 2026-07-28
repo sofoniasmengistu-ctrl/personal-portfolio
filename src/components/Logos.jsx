@@ -4,6 +4,9 @@ const logos = [
   { name: 'GIZ', note: 'Cloud trainer' },
   { name: 'KodeKloud', note: 'Senior DevOps' },
   { name: 'CNCF', note: 'Kubestronaut' },
+  { name: 'JSI', note: 'IT Specialist' },
+  { name: 'ECX', note: 'Network & systems' },
+  { name: 'Custor', note: 'Software internship' },
 ];
 
 const Logos = () => {
