@@ -3,10 +3,9 @@ import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { name: 'Products', href: '#products' },
-  { name: 'Engineering', href: '#engineering' },
-  { name: 'Clients', href: '#clients' },
+  { name: 'Work', href: '#work' },
+  { name: 'Approach', href: '#approach' },
   { name: 'About', href: '#about' },
-  { name: 'Contact', href: '#contact' },
 ];
 
 const Header = () => {
@@ -15,17 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = [
-        'home',
-        'products',
-        'engineering',
-        'clients',
-        'presence',
-        'ecosystem',
-        'about',
-        'skills',
-        'contact',
-      ];
+      const sections = ['home', 'products', 'work', 'approach', 'about', 'contact'];
       let current = '#home';
 
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 80) {
@@ -42,17 +31,11 @@ const Header = () => {
         }
       }
 
-      const map = {
-        '#presence': '#products',
-        '#ecosystem': '#products',
-        '#skills': '#about',
-      };
-      const navHash = map[current] || current;
-      setActiveHash(navHash);
+      setActiveHash(current === '#contact' ? '#about' : current);
 
       if (current === '#home') {
         window.history.replaceState(null, '', window.location.pathname);
-      } else if (!map[current]) {
+      } else if (current !== '#contact') {
         window.history.replaceState(null, '', current);
       }
     };
@@ -66,7 +49,7 @@ const Header = () => {
     <header className="site-header">
       <div className="container site-header__inner">
         <a href="#home" className="brand">
-          Sofonias<span>DevSecOps</span>
+          Sofonias<span>^</span>
         </a>
 
         <nav className="nav-desktop" aria-label="Primary">
@@ -79,6 +62,9 @@ const Header = () => {
               {link.name}
             </a>
           ))}
+          <a href="#contact" className="btn-dark nav-desktop__cta">
+            Talk to me →
+          </a>
         </nav>
 
         <button
@@ -102,6 +88,9 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
+            <a href="#contact" className="btn-dark" onClick={() => setIsOpen(false)}>
+              Talk to me →
+            </a>
           </nav>
         )}
       </div>
