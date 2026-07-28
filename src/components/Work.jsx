@@ -16,7 +16,7 @@ const Work = () => {
               The work hiring managers <span className="text-accent">should see</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              Real roles from LinkedIn: Safaricom TKG via Gebeya, cloud training,
+              Real roles from LinkedIn: hired by Gebeya (Safaricom TKG assignment), cloud training,
               multi cloud delivery, and 16+ years from networks to Kubernetes.
             </p>
           </div>

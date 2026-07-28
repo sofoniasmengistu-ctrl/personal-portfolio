@@ -47,8 +47,8 @@ const Hero = () => {
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>Gebeya · Safaricom Ethiopia</strong>: Tanzu Kubernetes
-                Grid, Terraform, CI/CD, monitoring
+                <strong>Hired by Gebeya</strong> · assigned to Safaricom TKG
+                (Kubernetes, Terraform, CI/CD)
               </span>
             </li>
             <li className="hero__check">

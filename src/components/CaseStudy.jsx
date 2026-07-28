@@ -2,19 +2,19 @@ import { MoveRight } from 'lucide-react';
 
 const steps = [
   {
-    label: '01 Problem',
-    title: 'Production Kubernetes at telco scale',
-    body: 'Safaricom Ethiopia needed reliable Tanzu Kubernetes Grid operations: cluster lifecycle, secure access, and delivery pipelines teams could trust.',
+    label: '01 The hire',
+    title: 'Gebeya hired me for Kubernetes depth',
+    body: 'Gebeya Inc. brought me on as a DevOps Engineer because of production Kubernetes and platform skills—not to sit on a generic ticket queue. That is the relationship that matters on my résumé.',
   },
   {
-    label: '02 What I built',
-    title: 'TKG platform engineering via Gebeya',
-    body: 'Owned cluster deployment and lifecycle, Terraform provisioning, CI/CD integration, RBAC and network policies, plus Prometheus/Grafana observability.',
+    label: '02 The assignment',
+    title: 'Safaricom Ethiopia: TKG project I was assigned',
+    body: 'Gebeya assigned me to Safaricom Ethiopia’s Tanzu Kubernetes Grid work: cluster lifecycle, secure access, Terraform, CI/CD, and observability the telco team could trust in production.',
   },
   {
-    label: '03 Outcome',
-    title: 'Operable, auditable, ready to ship',
-    body: 'A repeatable TKG path with documented runbooks, faster change delivery, clearer incident response, and security controls aligned to production expectations.',
+    label: '03 What made it different',
+    title: 'End-to-end ownership, not a seat on the bench',
+    body: 'I owned the platform path end to end—deploy, harden, observe, document—so Gebeya could staff a live telco client with confidence. Repeatable runbooks, faster changes, clearer incidents, production-grade controls.',
   },
 ];
 
@@ -37,12 +37,13 @@ const CaseStudy = () => {
           <div className="section-head__copy">
             <p className="section__label">Flagship case study</p>
             <h2 className="section__title">
-              Safaricom TKG via Gebeya{' '}
-              <span className="text-accent">Kubernetes that lasts</span>
+              Hired by Gebeya{' '}
+              <span className="text-accent">for Kubernetes that lasts</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              One deep delivery story for hiring managers: problem, build, and
-              outcome from real telco Kubernetes work in Ethiopia.
+              Gebeya is who hired me. Safaricom was the client project I was
+              assigned to. What set this hire apart: full ownership of a live
+              telco TKG platform—not borrowed tickets.
             </p>
           </div>
           <a href="#contact" className="fancy-arrow">
@@ -52,6 +53,21 @@ const CaseStudy = () => {
               <MoveRight className="fancy-arrow__tip" size={22} strokeWidth={2.25} />
             </span>
           </a>
+        </div>
+
+        <div className="case-study__meta">
+          <div className="case-study__meta-item">
+            <p className="case-study__meta-label mono">Employer</p>
+            <p className="case-study__meta-value">Gebeya Inc.</p>
+          </div>
+          <div className="case-study__meta-item">
+            <p className="case-study__meta-label mono">Assigned project</p>
+            <p className="case-study__meta-value">Safaricom Ethiopia · TKG</p>
+          </div>
+          <div className="case-study__meta-item">
+            <p className="case-study__meta-label mono">Role</p>
+            <p className="case-study__meta-value">DevOps Engineer</p>
+          </div>
         </div>
 
         <div className="case-study__steps">
