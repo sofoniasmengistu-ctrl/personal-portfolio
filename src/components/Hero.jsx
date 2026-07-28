@@ -47,8 +47,8 @@ const Hero = () => {
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>Hired by Gebeya</strong> · assigned to Safaricom TKG
-                (Kubernetes, Terraform, CI/CD)
+                <strong>Hired by Gebeya</strong> · multi-cloud Kubernetes (EKS,
+                GKE, AKS, Infomaniak, Linode, TKG)
               </span>
             </li>
             <li className="hero__check">
@@ -130,7 +130,7 @@ const Hero = () => {
               </li>
               <li>
                 <strong>02</strong>
-                <span>Kubestronaut level cluster craft, not slideware</span>
+                <span>End-to-end clusters: EKS, GKE, AKS, Infomaniak, Linode, TKG</span>
               </li>
               <li>
                 <strong>03</strong>

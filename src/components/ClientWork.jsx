@@ -9,8 +9,9 @@ const ClientWork = () => {
           Upwork &amp; <span className="text-gradient">consulting</span>
         </h2>
         <p className="section__lead">
-          Freelance and client work as a Cloud DevOps engineer — the same craft
-          behind Safaricom / Gebeya Kubernetes delivery, framed for remote teams.
+          Freelance and client work as a Cloud DevOps engineer — the same
+          end-to-end Kubernetes craft across EKS, GKE, AKS, Infomaniak, Linode,
+          and TKG, framed for remote teams.
         </p>
 
         <div className="work-grid">

@@ -19,6 +19,11 @@ const steps = [
 ];
 
 const tools = [
+  'AWS EKS',
+  'GKE',
+  'AKS',
+  'Infomaniak',
+  'Linode',
   'Tanzu TKG',
   'Kubernetes',
   'Terraform',

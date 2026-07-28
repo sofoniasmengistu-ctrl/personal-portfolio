@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: 'What production Kubernetes work has Sofonias delivered?',
-    a: 'At Gebeya Inc. he leads Tanzu Kubernetes Grid engineering for Safaricom Ethiopia: cluster lifecycle, Terraform, CI/CD, RBAC, and Prometheus/Grafana monitoring.',
+    a: 'End-to-end Kubernetes across clouds and providers: cluster creation through hardening, CI/CD, RBAC, networking, and observability on AWS EKS, Google GKE, Azure AKS, Infomaniak, Linode, and VMware Tanzu (TKG). At Gebeya Inc. he was hired for that depth and assigned to a live telco TKG platform project.',
   },
 ];
 
@@ -38,7 +38,8 @@ const Seo = () => {
             <p>
               Based in Addis Ababa and available remote worldwide. Multi-cloud
               delivery on AWS, Azure, and GCP with Terraform, CI/CD, GitOps, and
-              production Kubernetes including VMware Tanzu Kubernetes Grid.
+              production Kubernetes end to end: EKS, GKE, AKS, Infomaniak,
+              Linode, and VMware Tanzu Kubernetes Grid.
             </p>
           </article>
           <article className="seo__card">
@@ -53,7 +54,7 @@ const Seo = () => {
             <h3>Hire for roles, consulting, and builds</h3>
             <p>
               Full time Cloud DevOps / DevSecOps / SRE roles, Upwork style
-              consulting, Safaricom grade cluster work, cloud training (GIZ), and
+              consulting, multi-cloud cluster builds, cloud training (GIZ), and
               custom Telegram / platform builds.
             </p>
           </article>

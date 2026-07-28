@@ -28,6 +28,11 @@ const highlights = [
   'AWS Cloud Engineer',
   'CCNA · CCNP · CCNA Security',
   'Tanzu TKG',
+  'AWS EKS',
+  'GKE',
+  'AKS',
+  'Infomaniak',
+  'Linode Kubernetes',
   'Kubernetes',
   'Terraform',
   'ArgoCD · GitOps',
@@ -91,12 +96,15 @@ const About = () => {
               Based in Addis Ababa. Career path: IT support and networking into
               DevOps and cloud. Field engineer for 35+ technology companies, then
               six plus years designing and automating infrastructure on AWS,
-              Azure, GCP, and on prem Kubernetes (including VMware TKG).
+              Azure, GCP, and production Kubernetes end to end.
             </p>
             <p>
-              At Gebeya Inc. I lead Kubernetes engineering for Safaricom
-              projects. I also train teams (including GIZ) and mentor on cloud,
-              security, and cost optimization. Featured in{' '}
+              I create and operate clusters from the ground up on AWS EKS,
+              Google GKE, Azure AKS, Infomaniak, Linode, and VMware Tanzu TKG:
+              provisioning, hardening, CI/CD, RBAC, networking, and observability.
+              Hired by Gebeya Inc. for that Kubernetes depth and assigned to a
+              live telco TKG platform project. I also train teams (including GIZ)
+              and mentor on cloud, security, and cost optimization. Featured in{' '}
               <a href={credentials.cncfOrbit} target="_blank" rel="noopener noreferrer">
                 CNCF Kubestronaut in Orbit
               </a>

@@ -4,6 +4,8 @@ const highlights = [
   'AWS Cloud Engineer',
   'CCNA · CCNP · Security',
   'Kubernetes',
+  'EKS · GKE · AKS',
+  'Infomaniak · Linode',
   'Terraform',
   'AWS · Azure · GCP',
   'Python · Go',
