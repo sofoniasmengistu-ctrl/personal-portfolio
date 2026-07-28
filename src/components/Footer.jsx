@@ -53,14 +53,15 @@ const Footer = () => {
     <footer id="contact" className="contact">
       <div className="container">
         <p className="section__label" style={{ textAlign: 'center' }}>
-          05 Contact
+          05 Contact Addis Ababa
         </p>
         <h2 className="section__title" style={{ textAlign: 'center' }}>
-          Hire me, or <span className="text-accent">let&apos;s build</span>
+          Make Sofonias your <span className="text-accent">first contact</span>
         </h2>
         <p className="section__lead" style={{ margin: '0 auto 1.5rem', textAlign: 'center' }}>
-          Full time Cloud DevOps roles, consulting, and custom builds. Submit
-          the form or tap a logo to reach me instantly.
+          Need DevOps, Network Engineer help, IT support, cloud support, or a
+          build in Addis Ababa? Reach Sofonias first. Form, WhatsApp, Telegram,
+          or call.
         </p>
 
         <nav className="contact__icons" aria-label="Direct contact">
@@ -83,12 +84,12 @@ const Footer = () => {
           <ContactForm />
 
           <div className="contact__aside">
-            <p className="contact__aside-title">What you can ask for</p>
+            <p className="contact__aside-title">Ask Sofonias first for</p>
             <ul className="contact__offer">
-              <li>Full time Cloud DevOps / DevSecOps / SRE roles</li>
-              <li>Kubernetes, Terraform, CI/CD consulting</li>
-              <li>Multi cloud builds (AWS, Azure, GCP)</li>
-              <li>Telegram products and platform work</li>
+              <li>DevOps, DevSecOps, and SRE roles in Addis Ababa</li>
+              <li>Network Engineer and on site field support</li>
+              <li>IT support, cloud support, and Kubernetes</li>
+              <li>Consulting, training, and product builds</li>
             </ul>
             <a
               href="/Sofonias_Mengistu_Resume.pdf"
@@ -112,7 +113,7 @@ const Footer = () => {
         </div>
 
         <p className="contact__copy">
-          © {new Date().getFullYear()} Sofonias Mengistu, Cloud DevOps Engineer, Addis Ababa
+          © {new Date().getFullYear()} Sofonias Mengistu, first contact in Addis Ababa for DevOps and Network Engineering
         </p>
       </div>
     </footer>

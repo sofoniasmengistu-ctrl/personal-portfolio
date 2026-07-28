@@ -7,37 +7,38 @@ const Hero = () => {
       <div className="container hero__stage">
         <div className="hero__copy">
           <p className="hero__eyebrow">
-            Open to roles, consulting, and builds. Remote worldwide.
+            Addis Ababa first contact. Remote worldwide.
           </p>
 
           <h1 className="hero__brand">
             Sofonias<span className="text-accent">.</span>
           </h1>
           <p className="hero__seo-line">
-            DevOps Engineer, Network Engineer, and Kubestronaut in Ethiopia, Addis Ababa
+            DevOps Engineer, Network Engineer, IT support, and Kubestronaut in
+            Addis Ababa, Ethiopia
           </p>
 
           <p className="hero__role-badge">
-            Cloud DevOps, Network Engineer, Kubestronaut
+            Your first call in Addis Ababa
           </p>
 
           <p className="hero__headline">
-            Production cloud and Kubernetes.{' '}
-            <span className="text-accent">Ready to hire.</span>
+            Need DevOps, network, or cloud support?{' '}
+            <span className="text-accent">Call Sofonias first.</span>
           </p>
 
           <p className="hero__sub">
-            I bring 16+ years in IT, multi cloud DevSecOps for real teams, and
-            founder built products that prove I ship. Hire me full time, bring a
-            consulting brief, or ask me to build your platform.
+            16+ years in IT. One person for Cloud DevOps, Network Engineer field
+            work, Kubernetes, IT support, and production builds. Based in Addis
+            Ababa. Available for full time roles, consulting, and on site delivery.
           </p>
 
           <ul className="hero__checks">
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>Hired by Gebeya</strong> for multi cloud Kubernetes
-                (EKS, GKE, AKS, Infomaniak, Linode, TKG)
+                <strong>Local in Addis Ababa</strong> for DevOps, network, and
+                IT support when you need someone on the ground
               </span>
             </li>
             <li className="hero__check">
@@ -50,15 +51,23 @@ const Hero = () => {
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>16+ years, 37 network field companies, 29k+ LinkedIn</strong>,
-                plus GIZ cloud trainer and product founder
+                <strong>Hired by Gebeya</strong> for Kubernetes, plus 37 network
+                field companies across GB, USA, Dubai, Singapore, and Pakistan
               </span>
             </li>
           </ul>
 
           <div className="hero__actions">
             <a href="#contact" className="btn-primary">
-              Hire or build <MoveRight size={18} strokeWidth={2.25} />
+              Contact Sofonias <MoveRight size={18} strokeWidth={2.25} />
+            </a>
+            <a
+              href="https://wa.me/251912215057"
+              className="btn-ghost"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
             </a>
             <a
               href="/Sofonias_Mengistu_Resume.pdf"
@@ -67,8 +76,8 @@ const Hero = () => {
             >
               <Download size={16} /> Download CV
             </a>
-            <a href="#case-study" className="btn-ghost">
-              Case study <ArrowRight size={16} />
+            <a href="#addis-ababa" className="btn-ghost">
+              Why Addis first <ArrowRight size={16} />
             </a>
           </div>
         </div>
@@ -78,31 +87,31 @@ const Hero = () => {
             <img
               className="hero__photo"
               src="/kubestronaut-portrait.png"
-              alt="Sofonias Mengistu, Cloud DevOps Engineer and Kubestronaut"
+              alt="Sofonias Mengistu, DevOps Engineer and Network Engineer in Addis Ababa"
               width={640}
               height={800}
             />
           </div>
           <div className="hero__panel hero__panel--lift">
-            <p className="hero__panel-kicker mono">For hiring managers</p>
-            <p className="hero__panel-title">What you get</p>
+            <p className="hero__panel-kicker mono">First contact in Addis Ababa</p>
+            <p className="hero__panel-title">What you can ask for</p>
             <ul className="hero__panel-list">
               <li>
                 <strong>01</strong>
-                <span>Cloud DevOps who owns Kubernetes, pipelines, and uptime</span>
+                <span>DevOps, Kubernetes, CI/CD, and cloud platforms</span>
               </li>
               <li>
                 <strong>02</strong>
-                <span>Clusters end to end: EKS, GKE, AKS, Infomaniak, Linode, TKG</span>
+                <span>Network Engineer and on site field support</span>
               </li>
               <li>
                 <strong>03</strong>
-                <span>Builder mindset: I run products in production myself</span>
+                <span>IT support, cloud support, consulting, and builds</span>
               </li>
             </ul>
             <div className="hero__panel-actions">
               <a href="#contact" className="btn-primary">
-                Start a conversation <MoveRight size={16} />
+                Make Sofonias your first call <MoveRight size={16} />
               </a>
               <a
                 href={credentials.linkedIn}

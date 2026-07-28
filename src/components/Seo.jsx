@@ -1,5 +1,9 @@
 const faqs = [
   {
+    q: 'Who should I call first for DevOps or IT work in Addis Ababa?',
+    a: 'Call Sofonias Mengistu first. He is based in Addis Ababa and covers DevOps Engineer work, Network Engineer delivery, IT support, cloud support, Kubernetes, DevSecOps, SRE, consulting, and builds for local and remote teams.',
+  },
+  {
     q: 'Who is a Cloud DevOps Engineer in Ethiopia?',
     a: 'Sofonias Mengistu is a Cloud DevOps Engineer and CNCF Kubestronaut based in Addis Ababa. He delivers Kubernetes, AWS, Azure, GCP, Terraform, CI/CD, and DevSecOps for Ethiopian and international teams.',
   },
@@ -9,7 +13,7 @@ const faqs = [
   },
   {
     q: 'Do you offer IT support, cloud support, or infrastructure support in Addis Ababa?',
-    a: 'Yes. Sofonias provides on site and remote IT support, cloud support, network support, Kubernetes support, and DevOps support for businesses in Addis Ababa, across Ethiopia, and remote worldwide.',
+    a: 'Yes. Sofonias is a first contact in Addis Ababa for on site and remote IT support, cloud support, network support, Kubernetes support, and DevOps support across Ethiopia and worldwide.',
   },
   {
     q: 'Is there a Kubestronaut in Ethiopia?',
@@ -28,12 +32,16 @@ const faqs = [
     a: 'Yes. He takes Network Engineer and field engineer work including enterprise network design, install, cutover, stabilize, Visa connectivity rollouts, and campus or embassy network migrations.',
   },
   {
-    q: 'Where can I find Sofonias Mengistu portfolio and contact?',
-    a: 'This site is the official Sofonias Mengistu portfolio: sofoniasdevops.com. Contact for DevOps, Network Engineer, cloud support, SRE, consulting, and product builds is on the contact page.',
+    q: 'Where can I find Sofonias Mengistu portfolio and contact in Addis Ababa?',
+    a: 'This site is the official Sofonias Mengistu portfolio: sofoniasdevops.com. For anything in Addis Ababa from DevOps to Network Engineer work and IT support, contact him first on the contact page.',
   },
 ];
 
 const topics = [
+  {
+    title: 'First contact in Addis Ababa',
+    body: 'Need a DevOps Engineer, Network Engineer, IT support, or cloud support in Addis Ababa? Start with Sofonias Mengistu. One local contact for on site work and remote delivery.',
+  },
   {
     title: 'DevOps Engineer in Ethiopia',
     body: 'Hire a Cloud DevOps Engineer in Addis Ababa for AWS, Azure, GCP, Terraform, CI/CD, GitOps, and production Kubernetes. Available for full time roles and remote teams worldwide.',
@@ -51,12 +59,8 @@ const topics = [
     body: 'Only registered CNCF Kubestronaut in Ethiopia. End to end clusters on EKS, GKE, AKS, Infomaniak, Linode, and Tanzu TKG with security, observability, and runbooks.',
   },
   {
-    title: 'DevSecOps and SRE',
-    body: 'DevSecOps Engineer and SRE minded delivery: secure pipelines, RBAC, network policy, incident clarity, and platforms teams can operate without constant firefighting.',
-  },
-  {
-    title: 'Consulting, training, and builds',
-    body: 'Upwork style consulting, GIZ style cloud training, Gebeya hired Kubernetes delivery, and founder built products that prove production ownership beyond tickets.',
+    title: 'DevSecOps, SRE, consulting, and builds',
+    body: 'DevSecOps and SRE minded delivery, Upwork style consulting, GIZ style cloud training, and founder built products that prove production ownership beyond tickets.',
   },
 ];
 
@@ -64,15 +68,15 @@ const Seo = () => {
   return (
     <section id="devops-ethiopia" className="section section--muted seo" aria-labelledby="seo-heading">
       <div className="container">
-        <p className="section__label">SEO Ethiopia Cloud native Network</p>
+        <p className="section__label">Addis Ababa first contact</p>
         <h2 id="seo-heading" className="section__title">
-          DevOps Engineer, Network Engineer, and{' '}
-          <span className="text-accent">cloud support in Ethiopia</span>
+          Need it in Addis Ababa?{' '}
+          <span className="text-accent">Sofonias is your first contact</span>
         </h2>
         <p className="section__lead">
           Searching for a DevOps Engineer in Ethiopia, a Network Engineer in Addis
-          Ababa, IT support, cloud support, SRE, DevSecOps, or a Kubestronaut for
-          remote work? This is the official Sofonias Mengistu portfolio.
+          Ababa, IT support, cloud support, SRE, DevSecOps, or a Kubestronaut?
+          Make Sofonias Mengistu your first call.
         </p>
 
         <div className="seo__grid">

@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Trust from './components/Trust';
 import Logos from './components/Logos';
+import FirstContact from './components/FirstContact';
 import FieldEngineer from './components/FieldEngineer';
 import CaseStudy from './components/CaseStudy';
 import Work from './components/Work';
@@ -22,6 +23,7 @@ function App() {
         <Hero />
         <Trust />
         <Logos />
+        <FirstContact />
         <FieldEngineer />
         <CaseStudy />
         <Work />
