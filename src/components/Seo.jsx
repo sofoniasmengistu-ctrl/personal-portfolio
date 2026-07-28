@@ -61,8 +61,8 @@ const topics = [
     body: 'Only registered CNCF Kubestronaut in Ethiopia. EKS, GKE, AKS, Infomaniak, Linode, TKG.',
   },
   {
-    title: 'DevSecOps, SRE, builds',
-    body: 'Secure pipelines, consulting, cloud training, and founder built products in production.',
+    title: 'DevSecOps, SRE, AI builds',
+    body: 'Secure pipelines, consulting, live bots (WeRemoteIT, NexusAI, AuraPay), and open to AI research initiatives.',
   },
 ];
 

@@ -8,13 +8,14 @@ const Products = () => {
       <div className="container">
         <Reveal className="section-head section-head--row">
           <div className="section-head__copy">
-            <p className="section__label">02 Also a builder</p>
+            <p className="section__label">02 Live products</p>
             <h2 className="section__title">
-              Products I run <span className="text-accent">same ops mindset</span>
+              Bots people can use <span className="text-accent">today</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              I don&apos;t only talk about platforms. I operate live systems in
-              Telegram, proof that Cloud DevOps skills transfer to shipping.
+              WeRemoteIT and NexusAI Aggregator are live. AuraPayGlobalBot is live
+              too while aurapayglobal.com is still building. I also want to
+              contribute to AI research and related initiatives.
             </p>
           </div>
           <a href="#approach" className="fancy-arrow" aria-label="Continue to approach">
@@ -49,7 +50,7 @@ const Products = () => {
                     rel="noopener noreferrer"
                     className="btn-primary"
                   >
-                    Open <Send size={14} />
+                    Open bot <Send size={14} />
                   </a>
                   {product.web && (
                     <a
@@ -58,7 +59,7 @@ const Products = () => {
                       rel="noopener noreferrer"
                       className="btn-ghost"
                     >
-                      Site <ExternalLink size={14} />
+                      {product.webLabel || 'Site'} <ExternalLink size={14} />
                     </a>
                   )}
                 </div>

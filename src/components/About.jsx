@@ -41,6 +41,8 @@ const highlights = [
   'AWS, Azure, GCP',
   'Prometheus and Grafana',
   'CI/CD and DevSecOps',
+  'AI chat products',
+  'AI research interest',
   'Trainer / mentor',
   'Networking',
 ];
@@ -58,8 +60,8 @@ const About = () => {
             </h2>
             <p className="section__lead section__lead--tight">
               DevSecOps Engineer, Cloud Engineer, Trainer, SRE enthusiast.
-              Kubestronaut. Also ships products so you know I own production,
-              not just tickets.
+              Kubestronaut. Runs live Telegram products (WeRemoteIT, NexusAI,
+              AuraPay bot) and is open to AI research and related initiatives.
             </p>
           </div>
           <a href="#contact" className="fancy-arrow" aria-label="Go to contact">
@@ -106,7 +108,9 @@ const About = () => {
               provisioning, hardening, CI/CD, RBAC, networking, and observability.
               Hired by Gebeya Inc. for that Kubernetes depth and assigned to a
               live telco TKG platform project. I also train teams (including GIZ)
-              and mentor on cloud, security, and cost optimization. Featured in{' '}
+              and mentor on cloud, security, and cost optimization. Outside client
+              work I run live AI chat products and want to contribute to AI
+              research or any serious AI initiative. Featured in{' '}
               <a href={credentials.cncfOrbit} target="_blank" rel="noopener noreferrer">
                 CNCF Kubestronaut in Orbit
               </a>

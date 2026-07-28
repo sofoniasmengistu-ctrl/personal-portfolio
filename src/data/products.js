@@ -2,10 +2,11 @@ export const products = [
   {
     id: 'weremoteit',
     name: 'WeRemoteIT',
-    tag: 'Hiring',
+    tag: 'Live · AI chat native',
     description:
-      'AI powered ATS for remote IT talent: screening and matching inside Telegram.',
+      'Live AI chat native product for remote IT talent. Open the Telegram bot and use it today.',
     web: 'https://weremoteit.com',
+    webLabel: 'Site',
     bot: '@WeRemoteITbot',
     botUrl: 'https://t.me/WeRemoteITbot',
     community: 'https://t.me/WeRemoteIT',
@@ -14,10 +15,11 @@ export const products = [
   {
     id: 'aurapay',
     name: 'AuraPay Global',
-    tag: 'Payments',
+    tag: 'Bot live · Site building',
     description:
-      'TON and USDT gateway in Telegram: send, swap, Stars, and merchant links.',
+      'AuraPayGlobalBot is live on Telegram for payments. The website aurapayglobal.com is under construction.',
     web: 'https://aurapayglobal.com',
+    webLabel: 'Site building',
     bot: '@AuraPayGlobalBot',
     botUrl: 'https://t.me/AuraPayGlobalBot',
     community: 'https://t.me/AuraPayGlobalCommunity',
@@ -25,11 +27,12 @@ export const products = [
   },
   {
     id: 'nexusai',
-    name: 'NexusAI',
-    tag: 'AI',
+    name: 'NexusAI Aggregator',
+    tag: 'Live',
     description:
-      'Hundreds of models in one bot: compare side by side, vision, voice, and more.',
+      'Live multi model AI bot. Compare models side by side with vision, voice, and more. Open and use it now.',
     web: null,
+    webLabel: null,
     bot: '@NexusAIAggregatorBot',
     botUrl: 'https://t.me/NexusAIAggregatorBot',
     community: 'https://t.me/NexusAIPromo',
@@ -43,21 +46,21 @@ export const companyChannels = [
     label: 'YouTube',
     handle: '@WeRemoteIT',
     href: 'https://www.youtube.com/@WeRemoteIT',
-    note: 'Product demos and updates',
+    note: 'Live product demos and updates',
   },
   {
     id: 'x',
     label: 'X',
     handle: '@WeRemoteIT',
     href: 'https://x.com/WeRemoteIT',
-    note: 'Announcements',
+    note: 'Live product announcements',
   },
   {
     id: 'medium',
     label: 'Medium',
     handle: '@sofonias_mengistu',
     href: 'https://medium.com/@sofonias_mengistu',
-    note: 'Engineering notes',
+    note: 'Engineering and AI notes',
   },
 ];
 

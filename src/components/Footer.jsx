@@ -118,6 +118,7 @@ const Footer = () => {
             <ul className="site-footer__offer">
               <li>Hourly consulting and monthly retainer</li>
               <li>Full time Cloud DevOps and Network Engineer roles</li>
+              <li>AI research, AI initiatives, and live product builds</li>
               <li>On site Addis Ababa or remote delivery</li>
             </ul>
           </Reveal>
@@ -139,7 +140,7 @@ const Footer = () => {
           </nav>
 
           <div className="site-footer__company">
-            <span className="mono">WeRemoteIT</span>
+            <span className="mono">Live products</span>
             {companyChannels.map((c) => (
               <a key={c.id} href={c.href} target="_blank" rel="noopener noreferrer">
                 {c.label}

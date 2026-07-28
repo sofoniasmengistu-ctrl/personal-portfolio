@@ -11,12 +11,12 @@ const pillars = [
   {
     num: '02',
     title: 'Production ownership',
-    body: 'I run live products myself, so I design infra the way operators actually need it.',
+    body: 'I run live bots and products myself, including WeRemoteIT AI chat native, so I design infra the way operators actually need it.',
   },
   {
     num: '03',
-    title: 'Multi cloud delivery',
-    body: 'AWS, Azure, GCP with Terraform, GitOps, and DevSecOps for teams that ship.',
+    title: 'Multi cloud and AI',
+    body: 'AWS, Azure, GCP with Terraform, GitOps, and DevSecOps. Open to AI research and initiatives that need real platform craft.',
   },
 ];
 
@@ -47,7 +47,7 @@ const Approach = () => {
 
         <Reveal className="band band--next" delay={120}>
           <div className="band__head">
-            <h3 className="band__title">WeRemoteIT channels</h3>
+            <h3 className="band__title">WeRemoteIT (live) channels</h3>
           </div>
           <div className="split-row split-row--3">
             {companyChannels.map((channel) => (
