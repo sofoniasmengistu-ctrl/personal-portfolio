@@ -634,6 +634,7 @@ h1, h2, h3, h4 {
   background: #1a0a14;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
   aspect-ratio: 16 / 9;
+  position: relative;
 }
 
 .hero__video {
@@ -642,6 +643,30 @@ h1, h2, h3, h4 {
   display: block;
   object-fit: cover;
   background: #1a0a14;
+}
+
+.hero__watch-full {
+  position: absolute;
+  left: 50%;
+  bottom: 0.9rem;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(10, 8, 12, 0.72);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.hero__watch-full:hover {
+  background: rgba(229, 0, 79, 0.9);
+  transform: translateX(-50%) translateY(-1px);
 }
 
 .hero__visual {
@@ -797,6 +822,128 @@ h1, h2, h3, h4 {
     width: 34%;
     right: 0;
   }
+}
+
+/* ——— Logo trust row ——— */
+.logos {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+  padding-block: 1.75rem;
+}
+
+.logos__eyebrow {
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.logos__track {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  justify-content: flex-start;
+  padding-bottom: 0.25rem;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.logos__track::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 860px) {
+  .logos__track {
+    justify-content: center;
+    overflow: visible;
+    flex-wrap: wrap;
+  }
+}
+
+.logos__item {
+  flex: 0 0 auto;
+  min-width: 7.5rem;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface-muted);
+  text-align: center;
+}
+
+.logos__name {
+  display: block;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.logos__note {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* ——— Case study ——— */
+.case-study {
+  background: var(--surface);
+}
+
+.case-study__steps {
+  display: grid;
+  gap: 0.85rem;
+}
+
+@media (min-width: 900px) {
+  .case-study__steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+.case-study__step {
+  padding: 1.4rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-muted);
+  border-top: 3px solid var(--magenta);
+}
+
+.case-study__step-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--magenta);
+  margin-bottom: 0.65rem;
+}
+
+.case-study__step-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.55rem;
+  color: var(--ink);
+}
+
+.case-study__step-body {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.case-study__tools {
+  margin-top: 1.75rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--line);
+}
+
+.case-study__tools-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
 }
 
 /* ——— Trust metrics ——— */

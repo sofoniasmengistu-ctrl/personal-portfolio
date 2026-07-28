@@ -1,7 +1,18 @@
-import { ArrowRight, Check, Download, Linkedin, MoveRight } from 'lucide-react';
+import { useRef, useState } from 'react';
+import { ArrowRight, Check, Download, Linkedin, MoveRight, Volume2 } from 'lucide-react';
 import { credentials } from '../data/products';
 
 const Hero = () => {
+  const shortRef = useRef(null);
+  const [showFull, setShowFull] = useState(false);
+
+  const openFull = () => {
+    setShowFull(true);
+    if (shortRef.current) {
+      shortRef.current.pause();
+    }
+  };
+
   return (
     <section id="home" className="hero">
       <div className="container hero__stage">
@@ -67,24 +78,47 @@ const Hero = () => {
             >
               <Download size={16} /> Download CV
             </a>
-            <a href="#work" className="btn-ghost">
-              Engineering work <ArrowRight size={16} />
+            <a href="#case-study" className="btn-ghost">
+              Case study <ArrowRight size={16} />
             </a>
           </div>
         </div>
 
         <aside className="hero__aside">
           <div className="hero__media hero__visual--lift">
-            <video
-              className="hero__video"
-              controls
-              playsInline
-              preload="metadata"
-              poster="/intro-poster.jpg"
-              aria-label="Introduction video from Sofonias Mengistu, Cloud DevOps Engineer"
-            >
-              <source src="/intro.mp4" type="video/mp4" />
-            </video>
+            {!showFull ? (
+              <>
+                <video
+                  ref={shortRef}
+                  className="hero__video"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster="/intro-poster.jpg"
+                  aria-label="Short muted introduction from Sofonias Mengistu"
+                >
+                  <source src="/intro-short.mp4" type="video/mp4" />
+                </video>
+                <button type="button" className="hero__watch-full" onClick={openFull}>
+                  <Volume2 size={16} />
+                  Watch full intro
+                </button>
+              </>
+            ) : (
+              <video
+                className="hero__video"
+                controls
+                autoPlay
+                playsInline
+                preload="metadata"
+                poster="/intro-poster.jpg"
+                aria-label="Full introduction video from Sofonias Mengistu"
+              >
+                <source src="/intro.mp4" type="video/mp4" />
+              </video>
+            )}
           </div>
           <div className="hero__panel hero__panel--lift">
             <p className="hero__panel-kicker mono">For hiring managers</p>
