@@ -49,6 +49,7 @@ const Header = () => {
     <header className="site-header">
       <div className="container site-header__inner">
         <a href="#home" className="brand">
+          <img src="/brand-mark.svg" alt="" className="brand__mark" width="28" height="28" />
           Sofonias<span>^</span>
         </a>
 
