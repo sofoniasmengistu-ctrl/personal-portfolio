@@ -134,19 +134,35 @@ export const trustMetrics = [
   },
   {
     value: '16+',
+    count: 16,
+    suffix: '+',
     label: 'Years in IT / DevOps',
     href: null,
   },
   {
     value: '35+',
+    count: 35,
+    suffix: '+',
     label: 'Companies delivered as field engineer',
     href: null,
   },
   {
     value: '29k+',
+    count: 29,
+    suffix: 'k+',
     label: 'LinkedIn followers',
     href: 'https://www.linkedin.com/in/sofonias-mengistu-eng/',
   },
+];
+
+/** Full cert picture for trust strip */
+export const trustCertifications = [
+  'Kubestronaut (KCNA · KCSA · CKA · CKAD · CKS)',
+  'Azure — all certifications',
+  'AWS Cloud Engineer',
+  'CCNA',
+  'CCNP',
+  'CCNA Security',
 ];
 
 /** Selected roles from LinkedIn experience */

@@ -24,9 +24,9 @@ const timeline = [
 
 const highlights = [
   'Kubestronaut (KCNA KCSA CKA CKAD CKS)',
-  '12× Azure',
-  'AWS Solutions Architect',
-  'Cisco CCNA / CCNP / Security',
+  'Azure — all certifications',
+  'AWS Cloud Engineer',
+  'CCNA · CCNP · CCNA Security',
   'Tanzu TKG',
   'Kubernetes',
   'Terraform',

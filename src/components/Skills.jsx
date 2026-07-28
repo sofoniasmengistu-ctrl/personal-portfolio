@@ -1,8 +1,8 @@
 const highlights = [
   'Kubestronaut',
-  '12× Azure',
-  'AWS Architect',
-  'Cisco Security',
+  'Azure — all certs',
+  'AWS Cloud Engineer',
+  'CCNA · CCNP · Security',
   'Kubernetes',
   'Terraform',
   'AWS · Azure · GCP',
