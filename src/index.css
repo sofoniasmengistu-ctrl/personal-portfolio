@@ -465,6 +465,20 @@ h1, h2, h3, h4 {
   margin-left: 0.5rem;
 }
 
+.nav-desktop a.btn-dark,
+.nav-desktop a.btn-dark:hover,
+.nav-mobile a.btn-dark,
+.nav-mobile a.btn-dark:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+.nav-desktop a.btn-dark:hover,
+.nav-mobile a.btn-dark:hover {
+  background: #000;
+  color: #fff;
+}
+
 .nav-toggle {
   color: var(--ink);
   display: flex;
