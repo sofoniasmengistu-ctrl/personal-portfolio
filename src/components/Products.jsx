@@ -1,11 +1,12 @@
 import { ExternalLink, MoveRight, Send } from 'lucide-react';
 import { products } from '../data/products';
+import { Reveal } from './Reveal';
 
 const Products = () => {
   return (
-    <section id="products" className="section products">
+    <section id="products" className="section section--tight products">
       <div className="container">
-        <div className="section-head section-head--row">
+        <Reveal className="section-head section-head--row">
           <div className="section-head__copy">
             <p className="section__label">02 Also a builder</p>
             <h2 className="section__title">
@@ -23,46 +24,48 @@ const Products = () => {
               <MoveRight className="fancy-arrow__tip" size={22} strokeWidth={2.25} />
             </span>
           </a>
-        </div>
+        </Reveal>
 
-        <p className="band__meta mono h-track-hint">Swipe cards on mobile</p>
-        <div className="h-track products__track">
-          {products.map((product) => (
-            <article key={product.id} className="product-panel h-track__item">
-              <p className="product-panel__tag">{product.tag}</p>
-              <h3 className="product-panel__title">{product.name}</h3>
-              <p className="product-panel__desc">{product.description}</p>
-              <div className="product-panel__meta">
-                <a href={product.botUrl} target="_blank" rel="noopener noreferrer">
-                  {product.bot}
-                </a>
-                <a href={product.community} target="_blank" rel="noopener noreferrer">
-                  {product.communityLabel}
-                </a>
-              </div>
-              <div className="product-panel__actions">
-                <a
-                  href={product.botUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
-                  Open <Send size={14} />
-                </a>
-                {product.web && (
+        <Reveal delay={80}>
+          <p className="band__meta mono h-track-hint">Swipe cards on mobile</p>
+          <div className="h-track products__track">
+            {products.map((product) => (
+              <article key={product.id} className="product-panel h-track__item">
+                <p className="product-panel__tag">{product.tag}</p>
+                <h3 className="product-panel__title">{product.name}</h3>
+                <p className="product-panel__desc">{product.description}</p>
+                <div className="product-panel__meta">
+                  <a href={product.botUrl} target="_blank" rel="noopener noreferrer">
+                    {product.bot}
+                  </a>
+                  <a href={product.community} target="_blank" rel="noopener noreferrer">
+                    {product.communityLabel}
+                  </a>
+                </div>
+                <div className="product-panel__actions">
                   <a
-                    href={product.web}
+                    href={product.botUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-ghost"
+                    className="btn-primary"
                   >
-                    Site <ExternalLink size={14} />
+                    Open <Send size={14} />
                   </a>
-                )}
-              </div>
-            </article>
-          ))}
-        </div>
+                  {product.web && (
+                    <a
+                      href={product.web}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-ghost"
+                    >
+                      Site <ExternalLink size={14} />
+                    </a>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );

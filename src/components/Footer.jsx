@@ -1,6 +1,7 @@
 import { Github, Linkedin, Mail, MessageCircle, Send } from 'lucide-react';
 import { companyChannels } from '../data/products';
 import ContactForm from './ContactForm';
+import { Reveal } from './Reveal';
 
 /** Logo-only quick links, no repeated phone text on screen */
 const socialLinks = [
@@ -52,35 +53,39 @@ const Footer = () => {
   return (
     <footer id="contact" className="contact">
       <div className="container">
-        <p className="section__label" style={{ textAlign: 'center' }}>
-          05 Contact Addis Ababa
-        </p>
-        <h2 className="section__title" style={{ textAlign: 'center' }}>
-          Make Sofonias your <span className="text-accent">first contact</span>
-        </h2>
-        <p className="section__lead" style={{ margin: '0 auto 1.5rem', textAlign: 'center' }}>
-          Need DevOps, Network Engineer help, IT support, cloud support, or a
-          build in Addis Ababa? Reach Sofonias first. Form, WhatsApp, Telegram,
-          or call.
-        </p>
+        <Reveal>
+          <p className="section__label" style={{ textAlign: 'center' }}>
+            05 Contact Addis Ababa
+          </p>
+          <h2 className="section__title" style={{ textAlign: 'center' }}>
+            Make Sofonias your <span className="text-accent">first contact</span>
+          </h2>
+          <p className="section__lead" style={{ margin: '0 auto 1.15rem', textAlign: 'center' }}>
+            Need DevOps, Network Engineer help, IT support, cloud support, or a
+            build in Addis Ababa? Reach Sofonias first. Form, WhatsApp, Telegram,
+            or call.
+          </p>
+        </Reveal>
 
-        <nav className="contact__icons" aria-label="Direct contact">
-          {socialLinks.map(({ id, label, href, Icon }) => (
-            <a
-              key={id}
-              href={href}
-              target={href.startsWith('mailto:') ? undefined : '_blank'}
-              rel={href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
-              className="contact__icon"
-              aria-label={label}
-              title={label}
-            >
-              <Icon size={22} />
-            </a>
-          ))}
-        </nav>
+        <Reveal delay={60}>
+          <nav className="contact__icons" aria-label="Direct contact">
+            {socialLinks.map(({ id, label, href, Icon }) => (
+              <a
+                key={id}
+                href={href}
+                target={href.startsWith('mailto:') ? undefined : '_blank'}
+                rel={href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+                className="contact__icon"
+                aria-label={label}
+                title={label}
+              >
+                <Icon size={22} />
+              </a>
+            ))}
+          </nav>
+        </Reveal>
 
-        <div className="contact__layout">
+        <Reveal className="contact__layout" delay={100}>
           <ContactForm />
 
           <div className="contact__aside">
@@ -99,7 +104,7 @@ const Footer = () => {
               Download CV
             </a>
           </div>
-        </div>
+        </Reveal>
 
         <div className="contact__company">
           <p className="contact__company-label mono">Also building WeRemoteIT</p>

@@ -4,12 +4,13 @@ import {
   experienceHighlights,
   githubFeatured,
 } from '../data/products';
+import { Reveal } from './Reveal';
 
 const Work = () => {
   return (
-    <section id="work" className="section work">
+    <section id="work" className="section section--tight work">
       <div className="container">
-        <div className="section-head section-head--row">
+        <Reveal className="section-head section-head--row">
           <div className="section-head__copy">
             <p className="section__label">01 Cloud DevOps and Engineering</p>
             <h2 className="section__title">
@@ -33,9 +34,9 @@ const Work = () => {
               <MoveRight className="fancy-arrow__tip" size={22} strokeWidth={2.25} />
             </span>
           </a>
-        </div>
+        </Reveal>
 
-        <div className="band">
+        <Reveal className="band" delay={60}>
           <div className="band__head">
             <h3 className="band__title">Experience highlights</h3>
             <p className="band__meta mono h-track-hint">Swipe for more</p>
@@ -56,9 +57,9 @@ const Work = () => {
               </article>
             ))}
           </div>
-        </div>
+        </Reveal>
 
-        <div className="band band--next">
+        <Reveal className="band band--next" delay={80}>
           <div className="band__head">
             <h3 className="band__title">Delivery themes</h3>
             <span className="band__meta mono">Production + consulting</span>
@@ -79,9 +80,9 @@ const Work = () => {
               </article>
             ))}
           </div>
-        </div>
+        </Reveal>
 
-        <div className="band band--next">
+        <Reveal className="band band--next" delay={100}>
           <div className="band__head">
             <h3 className="band__title">GitHub selected engineering</h3>
             <a
@@ -111,7 +112,7 @@ const Work = () => {
               </a>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

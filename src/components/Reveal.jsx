@@ -1,7 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 
-/** Adds .is-inview when the element enters the viewport */
-export function Reveal({ children, className = '', as: Tag = 'div', delay = 0 }) {
+/** Scroll-triggered reveal with optional motion variants */
+export function Reveal({
+  children,
+  className = '',
+  as: Tag = 'div',
+  delay = 0,
+  variant = 'up',
+}) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -16,7 +22,7 @@ export function Reveal({ children, className = '', as: Tag = 'div', delay = 0 })
           observer.disconnect();
         }
       },
-      { threshold: 0.15, rootMargin: '0px 0px -8% 0px' },
+      { threshold: 0.12, rootMargin: '0px 0px -6% 0px' },
     );
 
     observer.observe(el);
@@ -26,7 +32,7 @@ export function Reveal({ children, className = '', as: Tag = 'div', delay = 0 })
   return (
     <Tag
       ref={ref}
-      className={`reveal ${visible ? 'is-inview' : ''} ${className}`.trim()}
+      className={`reveal reveal--${variant} ${visible ? 'is-inview' : ''} ${className}`.trim()}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}

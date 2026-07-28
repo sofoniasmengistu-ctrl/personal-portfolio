@@ -1,5 +1,6 @@
 import { ArrowUpRight, MoveRight } from 'lucide-react';
 import { credentials } from '../data/products';
+import { Reveal } from './Reveal';
 
 const timeline = [
   {
@@ -46,9 +47,9 @@ const highlights = [
 
 const About = () => {
   return (
-    <section id="about" className="section about">
+    <section id="about" className="section section--tight about">
       <div className="container">
-        <div className="section-head section-head--row">
+        <Reveal className="section-head section-head--row">
           <div className="section-head__copy">
             <p className="section__label">04 Profile</p>
             <h2 className="section__title">
@@ -68,10 +69,10 @@ const About = () => {
               <MoveRight className="fancy-arrow__tip" size={22} strokeWidth={2.25} />
             </span>
           </a>
-        </div>
+        </Reveal>
 
         <div className="about__layout about__layout--media">
-          <div className="about__media">
+          <Reveal className="about__media" variant="left">
             <img
               src="/kubestronaut-portrait.png"
               alt="Sofonias Mengistu in CNCF Kubestronaut jacket"
@@ -86,9 +87,9 @@ const About = () => {
               width={200}
               height={200}
             />
-          </div>
+          </Reveal>
 
-          <div className="about__bio">
+          <Reveal className="about__bio" delay={100} variant="right">
             <p className="about__roles">
               Cloud DevSecOps, Kubestronaut, Gebeya / Safaricom. Open to remote roles
             </p>
@@ -159,16 +160,16 @@ const About = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
 
         <div className="timeline">
-          {timeline.map((item) => (
-            <div key={item.year} className="timeline__item">
+          {timeline.map((item, i) => (
+            <Reveal key={item.year} className="timeline__item" delay={i * 80} variant="up">
               <span className="timeline__year">{item.year}</span>
               <h3 className="timeline__role">{item.role}</h3>
               <p className="timeline__desc">{item.description}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

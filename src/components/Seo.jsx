@@ -1,3 +1,5 @@
+import { Reveal } from './Reveal';
+
 const faqs = [
   {
     q: 'Who should I call first for DevOps or IT work in Addis Ababa?',
@@ -40,65 +42,66 @@ const faqs = [
 const topics = [
   {
     title: 'First contact in Addis Ababa',
-    body: 'Need a DevOps Engineer, Network Engineer, IT support, or cloud support in Addis Ababa? Start with Sofonias Mengistu. One local contact for on site work and remote delivery.',
+    body: 'Need DevOps, Network Engineer, IT support, or cloud support in Addis Ababa? Start with Sofonias.',
   },
   {
     title: 'DevOps Engineer in Ethiopia',
-    body: 'Hire a Cloud DevOps Engineer in Addis Ababa for AWS, Azure, GCP, Terraform, CI/CD, GitOps, and production Kubernetes. Available for full time roles and remote teams worldwide.',
+    body: 'Cloud DevOps for AWS, Azure, GCP, Terraform, CI/CD, and Kubernetes. Full time or remote.',
   },
   {
     title: 'Network Engineer in Ethiopia',
-    body: 'Network Engineer and field support for enterprise networks: design, install, cutover, and stabilize. Experience across GB, USA, Dubai, Singapore, and Pakistan via managed source partners.',
+    body: 'Field support across GB, USA, Dubai, Singapore, and Pakistan. Design, install, cutover, stabilize.',
   },
   {
-    title: 'IT support and cloud support',
-    body: 'Cloud support, infrastructure support, and IT support for companies that need reliable on site or remote help with networks, Kubernetes, monitoring, and day to day platform operations.',
+    title: 'IT and cloud support',
+    body: 'On site or remote help with networks, Kubernetes, monitoring, and day to day platform operations.',
   },
   {
-    title: 'Kubestronaut and Kubernetes Engineer',
-    body: 'Only registered CNCF Kubestronaut in Ethiopia. End to end clusters on EKS, GKE, AKS, Infomaniak, Linode, and Tanzu TKG with security, observability, and runbooks.',
+    title: 'Kubestronaut Ethiopia',
+    body: 'Only registered CNCF Kubestronaut in Ethiopia. EKS, GKE, AKS, Infomaniak, Linode, TKG.',
   },
   {
-    title: 'DevSecOps, SRE, consulting, and builds',
-    body: 'DevSecOps and SRE minded delivery, Upwork style consulting, GIZ style cloud training, and founder built products that prove production ownership beyond tickets.',
+    title: 'DevSecOps, SRE, builds',
+    body: 'Secure pipelines, consulting, cloud training, and founder built products in production.',
   },
 ];
 
 const Seo = () => {
   return (
-    <section id="devops-ethiopia" className="section section--muted seo" aria-labelledby="seo-heading">
+    <section id="devops-ethiopia" className="section section--tight seo" aria-labelledby="seo-heading">
       <div className="container">
-        <p className="section__label">Addis Ababa first contact</p>
-        <h2 id="seo-heading" className="section__title">
-          Need it in Addis Ababa?{' '}
-          <span className="text-accent">Sofonias is your first contact</span>
-        </h2>
-        <p className="section__lead">
-          Searching for a DevOps Engineer in Ethiopia, a Network Engineer in Addis
-          Ababa, IT support, cloud support, SRE, DevSecOps, or a Kubestronaut?
-          Make Sofonias Mengistu your first call.
-        </p>
+        <Reveal>
+          <p className="section__label">Addis Ababa first contact</p>
+          <h2 id="seo-heading" className="section__title">
+            Need it in Addis Ababa?{' '}
+            <span className="text-accent">Sofonias is your first contact</span>
+          </h2>
+          <p className="section__lead">
+            Searching for DevOps, Network Engineer, IT support, cloud support, or a
+            Kubestronaut in Ethiopia? Make Sofonias Mengistu your first call.
+          </p>
+        </Reveal>
 
         <div className="seo__grid">
-          {topics.map((topic) => (
-            <article key={topic.title} className="seo__card">
+          {topics.map((topic, i) => (
+            <Reveal key={topic.title} className="seo__card" delay={i * 60} variant="up">
               <h3>{topic.title}</h3>
               <p>{topic.body}</p>
-            </article>
+            </Reveal>
           ))}
         </div>
 
-        <div className="seo__faq">
+        <Reveal className="seo__faq">
           <h3 className="seo__faq-title">Frequently asked questions</h3>
-          <dl className="seo__faq-list">
+          <div className="seo__faq-list">
             {faqs.map((item) => (
-              <div key={item.q} className="seo__faq-item">
-                <dt>{item.q}</dt>
-                <dd>{item.a}</dd>
-              </div>
+              <details key={item.q} className="seo__faq-item">
+                <summary>{item.q}</summary>
+                <p>{item.a}</p>
+              </details>
             ))}
-          </dl>
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

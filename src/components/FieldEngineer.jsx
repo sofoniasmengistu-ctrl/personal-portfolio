@@ -1,5 +1,6 @@
 import { Check, MoveRight, Plus } from 'lucide-react';
 import { CountUp } from './CountUp';
+import { Reveal } from './Reveal';
 
 const regions = [
   'Great Britain',
@@ -49,76 +50,84 @@ const FieldEngineer = () => {
         <div className="field__veil" aria-hidden="true" />
 
         <div className="container field__inner">
-          <p className="field__label mono">Network Engineer and field support</p>
+          <Reveal>
+            <p className="field__label mono">Network Engineer and field support</p>
 
-          <div className="field__layout">
-            <div className="field__intro">
-              <div className="field__metric" aria-label="37 tech companies">
-                <span className="field__metric-value">
-                  <CountUp end={37} suffix="" />
-                </span>
-                <span className="field__metric-label">tech companies</span>
+            <div className="field__layout">
+              <div className="field__intro">
+                <div className="field__metric" aria-label="37 tech companies">
+                  <span className="field__metric-value">
+                    <CountUp end={37} suffix="" />
+                  </span>
+                  <span className="field__metric-label">tech companies</span>
+                </div>
+
+                <div className="field__intro-copy">
+                  <h2 className="field__title">
+                    Network Engineer for on site support across five regions
+                  </h2>
+                  <p className="field__lead">
+                    Managed source partners engaged me for enterprise network work.
+                    Full Network Engineer delivery, not ticket only support.
+                  </p>
+                </div>
               </div>
 
-              <div className="field__intro-copy">
-                <h2 className="field__title">
-                  Network Engineer for on site support across five regions
-                </h2>
-                <p className="field__lead">
-                  Managed source partners engaged me for enterprise network work.
-                  Full Network Engineer delivery, not ticket only support.
-                </p>
-              </div>
-            </div>
+              <div className="field__blocks">
+                <div className="field__block">
+                  <p className="field__block-label mono">Regions covered</p>
+                  <ul className="field__checks">
+                    {regions.map((region) => (
+                      <li key={region} className="field__check">
+                        <span className="field__check-mark" aria-hidden="true">
+                          <Check size={14} strokeWidth={3} />
+                        </span>
+                        <span>{region}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-            <div className="field__blocks">
-              <div className="field__block">
-                <p className="field__block-label mono">Regions covered</p>
-                <ul className="field__checks">
-                  {regions.map((region) => (
-                    <li key={region} className="field__check">
-                      <span className="field__check-mark" aria-hidden="true">
-                        <Check size={14} strokeWidth={3} />
-                      </span>
-                      <span>{region}</span>
-                    </li>
+                <div className="field__block">
+                  <p className="field__block-label mono">What I delivered</p>
+                  <ul className="field__pluses">
+                    {scope.map((item) => (
+                      <li key={item} className="field__plus">
+                        <span className="field__plus-mark" aria-hidden="true">
+                          <Plus size={14} strokeWidth={3} />
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="field__projects-wrap">
+                <p className="field__block-label mono">Standout projects</p>
+                <div className="field__projects">
+                  {projects.map((project, i) => (
+                    <Reveal
+                      key={project.kicker}
+                      as="article"
+                      className="field__project"
+                      delay={80 + i * 90}
+                      variant="up"
+                    >
+                      <p className="field__project-kicker mono">{project.kicker}</p>
+                      <h3 className="field__project-title">{project.title}</h3>
+                      <p className="field__project-body">{project.body}</p>
+                    </Reveal>
                   ))}
-                </ul>
+                </div>
               </div>
 
-              <div className="field__block">
-                <p className="field__block-label mono">What I delivered</p>
-                <ul className="field__pluses">
-                  {scope.map((item) => (
-                    <li key={item} className="field__plus">
-                      <span className="field__plus-mark" aria-hidden="true">
-                        <Plus size={14} strokeWidth={3} />
-                      </span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <a href="#contact" className="btn-primary field__cta">
+                Talk network engineering
+                <MoveRight size={16} />
+              </a>
             </div>
-
-            <div className="field__projects-wrap">
-              <p className="field__block-label mono">Standout projects</p>
-              <div className="field__projects">
-                {projects.map((project) => (
-                  <article key={project.kicker} className="field__project">
-                    <p className="field__project-kicker mono">{project.kicker}</p>
-                    <h3 className="field__project-title">{project.title}</h3>
-                    <p className="field__project-body">{project.body}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-
-            <a href="#contact" className="btn-primary field__cta">
-              Talk network engineering
-              <MoveRight size={16} />
-            </a>
-          </div>
+          </Reveal>
         </div>
       </div>
 

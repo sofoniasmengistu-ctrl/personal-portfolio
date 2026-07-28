@@ -89,7 +89,7 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="section pricing">
+    <section id="pricing" className="section section--tight pricing">
       <div className="container">
         <Reveal className="section-head section-head--row">
           <div className="section-head__copy">

@@ -1,4 +1,5 @@
 import { MoveRight } from 'lucide-react';
+import { Reveal } from './Reveal';
 
 const steps = [
   {
@@ -36,9 +37,9 @@ const tools = [
 
 const CaseStudy = () => {
   return (
-    <section id="case-study" className="section case-study">
+    <section id="case-study" className="section section--tight case-study">
       <div className="container">
-        <div className="section-head section-head--row">
+        <Reveal className="section-head section-head--row">
           <div className="section-head__copy">
             <p className="section__label">Flagship case study</p>
             <h2 className="section__title">
@@ -58,9 +59,9 @@ const CaseStudy = () => {
               <MoveRight className="fancy-arrow__tip" size={22} strokeWidth={2.25} />
             </span>
           </a>
-        </div>
+        </Reveal>
 
-        <div className="case-study__meta">
+        <Reveal className="case-study__meta" delay={80}>
           <div className="case-study__meta-item">
             <p className="case-study__meta-label mono">Employer</p>
             <p className="case-study__meta-value">Gebeya Inc.</p>
@@ -73,19 +74,19 @@ const CaseStudy = () => {
             <p className="case-study__meta-label mono">Role</p>
             <p className="case-study__meta-value">DevOps Engineer</p>
           </div>
-        </div>
+        </Reveal>
 
         <div className="case-study__steps">
-          {steps.map((step) => (
-            <article key={step.label} className="case-study__step">
+          {steps.map((step, i) => (
+            <Reveal key={step.label} as="article" className="case-study__step" delay={i * 100} variant="up">
               <p className="case-study__step-label mono">{step.label}</p>
               <h3 className="case-study__step-title">{step.title}</h3>
               <p className="case-study__step-body">{step.body}</p>
-            </article>
+            </Reveal>
           ))}
         </div>
 
-        <div className="case-study__tools">
+        <Reveal className="case-study__tools" delay={120}>
           <p className="case-study__tools-label mono">Stack</p>
           <div className="skills__chips">
             {tools.map((tool) => (
@@ -94,7 +95,7 @@ const CaseStudy = () => {
               </span>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

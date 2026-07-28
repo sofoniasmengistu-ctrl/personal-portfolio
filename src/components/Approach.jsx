@@ -1,5 +1,6 @@
 import { ExternalLink } from 'lucide-react';
 import { companyChannels } from '../data/products';
+import { Reveal } from './Reveal';
 
 const pillars = [
   {
@@ -23,26 +24,28 @@ const Approach = () => {
   return (
     <section id="approach" className="section section--tight approach section--muted">
       <div className="container">
-        <p className="section__label">03 How I operate</p>
-        <h2 className="section__title">
-          DevOps craft that <span className="text-accent">stays invisible</span>
-        </h2>
-        <p className="section__lead">
-          Same discipline on client platforms and my own products: secure,
-          automated, observable.
-        </p>
+        <Reveal>
+          <p className="section__label">03 How I operate</p>
+          <h2 className="section__title">
+            DevOps craft that <span className="text-accent">stays invisible</span>
+          </h2>
+          <p className="section__lead">
+            Same discipline on client platforms and my own products: secure,
+            automated, observable.
+          </p>
+        </Reveal>
 
         <div className="split-row">
-          {pillars.map((item) => (
-            <div key={item.num} className="pillar">
+          {pillars.map((item, i) => (
+            <Reveal key={item.num} className="pillar" delay={i * 90} variant="up">
               <span className="pillar__num mono">{item.num}</span>
               <h3 className="pillar__title">{item.title}</h3>
               <p className="pillar__body">{item.body}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="band band--next">
+        <Reveal className="band band--next" delay={120}>
           <div className="band__head">
             <h3 className="band__title">WeRemoteIT channels</h3>
           </div>
@@ -63,7 +66,7 @@ const Approach = () => {
               </a>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
