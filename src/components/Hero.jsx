@@ -71,11 +71,18 @@ const Hero = () => {
         </div>
 
         <aside className="hero__aside">
-          <div
-            className="hero__visual hero__visual--lift"
-            role="img"
-            aria-label="Sofonias in CNCF Kubestronaut jacket"
-          />
+          <div className="hero__media hero__visual--lift">
+            <video
+              className="hero__video"
+              controls
+              playsInline
+              preload="metadata"
+              poster="/intro-poster.jpg"
+              aria-label="Introduction video from Sofonias Mengistu, Cloud DevOps Engineer"
+            >
+              <source src="/intro.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div className="hero__panel hero__panel--lift">
             <p className="hero__panel-kicker mono">For hiring managers</p>
             <p className="hero__panel-title">What you get</p>
