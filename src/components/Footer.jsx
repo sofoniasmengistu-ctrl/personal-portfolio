@@ -66,7 +66,7 @@ const Footer = () => {
 
             <div className="contact__socials">
               <a
-                href="https://www.linkedin.com/in/sofonias-mengistu-b5394179/"
+                href="https://www.linkedin.com/in/sofonias-mengistu-eng/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__social"

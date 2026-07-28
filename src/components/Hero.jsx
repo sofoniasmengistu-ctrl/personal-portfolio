@@ -33,22 +33,22 @@ const Hero = () => {
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>Only CNCF Kubestronaut in Ethiopia</strong>, featured in
-                Kubestronaut in Orbit
+                <strong>Gebeya · Safaricom Ethiopia</strong>: Tanzu Kubernetes
+                Grid, Terraform, CI/CD, monitoring
               </span>
             </li>
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>AWS · Azure · GCP</strong>: Terraform, CI/CD, GitOps,
-                DevSecOps, data platforms
+                <strong>Only CNCF Kubestronaut in Ethiopia</strong> (KCNA, KCSA,
+                CKA, CKAD, CKS)
               </span>
             </li>
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>30k+ LinkedIn · 97+ GitHub projects</strong>, and live
-                client delivery via Upwork
+                <strong>16+ years · 35+ companies · 29k+ LinkedIn</strong>, plus
+                GIZ cloud trainer and product founder
               </span>
             </li>
           </ul>

@@ -65,7 +65,7 @@ export const credentials = {
   kubestronautDirectory:
     'https://www.cncf.io/training/kubestronaut/?_sft_lf-country=et',
   kubestronautNote: 'Only registered Kubestronaut in Ethiopia · CNCF',
-  linkedIn: 'https://www.linkedin.com/in/sofonias-mengistu-b5394179/',
+  linkedIn: 'https://www.linkedin.com/in/sofonias-mengistu-eng/',
   github: 'https://github.com/Sofoniasm',
   cncfOrbit:
     'https://www.cncf.io/blog/2024/12/31/kubestronaut-in-orbit-sofonias-mengistu/',
@@ -129,7 +129,7 @@ export const clientChannels = [
 export const trustMetrics = [
   {
     value: 'Kubestronaut',
-    label: 'Only in Ethiopia · CNCF',
+    label: 'KCNA · KCSA · CKA · CKAD · CKS',
     href: 'https://www.cncf.io/training/kubestronaut/?_sft_lf-country=et',
   },
   {
@@ -138,14 +138,53 @@ export const trustMetrics = [
     href: null,
   },
   {
-    value: '97+',
-    label: 'GitHub engineering projects',
-    href: 'https://github.com/Sofoniasm',
+    value: '35+',
+    label: 'Companies delivered as field engineer',
+    href: null,
   },
   {
-    value: '30k+',
-    label: 'LinkedIn network',
-    href: 'https://www.linkedin.com/in/sofonias-mengistu-b5394179/',
+    value: '29k+',
+    label: 'LinkedIn followers',
+    href: 'https://www.linkedin.com/in/sofonias-mengistu-eng/',
+  },
+];
+
+/** Selected roles from LinkedIn experience */
+export const experienceHighlights = [
+  {
+    title: 'DevOps Engineer · Gebeya Inc.',
+    outcome:
+      'Assigned to Safaricom Ethiopia: Tanzu Kubernetes Grid clusters, lifecycle, Terraform IaC, CI/CD, RBAC, Prometheus/Grafana.',
+    tags: ['TKG', 'Terraform', 'CI/CD', 'Prometheus', 'RBAC'],
+    channel: 'Aug 2023 to Present · Addis Ababa',
+  },
+  {
+    title: 'Cloud Computing Trainer · GIZ',
+    outcome:
+      'Trained teams on AWS, Azure, and GCP: architecture, security, serverless, and cost aware cloud practice.',
+    tags: ['AWS', 'Azure', 'GCP', 'Training'],
+    channel: 'Jul 2023 to Nov 2023 · GIZ',
+  },
+  {
+    title: 'Senior DevOps · KodeKloud',
+    outcome:
+      'Hands on DevOps delivery (Project Nautilus): Ansible, Terraform, config management, and cross team delivery.',
+    tags: ['Ansible', 'Terraform', 'Linux', 'DevOps'],
+    channel: '2023 · KodeKloud Engineer path',
+  },
+  {
+    title: 'Cloud / DevOps · multi client delivery',
+    outcome:
+      'AWS, Azure, GCP IaC, CI/CD, Docker/Kubernetes, monitoring, security, and cost optimization for consulting clients.',
+    tags: ['AWS', 'Azure', 'GCP', 'Kubernetes'],
+    channel: 'Tefer · Excis · Tech Source · Orion',
+  },
+  {
+    title: 'Network & systems · ECX and field',
+    outcome:
+      'Field engineer for 35+ technology companies; network admin and IT support at Ethiopia Commodity Exchange.',
+    tags: ['Cisco', 'LAN/WAN', 'Security', 'On prem'],
+    channel: '2010 to 2018 · ECX + field',
   },
 ];
 
@@ -201,27 +240,31 @@ export const githubFeatured = [
  */
 export const clientDeliveries = [
   {
-    title: 'Multi-cloud CI/CD & Kubernetes',
-    outcome: 'Pipelines, GitOps, and cluster operations for production teams.',
+    title: 'Safaricom Ethiopia · TKG Kubernetes',
+    outcome:
+      'Via Gebeya: cluster lifecycle, Terraform provisioning, CI/CD integration, security policies, monitoring.',
+    tags: ['Tanzu TKG', 'Safaricom', 'GitOps'],
+    channel: 'Gebeya Inc. · production',
+  },
+  {
+    title: 'Multi cloud CI/CD & platforms',
+    outcome:
+      'Pipelines and infra automation on AWS, Azure, and GCP for consulting and Upwork style delivery.',
     tags: ['Kubernetes', 'ArgoCD', 'Jenkins', 'GitLab CI'],
-    channel: 'Upwork · Consulting',
+    channel: 'Consulting · client delivery',
   },
   {
-    title: 'AWS production infrastructure',
-    outcome: 'Secure VPC layouts, RDS, runners, backups delivered as code.',
-    tags: ['AWS', 'Terraform', 'Security'],
-    channel: 'Upwork · Client delivery',
+    title: 'Cloud training for teams (GIZ)',
+    outcome:
+      'Structured AWS / Azure / GCP programs: fundamentals through architecture, security, and cost control.',
+    tags: ['Trainer', 'AWS', 'Azure', 'GCP'],
+    channel: 'GIZ · capacity building',
   },
   {
-    title: 'Azure data engineering platforms',
-    outcome: 'Automated lakehouse stacks for analytics and streaming workloads.',
-    tags: ['Azure', 'Databricks', 'Data Factory'],
-    channel: 'Freelance · Platform build',
-  },
-  {
-    title: 'Network & hybrid cloud hardening',
-    outcome: 'From Cisco-era networks to hybrid cloud and zero-trust patterns.',
-    tags: ['Networking', 'VPN', 'IAM'],
-    channel: 'Field + remote',
+    title: 'Enterprise networking to cloud',
+    outcome:
+      '35+ company field delivery plus ECX network/systems foundation before the DevOps transition.',
+    tags: ['Networking', 'Cisco', 'Hybrid cloud'],
+    channel: 'Field + ECX',
   },
 ];

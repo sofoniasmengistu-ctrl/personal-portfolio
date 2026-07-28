@@ -1,5 +1,9 @@
-import { ArrowUpRight, Github, MoveRight } from 'lucide-react';
-import { clientDeliveries, githubFeatured } from '../data/products';
+import { ArrowUpRight, MoveRight } from 'lucide-react';
+import {
+  clientDeliveries,
+  experienceHighlights,
+  githubFeatured,
+} from '../data/products';
 
 const Work = () => {
   return (
@@ -12,17 +16,17 @@ const Work = () => {
               The work hiring managers <span className="text-accent">should see</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              Production infra, Kubernetes, and platform delivery: open source and
-              client work. This is the Cloud DevOps profile.
+              Real roles from LinkedIn: Safaricom TKG via Gebeya, cloud training,
+              multi cloud delivery, and 16+ years from networks to Kubernetes.
             </p>
           </div>
           <a
-            href="https://github.com/Sofoniasm"
+            href="https://www.linkedin.com/in/sofonias-mengistu-eng/"
             target="_blank"
             rel="noopener noreferrer"
             className="fancy-arrow"
           >
-            <span className="fancy-arrow__label">GitHub</span>
+            <span className="fancy-arrow__label">LinkedIn</span>
             <span className="fancy-arrow__track" aria-hidden="true">
               <span className="fancy-arrow__line" />
               <MoveRight className="fancy-arrow__tip" size={22} strokeWidth={2.25} />
@@ -32,8 +36,61 @@ const Work = () => {
 
         <div className="band">
           <div className="band__head">
-            <h3 className="band__title">GitHub · selected engineering</h3>
+            <h3 className="band__title">Experience highlights</h3>
             <p className="band__meta mono h-track-hint">Swipe for more</p>
+          </div>
+          <div className="h-track">
+            {experienceHighlights.map((job) => (
+              <article key={job.title} className="work-card h-track__item">
+                <span className="work-card__channel">{job.channel}</span>
+                <h3 className="work-card__title">{job.title}</h3>
+                <p className="work-card__desc">{job.outcome}</p>
+                <div className="work-card__tags">
+                  {job.tags.map((tag) => (
+                    <span key={tag} className="work-card__tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="band band--next">
+          <div className="band__head">
+            <h3 className="band__title">Delivery themes</h3>
+            <span className="band__meta mono">Production + consulting</span>
+          </div>
+          <div className="h-track">
+            {clientDeliveries.map((job) => (
+              <article key={job.title} className="work-card h-track__item">
+                <span className="work-card__channel">{job.channel}</span>
+                <h3 className="work-card__title">{job.title}</h3>
+                <p className="work-card__desc">{job.outcome}</p>
+                <div className="work-card__tags">
+                  {job.tags.map((tag) => (
+                    <span key={tag} className="work-card__tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="band band--next">
+          <div className="band__head">
+            <h3 className="band__title">GitHub · selected engineering</h3>
+            <a
+              href="https://github.com/Sofoniasm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="band__link"
+            >
+              97+ projects <ArrowUpRight size={14} />
+            </a>
           </div>
           <div className="h-track">
             {githubFeatured.map((repo) => (
@@ -51,29 +108,6 @@ const Work = () => {
                   View repo <ArrowUpRight size={12} />
                 </span>
               </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="band band--next">
-          <div className="band__head">
-            <h3 className="band__title">Upwork · consulting delivery</h3>
-            <span className="band__meta mono">Hire for the same craft</span>
-          </div>
-          <div className="h-track">
-            {clientDeliveries.map((job) => (
-              <article key={job.title} className="work-card h-track__item">
-                <span className="work-card__channel">{job.channel}</span>
-                <h3 className="work-card__title">{job.title}</h3>
-                <p className="work-card__desc">{job.outcome}</p>
-                <div className="work-card__tags">
-                  {job.tags.map((tag) => (
-                    <span key={tag} className="work-card__tag">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </article>
             ))}
           </div>
         </div>

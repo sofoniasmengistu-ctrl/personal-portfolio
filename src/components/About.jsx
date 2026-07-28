@@ -4,35 +4,39 @@ import { credentials } from '../data/products';
 const timeline = [
   {
     year: 'Now',
-    role: 'Cloud DevOps · Kubestronaut · Open to roles',
+    role: 'DevOps · Gebeya / Safaricom TKG',
     description:
-      'Seeking Cloud DevOps roles. Consulting via Upwork. Kubernetes delivery (Safaricom / Gebeya). Products in production.',
+      'Tanzu Kubernetes Grid for Safaricom Ethiopia: clusters, Terraform, CI/CD, security, Prometheus/Grafana. Open to remote DevSecOps/SRE roles.',
+  },
+  {
+    year: '2018 to 23',
+    role: 'Cloud / DevOps · multi client',
+    description:
+      'AWS, Azure, GCP, KodeKloud Senior DevOps, GIZ cloud trainer, consulting and managed services delivery.',
   },
   {
     year: '2010 to 18',
-    role: 'Network & systems · ECX',
-    description: 'On-prem infrastructure and security at Ethiopia Commodity Exchange.',
-  },
-  {
-    year: '2010',
-    role: 'BSc Computer Science',
-    description: 'HiLCoE School of Computer Science and Technology.',
+    role: 'Network & systems · ECX + field',
+    description:
+      'Ethiopia Commodity Exchange and field engineer for 35+ technology companies across networking and infrastructure.',
   },
 ];
 
 const highlights = [
-  'Kubestronaut',
-  'Cloud DevOps',
+  'Kubestronaut (KCNA KCSA CKA CKAD CKS)',
   '12× Azure',
-  'AWS Architect',
-  'Cisco Security',
+  'AWS Solutions Architect',
+  'Cisco CCNA / CCNP / Security',
+  'Tanzu TKG',
   'Kubernetes',
   'Terraform',
+  'ArgoCD · GitOps',
+  'Ansible',
   'AWS · Azure · GCP',
-  'Python · Go',
+  'Prometheus · Grafana',
   'CI/CD · DevSecOps',
+  'Trainer / mentor',
   'Networking',
-  'Data · MLOps',
 ];
 
 const About = () => {
@@ -47,8 +51,9 @@ const About = () => {
               <span className="text-accent">Sofonias Mengistu</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              Job ready Cloud DevOps engineer. Kubestronaut. Also ships products
-              so you know I own production, not just tickets.
+              DevSecOps Engineer, Cloud Engineer, Trainer, SRE enthusiast.
+              Kubestronaut. Also ships products so you know I own production,
+              not just tickets.
             </p>
           </div>
           <a href="#contact" className="fancy-arrow" aria-label="Go to contact">
@@ -80,26 +85,28 @@ const About = () => {
 
           <div className="about__bio">
             <p className="about__roles">
-              Cloud DevOps Engineer · Kubestronaut · Open to remote roles
+              Cloud DevSecOps · Kubestronaut · Gebeya / Safaricom · Open to remote
             </p>
             <p>
-              Based in Addis Ababa. I design and operate secure multi-cloud
-              systems (Kubernetes, Terraform, CI/CD, DevSecOps) for teams that
-              need reliability. Available for full-time Cloud DevOps roles and
-              high-trust consulting (including Upwork).
+              Based in Addis Ababa. Career path: IT support and networking into
+              DevOps and cloud. Field engineer for 35+ technology companies, then
+              six plus years designing and automating infrastructure on AWS,
+              Azure, GCP, and on prem Kubernetes (including VMware TKG).
             </p>
             <p>
-              Featured in{' '}
+              At Gebeya Inc. I lead Kubernetes engineering for Safaricom
+              projects. I also train teams (including GIZ) and mentor on cloud,
+              security, and cost optimization. Featured in{' '}
               <a href={credentials.cncfOrbit} target="_blank" rel="noopener noreferrer">
                 CNCF Kubestronaut in Orbit
               </a>
               . Proof on{' '}
               <a href={credentials.linkedIn} target="_blank" rel="noopener noreferrer">
-                LinkedIn (30k+)
+                LinkedIn (29k+ followers)
               </a>{' '}
               and{' '}
               <a href={credentials.github} target="_blank" rel="noopener noreferrer">
-                GitHub (97+ projects)
+                GitHub
               </a>
               .
             </p>
@@ -119,9 +126,17 @@ const About = () => {
               >
                 Download CV
               </a>
+              <a
+                className="btn-dark"
+                href={credentials.linkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn profile
+                <ArrowUpRight size={16} />
+              </a>
               <a className="btn-dark" href="#contact">
                 Contact for roles
-                <ArrowUpRight size={16} />
               </a>
             </p>
 
