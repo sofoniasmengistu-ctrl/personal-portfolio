@@ -1,13 +1,52 @@
-import { Github, Linkedin, Mail, MessageCircle, Phone, Send } from 'lucide-react';
-import { clientChannels, companyChannels } from '../data/products';
+import { Github, Linkedin, Mail, MessageCircle, Send } from 'lucide-react';
+import { companyChannels } from '../data/products';
 import ContactForm from './ContactForm';
 
-const channelIcon = (id) => {
-  if (id.startsWith('wa')) return MessageCircle;
-  if (id.startsWith('tg')) return Send;
-  if (id.startsWith('phone')) return Phone;
-  return Mail;
-};
+/** Logo-only quick links — no repeated phone text on screen */
+const socialLinks = [
+  {
+    id: 'linkedin',
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/sofonias-mengistu-eng/',
+    Icon: Linkedin,
+  },
+  {
+    id: 'github',
+    label: 'GitHub',
+    href: 'https://github.com/Sofoniasm',
+    Icon: Github,
+  },
+  {
+    id: 'email',
+    label: 'Email Sofonias',
+    href: 'mailto:sofoniasmengistu@gmail.com',
+    Icon: Mail,
+  },
+  {
+    id: 'wa-1',
+    label: 'WhatsApp +251 912 215 057',
+    href: 'https://wa.me/251912215057',
+    Icon: MessageCircle,
+  },
+  {
+    id: 'wa-2',
+    label: 'WhatsApp +251 946 699 350',
+    href: 'https://wa.me/251946699350',
+    Icon: MessageCircle,
+  },
+  {
+    id: 'tg-1',
+    label: 'Telegram +251 912 215 057',
+    href: 'https://t.me/+251912215057',
+    Icon: Send,
+  },
+  {
+    id: 'tg-2',
+    label: 'Telegram +251 946 699 350',
+    href: 'https://t.me/+251946699350',
+    Icon: Send,
+  },
+];
 
 const Footer = () => {
   return (
@@ -19,78 +58,45 @@ const Footer = () => {
         <h2 className="section__title" style={{ textAlign: 'center' }}>
           Hire me, or <span className="text-accent">let&apos;s build</span>
         </h2>
-        <p className="section__lead" style={{ margin: '0 auto 1.75rem', textAlign: 'center' }}>
-          Full time Cloud DevOps roles, consulting, and custom builds
-          (platforms, Telegram products, cloud / Kubernetes). Reach me on any
-          channel below.
+        <p className="section__lead" style={{ margin: '0 auto 1.5rem', textAlign: 'center' }}>
+          Full time Cloud DevOps roles, consulting, and custom builds. Submit
+          the form or tap a logo to reach me instantly.
         </p>
+
+        <nav className="contact__icons" aria-label="Direct contact">
+          {socialLinks.map(({ id, label, href, Icon }) => (
+            <a
+              key={id}
+              href={href}
+              target={href.startsWith('mailto:') ? undefined : '_blank'}
+              rel={href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+              className="contact__icon"
+              aria-label={label}
+              title={label}
+            >
+              <Icon size={22} />
+            </a>
+          ))}
+        </nav>
 
         <div className="contact__layout">
           <ContactForm />
 
           <div className="contact__aside">
-            <p className="contact__aside-title">Direct channels</p>
-            <div className="contact__channels">
-              {clientChannels.map((channel) => {
-                const Icon = channelIcon(channel.id);
-                return (
-                  <a
-                    key={channel.id}
-                    href={channel.href}
-                    target={channel.href.startsWith('http') ? '_blank' : undefined}
-                    rel={channel.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="contact__channel"
-                  >
-                    <span className="contact__channel-icon">
-                      <Icon size={18} />
-                    </span>
-                    <span className="contact__channel-body">
-                      <span className="contact__channel-label">{channel.label}</span>
-                      <span className="contact__channel-value">{channel.value}</span>
-                      <span className="contact__channel-note">{channel.note}</span>
-                    </span>
-                  </a>
-                );
-              })}
-            </div>
-
-            <div className="contact__actions">
-              <a
-                href="/Sofonias_Mengistu_Resume.pdf"
-                download="Sofonias_Mengistu_Resume.pdf"
-                className="btn-dark"
-              >
-                Download CV
-              </a>
-            </div>
-
-            <div className="contact__socials">
-              <a
-                href="https://www.linkedin.com/in/sofonias-mengistu-eng/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact__social"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={22} />
-              </a>
-              <a
-                href="https://github.com/Sofoniasm"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact__social"
-                aria-label="GitHub"
-              >
-                <Github size={22} />
-              </a>
-              <a
-                href="mailto:sofoniasmengistu@gmail.com"
-                className="contact__social"
-                aria-label="Email"
-              >
-                <Mail size={22} />
-              </a>
-            </div>
+            <p className="contact__aside-title">What you can ask for</p>
+            <ul className="contact__offer">
+              <li>Full time Cloud DevOps / DevSecOps / SRE roles</li>
+              <li>Kubernetes, Terraform, CI/CD consulting</li>
+              <li>Multi cloud builds (AWS, Azure, GCP)</li>
+              <li>Telegram products and platform work</li>
+            </ul>
+            <a
+              href="/Sofonias_Mengistu_Resume.pdf"
+              download="Sofonias_Mengistu_Resume.pdf"
+              className="btn-dark contact__cv"
+            >
+              Download CV
+            </a>
           </div>
         </div>
 
