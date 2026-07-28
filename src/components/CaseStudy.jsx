@@ -9,7 +9,7 @@ const steps = [
   {
     label: '02 The assignment',
     title: 'Safaricom Ethiopia: TKG project I was assigned',
-    body: 'Gebeya assigned me to Safaricom Ethiopia Tanzu Kubernetes Grid work. I handled cluster lifecycle, secure access, Terraform, CI/CD, and observability the telco team could trust in production.',
+    body: 'Gebeya assigned me to Safaricom Ethiopia Tanzu Kubernetes Grid work. I handled cluster lifecycle, secure access, Terraform, CI/CD, and observability that the telco team could trust in production.',
   },
   {
     label: '03 What made it different',

@@ -90,7 +90,7 @@ const About = () => {
 
           <div className="about__bio">
             <p className="about__roles">
-              Cloud DevSecOps, Kubestronaut, Gebeya / Safaricom. Open to remote
+              Cloud DevSecOps, Kubestronaut, Gebeya / Safaricom. Open to remote roles
             </p>
             <p>
               Based in Addis Ababa. Career path: IT support and networking into

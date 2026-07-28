@@ -4,7 +4,7 @@ export const products = [
     name: 'WeRemoteIT',
     tag: 'Hiring',
     description:
-      'AI-powered ATS for remote IT talent: screening and matching inside Telegram.',
+      'AI powered ATS for remote IT talent: screening and matching inside Telegram.',
     web: 'https://weremoteit.com',
     bot: '@WeRemoteITbot',
     botUrl: 'https://t.me/WeRemoteITbot',
@@ -16,7 +16,7 @@ export const products = [
     name: 'AuraPay Global',
     tag: 'Payments',
     description:
-      'TON & USDT gateway in Telegram: send, swap, Stars, and merchant links.',
+      'TON and USDT gateway in Telegram: send, swap, Stars, and merchant links.',
     web: 'https://aurapayglobal.com',
     bot: '@AuraPayGlobalBot',
     botUrl: 'https://t.me/AuraPayGlobalBot',
@@ -43,7 +43,7 @@ export const companyChannels = [
     label: 'YouTube',
     handle: '@WeRemoteIT',
     href: 'https://www.youtube.com/@WeRemoteIT',
-    note: 'Product demos & updates',
+    note: 'Product demos and updates',
   },
   {
     id: 'x',
@@ -263,7 +263,7 @@ export const clientDeliveries = [
     channel: 'Gebeya Inc., production',
   },
   {
-    title: 'Multi cloud CI/CD & platforms',
+    title: 'Multi cloud CI/CD and platforms',
     outcome:
       'Pipelines and infra automation on AWS, Azure, and GCP for consulting and Upwork style delivery.',
     tags: ['Kubernetes', 'ArgoCD', 'Jenkins', 'GitLab CI'],
