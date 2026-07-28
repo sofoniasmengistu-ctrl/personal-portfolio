@@ -5,9 +5,9 @@ const FORM_ENDPOINT = 'https://formsubmit.co/ajax/sofoniasmengistu@gmail.com';
 
 const intentOptions = [
   { value: 'Free 15 minute consultation', label: 'Free 15 minute consultation' },
-  { value: 'Hourly consulting', label: 'Hourly consulting' },
-  { value: 'Monthly retainer', label: 'Monthly retainer' },
-  { value: 'Full time Cloud DevOps role', label: 'Full time Cloud DevOps role' },
+  { value: 'Consulting hour ($200)', label: 'Consulting hour ($200)' },
+  { value: 'Monthly retainer ($3600)', label: 'Monthly retainer ($3600)' },
+  { value: 'Full time role ($20/hr)', label: 'Full time role ($20/hr)' },
   { value: 'Network Engineer / field work', label: 'Network Engineer / field work' },
   { value: 'Build a product or platform', label: 'Build a product or platform' },
   { value: 'Other', label: 'Other' },

@@ -1,14 +1,19 @@
-import { CalendarClock, Clock3, MoveRight, ShieldCheck } from 'lucide-react';
+import { Briefcase, CalendarClock, Clock3, MoveRight, ShieldCheck } from 'lucide-react';
 import { Reveal } from './Reveal';
 
 /**
- * Set hourly / monthly when Sofonias confirms live rates.
- * null = show “quoted after free consult”.
+ * Sofonias rates (USD)
+ * - consultationHourly: paid consulting / advisory hour
+ * - fullTimeHourly: employment rate for full time roles
+ * - monthly: retainer with slight discount vs 20 consulting hours at $200
  */
 export const pricingRates = {
   currency: 'USD',
-  hourly: null,
-  monthly: null,
+  consultationHourly: 200,
+  fullTimeHourly: 20,
+  monthly: 3600,
+  monthlyHoursIncluded: 20,
+  monthlyListValue: 4000,
 };
 
 const plans = [
@@ -30,23 +35,19 @@ const plans = [
     external: true,
   },
   {
-    id: 'hourly',
+    id: 'consultation',
     featured: false,
     icon: Clock3,
-    name: 'Hourly',
-    price: pricingRates.hourly
-      ? `$${pricingRates.hourly}`
-      : 'Custom',
-    priceNote: pricingRates.hourly
-      ? `per hour · ${pricingRates.currency}`
-      : 'Quoted after free consult',
-    blurb: 'Best for focused tasks: cluster work, pipeline fixes, network cutovers, or short consulting blocks.',
+    name: 'Consultation hour',
+    price: `$${pricingRates.consultationHourly}`,
+    priceNote: `per hour, ${pricingRates.currency}`,
+    blurb: 'Paid consulting for focused work: architecture, Kubernetes, pipelines, network cutovers, or expert advice.',
     points: [
       'DevOps and Kubernetes delivery',
       'Network Engineer field support',
       'IT and cloud support blocks',
     ],
-    cta: 'Ask hourly rate',
+    cta: 'Book consulting hour',
     href: '#contact',
     external: false,
   },
@@ -55,19 +56,32 @@ const plans = [
     featured: false,
     icon: ShieldCheck,
     name: 'Monthly retainer',
-    price: pricingRates.monthly
-      ? `$${pricingRates.monthly.toLocaleString()}`
-      : 'Custom',
-    priceNote: pricingRates.monthly
-      ? `per month · ${pricingRates.currency}`
-      : 'Quoted after free consult',
-    blurb: 'Ongoing platform ownership: uptime, changes, security, and a first contact in Addis Ababa when you need him.',
+    price: `$${pricingRates.monthly.toLocaleString()}`,
+    priceNote: `per month, ${pricingRates.currency}`,
+    blurb: `Up to ${pricingRates.monthlyHoursIncluded} hours included. Slight discount vs $${pricingRates.monthlyListValue.toLocaleString()} at the $${pricingRates.consultationHourly}/hr consulting rate. Global fractional DevOps retainers often run about $2,000 to $6,000 for this shape of work.`,
     points: [
-      'Priority response and planning',
-      'Monthly delivery cadence',
-      'Local on site when required',
+      `About 10% off vs ${pricingRates.monthlyHoursIncluded} consulting hours`,
+      'Priority response and monthly cadence',
+      'On site Addis Ababa when required',
     ],
-    cta: 'Ask monthly rate',
+    cta: 'Start monthly retainer',
+    href: '#contact',
+    external: false,
+  },
+  {
+    id: 'fulltime',
+    featured: false,
+    icon: Briefcase,
+    name: 'Full time role',
+    price: `$${pricingRates.fullTimeHourly}`,
+    priceNote: `per hour, ${pricingRates.currency} employment`,
+    blurb: 'For full time Cloud DevOps / Network Engineer employment offers. About $3,200 per month at a standard 160 hour month.',
+    points: [
+      'Full time hire conversations',
+      'Addis Ababa on site or remote',
+      'Roles, not short consulting blocks',
+    ],
+    cta: 'Discuss full time hire',
     href: '#contact',
     external: false,
   },
@@ -81,12 +95,12 @@ const Pricing = () => {
           <div className="section-head__copy">
             <p className="section__label">Pricing</p>
             <h2 className="section__title">
-              Clear engagement.{' '}
+              Clear rates.{' '}
               <span className="text-accent">15 minutes free.</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              Start with a free consultation. Then choose hourly work or a monthly
-              retainer for Addis Ababa on site and remote delivery.
+              Free intro call, then consulting at $200/hr, a discounted monthly
+              retainer, or full time employment at $20/hr.
             </p>
           </div>
           <a href="#contact" className="fancy-arrow">
@@ -98,25 +112,20 @@ const Pricing = () => {
           </a>
         </Reveal>
 
-        <div className="pricing__grid">
+        <div className="pricing__grid pricing__grid--4">
           {plans.map((plan, index) => {
             const Icon = plan.icon;
             return (
               <Reveal
                 key={plan.id}
                 className={`pricing__card${plan.featured ? ' pricing__card--featured' : ''}`}
-                delay={index * 90}
+                delay={index * 80}
               >
                 <p className="pricing__card-kicker mono">
                   <Icon size={16} strokeWidth={2.25} />
                   {plan.name}
                 </p>
-                <p className="pricing__amount">
-                  {plan.price}
-                  {plan.id !== 'free' && pricingRates[plan.id] ? (
-                    <span className="pricing__amount-suffix">+</span>
-                  ) : null}
-                </p>
+                <p className="pricing__amount">{plan.price}</p>
                 <p className="pricing__amount-note">{plan.priceNote}</p>
                 <p className="pricing__blurb">{plan.blurb}</p>
                 <ul className="pricing__points">
@@ -140,9 +149,10 @@ const Pricing = () => {
 
         <Reveal className="pricing__footnote">
           <p>
-            Rates are a starting point for standard consulting. Complex production
-            cutovers, multi cloud builds, or dedicated on site weeks get a custom
-            quote after the free 15 minute call.
+            Consulting hour is $200 USD. Monthly retainer is $3,600 for up to 20
+            hours (about 10% below $4,000 at the hourly consulting rate). Full time
+            employment conversations use $20/hr. Larger cutovers or dedicated on
+            site weeks get a custom quote after the free 15 minute call.
           </p>
         </Reveal>
       </div>
