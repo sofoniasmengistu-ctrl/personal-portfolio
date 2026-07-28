@@ -897,6 +897,197 @@ h1, h2, h3, h4 {
   color: var(--text-muted);
 }
 
+/* ——— Field engineer showcase ——— */
+.field {
+  background: var(--surface);
+}
+
+.field__stage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(32rem, 72vh, 40rem);
+  display: flex;
+  align-items: center;
+}
+
+.field__visual {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center right;
+  transform: scale(1.02);
+  animation: field-drift 22s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.field__veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      105deg,
+      rgba(255, 255, 255, 0.97) 0%,
+      rgba(255, 255, 255, 0.92) 42%,
+      rgba(255, 255, 255, 0.55) 68%,
+      rgba(74, 21, 57, 0.28) 100%
+    );
+}
+
+.field__inner {
+  position: relative;
+  z-index: 2;
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.field__copy {
+  max-width: 36rem;
+}
+
+.field__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--magenta);
+  margin-bottom: 0.85rem;
+}
+
+.field__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 3.2vw, 2.35rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.field__stat {
+  color: var(--magenta);
+  white-space: nowrap;
+}
+
+.field__lead {
+  color: var(--text-secondary);
+  font-size: 1.02rem;
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  max-width: 34rem;
+}
+
+.field__projects {
+  list-style: none;
+  display: grid;
+  gap: 1.15rem;
+  margin: 0 0 1.75rem;
+  padding: 0;
+}
+
+.field__projects li {
+  display: grid;
+  gap: 0.3rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--magenta);
+}
+
+.field__project-kicker {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--magenta);
+}
+
+.field__projects strong {
+  font-size: 1.05rem;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.field__projects span:last-child {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.field__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.field__ribbon {
+  border-block: 1px solid var(--line);
+  background: var(--surface-muted);
+  overflow: hidden;
+}
+
+.field__ribbon-track {
+  display: flex;
+  gap: 2.5rem;
+  width: max-content;
+  padding: 0.95rem 0;
+  animation: field-marquee 28s linear infinite;
+}
+
+.field__ribbon-item {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.field__ribbon-item::before {
+  content: '◆';
+  color: var(--magenta);
+  margin-right: 0.75rem;
+  font-size: 0.55rem;
+  vertical-align: middle;
+}
+
+@keyframes field-drift {
+  from {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.06) translate3d(-1.5%, -1%, 0);
+  }
+}
+
+@keyframes field-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .field__visual,
+  .field__ribbon-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .field__veil {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.96) 0%,
+        rgba(255, 255, 255, 0.9) 55%,
+        rgba(255, 255, 255, 0.72) 100%
+      );
+  }
+
+  .field__visual {
+    background-position: center;
+  }
+}
+
 /* ——— Case study ——— */
 .case-study {
   background: var(--surface);

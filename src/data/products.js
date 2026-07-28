@@ -140,8 +140,8 @@ export const trustMetrics = [
     href: null,
   },
   {
-    value: '35+',
-    count: 35,
+    value: '257+',
+    count: 257,
     suffix: '+',
     label: 'Companies delivered as field engineer',
     href: null,
@@ -198,7 +198,7 @@ export const experienceHighlights = [
   {
     title: 'Network & systems · ECX and field',
     outcome:
-      'Field engineer for 35+ technology companies; network admin and IT support at Ethiopia Commodity Exchange.',
+      'Field engineer for 257+ technology companies worldwide; network admin and IT support at Ethiopia Commodity Exchange.',
     tags: ['Cisco', 'LAN/WAN', 'Security', 'On prem'],
     channel: '2010 to 2018 · ECX + field',
   },
@@ -279,7 +279,7 @@ export const clientDeliveries = [
   {
     title: 'Enterprise networking to cloud',
     outcome:
-      '35+ company field delivery plus ECX network/systems foundation before the DevOps transition.',
+      '257+ company field delivery plus ECX network/systems foundation before the DevOps transition.',
     tags: ['Networking', 'Cisco', 'Hybrid cloud'],
     channel: 'Field + ECX',
   },

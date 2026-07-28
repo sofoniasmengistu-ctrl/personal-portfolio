@@ -61,7 +61,7 @@ const Hero = () => {
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>16+ years · 35+ companies · 29k+ LinkedIn</strong>, plus
+                <strong>16+ years · 257+ field companies · 29k+ LinkedIn</strong>, plus
                 GIZ cloud trainer and product founder
               </span>
             </li>
