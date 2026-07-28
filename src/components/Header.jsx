@@ -14,6 +14,11 @@ const Header = () => {
   const [activeHash, setActiveHash] = useState('#home');
 
   useEffect(() => {
+    document.body.classList.toggle('nav-open', isOpen);
+    return () => document.body.classList.remove('nav-open');
+  }, [isOpen]);
+
+  useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'field', 'case-study', 'work', 'products', 'approach', 'about', 'contact'];
       let current = '#home';
