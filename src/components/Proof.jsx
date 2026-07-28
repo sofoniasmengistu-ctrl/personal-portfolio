@@ -1,7 +1,7 @@
 const ecosystem = [
   {
     title: 'Mini Apps + bots',
-    body: 'Telegram-native surfaces with real wallets, hiring flows, and AI.',
+    body: 'Telegram-native surfaces with wallets, hiring flows, and AI.',
   },
   {
     title: 'Owned communities',
@@ -9,7 +9,7 @@ const ecosystem = [
   },
   {
     title: 'Operated end-to-end',
-    body: 'Cloud, Kubernetes, CI/CD, security — the same stack that keeps them live.',
+    body: 'Cloud, Kubernetes, CI/CD, security — the stack that keeps them live.',
   },
 ];
 
@@ -17,13 +17,13 @@ const Proof = () => {
   return (
     <section id="ecosystem" className="section section--tight">
       <div className="container">
-        <p className="section__label">03 — Approach</p>
+        <p className="section__label">05 — Approach</p>
         <h2 className="section__title">
           Built where people <span className="text-gradient">already are</span>
         </h2>
         <p className="section__lead">
-          Chat is the interface. Infrastructure is invisible. Communities grow
-          beside the product — not as an afterthought.
+          Chat is the interface. Infrastructure stays invisible. Communities grow
+          beside the product.
         </p>
 
         <div className="proof__grid">

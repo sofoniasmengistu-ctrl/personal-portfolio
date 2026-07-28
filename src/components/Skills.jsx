@@ -9,21 +9,22 @@ const highlights = [
   'Python · Go',
   'CI/CD · DevSecOps',
   'Networking',
+  'Data · MLOps',
 ];
 
 const Skills = () => {
   return (
     <section id="skills" className="section section--tight">
       <div className="container">
-        <p className="section__label">05 — Craft</p>
+        <p className="section__label">07 — Craft</p>
         <h2 className="section__title">
           Selected <span className="text-gradient">capabilities</span>
         </h2>
         <p className="section__lead">
-          A short list. Full certifications and stack details are in the CV.
+          A short list. Full certifications live in the CV and Credly.
         </p>
 
-        <div className="skills__chips skills__chips--curated">
+        <div className="skills__chips">
           {highlights.map((skill) => (
             <span key={skill} className="skill-chip">
               {skill}

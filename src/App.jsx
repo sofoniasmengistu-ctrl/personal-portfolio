@@ -2,7 +2,10 @@ import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Trust from './components/Trust';
 import Products from './components/Products';
+import Engineering from './components/Engineering';
+import ClientWork from './components/ClientWork';
 import Presence from './components/Presence';
 import Proof from './components/Proof';
 import About from './components/About';
@@ -16,7 +19,10 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Trust />
         <Products />
+        <Engineering />
+        <ClientWork />
         <Presence />
         <Proof />
         <About />

@@ -6,13 +6,13 @@ const Footer = () => {
     <footer id="contact" className="contact">
       <div className="container">
         <p className="section__label" style={{ textAlign: 'center' }}>
-          06 — Contact
+          08 — Contact
         </p>
         <h2 className="section__title" style={{ textAlign: 'center' }}>
           Let&apos;s talk
         </h2>
         <p className="section__lead" style={{ margin: '0 auto 1.5rem', textAlign: 'center' }}>
-          Products, partnerships, or infrastructure consulting.
+          DevOps consulting, Upwork projects, or product partnerships.
         </p>
 
         <div className="contact__socials">
