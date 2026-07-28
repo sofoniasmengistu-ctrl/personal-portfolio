@@ -7,9 +7,9 @@ const ribbon = [
   'Dubai',
   'Singapore',
   'Pakistan',
-  'Visa · Ethiopian banks',
-  'American Embassy · Ubiquiti',
-  'Network Engineer · field support',
+  'Visa routers for Ethiopian banks',
+  'American Embassy Ubiquiti cutover',
+  'Network Engineer field support',
 ];
 
 const FieldEngineer = () => {
@@ -26,37 +26,37 @@ const FieldEngineer = () => {
 
         <div className="container field__inner">
           <div className="field__copy">
-            <p className="field__label mono">Network Engineer · Field support</p>
+            <p className="field__label mono">Network Engineer and field support</p>
             <h2 className="field__title">
-              Network Engineer for{' '}
+              I supported{' '}
               <span className="field__stat">
                 <CountUp end={37} suffix="" />
               </span>{' '}
-              tech companies across GB, USA, Dubai, Singapore, and Pakistan —
-              engaged through managed-source partners for on-site network
-              support.
+              tech companies as a Network Engineer across Great Britain, the USA,
+              Dubai, Singapore, and Pakistan.
             </h2>
             <p className="field__lead">
-              Full Network Engineer delivery: design, install, cutover, and
-              stabilize. Field engineer support for enterprise networks — not
-              ticket-only work. Two standout projects:
+              Managed source partners engaged me for on site network support. The
+              work was full Network Engineer delivery: design, install, cutover,
+              and stabilize for enterprise networks. Not ticket only support.
+              Two projects stand out.
             </p>
 
             <ul className="field__projects">
               <li>
-                <span className="field__project-kicker mono">01 · National banking</span>
+                <span className="field__project-kicker mono">National banking</span>
                 <strong>Visa router deployment across all Ethiopian banks</strong>
                 <span>
-                  Nationwide rollout so banks could run Visa connectivity on a
-                  consistent, production-ready network path.
+                  I rolled out Visa connectivity nationwide so banks shared a
+                  consistent production ready network path.
                 </span>
               </li>
               <li>
-                <span className="field__project-kicker mono">02 · Diplomatic site</span>
-                <strong>American Embassy: Huawei out, Ubiquiti in</strong>
+                <span className="field__project-kicker mono">Diplomatic site</span>
+                <strong>American Embassy: Huawei removed, Ubiquiti installed</strong>
                 <span>
-                  Full removal of Huawei gear and replacement with Ubiquiti —
-                  end-to-end swap without leaving the site half-migrated.
+                  I removed the Huawei equipment completely and replaced it with
+                  Ubiquiti so the site finished the migration in one pass.
                 </span>
               </li>
             </ul>

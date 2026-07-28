@@ -7,28 +7,28 @@ const Hero = () => {
       <div className="container hero__stage">
         <div className="hero__copy">
           <p className="hero__eyebrow">
-            Open to roles · Consulting · Builds · Remote worldwide
+            Open to roles, consulting, and builds. Remote worldwide.
           </p>
 
           <h1 className="hero__brand">
             Sofonias<span className="text-accent">.</span>
           </h1>
           <p className="hero__seo-line">
-            Cloud DevOps Engineer in Ethiopia · Kubestronaut · Addis Ababa
+            Cloud DevOps Engineer in Ethiopia, Kubestronaut, based in Addis Ababa
           </p>
 
           <p className="hero__role-badge">
-            Cloud DevOps Engineer <span aria-hidden="true">·</span> Kubestronaut
+            Cloud DevOps Engineer and Kubestronaut
           </p>
 
           <p className="hero__headline">
-            Production cloud &amp; Kubernetes.{' '}
-            <span className="text-accent">Hire ready.</span>
+            Production cloud and Kubernetes.{' '}
+            <span className="text-accent">Ready to hire.</span>
           </p>
 
           <p className="hero__sub">
-            16+ years in IT. Multi-cloud DevSecOps for real teams, plus
-            founder-built products that prove I ship. Hire me full time, bring a
+            I bring 16+ years in IT, multi cloud DevSecOps for real teams, and
+            founder built products that prove I ship. Hire me full time, bring a
             consulting brief, or ask me to build your platform.
           </p>
 
@@ -36,8 +36,8 @@ const Hero = () => {
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>Hired by Gebeya</strong> · multi-cloud Kubernetes (EKS,
-                GKE, AKS, Infomaniak, Linode, TKG)
+                <strong>Hired by Gebeya</strong> for multi cloud Kubernetes
+                (EKS, GKE, AKS, Infomaniak, Linode, TKG)
               </span>
             </li>
             <li className="hero__check">
@@ -50,8 +50,8 @@ const Hero = () => {
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>16+ years · 37 network field companies · 29k+ LinkedIn</strong>, plus
-                GIZ cloud trainer and product founder
+                <strong>16+ years, 37 network field companies, 29k+ LinkedIn</strong>,
+                plus GIZ cloud trainer and product founder
               </span>
             </li>
           </ul>
@@ -93,7 +93,7 @@ const Hero = () => {
               </li>
               <li>
                 <strong>02</strong>
-                <span>End-to-end clusters: EKS, GKE, AKS, Infomaniak, Linode, TKG</span>
+                <span>Clusters end to end: EKS, GKE, AKS, Infomaniak, Linode, TKG</span>
               </li>
               <li>
                 <strong>03</strong>

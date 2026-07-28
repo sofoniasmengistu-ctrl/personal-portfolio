@@ -5,12 +5,12 @@ const Presence = () => {
   return (
     <section id="presence" className="section section--tight presence">
       <div className="container">
-        <p className="section__label">04 — Company</p>
+        <p className="section__label">04 Company</p>
         <h2 className="section__title">
           WeRemoteIT <span className="text-gradient">channels</span>
         </h2>
         <p className="section__lead">
-          Official company presence — demos, announcements, and long-form writing.
+          Official company presence for demos, announcements, and long form writing.
         </p>
 
         <div className="presence__grid">

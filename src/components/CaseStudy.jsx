@@ -4,17 +4,17 @@ const steps = [
   {
     label: '01 The hire',
     title: 'Gebeya hired me for Kubernetes depth',
-    body: 'Gebeya Inc. brought me on as a DevOps Engineer because of production Kubernetes and platform skills—not to sit on a generic ticket queue. That is the relationship that matters on my résumé.',
+    body: 'Gebeya Inc. hired me as a DevOps Engineer for production Kubernetes and platform skills. They needed someone who could own the work, not sit on a generic ticket queue.',
   },
   {
     label: '02 The assignment',
     title: 'Safaricom Ethiopia: TKG project I was assigned',
-    body: 'Gebeya assigned me to Safaricom Ethiopia’s Tanzu Kubernetes Grid work: cluster lifecycle, secure access, Terraform, CI/CD, and observability the telco team could trust in production.',
+    body: 'Gebeya assigned me to Safaricom Ethiopia Tanzu Kubernetes Grid work. I handled cluster lifecycle, secure access, Terraform, CI/CD, and observability the telco team could trust in production.',
   },
   {
     label: '03 What made it different',
-    title: 'End-to-end ownership, not a seat on the bench',
-    body: 'I owned the platform path end to end—deploy, harden, observe, document—so Gebeya could staff a live telco client with confidence. Repeatable runbooks, faster changes, clearer incidents, production-grade controls.',
+    title: 'Full ownership from day one',
+    body: 'I owned the platform path end to end: deploy, harden, observe, and document. That gave Gebeya a repeatable TKG path with runbooks, faster changes, clearer incidents, and production grade controls.',
   },
 ];
 
@@ -43,12 +43,12 @@ const CaseStudy = () => {
             <p className="section__label">Flagship case study</p>
             <h2 className="section__title">
               Hired by Gebeya{' '}
-              <span className="text-accent">for Kubernetes that lasts</span>
+              <span className="text-accent">for lasting Kubernetes platforms</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              Gebeya is who hired me. Safaricom was the client project I was
-              assigned to. What set this hire apart: full ownership of a live
-              telco TKG platform—not borrowed tickets.
+              Gebeya hired me. Safaricom was the client project they assigned.
+              What set the hire apart was full ownership of a live telco TKG
+              platform, not borrowed tickets.
             </p>
           </div>
           <a href="#contact" className="fancy-arrow">
@@ -67,7 +67,7 @@ const CaseStudy = () => {
           </div>
           <div className="case-study__meta-item">
             <p className="case-study__meta-label mono">Assigned project</p>
-            <p className="case-study__meta-value">Safaricom Ethiopia · TKG</p>
+            <p className="case-study__meta-value">Safaricom Ethiopia TKG</p>
           </div>
           <div className="case-study__meta-item">
             <p className="case-study__meta-label mono">Role</p>

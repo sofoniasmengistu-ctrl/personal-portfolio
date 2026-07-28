@@ -4,14 +4,14 @@ const ClientWork = () => {
   return (
     <section id="clients" className="section section--tight">
       <div className="container">
-        <p className="section__label">03 — Client delivery</p>
+        <p className="section__label">03 Client delivery</p>
         <h2 className="section__title">
-          Upwork &amp; <span className="text-gradient">consulting</span>
+          Upwork and <span className="text-gradient">consulting</span>
         </h2>
         <p className="section__lead">
-          Freelance and client work as a Cloud DevOps engineer — the same
-          end-to-end Kubernetes craft across EKS, GKE, AKS, Infomaniak, Linode,
-          and TKG, framed for remote teams.
+          Freelance and client work as a Cloud DevOps engineer. Same Kubernetes
+          craft end to end across EKS, GKE, AKS, Infomaniak, Linode, and TKG,
+          framed for remote teams.
         </p>
 
         <div className="work-grid">

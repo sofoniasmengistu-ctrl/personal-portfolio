@@ -1,15 +1,15 @@
 const ecosystem = [
   {
-    title: 'Mini Apps + bots',
-    body: 'Telegram-native surfaces with wallets, hiring flows, and AI.',
+    title: 'Mini Apps and bots',
+    body: 'Telegram native surfaces with wallets, hiring flows, and AI.',
   },
   {
     title: 'Owned communities',
-    body: 'Channels and groups per product — updates and support in-chat.',
+    body: 'Channels and groups per product for updates and support in chat.',
   },
   {
-    title: 'Operated end-to-end',
-    body: 'Cloud, Kubernetes, CI/CD, security — the stack that keeps them live.',
+    title: 'Operated end to end',
+    body: 'Cloud, Kubernetes, CI/CD, and security. The stack that keeps them live.',
   },
 ];
 
@@ -17,7 +17,7 @@ const Proof = () => {
   return (
     <section id="ecosystem" className="section section--tight">
       <div className="container">
-        <p className="section__label">05 — Approach</p>
+        <p className="section__label">05 Approach</p>
         <h2 className="section__title">
           Built where people <span className="text-gradient">already are</span>
         </h2>

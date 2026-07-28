@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail, MessageCircle, Send } from 'lucide-react';
 import { companyChannels } from '../data/products';
 import ContactForm from './ContactForm';
 
-/** Logo-only quick links — no repeated phone text on screen */
+/** Logo-only quick links, no repeated phone text on screen */
 const socialLinks = [
   {
     id: 'linkedin',
@@ -101,7 +101,7 @@ const Footer = () => {
         </div>
 
         <div className="contact__company">
-          <p className="contact__company-label mono">Also building · WeRemoteIT</p>
+          <p className="contact__company-label mono">Also building WeRemoteIT</p>
           <div className="contact__company-links">
             {companyChannels.map((c) => (
               <a key={c.id} href={c.href} target="_blank" rel="noopener noreferrer">
@@ -112,7 +112,7 @@ const Footer = () => {
         </div>
 
         <p className="contact__copy">
-          © {new Date().getFullYear()} Sofonias Mengistu · Cloud DevOps Engineer · Addis Ababa
+          © {new Date().getFullYear()} Sofonias Mengistu, Cloud DevOps Engineer, Addis Ababa
         </p>
       </div>
     </footer>

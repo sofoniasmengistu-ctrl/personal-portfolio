@@ -4,19 +4,19 @@ import { credentials } from '../data/products';
 const timeline = [
   {
     year: 'Now',
-    role: 'DevOps · Gebeya / Safaricom TKG',
+    role: 'DevOps at Gebeya, Safaricom TKG assignment',
     description:
-      'Tanzu Kubernetes Grid for Safaricom Ethiopia: clusters, Terraform, CI/CD, security, Prometheus/Grafana. Open to remote DevSecOps/SRE roles.',
+      'Tanzu Kubernetes Grid for Safaricom Ethiopia: clusters, Terraform, CI/CD, security, Prometheus/Grafana. Open to remote DevSecOps and SRE roles.',
   },
   {
     year: '2018 to 23',
-    role: 'Cloud / DevOps · multi client',
+    role: 'Cloud and DevOps multi client',
     description:
       'AWS, Azure, GCP, KodeKloud Senior DevOps, GIZ cloud trainer, consulting and managed services delivery.',
   },
   {
     year: '2010 to 18',
-    role: 'Network & systems · ECX + field',
+    role: 'Network and systems at ECX and field',
     description:
       'Ethiopia Commodity Exchange and Network Engineer field support for 37 tech companies across GB, USA, Dubai, Singapore, and Pakistan.',
   },
@@ -24,9 +24,9 @@ const timeline = [
 
 const highlights = [
   'Kubestronaut (KCNA KCSA CKA CKAD CKS)',
-  'Azure — all certifications',
+  'Azure all certifications',
   'AWS Cloud Engineer',
-  'CCNA · CCNP · CCNA Security',
+  'CCNA, CCNP, CCNA Security',
   'Tanzu TKG',
   'AWS EKS',
   'GKE',
@@ -35,11 +35,11 @@ const highlights = [
   'Linode Kubernetes',
   'Kubernetes',
   'Terraform',
-  'ArgoCD · GitOps',
+  'ArgoCD and GitOps',
   'Ansible',
-  'AWS · Azure · GCP',
-  'Prometheus · Grafana',
-  'CI/CD · DevSecOps',
+  'AWS, Azure, GCP',
+  'Prometheus and Grafana',
+  'CI/CD and DevSecOps',
   'Trainer / mentor',
   'Networking',
 ];
@@ -90,7 +90,7 @@ const About = () => {
 
           <div className="about__bio">
             <p className="about__roles">
-              Cloud DevSecOps · Kubestronaut · Gebeya / Safaricom · Open to remote
+              Cloud DevSecOps, Kubestronaut, Gebeya / Safaricom. Open to remote
             </p>
             <p>
               Based in Addis Ababa. Career path: IT support and networking into

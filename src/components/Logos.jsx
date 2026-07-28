@@ -1,11 +1,11 @@
 const logos = [
-  { name: 'Gebeya', note: 'Hired · DevOps' },
+  { name: 'Gebeya', note: 'Hired as DevOps' },
   { name: 'Safaricom', note: 'Assigned project' },
   { name: 'GIZ', note: 'Cloud trainer' },
   { name: 'KodeKloud', note: 'Senior DevOps' },
   { name: 'CNCF', note: 'Kubestronaut' },
   { name: 'JSI', note: 'IT Specialist' },
-  { name: 'ECX', note: 'Network & systems' },
+  { name: 'ECX', note: 'Network and systems' },
   { name: 'Custor', note: 'Software internship' },
 ];
 

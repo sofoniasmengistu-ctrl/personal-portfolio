@@ -11,13 +11,14 @@ const Work = () => {
       <div className="container">
         <div className="section-head section-head--row">
           <div className="section-head__copy">
-            <p className="section__label">01 Cloud DevOps · Engineering</p>
+            <p className="section__label">01 Cloud DevOps and Engineering</p>
             <h2 className="section__title">
               The work hiring managers <span className="text-accent">should see</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              Real roles from LinkedIn: hired by Gebeya (Safaricom TKG assignment), cloud training,
-              multi cloud delivery, and 16+ years from networks to Kubernetes.
+              Real roles from LinkedIn: hired by Gebeya (Safaricom TKG assignment),
+              cloud training, multi cloud delivery, and 16+ years from networks to
+              Kubernetes.
             </p>
           </div>
           <a
@@ -82,7 +83,7 @@ const Work = () => {
 
         <div className="band band--next">
           <div className="band__head">
-            <h3 className="band__title">GitHub · selected engineering</h3>
+            <h3 className="band__title">GitHub selected engineering</h3>
             <a
               href="https://github.com/Sofoniasm"
               target="_blank"

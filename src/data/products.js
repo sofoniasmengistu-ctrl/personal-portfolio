@@ -64,7 +64,7 @@ export const companyChannels = [
 export const credentials = {
   kubestronautDirectory:
     'https://www.cncf.io/training/kubestronaut/?_sft_lf-country=et',
-  kubestronautNote: 'Only registered Kubestronaut in Ethiopia · CNCF',
+  kubestronautNote: 'Only registered Kubestronaut in Ethiopia, CNCF',
   linkedIn: 'https://www.linkedin.com/in/sofonias-mengistu-eng/',
   github: 'https://github.com/Sofoniasm',
   cncfOrbit:
@@ -125,11 +125,11 @@ export const clientChannels = [
   },
 ];
 
-/** Social / platform proof — curated for hiring managers */
+/** Social / platform proof curated for hiring managers */
 export const trustMetrics = [
   {
     value: 'Kubestronaut',
-    label: 'KCNA · KCSA · CKA · CKAD · CKS',
+    label: 'KCNA, KCSA, CKA, CKAD, CKS',
     href: 'https://www.cncf.io/training/kubestronaut/?_sft_lf-country=et',
   },
   {
@@ -143,7 +143,7 @@ export const trustMetrics = [
     value: '37',
     count: 37,
     suffix: '',
-    label: 'Tech companies · Network Engineer field support',
+    label: 'Tech companies, Network Engineer field support',
     href: null,
   },
   {
@@ -157,8 +157,8 @@ export const trustMetrics = [
 
 /** Full cert picture for trust strip */
 export const trustCertifications = [
-  'Kubestronaut (KCNA · KCSA · CKA · CKAD · CKS)',
-  'Azure — all certifications',
+  'Kubestronaut (KCNA, KCSA, CKA, CKAD, CKS)',
+  'Azure all certifications',
   'AWS Cloud Engineer',
   'CCNA',
   'CCNP',
@@ -168,113 +168,113 @@ export const trustCertifications = [
 /** Selected roles from LinkedIn experience */
 export const experienceHighlights = [
   {
-    title: 'DevOps Engineer · Gebeya Inc.',
+    title: 'DevOps Engineer at Gebeya Inc.',
     outcome:
       'Assigned to Safaricom Ethiopia: Tanzu Kubernetes Grid clusters, lifecycle, Terraform IaC, CI/CD, RBAC, Prometheus/Grafana.',
     tags: ['TKG', 'Terraform', 'CI/CD', 'Prometheus', 'RBAC'],
-    channel: 'Aug 2023 to Present · Addis Ababa',
+    channel: 'Aug 2023 to Present, Addis Ababa',
   },
   {
-    title: 'Cloud Computing Trainer · GIZ',
+    title: 'Cloud Computing Trainer at GIZ',
     outcome:
       'Trained teams on AWS, Azure, and GCP: architecture, security, serverless, and cost aware cloud practice.',
     tags: ['AWS', 'Azure', 'GCP', 'Training'],
-    channel: 'Jul 2023 to Nov 2023 · GIZ',
+    channel: 'Jul 2023 to Nov 2023, GIZ',
   },
   {
-    title: 'Senior DevOps · KodeKloud',
+    title: 'Senior DevOps at KodeKloud',
     outcome:
       'Hands on DevOps delivery (Project Nautilus): Ansible, Terraform, config management, and cross team delivery.',
     tags: ['Ansible', 'Terraform', 'Linux', 'DevOps'],
-    channel: '2023 · KodeKloud Engineer path',
+    channel: '2023, KodeKloud Engineer path',
   },
   {
-    title: 'Cloud / DevOps · multi client delivery',
+    title: 'Cloud and DevOps multi client delivery',
     outcome:
       'AWS, Azure, GCP IaC, CI/CD, Docker/Kubernetes, monitoring, security, and cost optimization for consulting clients.',
     tags: ['AWS', 'Azure', 'GCP', 'Kubernetes'],
-    channel: 'Tefer · Excis · Tech Source · Orion',
+    channel: 'Tefer, Excis, Tech Source, Orion',
   },
   {
-    title: 'Network & systems · ECX and field',
+    title: 'Network and systems at ECX and field',
     outcome:
-      'Network Engineer field support for 37 tech companies across GB, USA, Dubai, Singapore, and Pakistan via managed-source partners; network admin and IT support at Ethiopia Commodity Exchange.',
+      'Network Engineer field support for 37 tech companies across GB, USA, Dubai, Singapore, and Pakistan via managed source partners; network admin and IT support at Ethiopia Commodity Exchange.',
     tags: ['Cisco', 'LAN/WAN', 'Security', 'On prem'],
-    channel: '2010 to 2018 · ECX + field',
+    channel: '2010 to 2018, ECX and field',
   },
 ];
 
-/** Featured GitHub engineering work — smart subset of 97+ repos */
+/** Featured GitHub engineering work, smart subset of 97+ repos */
 export const githubFeatured = [
   {
-    name: 'AWS prod infra · FT360 / Aircall',
-    stack: 'Terraform · AWS · CI',
+    name: 'AWS prod infra, FT360 / Aircall',
+    stack: 'Terraform, AWS, CI',
     description:
       'Production IaC: EC2, RDS, GitLab Runner, security, backups, and scale.',
     href: 'https://github.com/Sofoniasm/aws-prod-infra-ft360-aircall-api',
   },
   {
     name: 'Laravel serverless on AWS',
-    stack: 'Lambda · Aurora · Terraform',
+    stack: 'Lambda, Aurora, Terraform',
     description:
       'Bref + API Gateway + Aurora Serverless with GitLab CI and secure env management.',
     href: 'https://github.com/Sofoniasm/aws-laravel-serverless-terraform',
   },
   {
     name: 'Azure data platform (100%)',
-    stack: 'Terraform · Databricks · ADF',
+    stack: 'Terraform, Databricks, ADF',
     description:
       'Medallion lakehouse: Data Lake, Key Vault, Databricks, Data Factory.',
     href: 'https://github.com/Sofoniasm/Azure-Data-Engineer-100-automated-',
   },
   {
     name: 'Matrix Synapse deployment',
-    stack: 'HCL · Bridges · React',
+    stack: 'HCL, Bridges, React',
     description:
-      'Full-stack Matrix platform with social bridges and AI conversation insights.',
+      'Full stack Matrix platform with social bridges and AI conversation insights.',
     href: 'https://github.com/Sofoniasm/Matrix-Synapse-deployment',
   },
   {
     name: 'Realtime data streaming',
-    stack: 'Kafka · Spark · Airflow',
+    stack: 'Kafka, Spark, Airflow',
     description:
       'End to end streaming pipeline: ingest, process, store, fully containerized.',
     href: 'https://github.com/Sofoniasm/Realtime-Data-Streaming-End-To-End-Data-Engineering-Project',
   },
   {
     name: 'GitOps + AIOps prototype',
-    stack: 'Python · Multi-cloud',
+    stack: 'Python, Multi cloud',
     description:
-      'Simulated multi-cloud cost/latency routing with telemetry and a live dashboard.',
+      'Simulated multi cloud cost and latency routing with telemetry and a live dashboard.',
     href: 'https://github.com/Sofoniasm/swen-gitops-aiops',
   },
 ];
 
 /**
- * Client / Upwork-style delivery — framed from real delivery themes.
+ * Client / Upwork style delivery framed from real delivery themes.
  * Replace hrefs with Upwork portfolio links when you share them.
  */
 export const clientDeliveries = [
   {
-    title: 'Safaricom Ethiopia · TKG Kubernetes',
+    title: 'Safaricom Ethiopia, TKG Kubernetes',
     outcome:
       'Via Gebeya: cluster lifecycle, Terraform provisioning, CI/CD integration, security policies, monitoring.',
     tags: ['Tanzu TKG', 'Safaricom', 'GitOps'],
-    channel: 'Gebeya Inc. · production',
+    channel: 'Gebeya Inc., production',
   },
   {
     title: 'Multi cloud CI/CD & platforms',
     outcome:
       'Pipelines and infra automation on AWS, Azure, and GCP for consulting and Upwork style delivery.',
     tags: ['Kubernetes', 'ArgoCD', 'Jenkins', 'GitLab CI'],
-    channel: 'Consulting · client delivery',
+    channel: 'Consulting, client delivery',
   },
   {
     title: 'Cloud training for teams (GIZ)',
     outcome:
       'Structured AWS / Azure / GCP programs: fundamentals through architecture, security, and cost control.',
     tags: ['Trainer', 'AWS', 'Azure', 'GCP'],
-    channel: 'GIZ · capacity building',
+    channel: 'GIZ, capacity building',
   },
   {
     title: 'Enterprise networking to cloud',

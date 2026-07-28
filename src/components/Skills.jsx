@@ -1,24 +1,24 @@
 const highlights = [
   'Kubestronaut',
-  'Azure — all certs',
+  'Azure all certs',
   'AWS Cloud Engineer',
-  'CCNA · CCNP · Security',
+  'CCNA, CCNP, Security',
   'Kubernetes',
-  'EKS · GKE · AKS',
-  'Infomaniak · Linode',
+  'EKS, GKE, AKS',
+  'Infomaniak, Linode',
   'Terraform',
-  'AWS · Azure · GCP',
-  'Python · Go',
-  'CI/CD · DevSecOps',
+  'AWS, Azure, GCP',
+  'Python, Go',
+  'CI/CD and DevSecOps',
   'Networking',
-  'Data · MLOps',
+  'Data and MLOps',
 ];
 
 const Skills = () => {
   return (
     <section id="skills" className="section section--tight">
       <div className="container">
-        <p className="section__label">07 — Craft</p>
+        <p className="section__label">07 Craft</p>
         <h2 className="section__title">
           Selected <span className="text-gradient">capabilities</span>
         </h2>

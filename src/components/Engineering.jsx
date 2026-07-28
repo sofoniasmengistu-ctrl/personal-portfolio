@@ -5,12 +5,12 @@ const Engineering = () => {
   return (
     <section id="engineering" className="section">
       <div className="container">
-        <p className="section__label">02 — Engineering</p>
+        <p className="section__label">02 Engineering</p>
         <h2 className="section__title">
           GitHub work, <span className="text-gradient">selected</span>
         </h2>
         <p className="section__lead">
-          97+ public projects. Here are the ones that show how I build —
+          97+ public projects. Here are the ones that show how I build:
           Terraform, Kubernetes, data platforms, and production AWS.
         </p>
 

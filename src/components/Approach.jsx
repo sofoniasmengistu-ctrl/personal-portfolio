@@ -14,7 +14,7 @@ const pillars = [
   },
   {
     num: '03',
-    title: 'Multi-cloud delivery',
+    title: 'Multi cloud delivery',
     body: 'AWS, Azure, GCP with Terraform, GitOps, and DevSecOps for teams that ship.',
   },
 ];
