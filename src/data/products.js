@@ -36,3 +36,34 @@ export const products = [
     communityLabel: 'Updates',
   },
 ];
+
+/** Official WeRemoteIT company channels (not personal socials) */
+export const companyChannels = [
+  {
+    id: 'youtube',
+    label: 'YouTube',
+    handle: '@WeRemoteIT',
+    href: 'https://www.youtube.com/@WeRemoteIT',
+    note: 'Product demos & updates',
+  },
+  {
+    id: 'x',
+    label: 'X',
+    handle: '@WeRemoteIT',
+    href: 'https://x.com/WeRemoteIT',
+    note: 'Announcements',
+  },
+  {
+    id: 'medium',
+    label: 'Medium',
+    handle: '@sofonias_mengistu',
+    href: 'https://medium.com/@sofonias_mengistu',
+    note: 'Engineering notes',
+  },
+];
+
+export const credentials = {
+  kubestronautDirectory:
+    'https://www.cncf.io/training/kubestronaut/?_sft_lf-country=et',
+  kubestronautNote: 'Only registered Kubestronaut in Ethiopia · CNCF directory',
+};

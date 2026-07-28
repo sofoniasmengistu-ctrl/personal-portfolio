@@ -1,8 +1,23 @@
+const ecosystem = [
+  {
+    title: 'Mini Apps + bots',
+    body: 'Telegram-native surfaces with real wallets, hiring flows, and AI.',
+  },
+  {
+    title: 'Owned communities',
+    body: 'Channels and groups per product — updates and support in-chat.',
+  },
+  {
+    title: 'Operated end-to-end',
+    body: 'Cloud, Kubernetes, CI/CD, security — the same stack that keeps them live.',
+  },
+];
+
 const Proof = () => {
   return (
     <section id="ecosystem" className="section section--tight">
       <div className="container">
-        <p className="section__label">02 — Approach</p>
+        <p className="section__label">03 — Approach</p>
         <h2 className="section__title">
           Built where people <span className="text-gradient">already are</span>
         </h2>
@@ -12,18 +27,12 @@ const Proof = () => {
         </p>
 
         <div className="proof__grid">
-          <div className="proof-item">
-            <h3>Mini Apps + bots</h3>
-            <p>Telegram-native surfaces with real wallets, hiring flows, and AI.</p>
-          </div>
-          <div className="proof-item">
-            <h3>Owned communities</h3>
-            <p>Channels and groups per product — updates and support in-chat.</p>
-          </div>
-          <div className="proof-item">
-            <h3>Operated end-to-end</h3>
-            <p>Cloud, Kubernetes, CI/CD, security — the same stack that keeps them live.</p>
-          </div>
+          {ecosystem.map((item) => (
+            <div key={item.title} className="proof-item">
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

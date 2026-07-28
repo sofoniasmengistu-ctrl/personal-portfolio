@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Products from './components/Products';
+import Presence from './components/Presence';
 import Proof from './components/Proof';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -16,6 +17,7 @@ function App() {
       <main>
         <Hero />
         <Products />
+        <Presence />
         <Proof />
         <About />
         <Skills />

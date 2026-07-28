@@ -1,3 +1,5 @@
+import { credentials } from '../data/products';
+
 const timeline = [
   {
     year: 'Now',
@@ -20,7 +22,7 @@ const About = () => {
   return (
     <section id="about" className="section about">
       <div className="container">
-        <p className="section__label">03 — Profile</p>
+        <p className="section__label">04 — Profile</p>
         <h2 className="section__title">
           Sofonias <span className="text-gradient">Mengistu</span>
         </h2>
@@ -28,22 +30,38 @@ const About = () => {
           Brief by design. Detail lives in the work — and in the CV on request.
         </p>
 
-        <div className="about__layout">
-          <img
-            src="/profile.jpg"
-            alt="Sofonias Mengistu"
-            className="about__photo"
-            width={180}
-            height={180}
-          />
+        <div className="about__layout about__layout--media">
+          <div className="about__media">
+            <img
+              src="/kubestronaut-portrait.png"
+              alt="Sofonias Mengistu in CNCF Kubestronaut jacket"
+              className="about__portrait"
+              width={420}
+              height={520}
+            />
+            <img
+              src="/kubestronaut-jacket.png"
+              alt="Kubestronaut jacket detail"
+              className="about__jacket"
+              width={200}
+              height={200}
+            />
+          </div>
+
           <div className="about__bio">
-            <p className="about__roles">
-              Founder · DevSecOps · Kubestronaut
-            </p>
+            <p className="about__roles">Founder · DevSecOps · Kubestronaut</p>
             <p>
               Based in Addis Ababa. I build products people use in Telegram,
               and advise teams on cloud, Kubernetes, and secure delivery across Africa.
             </p>
+            <a
+              className="about__credential"
+              href={credentials.kubestronautDirectory}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {credentials.kubestronautNote}
+            </a>
             <p>
               <a href="/Sofonias_Mengistu_Resume.pdf" download="Sofonias_Mengistu_Resume.pdf">
                 Download CV →

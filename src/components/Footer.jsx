@@ -1,11 +1,12 @@
 import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
+import { companyChannels } from '../data/products';
 
 const Footer = () => {
   return (
     <footer id="contact" className="contact">
       <div className="container">
         <p className="section__label" style={{ textAlign: 'center' }}>
-          05 — Contact
+          06 — Contact
         </p>
         <h2 className="section__title" style={{ textAlign: 'center' }}>
           Let&apos;s talk
@@ -54,6 +55,17 @@ const Footer = () => {
         <div className="contact__details">
           <a href="mailto:sofoniasmengistu@gmail.com">sofoniasmengistu@gmail.com</a>
           <a href="tel:+251912215057">+251 912 215 057</a>
+        </div>
+
+        <div className="contact__company">
+          <p className="contact__company-label mono">WeRemoteIT · company</p>
+          <div className="contact__company-links">
+            {companyChannels.map((c) => (
+              <a key={c.id} href={c.href} target="_blank" rel="noopener noreferrer">
+                {c.label}
+              </a>
+            ))}
+          </div>
         </div>
 
         <p className="contact__copy">

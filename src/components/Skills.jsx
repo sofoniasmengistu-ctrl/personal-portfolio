@@ -15,7 +15,7 @@ const Skills = () => {
   return (
     <section id="skills" className="section section--tight">
       <div className="container">
-        <p className="section__label">04 — Craft</p>
+        <p className="section__label">05 — Craft</p>
         <h2 className="section__title">
           Selected <span className="text-gradient">capabilities</span>
         </h2>
