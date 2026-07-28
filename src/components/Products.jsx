@@ -13,9 +13,9 @@ const Products = () => {
           Three chat-native products. Each with a Mini App, a bot, and a community.
         </p>
 
-        <div className="products__track">
+        <div className="h-track products__track">
           {products.map((product) => (
-            <article key={product.id} className="product-panel">
+            <article key={product.id} className="product-panel h-track__item">
               <p className="product-panel__tag">{product.tag}</p>
               <h3 className="product-panel__title">{product.name}</h3>
               <p className="product-panel__desc">{product.description}</p>

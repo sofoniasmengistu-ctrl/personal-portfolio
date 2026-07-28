@@ -6,7 +6,7 @@ const Footer = () => {
     <footer id="contact" className="contact">
       <div className="container">
         <p className="section__label" style={{ textAlign: 'center' }}>
-          08 — Contact
+          05 — Contact
         </p>
         <h2 className="section__title" style={{ textAlign: 'center' }}>
           Let&apos;s talk

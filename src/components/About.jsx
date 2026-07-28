@@ -19,11 +19,25 @@ const timeline = [
   },
 ];
 
+const highlights = [
+  'Kubestronaut',
+  '12× Azure',
+  'AWS Architect',
+  'Cisco Security',
+  'Kubernetes',
+  'Terraform',
+  'AWS · Azure · GCP',
+  'Python · Go',
+  'CI/CD · DevSecOps',
+  'Networking',
+  'Data · MLOps',
+];
+
 const About = () => {
   return (
     <section id="about" className="section about">
       <div className="container">
-        <p className="section__label">06 — Profile</p>
+        <p className="section__label">04 — Profile</p>
         <h2 className="section__title">
           Sofonias <span className="text-gradient">Mengistu</span>
         </h2>
@@ -86,6 +100,17 @@ const About = () => {
                 Download CV →
               </a>
             </p>
+
+            <div className="about__skills" id="skills">
+              <p className="band__title">Selected capabilities</p>
+              <div className="skills__chips">
+                {highlights.map((skill) => (
+                  <span key={skill} className="skill-chip">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 

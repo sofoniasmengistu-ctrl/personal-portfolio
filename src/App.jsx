@@ -4,12 +4,9 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Trust from './components/Trust';
 import Products from './components/Products';
-import Engineering from './components/Engineering';
-import ClientWork from './components/ClientWork';
-import Presence from './components/Presence';
-import Proof from './components/Proof';
+import Work from './components/Work';
+import Approach from './components/Approach';
 import About from './components/About';
-import Skills from './components/Skills';
 import Footer from './components/Footer';
 import StickyCta from './components/StickyCta';
 
@@ -21,12 +18,9 @@ function App() {
         <Hero />
         <Trust />
         <Products />
-        <Engineering />
-        <ClientWork />
-        <Presence />
-        <Proof />
+        <Work />
+        <Approach />
         <About />
-        <Skills />
       </main>
       <Footer />
       <StickyCta />
