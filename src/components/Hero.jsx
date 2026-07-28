@@ -14,11 +14,11 @@ const Hero = () => {
             Sofonias<span className="text-accent">.</span>
           </h1>
           <p className="hero__seo-line">
-            Cloud DevOps Engineer in Ethiopia, Kubestronaut, based in Addis Ababa
+            DevOps Engineer, Network Engineer, and Kubestronaut in Ethiopia, Addis Ababa
           </p>
 
           <p className="hero__role-badge">
-            Cloud DevOps Engineer and Kubestronaut
+            Cloud DevOps, Network Engineer, Kubestronaut
           </p>
 
           <p className="hero__headline">

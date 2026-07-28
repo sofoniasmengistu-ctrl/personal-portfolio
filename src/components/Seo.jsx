@@ -4,16 +4,59 @@ const faqs = [
     a: 'Sofonias Mengistu is a Cloud DevOps Engineer and CNCF Kubestronaut based in Addis Ababa. He delivers Kubernetes, AWS, Azure, GCP, Terraform, CI/CD, and DevSecOps for Ethiopian and international teams.',
   },
   {
+    q: 'Who is a Network Engineer in Ethiopia with field experience?',
+    a: 'Sofonias Mengistu is a Network Engineer with field support for 37 tech companies across Great Britain, the USA, Dubai, Singapore, and Pakistan, plus major projects such as Visa routers for Ethiopian banks and an American Embassy Huawei to Ubiquiti cutover.',
+  },
+  {
+    q: 'Do you offer IT support, cloud support, or infrastructure support in Addis Ababa?',
+    a: 'Yes. Sofonias provides on site and remote IT support, cloud support, network support, Kubernetes support, and DevOps support for businesses in Addis Ababa, across Ethiopia, and remote worldwide.',
+  },
+  {
     q: 'Is there a Kubestronaut in Ethiopia?',
     a: 'Yes. Sofonias is the only registered CNCF Kubestronaut in Ethiopia (KCNA, KCSA, CKA, CKAD, CKS) and was featured in CNCF Kubestronaut in Orbit.',
   },
   {
-    q: 'How do I hire a DevOps Engineer in Ethiopia or remotely?',
-    a: 'Use the contact form on this site, email sofoniasmengistu@gmail.com, or WhatsApp / Telegram on +251 912 215 057 and +251 946 699 350 for full time roles, consulting, or builds.',
+    q: 'How do I hire a DevOps Engineer, SRE, or DevSecOps engineer in Ethiopia or remotely?',
+    a: 'Use the contact form on this site, email sofoniasmengistu@gmail.com, or WhatsApp / Telegram on +251 912 215 057 and +251 946 699 350 for full time roles, consulting, Upwork style projects, or builds.',
   },
   {
     q: 'What production Kubernetes work has Sofonias delivered?',
     a: 'Kubernetes end to end across clouds and providers: cluster creation through hardening, CI/CD, RBAC, networking, and observability on AWS EKS, Google GKE, Azure AKS, Infomaniak, Linode, and VMware Tanzu (TKG). At Gebeya Inc. he was hired for that depth and assigned to a live telco TKG platform project.',
+  },
+  {
+    q: 'Can I hire Sofonias for Network Engineer or field engineer projects?',
+    a: 'Yes. He takes Network Engineer and field engineer work including enterprise network design, install, cutover, stabilize, Visa connectivity rollouts, and campus or embassy network migrations.',
+  },
+  {
+    q: 'Where can I find Sofonias Mengistu portfolio and contact?',
+    a: 'This site is the official Sofonias Mengistu portfolio: sofoniasdevops.com. Contact for DevOps, Network Engineer, cloud support, SRE, consulting, and product builds is on the contact page.',
+  },
+];
+
+const topics = [
+  {
+    title: 'DevOps Engineer in Ethiopia',
+    body: 'Hire a Cloud DevOps Engineer in Addis Ababa for AWS, Azure, GCP, Terraform, CI/CD, GitOps, and production Kubernetes. Available for full time roles and remote teams worldwide.',
+  },
+  {
+    title: 'Network Engineer in Ethiopia',
+    body: 'Network Engineer and field support for enterprise networks: design, install, cutover, and stabilize. Experience across GB, USA, Dubai, Singapore, and Pakistan via managed source partners.',
+  },
+  {
+    title: 'IT support and cloud support',
+    body: 'Cloud support, infrastructure support, and IT support for companies that need reliable on site or remote help with networks, Kubernetes, monitoring, and day to day platform operations.',
+  },
+  {
+    title: 'Kubestronaut and Kubernetes Engineer',
+    body: 'Only registered CNCF Kubestronaut in Ethiopia. End to end clusters on EKS, GKE, AKS, Infomaniak, Linode, and Tanzu TKG with security, observability, and runbooks.',
+  },
+  {
+    title: 'DevSecOps and SRE',
+    body: 'DevSecOps Engineer and SRE minded delivery: secure pipelines, RBAC, network policy, incident clarity, and platforms teams can operate without constant firefighting.',
+  },
+  {
+    title: 'Consulting, training, and builds',
+    body: 'Upwork style consulting, GIZ style cloud training, Gebeya hired Kubernetes delivery, and founder built products that prove production ownership beyond tickets.',
   },
 ];
 
@@ -21,43 +64,24 @@ const Seo = () => {
   return (
     <section id="devops-ethiopia" className="section section--muted seo" aria-labelledby="seo-heading">
       <div className="container">
-        <p className="section__label">SEO Ethiopia Cloud native</p>
+        <p className="section__label">SEO Ethiopia Cloud native Network</p>
         <h2 id="seo-heading" className="section__title">
-          DevOps Engineer in Ethiopia{' '}
-          <span className="text-accent">Cloud DevOps and Kubestronaut</span>
+          DevOps Engineer, Network Engineer, and{' '}
+          <span className="text-accent">cloud support in Ethiopia</span>
         </h2>
         <p className="section__lead">
-          Looking for a Cloud DevOps Engineer in Ethiopia, a Kubernetes specialist
-          in Addis Ababa, or a Kubestronaut for remote DevSecOps? This is the
-          official site of Sofonias Mengistu.
+          Searching for a DevOps Engineer in Ethiopia, a Network Engineer in Addis
+          Ababa, IT support, cloud support, SRE, DevSecOps, or a Kubestronaut for
+          remote work? This is the official Sofonias Mengistu portfolio.
         </p>
 
         <div className="seo__grid">
-          <article className="seo__card">
-            <h3>Cloud DevOps Engineer in Ethiopia</h3>
-            <p>
-              Based in Addis Ababa and available remote worldwide. Multi cloud
-              delivery on AWS, Azure, and GCP with Terraform, CI/CD, GitOps, and
-              production Kubernetes end to end: EKS, GKE, AKS, Infomaniak,
-              Linode, and VMware Tanzu Kubernetes Grid.
-            </p>
-          </article>
-          <article className="seo__card">
-            <h3>Kubestronaut Ethiopia</h3>
-            <p>
-              CNCF Kubestronaut credentials: KCNA, KCSA, CKA, CKAD, and CKS.
-              Featured by CNCF for Kubernetes and cloud native leadership from
-              Ethiopia.
-            </p>
-          </article>
-          <article className="seo__card">
-            <h3>Hire for roles, consulting, and builds</h3>
-            <p>
-              Full time Cloud DevOps / DevSecOps / SRE roles, Upwork style
-              consulting, multi cloud cluster builds, cloud training (GIZ), and
-              custom Telegram and platform builds.
-            </p>
-          </article>
+          {topics.map((topic) => (
+            <article key={topic.title} className="seo__card">
+              <h3>{topic.title}</h3>
+              <p>{topic.body}</p>
+            </article>
+          ))}
         </div>
 
         <div className="seo__faq">
