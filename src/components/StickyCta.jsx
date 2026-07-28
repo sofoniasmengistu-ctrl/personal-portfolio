@@ -3,8 +3,8 @@ import { Linkedin, MessageCircle } from 'lucide-react';
 const StickyCta = () => {
   return (
     <div className="sticky-cta" role="navigation" aria-label="Quick actions">
-      <a href="#contact" className="btn-primary">
-        Call Sofonias
+      <a href="#pricing" className="btn-primary">
+        Free 15 min
       </a>
       <div className="sticky-cta__icons">
         <a

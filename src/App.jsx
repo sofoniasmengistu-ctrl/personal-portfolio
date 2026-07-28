@@ -11,6 +11,7 @@ import Work from './components/Work';
 import Products from './components/Products';
 import Approach from './components/Approach';
 import About from './components/About';
+import Pricing from './components/Pricing';
 import Seo from './components/Seo';
 import Footer from './components/Footer';
 import StickyCta from './components/StickyCta';
@@ -30,6 +31,7 @@ function App() {
         <Products />
         <Approach />
         <About />
+        <Pricing />
         <Seo />
       </main>
       <Footer />

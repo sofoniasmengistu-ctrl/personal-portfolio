@@ -4,10 +4,12 @@ import { Send } from 'lucide-react';
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/sofoniasmengistu@gmail.com';
 
 const intentOptions = [
+  { value: 'Free 15 minute consultation', label: 'Free 15 minute consultation' },
+  { value: 'Hourly consulting', label: 'Hourly consulting' },
+  { value: 'Monthly retainer', label: 'Monthly retainer' },
   { value: 'Full time Cloud DevOps role', label: 'Full time Cloud DevOps role' },
-  { value: 'Consulting / Upwork project', label: 'Consulting / Upwork project' },
+  { value: 'Network Engineer / field work', label: 'Network Engineer / field work' },
   { value: 'Build a product or platform', label: 'Build a product or platform' },
-  { value: 'Telegram / Mini App build', label: 'Telegram / Mini App build' },
   { value: 'Other', label: 'Other' },
 ];
 

@@ -86,10 +86,10 @@ const Footer = () => {
           <div className="contact__aside">
             <p className="contact__aside-title">Ask Sofonias first for</p>
             <ul className="contact__offer">
-              <li>DevOps, DevSecOps, and SRE roles in Addis Ababa</li>
-              <li>Network Engineer and on site field support</li>
+              <li>Free 15 minute consultation</li>
+              <li>Hourly or monthly DevOps and network work</li>
               <li>IT support, cloud support, and Kubernetes</li>
-              <li>Consulting, training, and product builds</li>
+              <li>On site Addis Ababa or remote delivery</li>
             </ul>
             <a
               href="/Sofonias_Mengistu_Resume.pdf"

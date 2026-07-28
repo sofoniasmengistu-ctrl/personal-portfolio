@@ -885,6 +885,159 @@ h1, h2, h3, h4 {
   color: var(--text-muted);
 }
 
+/* ——— Reveal animations ——— */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s var(--ease),
+    transform 0.7s var(--ease);
+  will-change: opacity, transform;
+}
+
+.reveal.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ——— Pricing ——— */
+.pricing {
+  background: var(--surface-muted);
+  border-block: 1px solid var(--line);
+}
+
+.pricing__grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+@media (min-width: 900px) {
+  .pricing__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: stretch;
+  }
+}
+
+.pricing__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.4rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-align: left;
+}
+
+.pricing__card--featured {
+  border-color: color-mix(in srgb, var(--magenta) 45%, var(--line));
+  box-shadow: 0 16px 40px rgba(74, 21, 57, 0.08);
+  background:
+    linear-gradient(180deg, rgba(229, 0, 79, 0.04), transparent 42%),
+    var(--surface);
+}
+
+.pricing__card-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--magenta);
+  margin-bottom: 0.15rem;
+}
+
+.pricing__amount {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.pricing__amount-suffix {
+  color: var(--magenta);
+}
+
+.pricing__amount-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.pricing__blurb {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 0.35rem;
+}
+
+.pricing__points {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+  flex: 1;
+}
+
+.pricing__points li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
+.pricing__points li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--magenta);
+  font-weight: 800;
+}
+
+.pricing__card .btn-primary,
+.pricing__card .btn-dark {
+  width: 100%;
+  margin-top: auto;
+}
+
+.pricing__footnote {
+  margin-top: 1.25rem;
+  max-width: 42rem;
+}
+
+.pricing__footnote p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.hero__copy {
+  animation: rise-in 0.8s var(--ease) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__copy,
+  .hero__visual--lift,
+  .hero__panel--lift {
+    animation: none;
+  }
+}
+
 /* ——— Addis Ababa first contact ——— */
 .first-contact {
   background:
