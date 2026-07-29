@@ -28,12 +28,24 @@ const projects = [
     title: 'American Embassy Huawei to Ubiquiti',
     body: 'Removed Huawei completely and installed Ubiquiti so the site finished in one pass.',
   },
+  {
+    kicker: '03 Spain embassy',
+    title: 'Datacenter VPN and full network infrastructure',
+    body: 'Configured the Spain embassy datacenter end to end: VPN, routers, switches, and core network — not patch cords.',
+  },
+  {
+    kicker: '04 GIZ',
+    title: 'GIZ router and network configuration',
+    body: 'Configured GIZ routers and supporting network infrastructure so sites ran on a stable, production ready path.',
+  },
 ];
 
 const ribbon = [
   ...regions,
   'Visa routers for Ethiopian banks',
   'American Embassy Ubiquiti cutover',
+  'Spain embassy datacenter VPN',
+  'GIZ router configuration',
   'Managed source partners',
 ];
 

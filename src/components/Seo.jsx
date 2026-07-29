@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: 'Who is a Network Engineer in Ethiopia with field experience?',
-    a: 'Sofonias Mengistu is a Network Engineer with field support for 37 tech companies across Great Britain, the USA, Dubai, Singapore, and Pakistan, plus major projects such as Visa routers for Ethiopian banks and an American Embassy Huawei to Ubiquiti cutover.',
+    a: 'Sofonias Mengistu is a Network Engineer with field support for 37 tech companies across Great Britain, the USA, Dubai, Singapore, and Pakistan, plus major projects such as Visa routers for Ethiopian banks, an American Embassy Huawei to Ubiquiti cutover, Spain embassy datacenter VPN and infrastructure configuration, and GIZ router configuration.',
   },
   {
     q: 'Do you offer IT support, cloud support, or infrastructure support in Addis Ababa?',
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: 'Can I hire Sofonias for Network Engineer or field engineer projects?',
-    a: 'Yes. He takes Network Engineer and field engineer work including enterprise network design, install, cutover, stabilize, Visa connectivity rollouts, and campus or embassy network migrations.',
+    a: 'Yes. He takes Network Engineer and field engineer work including enterprise network design, install, cutover, stabilize, Visa connectivity rollouts, embassy datacenter VPN and infrastructure configuration, and campus or embassy network migrations.',
   },
   {
     q: 'Where can I find Sofonias Mengistu portfolio and contact in Addis Ababa?',
