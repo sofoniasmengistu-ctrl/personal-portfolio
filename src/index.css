@@ -1924,6 +1924,27 @@ a.trust__item:hover .trust__value {
   font-weight: 700;
 }
 
+.trust__badge-note {
+  font-size: 0.58rem;
+  line-height: 1.25;
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 100%;
+}
+
+.trust__badge--platform {
+  width: 6.1rem;
+  border-color: var(--line);
+}
+
+.trust__badge--platform:hover {
+  border-color: color-mix(in srgb, var(--magenta) 40%, var(--line));
+}
+
+.trust__badge--platform .trust__badge-label {
+  color: var(--ink-soft);
+}
+
 .trust__certs-row {
   display: flex;
   flex-wrap: wrap;

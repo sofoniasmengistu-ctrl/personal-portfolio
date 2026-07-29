@@ -193,11 +193,41 @@ export const trustKubestronautCerts = [
 ];
 
 export const trustPlatformCertifications = [
-  'Azure all certifications',
-  'AWS Cloud Engineer',
-  'CCNA',
-  'CCNP',
-  'CCNA Security',
+  {
+    id: 'azure',
+    label: 'Azure',
+    note: 'All certifications',
+    logo: '/certs/azure.svg',
+    href: 'https://learn.microsoft.com/en-us/credentials/',
+  },
+  {
+    id: 'aws',
+    label: 'AWS',
+    note: 'Cloud Engineer',
+    logo: '/certs/aws.svg',
+    href: 'https://aws.amazon.com/certification/',
+  },
+  {
+    id: 'ccna',
+    label: 'CCNA',
+    note: 'Cisco',
+    logo: '/certs/cisco.svg',
+    href: 'https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html',
+  },
+  {
+    id: 'ccnp',
+    label: 'CCNP',
+    note: 'Cisco',
+    logo: '/certs/cisco.svg',
+    href: 'https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccnp-enterprise/index.html',
+  },
+  {
+    id: 'ccna-sec',
+    label: 'CCNA Sec',
+    note: 'Cisco Security',
+    logo: '/certs/cisco.svg',
+    href: 'https://www.cisco.com/site/us/en/learn/training-certifications/certifications/security/index.html',
+  },
 ];
 
 /** Selected roles from LinkedIn experience */

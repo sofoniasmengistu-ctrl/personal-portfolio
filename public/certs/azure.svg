@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Microsoft Azure">
+  <rect width="96" height="96" rx="12" fill="#F3F8FC"/>
+  <path fill="#0078D4" d="M28.5 72.5 48.2 23.5h16.8L42.2 72.5H28.5z"/>
+  <path fill="#50E6FF" d="M54.2 52.8 42.2 72.5h29.6L86 52.8H54.2z"/>
+  <path fill="#0078D4" d="M54.2 52.8h31.8L74.8 72.5H42.2l12-19.7z" opacity=".85"/>
+</svg>

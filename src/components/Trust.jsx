@@ -74,11 +74,21 @@ const Trust = () => {
             <p className="trust__certs-label trust__certs-label--next mono">
               Azure, AWS, and Cisco
             </p>
-            <div className="trust__certs-row">
+            <div className="trust__badge-row" role="list">
               {trustPlatformCertifications.map((cert) => (
-                <span key={cert} className="trust__cert">
-                  {cert}
-                </span>
+                <a
+                  key={cert.id}
+                  href={cert.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="trust__badge trust__badge--platform"
+                  role="listitem"
+                  title={`${cert.label} · ${cert.note}`}
+                >
+                  <img src={cert.logo} alt={`${cert.label} certification`} className="trust__badge-img" />
+                  <span className="trust__badge-label mono">{cert.label}</span>
+                  <span className="trust__badge-note">{cert.note}</span>
+                </a>
               ))}
             </div>
           </Reveal>
