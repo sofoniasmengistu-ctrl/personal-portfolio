@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Video', href: '#intro-video' },
   { name: 'Addis', href: '#addis-ababa' },
   { name: 'Field', href: '#field' },
   { name: 'Work', href: '#work' },
@@ -21,7 +20,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'intro-video', 'addis-ababa', 'field', 'case-study', 'work', 'products', 'approach', 'about', 'pricing', 'contact'];
+      const sections = ['home', 'addis-ababa', 'field', 'case-study', 'work', 'products', 'approach', 'about', 'pricing', 'contact'];
       let current = '#home';
 
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 80) {

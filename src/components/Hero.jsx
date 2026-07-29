@@ -1,6 +1,9 @@
 import { ArrowRight, Check, Download, Linkedin, MoveRight } from 'lucide-react';
 import { credentials } from '../data/products';
 
+const INTRO_VIDEO =
+  'https://github.com/Sofoniasm/personal-portfolio/releases/download/intro-video-v1/sofonias-intro.mp4';
+
 const Hero = () => {
   return (
     <section id="home" className="hero">
@@ -87,13 +90,16 @@ const Hero = () => {
 
         <aside className="hero__aside">
           <div className="hero__media hero__visual--lift">
-            <img
-              className="hero__photo"
-              src="/kubestronaut-portrait.png"
-              alt="Sofonias Mengistu, DevOps Engineer and Network Engineer in Addis Ababa"
-              width={640}
-              height={800}
-            />
+            <video
+              className="hero__video"
+              controls
+              playsInline
+              preload="metadata"
+              poster="/sofonias-intro-poster.jpg"
+              aria-label="Sofonias Mengistu introducing his Cloud DevOps and engineering background"
+            >
+              <source src={INTRO_VIDEO} type="video/mp4" />
+            </video>
           </div>
           <div className="hero__panel hero__panel--lift">
             <p className="hero__panel-kicker mono">First contact in Addis Ababa</p>

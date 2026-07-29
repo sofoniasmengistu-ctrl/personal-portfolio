@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Trust from './components/Trust';
 import Logos from './components/Logos';
-import IntroVideo from './components/IntroVideo';
 import FirstContact from './components/FirstContact';
 import FieldEngineer from './components/FieldEngineer';
 import CaseStudy from './components/CaseStudy';
@@ -25,7 +24,6 @@ function App() {
         <Hero />
         <Trust />
         <Logos />
-        <IntroVideo />
         <FirstContact />
         <FieldEngineer />
         <CaseStudy />
