@@ -194,9 +194,16 @@ export const experienceHighlights = [
   {
     title: 'Senior DevOps at KodeKloud',
     outcome:
-      'Hands on DevOps delivery (Project Nautilus): Ansible, Terraform, config management, and cross team delivery.',
-    tags: ['Ansible', 'Terraform', 'Linux', 'DevOps'],
-    channel: '2023, KodeKloud Engineer path',
+      'One year as Senior DevOps on KodeKloud (Project Nautilus): Git, Jenkins, Linux, Docker, Kubernetes, Ansible, Terraform, and daily cross team delivery tasks.',
+    tags: ['Git', 'Jenkins', 'Linux', 'Docker', 'Kubernetes'],
+    channel: '1 year · KodeKloud Engineer path',
+  },
+  {
+    title: 'Two years building DevOps tool tasks',
+    outcome:
+      'About two years of hands on practice building and completing real DevOps tasks across Git, Jenkins, Linux, Docker, Kubernetes, CI/CD, and the wider toolchain before and alongside client delivery.',
+    tags: ['Git', 'Jenkins', 'Docker', 'Kubernetes', 'CI/CD'],
+    channel: '~2 years · hands on build time',
   },
   {
     title: 'Cloud and DevOps multi client delivery',

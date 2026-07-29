@@ -1,33 +1,38 @@
 import { MoveRight } from 'lucide-react';
 import { Reveal } from './Reveal';
 
-const steps = [
+const proofs = [
   {
-    label: '01 The hire',
-    title: 'Gebeya hired me for Kubernetes depth',
-    body: 'Gebeya Inc. hired me as a DevOps Engineer for production Kubernetes and platform skills. They needed someone who could own the work, not sit on a generic ticket queue.',
+    label: '01 Gebeya hire',
+    title: 'Hired for Kubernetes depth, assigned to Safaricom TKG',
+    body: 'Gebeya Inc. hired me as a DevOps Engineer for production Kubernetes and platform skills, then assigned me to Safaricom Ethiopia Tanzu Kubernetes Grid: cluster lifecycle, Terraform, CI/CD, RBAC, and observability.',
   },
   {
-    label: '02 The assignment',
-    title: 'Safaricom Ethiopia: TKG project I was assigned',
-    body: 'Gebeya assigned me to Safaricom Ethiopia Tanzu Kubernetes Grid work. I handled cluster lifecycle, secure access, Terraform, CI/CD, and observability that the telco team could trust in production.',
+    label: '02 KodeKloud, one year',
+    title: 'Senior DevOps on KodeKloud for a full year',
+    body: 'One year on KodeKloud as Senior DevOps: Project Nautilus style delivery, daily engineering tasks, Ansible, Terraform, Linux, and cross team handoffs that mirrored real production work.',
   },
   {
-    label: '03 What made it different',
-    title: 'Full ownership from day one',
-    body: 'I owned the platform path end to end: deploy, harden, observe, and document. That gave Gebeya a repeatable TKG path with runbooks, faster changes, clearer incidents, and production grade controls.',
+    label: '03 Two years building the craft',
+    title: 'Two years building Git, Jenkins, Linux, Docker, Kubernetes tasks',
+    body: 'Beyond any single employer I spent about two years building and completing hands on DevOps tasks across Git, Jenkins, Linux, Docker, Kubernetes, CI/CD, and the wider DevOps toolchain so the hire was already battle tested.',
   },
 ];
 
 const tools = [
+  'Git',
+  'Jenkins',
+  'Linux',
+  'Docker',
+  'Kubernetes',
   'AWS EKS',
   'GKE',
   'AKS',
   'Infomaniak',
   'Linode',
   'Tanzu TKG',
-  'Kubernetes',
   'Terraform',
+  'Ansible',
   'CI/CD',
   'RBAC',
   'NetworkPolicy',
@@ -41,15 +46,16 @@ const CaseStudy = () => {
       <div className="container">
         <Reveal className="section-head section-head--row">
           <div className="section-head__copy">
-            <p className="section__label">Flagship case study</p>
+            <p className="section__label">Flagship proof</p>
             <h2 className="section__title">
-              Hired by Gebeya{' '}
-              <span className="text-accent">for lasting Kubernetes platforms</span>
+              Not only Gebeya.{' '}
+              <span className="text-accent">KodeKloud and years of DevOps tasks</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              Gebeya hired me. Safaricom was the client project they assigned.
-              What set the hire apart was full ownership of a live telco TKG
-              platform, not borrowed tickets.
+              Gebeya hired me for live Safaricom TKG work. I also spent one year on
+              KodeKloud as Senior DevOps, and about two years building real tasks
+              across Git, Jenkins, Linux, Docker, Kubernetes, and the full DevOps
+              toolchain.
             </p>
           </div>
           <a href="#contact" className="fancy-arrow">
@@ -63,21 +69,21 @@ const CaseStudy = () => {
 
         <Reveal className="case-study__meta" delay={80}>
           <div className="case-study__meta-item">
-            <p className="case-study__meta-label mono">Employer</p>
-            <p className="case-study__meta-value">Gebeya Inc.</p>
+            <p className="case-study__meta-label mono">Production hire</p>
+            <p className="case-study__meta-value">Gebeya · Safaricom TKG</p>
           </div>
           <div className="case-study__meta-item">
-            <p className="case-study__meta-label mono">Assigned project</p>
-            <p className="case-study__meta-value">Safaricom Ethiopia TKG</p>
+            <p className="case-study__meta-label mono">KodeKloud</p>
+            <p className="case-study__meta-value">1 year · Senior DevOps</p>
           </div>
           <div className="case-study__meta-item">
-            <p className="case-study__meta-label mono">Role</p>
-            <p className="case-study__meta-value">DevOps Engineer</p>
+            <p className="case-study__meta-label mono">Hands on build time</p>
+            <p className="case-study__meta-value">2 years · DevOps tools</p>
           </div>
         </Reveal>
 
         <div className="case-study__steps">
-          {steps.map((step, i) => (
+          {proofs.map((step, i) => (
             <Reveal key={step.label} as="article" className="case-study__step" delay={i * 100} variant="up">
               <p className="case-study__step-label mono">{step.label}</p>
               <h3 className="case-study__step-title">{step.title}</h3>

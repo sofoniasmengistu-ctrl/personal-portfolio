@@ -54,8 +54,9 @@ const Hero = () => {
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>Hired by Gebeya</strong> for Kubernetes, plus 37 network
-                field companies across GB, USA, Dubai, Singapore, and Pakistan
+                <strong>Gebeya + KodeKloud</strong> hire and one year Senior
+                DevOps, plus ~2 years building Git, Jenkins, Linux, Docker, and
+                Kubernetes tasks
               </span>
             </li>
           </ul>

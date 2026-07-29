@@ -11,9 +11,9 @@ const timeline = [
   },
   {
     year: '2018 to 23',
-    role: 'Cloud and DevOps multi client',
+    role: 'Cloud, KodeKloud, and DevOps tool craft',
     description:
-      'AWS, Azure, GCP, KodeKloud Senior DevOps, GIZ cloud trainer, consulting and managed services delivery.',
+      'About two years building Git, Jenkins, Linux, Docker, and Kubernetes tasks; one year Senior DevOps at KodeKloud; AWS, Azure, GCP, GIZ trainer, consulting delivery.',
   },
   {
     year: '2010 to 18',
