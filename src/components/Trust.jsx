@@ -12,7 +12,7 @@ const Trust = () => {
       <div className="partition-stage">
         <div
           className="partition-visual"
-          style={{ backgroundImage: "url('/trust-certs-bg.png')" }}
+          style={{ backgroundImage: "url('/trust-certs-bg.jpg')" }}
           role="img"
           aria-label="Cloud and networking certifications background"
         />
