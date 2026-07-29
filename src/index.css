@@ -1887,6 +1887,7 @@ a.trust__item:hover .trust__value {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.65rem;
+  background: transparent;
 }
 
 .trust__badge {
@@ -1897,7 +1898,7 @@ a.trust__item:hover .trust__value {
   width: 5.75rem;
   padding: 0.65rem 0.45rem 0.55rem;
   border: 1px solid color-mix(in srgb, var(--magenta) 28%, var(--line));
-  background: rgba(255, 255, 255, 0.88);
+  background: #fff;
   backdrop-filter: blur(8px);
   transition: transform 0.2s var(--ease), border-color 0.2s, box-shadow 0.2s;
 }
@@ -1949,8 +1950,7 @@ a.trust__item:hover .trust__value {
 .trust__badge--aws {
   width: 9rem;
   border-color: color-mix(in srgb, #ff9900 35%, var(--line));
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 248, 236, 0.9));
+  background: #fff;
 }
 
 .trust__badge--aws .trust__badge-label {
@@ -1994,6 +1994,22 @@ a.trust__item:hover .trust__value {
   padding: 0.15rem 0.15rem 0.85rem;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  background: transparent;
+  scrollbar-width: thin;
+  scrollbar-color: var(--magenta) transparent;
+}
+
+.trust__cred-track::-webkit-scrollbar {
+  height: 4px;
+}
+
+.trust__cred-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.trust__cred-track::-webkit-scrollbar-thumb {
+  background: var(--magenta);
+  border-radius: 999px;
 }
 
 .trust__cred {
@@ -2004,7 +2020,7 @@ a.trust__item:hover .trust__value {
   padding: 0.75rem 0.85rem;
   scroll-snap-align: start;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.9);
+  background: #fff;
   backdrop-filter: blur(8px);
   transition: transform 0.2s var(--ease), border-color 0.2s, box-shadow 0.2s;
 }
