@@ -1,9 +1,6 @@
 import { ArrowRight, Check, Download, Linkedin, MoveRight } from 'lucide-react';
 import { credentials } from '../data/products';
 
-const INTRO_VIDEO =
-  'https://github.com/Sofoniasm/personal-portfolio/releases/download/intro-video-v1/sofonias-intro.mp4';
-
 const Hero = () => {
   return (
     <section id="home" className="hero">
@@ -96,9 +93,9 @@ const Hero = () => {
               playsInline
               preload="metadata"
               poster="/sofonias-intro-poster.jpg"
-              aria-label="Sofonias Mengistu introducing his Cloud DevOps and engineering background"
+              aria-label="Sofonias Mengistu short introduction video"
             >
-              <source src={INTRO_VIDEO} type="video/mp4" />
+              <source src="/sofonias-intro.mp4" type="video/mp4" />
             </video>
           </div>
           <div className="hero__panel hero__panel--lift">
