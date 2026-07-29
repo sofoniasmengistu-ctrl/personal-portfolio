@@ -158,9 +158,41 @@ export const trustMetrics = [
   },
 ];
 
-/** Full cert picture for trust strip */
-export const trustCertifications = [
-  'Kubestronaut (KCNA, KCSA, CKA, CKAD, CKS)',
+/** Full cert picture for trust strip — Kubestronaut badges use official CNCF artwork */
+export const trustKubestronautCerts = [
+  {
+    id: 'kcna',
+    label: 'KCNA',
+    logo: '/certs/kcna.svg',
+    href: 'https://www.cncf.io/training/certification/kcna/',
+  },
+  {
+    id: 'kcsa',
+    label: 'KCSA',
+    logo: '/certs/kcsa.svg',
+    href: 'https://www.cncf.io/training/certification/kcsa/',
+  },
+  {
+    id: 'cka',
+    label: 'CKA',
+    logo: '/certs/cka.svg',
+    href: 'https://www.cncf.io/training/certification/cka/',
+  },
+  {
+    id: 'ckad',
+    label: 'CKAD',
+    logo: '/certs/ckad.svg',
+    href: 'https://www.cncf.io/training/certification/ckad/',
+  },
+  {
+    id: 'cks',
+    label: 'CKS',
+    logo: '/certs/cks.svg',
+    href: 'https://www.cncf.io/training/certification/cks/',
+  },
+];
+
+export const trustPlatformCertifications = [
   'Azure all certifications',
   'AWS Cloud Engineer',
   'CCNA',
