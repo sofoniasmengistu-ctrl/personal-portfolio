@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 .video-work
+public/sofonias-intro.mp4
 
 # Editor directories and files
 .vscode/*

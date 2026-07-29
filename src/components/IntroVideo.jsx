@@ -1,5 +1,8 @@
 import { Reveal } from './Reveal';
 
+const VIDEO_SRC =
+  'https://github.com/Sofoniasm/personal-portfolio/releases/download/intro-video-v1/sofonias-intro.mp4';
+
 const IntroVideo = () => {
   return (
     <section id="intro-video" className="section section--tight intro-video">
@@ -28,7 +31,7 @@ const IntroVideo = () => {
               poster="/sofonias-intro-poster.jpg"
               aria-label="Sofonias Mengistu introducing his Cloud DevOps and engineering background"
             >
-              <source src="/sofonias-intro.mp4" type="video/mp4" />
+              <source src={VIDEO_SRC} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
