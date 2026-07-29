@@ -15,8 +15,8 @@ const Hero = () => {
               Sofonias<span className="text-accent">.</span>
             </span>
             <span className="hero__seo-line">
-              DevOps Engineer, Network Engineer, IT support, and Kubestronaut in
-              Addis Ababa, Ethiopia
+              DevOps Engineer, Azure Data Engineer, Network Engineer, IT support,
+              and Kubestronaut in Addis Ababa, Ethiopia
             </span>
           </h1>
 
@@ -30,9 +30,10 @@ const Hero = () => {
           </p>
 
           <p className="hero__sub">
-            16+ years in IT. One person for Cloud DevOps, Network Engineer field
-            work, Kubernetes, IT support, and production builds. Based in Addis
-            Ababa. Available for full time roles, consulting, and on site delivery.
+            16+ years in IT. One person for Cloud DevOps, Azure Data Engineer work,
+            Network Engineer field delivery, Kubernetes, IT support, and production
+            builds. Based in Addis Ababa. Available for full time roles, consulting,
+            and on site delivery.
           </p>
 
           <ul className="hero__checks">
@@ -104,11 +105,11 @@ const Hero = () => {
               </li>
               <li>
                 <strong>02</strong>
-                <span>Network Engineer and on site field support</span>
+                <span>Azure Data Engineer: ADF, Databricks, lakehouse</span>
               </li>
               <li>
                 <strong>03</strong>
-                <span>IT support, cloud support, consulting, and builds</span>
+                <span>Network Engineer, IT support, consulting, and builds</span>
               </li>
             </ul>
             <div className="hero__panel-actions">

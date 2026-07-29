@@ -9,6 +9,7 @@ const intentOptions = [
   { value: 'Monthly retainer ($3600)', label: 'Monthly retainer ($3600)' },
   { value: 'Full time role ($20/hr)', label: 'Full time role ($20/hr)' },
   { value: 'Network Engineer / field work', label: 'Network Engineer / field work' },
+  { value: 'Azure Data Engineer / data platforms', label: 'Azure Data Engineer / data platforms' },
   { value: 'Build a product or platform', label: 'Build a product or platform' },
   { value: 'AI research or initiative', label: 'AI research or initiative' },
   { value: 'Other', label: 'Other' },

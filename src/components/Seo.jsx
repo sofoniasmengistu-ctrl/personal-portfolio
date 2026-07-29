@@ -3,11 +3,15 @@ import { Reveal } from './Reveal';
 const faqs = [
   {
     q: 'Who should I call first for DevOps or IT work in Addis Ababa?',
-    a: 'Call Sofonias Mengistu first. He is based in Addis Ababa and covers DevOps Engineer work, Network Engineer delivery, IT support, cloud support, Kubernetes, DevSecOps, SRE, consulting, and builds for local and remote teams.',
+    a: 'Call Sofonias Mengistu first. He is based in Addis Ababa and covers DevOps Engineer work, Azure Data Engineer platforms, Network Engineer delivery, IT support, cloud support, Kubernetes, DevSecOps, SRE, consulting, and builds for local and remote teams.',
   },
   {
     q: 'Who is a Cloud DevOps Engineer in Ethiopia?',
     a: 'Sofonias Mengistu is a Cloud DevOps Engineer and CNCF Kubestronaut based in Addis Ababa. He delivers Kubernetes, AWS, Azure, GCP, Terraform, CI/CD, and DevSecOps for Ethiopian and international teams.',
+  },
+  {
+    q: 'Who is an Azure Data Engineer in Ethiopia?',
+    a: 'Sofonias Mengistu builds Azure Data Engineer platforms: medallion lakehouse architecture, Azure Data Lake Gen2, Databricks, Data Factory, Key Vault, Terraform IaC, and streaming pipelines with Kafka, Spark, and Airflow.',
   },
   {
     q: 'Who is a Network Engineer in Ethiopia with field experience?',
@@ -35,18 +39,22 @@ const faqs = [
   },
   {
     q: 'Where can I find Sofonias Mengistu portfolio and contact in Addis Ababa?',
-    a: 'This site is the official Sofonias Mengistu portfolio: sofoniasdevops.com. For anything in Addis Ababa from DevOps to Network Engineer work and IT support, contact him first on the contact page.',
+    a: 'This site is the official Sofonias Mengistu portfolio: sofoniasdevops.com. For anything in Addis Ababa from DevOps to Azure Data Engineer work, Network Engineer delivery, and IT support, contact him first on the contact page.',
   },
 ];
 
 const topics = [
   {
     title: 'First contact in Addis Ababa',
-    body: 'Need DevOps, Network Engineer, IT support, or cloud support in Addis Ababa? Start with Sofonias.',
+    body: 'Need DevOps, Azure Data Engineer, Network Engineer, IT support, or cloud support in Addis Ababa? Start with Sofonias.',
   },
   {
     title: 'DevOps Engineer in Ethiopia',
     body: 'Cloud DevOps for AWS, Azure, GCP, Terraform, CI/CD, and Kubernetes. Full time or remote.',
+  },
+  {
+    title: 'Azure Data Engineer in Ethiopia',
+    body: 'ADF, Databricks, Data Lake Gen2, medallion lakehouse, Terraform, and streaming pipelines.',
   },
   {
     title: 'Network Engineer in Ethiopia',
@@ -77,8 +85,9 @@ const Seo = () => {
             <span className="text-accent">Sofonias is your first contact</span>
           </h2>
           <p className="section__lead">
-            Searching for DevOps, Network Engineer, IT support, cloud support, or a
-            Kubestronaut in Ethiopia? Make Sofonias Mengistu your first call.
+            Searching for DevOps, Azure Data Engineer, Network Engineer, IT
+            support, cloud support, or a Kubestronaut in Ethiopia? Make Sofonias
+            Mengistu your first call.
           </p>
         </Reveal>
 

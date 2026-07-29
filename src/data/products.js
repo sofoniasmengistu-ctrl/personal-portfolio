@@ -178,6 +178,13 @@ export const experienceHighlights = [
     channel: 'Aug 2023 to Present, Addis Ababa',
   },
   {
+    title: 'Azure Data Engineer',
+    outcome:
+      'Azure data platforms end to end: medallion lakehouse (Bronze / Silver / Gold), Data Lake Gen2, Databricks, Data Factory, Key Vault, Terraform IaC, and PySpark ready pipelines. Also streaming pipelines with Kafka, Spark, and Airflow.',
+    tags: ['ADF', 'Databricks', 'Data Lake', 'Terraform', 'PySpark'],
+    channel: 'Azure data platforms and pipelines',
+  },
+  {
     title: 'Cloud Computing Trainer at GIZ',
     outcome:
       'Trained teams on AWS, Azure, and GCP: architecture, security, serverless, and cost aware cloud practice.',
@@ -224,10 +231,10 @@ export const githubFeatured = [
     href: 'https://github.com/Sofoniasm/aws-laravel-serverless-terraform',
   },
   {
-    name: 'Azure data platform (100%)',
+    name: 'Azure Data Engineer platform (100%)',
     stack: 'Terraform, Databricks, ADF',
     description:
-      'Medallion lakehouse: Data Lake, Key Vault, Databricks, Data Factory.',
+      'Full Azure Data Engineer stack: medallion lakehouse, Data Lake Gen2, Key Vault, Databricks, Data Factory.',
     href: 'https://github.com/Sofoniasm/Azure-Data-Engineer-100-automated-',
   },
   {
@@ -264,6 +271,13 @@ export const clientDeliveries = [
       'Via Gebeya: cluster lifecycle, Terraform provisioning, CI/CD integration, security policies, monitoring.',
     tags: ['Tanzu TKG', 'Safaricom', 'GitOps'],
     channel: 'Gebeya Inc., production',
+  },
+  {
+    title: 'Azure Data Engineer platforms',
+    outcome:
+      'Automated Azure data stack: Data Lake Gen2, Databricks, Data Factory, Key Vault, medallion architecture, plus realtime streaming (Kafka, Spark, Airflow).',
+    tags: ['Azure Data Factory', 'Databricks', 'Lakehouse', 'Streaming'],
+    channel: 'Data engineering delivery',
   },
   {
     title: 'Multi cloud CI/CD and platforms',

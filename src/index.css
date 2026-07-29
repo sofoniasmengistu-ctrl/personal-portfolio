@@ -902,6 +902,48 @@ h1, h2, h3, h4 {
   color: var(--text-muted);
 }
 
+/* ——— Intro video ——— */
+.intro-video {
+  background: var(--surface-muted);
+  border-block: 1px solid var(--line);
+}
+
+.intro-video__stage {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.intro-video__frame {
+  position: relative;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background: #1a1218;
+  box-shadow: 0 18px 48px rgba(40, 12, 28, 0.14);
+}
+
+.intro-video__player {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: min(72vh, 640px);
+  object-fit: cover;
+  background: #1a1218;
+}
+
+.intro-video__caption {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+@media (min-width: 720px) {
+  .intro-video__stage {
+    max-width: 360px;
+  }
+}
+
 /* ——— Reveal animations ——— */
 .reveal {
   opacity: 0;

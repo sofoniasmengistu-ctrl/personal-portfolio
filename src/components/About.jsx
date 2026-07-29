@@ -26,6 +26,8 @@ const timeline = [
 const highlights = [
   'Kubestronaut (KCNA KCSA CKA CKAD CKS)',
   'Azure all certifications',
+  'Azure Data Engineer',
+  'ADF, Databricks, Data Lake',
   'AWS Cloud Engineer',
   'CCNA, CCNP, CCNA Security',
   'Tanzu TKG',
@@ -59,9 +61,10 @@ const About = () => {
               <span className="text-accent">Sofonias Mengistu</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              DevSecOps Engineer, Cloud Engineer, Trainer, SRE enthusiast.
-              Kubestronaut. Runs live Telegram products (WeRemoteIT, NexusAI,
-              AuraPay bot) and is open to AI research and related initiatives.
+              DevSecOps Engineer, Cloud Engineer, Azure Data Engineer, Trainer, SRE
+              enthusiast. Kubestronaut. Runs live Telegram products (WeRemoteIT,
+              NexusAI, AuraPay bot) and is open to AI research and related
+              initiatives.
             </p>
           </div>
           <a href="#contact" className="fancy-arrow" aria-label="Go to contact">
@@ -93,20 +96,22 @@ const About = () => {
 
           <Reveal className="about__bio" delay={100} variant="right">
             <p className="about__roles">
-              Cloud DevSecOps, Kubestronaut, Gebeya / Safaricom. Open to remote roles
+              Cloud DevSecOps, Azure Data Engineer, Kubestronaut, Gebeya / Safaricom
             </p>
             <p>
               Based in Addis Ababa. Career path: IT support and networking into
-              DevOps and cloud. Network Engineer field support for 37 tech
-              companies across GB, USA, Dubai, Singapore, and Pakistan, then
-              six plus years designing and automating infrastructure on AWS,
-              Azure, GCP, and production Kubernetes end to end.
+              DevOps, cloud, and Azure Data Engineering. Network Engineer field
+              support for 37 tech companies across GB, USA, Dubai, Singapore, and
+              Pakistan, then six plus years designing and automating infrastructure
+              on AWS, Azure, GCP, and production Kubernetes end to end.
             </p>
             <p>
               I create and operate clusters from the ground up on AWS EKS,
               Google GKE, Azure AKS, Infomaniak, Linode, and VMware Tanzu TKG:
               provisioning, hardening, CI/CD, RBAC, networking, and observability.
-              Hired by Gebeya Inc. for that Kubernetes depth and assigned to a
+              On the data side I build Azure Data Engineer platforms: medallion
+              lakehouse, Data Lake Gen2, Databricks, Data Factory, and streaming
+              pipelines. Hired by Gebeya Inc. for Kubernetes depth and assigned to a
               live telco TKG platform project. I also train teams (including GIZ)
               and mentor on cloud, security, and cost optimization. Outside client
               work I run live AI chat products and want to contribute to AI
