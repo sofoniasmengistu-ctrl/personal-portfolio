@@ -43,66 +43,76 @@ const tools = [
 
 const CaseStudy = () => {
   return (
-    <section id="case-study" className="section section--tight case-study">
-      <div className="container">
-        <Reveal className="section-head section-head--row">
-          <div className="section-head__copy">
-            <p className="section__label">Flagship proof</p>
-            <h2 className="section__title">
-              Not only Gebeya.{' '}
-              <span className="text-accent">KodeKloud and years of DevOps tasks</span>
-            </h2>
-            <p className="section__lead section__lead--tight">
-              Gebeya hired me for live Safaricom TKG work. I also spent one year on
-              KodeKloud as Senior DevOps, and about two years building real tasks
-              across Git, Jenkins, Linux, Docker, Kubernetes, and the full DevOps
-              toolchain.
-            </p>
-          </div>
-          <a href="#contact" className="fancy-arrow">
-            <span className="fancy-arrow__label">Discuss similar work</span>
-            <span className="fancy-arrow__track" aria-hidden="true">
-              <span className="fancy-arrow__line" />
-              <MoveRight className="fancy-arrow__tip" size={22} strokeWidth={2.25} />
-            </span>
-          </a>
-        </Reveal>
+    <section id="case-study" className="case-study">
+      <div className="partition-stage">
+        <div
+          className="partition-visual"
+          style={{ backgroundImage: "url('/case-study-bg.png')" }}
+          role="img"
+          aria-label="DevOps Kubernetes and container infrastructure background"
+        />
+        <div className="partition-veil" aria-hidden="true" />
 
-        <Reveal className="case-study__meta" delay={80}>
-          <div className="case-study__meta-item">
-            <p className="case-study__meta-label mono">Production hire</p>
-            <p className="case-study__meta-value">Gebeya · Safaricom TKG</p>
-          </div>
-          <div className="case-study__meta-item">
-            <p className="case-study__meta-label mono">KodeKloud</p>
-            <p className="case-study__meta-value">1 year · Senior DevOps</p>
-          </div>
-          <div className="case-study__meta-item">
-            <p className="case-study__meta-label mono">Hands on build time</p>
-            <p className="case-study__meta-value">2 years · DevOps tools</p>
-          </div>
-        </Reveal>
-
-        <div className="case-study__steps">
-          {proofs.map((step, i) => (
-            <Reveal key={step.label} as="article" className="case-study__step" delay={i * 100} variant="up">
-              <p className="case-study__step-label mono">{step.label}</p>
-              <h3 className="case-study__step-title">{step.title}</h3>
-              <p className="case-study__step-body">{step.body}</p>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal className="case-study__tools" delay={120}>
-          <p className="case-study__tools-label mono">Stack</p>
-          <div className="skills__chips">
-            {tools.map((tool) => (
-              <span key={tool} className="skill-chip">
-                {tool}
+        <div className="container partition-inner case-study__inner">
+          <Reveal className="section-head section-head--row">
+            <div className="section-head__copy">
+              <p className="section__label">Flagship proof</p>
+              <h2 className="section__title">
+                Not only Gebeya.{' '}
+                <span className="text-accent">KodeKloud and years of DevOps tasks</span>
+              </h2>
+              <p className="section__lead section__lead--tight">
+                Gebeya hired me for live Safaricom TKG work. I also spent one year on
+                KodeKloud as Senior DevOps, and about two years building real tasks
+                across Git, Jenkins, Linux, Docker, Kubernetes, and the full DevOps
+                toolchain.
+              </p>
+            </div>
+            <a href="#contact" className="fancy-arrow">
+              <span className="fancy-arrow__label">Discuss similar work</span>
+              <span className="fancy-arrow__track" aria-hidden="true">
+                <span className="fancy-arrow__line" />
+                <MoveRight className="fancy-arrow__tip" size={22} strokeWidth={2.25} />
               </span>
+            </a>
+          </Reveal>
+
+          <Reveal className="case-study__meta" delay={80}>
+            <div className="case-study__meta-item">
+              <p className="case-study__meta-label mono">Production hire</p>
+              <p className="case-study__meta-value">Gebeya · Safaricom TKG</p>
+            </div>
+            <div className="case-study__meta-item">
+              <p className="case-study__meta-label mono">KodeKloud</p>
+              <p className="case-study__meta-value">1 year · Senior DevOps</p>
+            </div>
+            <div className="case-study__meta-item">
+              <p className="case-study__meta-label mono">Hands on build time</p>
+              <p className="case-study__meta-value">2 years · DevOps tools</p>
+            </div>
+          </Reveal>
+
+          <div className="case-study__steps">
+            {proofs.map((step, i) => (
+              <Reveal key={step.label} as="article" className="case-study__step" delay={i * 100} variant="up">
+                <p className="case-study__step-label mono">{step.label}</p>
+                <h3 className="case-study__step-title">{step.title}</h3>
+                <p className="case-study__step-body">{step.body}</p>
+              </Reveal>
             ))}
           </div>
-        </Reveal>
+
+          <Reveal className="case-study__tools" delay={120}>
+            <p className="case-study__tools-label mono">Stack</p>
+            <div className="skills__chips">
+              {tools.map((tool) => (
+                <span key={tool} className="skill-chip">
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
