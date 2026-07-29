@@ -3,6 +3,8 @@ import { Reveal } from './Reveal';
 const logos = [
   { name: 'Gebeya', note: 'Hired as DevOps' },
   { name: 'Safaricom', note: 'Assigned project' },
+  { name: 'Akamai', note: 'Cloud apps' },
+  { name: 'Linode', note: 'Akamai cloud' },
   { name: 'GIZ', note: 'Cloud trainer' },
   { name: 'KodeKloud', note: 'Senior DevOps' },
   { name: 'CNCF', note: 'Kubestronaut' },

@@ -224,6 +224,20 @@ export const experienceHighlights = [
 /** Featured GitHub engineering work, smart subset of 97+ repos */
 export const githubFeatured = [
   {
+    name: 'KubeOptimia',
+    stack: 'Kubernetes cost monitoring',
+    description:
+      'Monitors cluster cost, idle capacity, and rightsizing so unused resources can be provisioned or reclaimed.',
+    href: null,
+  },
+  {
+    name: 'Akamai cloud app',
+    stack: 'Akamai · Linode',
+    description:
+      'Application work on Akamai Cloud (Linode): deploy and operate workloads on the Akamai platform.',
+    href: null,
+  },
+  {
     name: 'AWS prod infra, FT360 / Aircall',
     stack: 'Terraform, AWS, CI',
     description:

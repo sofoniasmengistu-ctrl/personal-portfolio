@@ -95,22 +95,36 @@ const Work = () => {
             </a>
           </div>
           <div className="h-track">
-            {githubFeatured.map((repo) => (
-              <a
-                key={repo.href}
-                href={repo.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="work-card h-track__item"
-              >
-                <span className="work-card__stack">{repo.stack}</span>
-                <h3 className="work-card__title">{repo.name}</h3>
-                <p className="work-card__desc">{repo.description}</p>
-                <span className="work-card__cta mono">
-                  View repo <ArrowUpRight size={12} />
-                </span>
-              </a>
-            ))}
+            {githubFeatured.map((repo) => {
+              const inner = (
+                <>
+                  <span className="work-card__stack">{repo.stack}</span>
+                  <h3 className="work-card__title">{repo.name}</h3>
+                  <p className="work-card__desc">{repo.description}</p>
+                  {repo.href ? (
+                    <span className="work-card__cta mono">
+                      View repo <ArrowUpRight size={12} />
+                    </span>
+                  ) : null}
+                </>
+              );
+
+              return repo.href ? (
+                <a
+                  key={repo.name}
+                  href={repo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="work-card h-track__item"
+                >
+                  {inner}
+                </a>
+              ) : (
+                <article key={repo.name} className="work-card h-track__item">
+                  {inner}
+                </article>
+              );
+            })}
           </div>
         </Reveal>
       </div>

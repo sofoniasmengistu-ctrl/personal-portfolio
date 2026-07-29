@@ -7,7 +7,7 @@ const highlights = [
   'CCNA, CCNP, Security',
   'Kubernetes',
   'EKS, GKE, AKS',
-  'Infomaniak, Linode',
+  'Infomaniak, Linode, Akamai',
   'Terraform',
   'AWS, Azure, GCP',
   'Python, Go',

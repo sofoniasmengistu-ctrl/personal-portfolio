@@ -36,6 +36,8 @@ const highlights = [
   'AKS',
   'Infomaniak',
   'Linode Kubernetes',
+  'Akamai Cloud',
+  'KubeOptimia',
   'Kubernetes',
   'Terraform',
   'ArgoCD and GitOps',

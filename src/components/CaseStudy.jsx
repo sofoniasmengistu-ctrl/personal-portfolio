@@ -30,6 +30,7 @@ const tools = [
   'AKS',
   'Infomaniak',
   'Linode',
+  'Akamai',
   'Tanzu TKG',
   'Terraform',
   'Ansible',
