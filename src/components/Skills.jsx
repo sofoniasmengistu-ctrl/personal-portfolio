@@ -1,9 +1,9 @@
 const highlights = [
   'Kubestronaut',
-  'Azure all certs',
+  'Azure Solutions Architect',
   'Azure Data Engineer',
   'ADF, Databricks, Lakehouse',
-  'AWS Cloud Engineer',
+  'AWS Solutions Architect',
   'CCNA, CCNP, Security',
   'Kubernetes',
   'EKS, GKE, AKS',

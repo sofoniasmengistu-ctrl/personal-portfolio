@@ -25,10 +25,10 @@ const timeline = [
 
 const highlights = [
   'Kubestronaut (KCNA KCSA CKA CKAD CKS)',
-  'Azure all certifications',
+  'Azure Solutions Architect Expert',
   'Azure Data Engineer',
   'ADF, Databricks, Data Lake',
-  'AWS Cloud Engineer',
+  'AWS Solutions Architect',
   'CCNA, CCNP, CCNA Security',
   'Tanzu TKG',
   'AWS EKS',

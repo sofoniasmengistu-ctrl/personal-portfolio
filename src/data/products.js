@@ -192,43 +192,105 @@ export const trustKubestronautCerts = [
   },
 ];
 
-export const trustPlatformCertifications = [
+export const trustAzureCertifications = [
   {
-    id: 'azure',
-    label: 'Azure',
-    note: 'All certifications',
-    logo: '/certs/azure.svg',
-    href: 'https://learn.microsoft.com/en-us/credentials/',
+    id: 'az-104',
+    title: 'Azure Administrator Associate',
+    level: 'Associate',
+    logo: '/certs/ms-associate.svg',
   },
   {
-    id: 'aws',
-    label: 'AWS',
-    note: 'Cloud Engineer',
-    logo: '/certs/aws.svg',
-    href: 'https://aws.amazon.com/certification/',
+    id: 'az-305',
+    title: 'Azure Solutions Architect Expert',
+    level: 'Expert',
+    logo: '/certs/ms-expert.svg',
+  },
+  {
+    id: 'az-500',
+    title: 'Azure Security Engineer Associate',
+    level: 'Associate',
+    logo: '/certs/ms-associate.svg',
+  },
+  {
+    id: 'az-400',
+    title: 'DevOps Engineer Expert',
+    level: 'Expert',
+    logo: '/certs/ms-expert.svg',
+  },
+  {
+    id: 'sc-200',
+    title: 'Security Operations Analyst Associate',
+    level: 'Associate',
+    logo: '/certs/ms-associate.svg',
+  },
+  {
+    id: 'dp-900',
+    title: 'Azure Data Fundamentals',
+    level: 'Fundamentals',
+    logo: '/certs/ms-fundamentals.svg',
+  },
+  {
+    id: 'sc-900',
+    title: 'Security, Compliance, and Identity Fundamentals',
+    level: 'Fundamentals',
+    logo: '/certs/ms-fundamentals.svg',
+  },
+  {
+    id: 'pl-900',
+    title: 'Power Platform Fundamentals',
+    level: 'Fundamentals',
+    logo: '/certs/ms-fundamentals.svg',
+  },
+  {
+    id: 'az-900',
+    title: 'Azure Fundamentals',
+    level: 'Fundamentals',
+    logo: '/certs/ms-fundamentals.svg',
+  },
+  {
+    id: 'ai-900',
+    title: 'Azure AI Fundamentals',
+    level: 'Fundamentals',
+    logo: '/certs/ms-fundamentals.svg',
+  },
+];
+
+export const trustAzureProfileHref =
+  'https://learn.microsoft.com/en-us/users/sofoniasmengistu-7753/credentials/certifications';
+
+export const trustAwsAndCiscoCertifications = [
+  {
+    id: 'aws-sa',
+    title: 'AWS Solutions Architect',
+    note: 'Amazon Web Services',
+    logo: '/certs/aws-sa.svg',
+    href: 'https://aws.amazon.com/certification/certified-solutions-architect-associate/',
   },
   {
     id: 'ccna',
-    label: 'CCNA',
+    title: 'CCNA',
     note: 'Cisco',
     logo: '/certs/cisco.svg',
     href: 'https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html',
   },
   {
     id: 'ccnp',
-    label: 'CCNP',
+    title: 'CCNP',
     note: 'Cisco',
     logo: '/certs/cisco.svg',
     href: 'https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccnp-enterprise/index.html',
   },
   {
     id: 'ccna-sec',
-    label: 'CCNA Sec',
-    note: 'Cisco Security',
+    title: 'CCNA Security',
+    note: 'Cisco',
     logo: '/certs/cisco.svg',
     href: 'https://www.cisco.com/site/us/en/learn/training-certifications/certifications/security/index.html',
   },
 ];
+
+/** @deprecated kept for any old imports — prefer trustAzureCertifications */
+export const trustPlatformCertifications = trustAwsAndCiscoCertifications;
 
 /** Selected roles from LinkedIn experience */
 export const experienceHighlights = [

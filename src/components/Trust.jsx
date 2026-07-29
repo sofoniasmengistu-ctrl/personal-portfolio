@@ -1,7 +1,9 @@
 import {
   trustMetrics,
   trustKubestronautCerts,
-  trustPlatformCertifications,
+  trustAzureCertifications,
+  trustAzureProfileHref,
+  trustAwsAndCiscoCertifications,
 } from '../data/products';
 import { CountUp } from './CountUp';
 import { Reveal } from './Reveal';
@@ -71,22 +73,59 @@ const Trust = () => {
               ))}
             </div>
 
+            <div className="trust__creds-head">
+              <p className="trust__certs-label trust__certs-label--next mono">
+                Microsoft Azure credentials
+              </p>
+              <a
+                href={trustAzureProfileHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="trust__creds-link mono"
+              >
+                View on Microsoft Learn
+              </a>
+            </div>
+            <div className="trust__cred-track" role="list">
+              {trustAzureCertifications.map((cert) => (
+                <a
+                  key={cert.id}
+                  href={trustAzureProfileHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="trust__cred"
+                  role="listitem"
+                >
+                  <img
+                    src={cert.logo}
+                    alt=""
+                    className="trust__cred-badge"
+                    aria-hidden="true"
+                  />
+                  <span className="trust__cred-copy">
+                    <span className="trust__cred-level mono">{cert.level}</span>
+                    <span className="trust__cred-title">{cert.title}</span>
+                  </span>
+                </a>
+              ))}
+            </div>
+
             <p className="trust__certs-label trust__certs-label--next mono">
-              Azure, AWS, and Cisco
+              AWS Solutions Architect and Cisco
             </p>
             <div className="trust__badge-row" role="list">
-              {trustPlatformCertifications.map((cert) => (
+              {trustAwsAndCiscoCertifications.map((cert) => (
                 <a
                   key={cert.id}
                   href={cert.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="trust__badge trust__badge--platform"
+                  className={`trust__badge trust__badge--wide${cert.id === 'aws-sa' ? ' trust__badge--aws' : ''}`}
                   role="listitem"
-                  title={`${cert.label} · ${cert.note}`}
+                  title={cert.title}
                 >
-                  <img src={cert.logo} alt={`${cert.label} certification`} className="trust__badge-img" />
-                  <span className="trust__badge-label mono">{cert.label}</span>
+                  <img src={cert.logo} alt="" className="trust__badge-img" aria-hidden="true" />
+                  <span className="trust__badge-label mono">{cert.title}</span>
                   <span className="trust__badge-note">{cert.note}</span>
                 </a>
               ))}
