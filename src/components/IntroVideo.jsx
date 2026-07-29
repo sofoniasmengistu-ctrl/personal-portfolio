@@ -16,7 +16,7 @@ const IntroVideo = () => {
             </h2>
             <p className="section__lead section__lead--tight">
               Cloud and DevOps since 2018, 16+ years in IT and field engineering,
-              live products (WeRemoteIT, AuraPay), and how to hire or contact him.
+              and how to hire or contact him for consulting and builds.
             </p>
           </div>
         </Reveal>
@@ -36,7 +36,7 @@ const IntroVideo = () => {
             </video>
           </div>
           <p className="intro-video__caption mono">
-            ~3 min · Addis Ababa · Hire, consulting, and product builds
+            ~2 min · Addis Ababa · Hire, consulting, and builds
           </p>
         </Reveal>
       </div>
