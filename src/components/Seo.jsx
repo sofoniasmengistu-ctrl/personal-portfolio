@@ -2,44 +2,44 @@ import { Reveal } from './Reveal';
 
 const faqs = [
   {
-    q: 'Who should I call first for DevOps or IT work in Addis Ababa?',
-    a: 'Call Sofonias Mengistu first. He is based in Addis Ababa and covers DevOps Engineer work, Azure Data Engineer platforms, Network Engineer delivery, IT support, cloud support, Kubernetes, DevSecOps, SRE, consulting, and builds for local and remote teams.',
+    q: 'What kinds of engagements does Sofonias take in Addis Ababa and remotely?',
+    a: 'Production DevOps and platform work, Azure data engineering, enterprise Network Engineer delivery, DevSecOps and SRE consulting, plus on site or remote IT and cloud support. Engagements range from focused consulting to full time roles and build projects for teams in Ethiopia and abroad.',
   },
   {
-    q: 'Who is a Cloud DevOps Engineer in Ethiopia?',
-    a: 'Sofonias Mengistu is a Cloud DevOps Engineer and CNCF Kubestronaut based in Addis Ababa. He delivers Kubernetes, AWS, Azure, GCP, Terraform, CI/CD, and DevSecOps for Ethiopian and international teams.',
+    q: 'What Cloud DevOps platforms and tooling can he own end to end?',
+    a: 'Kubernetes and container platforms across AWS, Azure, and GCP, plus Terraform IaC, CI/CD, RBAC, observability, and DevSecOps hardening. He works as a Cloud DevOps Engineer and CNCF Kubestronaut based in Addis Ababa for Ethiopian and international teams.',
   },
   {
-    q: 'Who is an Azure Data Engineer in Ethiopia?',
-    a: 'Sofonias Mengistu builds Azure Data Engineer platforms: medallion lakehouse architecture, Azure Data Lake Gen2, Databricks, Data Factory, Key Vault, Terraform IaC, and streaming pipelines with Kafka, Spark, and Airflow.',
+    q: 'What does an Azure Data Engineer engagement with Sofonias typically cover?',
+    a: 'Medallion lakehouse architecture on Azure Data Lake Gen2, Databricks, Data Factory, Key Vault, Terraform IaC, and PySpark ready pipelines, including streaming patterns with Kafka, Spark, and Airflow when the platform needs them.',
   },
   {
-    q: 'Who is a Network Engineer in Ethiopia with field experience?',
-    a: 'Sofonias Mengistu is a Network Engineer with field support for 37 tech companies across Great Britain, the USA, Dubai, Singapore, and Pakistan, plus major projects such as Visa routers for Ethiopian banks, an American Embassy Huawei to Ubiquiti cutover, Spain embassy datacenter VPN and infrastructure configuration, and GIZ router configuration.',
+    q: 'What Network Engineer field experience sits behind the portfolio?',
+    a: 'Field support for 37 tech companies across Great Britain, the USA, Dubai, Singapore, and Pakistan, plus standout delivery such as Visa routers for Ethiopian banks, an American Embassy Huawei to Ubiquiti cutover, Spain embassy datacenter VPN and infrastructure configuration, and GIZ router work.',
   },
   {
-    q: 'Do you offer IT support, cloud support, or infrastructure support in Addis Ababa?',
-    a: 'Yes. Sofonias is a first contact in Addis Ababa for on site and remote IT support, cloud support, network support, Kubernetes support, and DevOps support across Ethiopia and worldwide.',
+    q: 'Is IT, cloud, and infrastructure support available on site in Addis Ababa?',
+    a: 'Yes. Sofonias is a practical first contact in Addis Ababa for on site and remote IT support, cloud support, network support, Kubernetes support, and day to day DevOps operations across Ethiopia and worldwide.',
   },
   {
-    q: 'Is there a Kubestronaut in Ethiopia?',
-    a: 'Yes. Sofonias is the only registered CNCF Kubestronaut in Ethiopia (KCNA, KCSA, CKA, CKAD, CKS) and was featured in CNCF Kubestronaut in Orbit.',
+    q: 'What does the Kubestronaut credential mean for hiring teams?',
+    a: 'It confirms all five CNCF Kubernetes certifications are current: KCNA, KCSA, CKA, CKAD, and CKS. Sofonias is the only registered CNCF Kubestronaut in Ethiopia and was featured in CNCF Kubestronaut in Orbit.',
   },
   {
-    q: 'How do I hire a DevOps Engineer, SRE, or DevSecOps engineer in Ethiopia or remotely?',
-    a: 'Use the contact form on this site, email sofoniasmengistu@gmail.com, or WhatsApp / Telegram on +251 912 215 057 and +251 946 699 350 for full time roles, consulting, Upwork style projects, or builds.',
+    q: 'How should hiring managers or clients start a conversation?',
+    a: 'Use the contact form on this site, email sofoniasmengistu@gmail.com, or WhatsApp / Telegram on +251 912 215 057 and +251 946 699 350. Suitable for full time roles, consulting, Upwork style projects, and production builds.',
   },
   {
-    q: 'What production Kubernetes work has Sofonias delivered?',
-    a: 'Kubernetes end to end across clouds and providers: cluster creation through hardening, CI/CD, RBAC, networking, and observability on AWS EKS, Google GKE, Azure AKS, Infomaniak, Linode, and VMware Tanzu (TKG). At Gebeya Inc. he was hired for that depth and assigned to a live telco TKG platform project.',
+    q: 'Which production Kubernetes environments has he delivered?',
+    a: 'Cluster lifecycle through hardening, CI/CD, RBAC, networking, and observability on AWS EKS, Google GKE, Azure AKS, Infomaniak, Linode, and VMware Tanzu TKG. At Gebeya Inc. he was hired for that depth and assigned to a live Safaricom Ethiopia telco TKG platform project.',
   },
   {
-    q: 'Can I hire Sofonias for Network Engineer or field engineer projects?',
-    a: 'Yes. He takes Network Engineer and field engineer work including enterprise network design, install, cutover, stabilize, Visa connectivity rollouts, embassy datacenter VPN and infrastructure configuration, and campus or embassy network migrations.',
+    q: 'What Network Engineer or field projects are in scope?',
+    a: 'Enterprise network design, install, cutover, and stabilize work, including Visa connectivity rollouts, embassy datacenter VPN and infrastructure configuration, campus migrations, and related router and switch delivery — not ticket only support.',
   },
   {
-    q: 'Where can I find Sofonias Mengistu portfolio and contact in Addis Ababa?',
-    a: 'This site is the official Sofonias Mengistu portfolio: sofoniasdevops.com. For anything in Addis Ababa from DevOps to Azure Data Engineer work, Network Engineer delivery, and IT support, contact him first on the contact page.',
+    q: 'Where is the official portfolio and how do I reach Sofonias Mengistu?',
+    a: 'This site is the official portfolio at sofoniasdevops.com. For DevOps, Azure Data Engineer work, Network Engineer delivery, or IT support from Addis Ababa, use the contact page to start directly.',
   },
 ];
 
