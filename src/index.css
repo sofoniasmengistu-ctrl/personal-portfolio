@@ -2866,10 +2866,59 @@ a.work-card:hover {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
   padding: 1.1rem 0.15rem 1.35rem;
   margin: 0 -0.15rem;
   scrollbar-width: thin;
   scrollbar-color: var(--magenta) transparent;
+}
+
+@media (max-width: 767px) {
+  .recommendations__track {
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+    padding-bottom: 1.1rem;
+    scroll-padding-inline: 1rem;
+  }
+
+  .rec-card {
+    flex-basis: min(86vw, 20.5rem);
+    min-height: 18.5rem;
+    padding: 1.15rem 1.05rem 1.05rem;
+  }
+
+  .rec-card__text {
+    -webkit-line-clamp: 5;
+    font-size: 0.92rem;
+  }
+
+  .rec-card:active,
+  .rec-card:focus-within {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--magenta) 55%, var(--line));
+    box-shadow:
+      0 0 0 1px rgba(229, 0, 79, 0.18),
+      0 0 22px rgba(229, 0, 79, 0.2),
+      0 12px 28px rgba(74, 21, 57, 0.1);
+  }
+
+  .rec-card:active .rec-card__glow,
+  .rec-card:focus-within .rec-card__glow {
+    opacity: 1;
+  }
+
+  .recommendations__toast {
+    left: 1rem;
+    right: 1rem;
+    transform: none;
+    text-align: center;
+    border-radius: var(--radius);
+    bottom: calc(var(--sticky-cta-h) + 0.75rem);
+  }
+
+  .recommendations__submit {
+    margin-top: 1.75rem;
+  }
 }
 
 .recommendations__track:focus-visible {
