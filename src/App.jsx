@@ -11,6 +11,7 @@ import Work from './components/Work';
 import Products from './components/Products';
 import Approach from './components/Approach';
 import About from './components/About';
+import Recommendations from './components/Recommendations';
 import Pricing from './components/Pricing';
 import Seo from './components/Seo';
 import Footer from './components/Footer';
@@ -31,6 +32,7 @@ function App() {
         <Products />
         <Approach />
         <About />
+        <Recommendations />
         <Pricing />
         <Seo />
       </main>
