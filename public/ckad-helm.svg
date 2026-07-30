@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <!-- Compact CKAD ship's wheel — same magenta as brand caret (#e5004f) -->
+  <circle cx="12" cy="12" r="3" stroke="#e5004f" stroke-width="1.75"/>
+  <circle cx="12" cy="12" r="7.1" stroke="#e5004f" stroke-width="1.75"/>
+  <g stroke="#e5004f" stroke-width="1.75" stroke-linecap="round">
+    <path d="M12 1.6v3.9"/>
+    <path d="M12 18.5v3.9"/>
+    <path d="M1.6 12h3.9"/>
+    <path d="M18.5 12h3.9"/>
+    <path d="M4.6 4.6l2.75 2.75"/>
+    <path d="M16.65 16.65l2.75 2.75"/>
+    <path d="M19.4 4.6l-2.75 2.75"/>
+    <path d="M7.35 16.65l-2.75 2.75"/>
+  </g>
+  <circle cx="12" cy="12" r="1.15" fill="#e5004f"/>
+</svg>

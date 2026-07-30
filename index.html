@@ -345,10 +345,15 @@
       font-weight: 600;
       letter-spacing: 0.01em;
       line-height: 1.2;
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 0.2rem;
     }
 
-    .boot__brand span {
-      color: #e5004f;
+    .boot__brand img {
+      width: 0.72em;
+      height: 0.72em;
+      margin-top: 0.08em;
     }
 
     .boot__meta {
@@ -414,7 +419,7 @@
   <div id="root">
     <div class="boot" role="status" aria-live="polite" aria-label="Loading Sofonias Mengistu">
       <img class="boot__mark" src="/brand-mark.svg" width="36" height="36" alt="" />
-      <p class="boot__brand">Sofonias<span>^</span></p>
+      <p class="boot__brand">Sofonias<img src="/ckad-helm.svg" width="15" height="15" alt="" /></p>
       <p class="boot__meta">DevOps · Azure · Network</p>
       <div class="boot__bar" aria-hidden="true"><span class="boot__bar-fill"></span></div>
       <h1 class="boot__seo">Sofonias Mengistu | DevOps and Network Engineer in Addis Ababa</h1>

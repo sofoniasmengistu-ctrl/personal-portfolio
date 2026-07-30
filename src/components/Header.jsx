@@ -57,7 +57,15 @@ const Header = () => {
       <div className="container site-header__inner">
         <a href="#home" className="brand">
           <img src="/brand-mark.svg" alt="" className="brand__mark" width="28" height="28" />
-          Sofonias<span>^</span>
+          Sofonias
+          <img
+            src="/ckad-helm.svg"
+            alt=""
+            className="brand__helm"
+            width="14"
+            height="14"
+            title="CKAD"
+          />
         </a>
 
         <nav className="nav-desktop" aria-label="Primary">

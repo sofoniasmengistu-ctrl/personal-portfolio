@@ -440,6 +440,26 @@ h1, h2, h3, h4 {
   border-radius: 0.4rem;
 }
 
+.brand__helm {
+  width: 0.72em;
+  height: 0.72em;
+  flex-shrink: 0;
+  margin-left: 0.05em;
+  align-self: flex-start;
+  margin-top: 0.08em;
+  transform: none;
+}
+
+.brand__helm--footer {
+  display: inline-block;
+  width: 0.72em;
+  height: 0.72em;
+  margin-left: 0.05em;
+  margin-top: 0;
+  vertical-align: super;
+  transform: none;
+}
+
 .brand span {
   color: var(--magenta);
   font-weight: 800;

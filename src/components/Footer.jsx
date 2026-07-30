@@ -98,7 +98,15 @@ const Footer = () => {
                 height="36"
               />
               <span className="site-footer__brand-name">
-                Sofonias<span>^</span>
+                Sofonias
+                <img
+                  src="/ckad-helm.svg"
+                  alt=""
+                  className="brand__helm brand__helm--footer"
+                  width="14"
+                  height="14"
+                  title="CKAD"
+                />
               </span>
             </a>
 
