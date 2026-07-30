@@ -89,7 +89,11 @@ const Footer = () => {
       <div className="site-footer__stage">
         <div className="container site-footer__inner">
           <Reveal className="site-footer__intro">
-            <a href="#home" className="site-footer__brand" aria-label="Sofonias home">
+            <a
+              href="#home"
+              className="site-footer__brand"
+              aria-label="Sofonias Mengistu — Cloud Platform Architect"
+            >
               <img
                 src="/brand-mark.svg"
                 alt=""
@@ -97,16 +101,19 @@ const Footer = () => {
                 width="36"
                 height="36"
               />
-              <span className="site-footer__brand-name">
-                Sofonias
-                <img
-                  src="/ckad-helm.svg"
-                  alt=""
-                  className="brand__helm brand__helm--footer"
-                  width="14"
-                  height="14"
-                  title="CKAD"
-                />
+              <span className="site-footer__brand-text">
+                <span className="site-footer__brand-name">
+                  Sofonias Mengistu
+                  <img
+                    src="/ckad-helm.svg"
+                    alt=""
+                    className="brand__helm brand__helm--footer"
+                    width="14"
+                    height="14"
+                    title="CKAD"
+                  />
+                </span>
+                <span className="site-footer__brand-title">Cloud Platform Architect</span>
               </span>
             </a>
 

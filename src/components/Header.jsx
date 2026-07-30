@@ -55,17 +55,22 @@ const Header = () => {
   return (
     <header className="site-header">
       <div className="container site-header__inner">
-        <a href="#home" className="brand">
+        <a href="#home" className="brand" aria-label="Sofonias Mengistu — Cloud Platform Architect">
           <img src="/brand-mark.svg" alt="" className="brand__mark" width="28" height="28" />
-          Sofonias
-          <img
-            src="/ckad-helm.svg"
-            alt=""
-            className="brand__helm"
-            width="14"
-            height="14"
-            title="CKAD"
-          />
+          <span className="brand__text">
+            <span className="brand__name">
+              Sofonias Mengistu
+              <img
+                src="/ckad-helm.svg"
+                alt=""
+                className="brand__helm"
+                width="14"
+                height="14"
+                title="CKAD"
+              />
+            </span>
+            <span className="brand__title">Cloud Platform Architect</span>
+          </span>
         </a>
 
         <nav className="nav-desktop" aria-label="Primary">
