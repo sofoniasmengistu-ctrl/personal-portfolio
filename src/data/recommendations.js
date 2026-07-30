@@ -1,4 +1,4 @@
-/** Curated recommendations (published after review). LinkedIn quotes kept as received. */
+/** Curated LinkedIn recommendations shown on the site. */
 export const recommendations = [
   {
     id: 'tigest-damtie',
@@ -36,10 +36,11 @@ export const recommendations = [
   },
 ];
 
-export const recommendationRoles = [
-  { value: 'Colleague', label: 'Colleague' },
-  { value: 'Manager', label: 'Manager / supervisor' },
-  { value: 'Client', label: 'Client' },
-  { value: 'Studied together', label: 'Studied together' },
+export const knowSofoniasOptions = [
+  { value: 'HiLCoE', label: 'HiLCoE (school or study)' },
+  { value: 'Certification course together', label: 'Certification course together' },
+  { value: 'Same workplace', label: 'Same workplace' },
+  { value: 'Short time project', label: 'Short time project' },
+  { value: 'School or study together', label: 'School or study together' },
   { value: 'Other', label: 'Other' },
 ];

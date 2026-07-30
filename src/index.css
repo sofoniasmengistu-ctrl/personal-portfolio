@@ -3042,6 +3042,69 @@ a.work-card:hover {
   max-width: 40rem;
 }
 
+.rec-card--new {
+  animation: rec-card-pop 0.55s var(--ease);
+}
+
+@keyframes rec-card-pop {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.rec-card__remove {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rec-card__remove:hover {
+  color: var(--magenta);
+  border-color: color-mix(in srgb, var(--magenta) 45%, var(--line));
+}
+
+.recommendations__toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(var(--sticky-cta-h) + 1.25rem);
+  transform: translateX(-50%);
+  z-index: 60;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 12px 28px rgba(17, 17, 17, 0.22);
+  animation: rec-toast-in 0.35s var(--ease);
+}
+
+@keyframes rec-toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
 .recommendations__photo-hint {
   margin: -0.35rem 0 0.9rem;
   font-size: 0.72rem;
