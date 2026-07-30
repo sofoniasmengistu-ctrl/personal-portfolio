@@ -1,5 +1,5 @@
-import { useId, useState } from 'react';
-import { ArrowUpRight, Send } from 'lucide-react';
+import { useId, useRef, useState } from 'react';
+import { ArrowUpRight, ChevronLeft, ChevronRight, Send } from 'lucide-react';
 import { credentials } from '../data/products';
 import { recommendationRoles, recommendations } from '../data/recommendations';
 import { Reveal } from './Reveal';
@@ -212,7 +212,62 @@ const RecommendationForm = () => {
   );
 };
 
+const CommentCard = ({ item }) => {
+  const [expanded, setExpanded] = useState(false);
+  const long = item.quote.length > 220;
+
+  return (
+    <article className="rec-card">
+      <span className="rec-card__glow" aria-hidden="true" />
+      <span className="rec-card__mark" aria-hidden="true">
+        “
+      </span>
+      <blockquote className="rec-card__quote">
+        <p className={`rec-card__text${expanded ? ' is-open' : ''}`}>
+          {item.quote}
+        </p>
+      </blockquote>
+      {long && (
+        <button
+          type="button"
+          className="rec-card__more mono"
+          onClick={() => setExpanded((v) => !v)}
+          aria-expanded={expanded}
+        >
+          {expanded ? 'Show less' : 'Read full'}
+        </button>
+      )}
+      <footer className="rec-card__footer">
+        <img
+          src={item.photo}
+          alt=""
+          className="rec-card__avatar"
+          width={48}
+          height={48}
+        />
+        <div className="rec-card__meta">
+          <p className="rec-card__name">{item.name}</p>
+          <p className="rec-card__title">{item.title}</p>
+          <p className="rec-card__context mono">
+            {item.relationship} · {item.source}
+          </p>
+        </div>
+      </footer>
+    </article>
+  );
+};
+
 const Recommendations = () => {
+  const trackRef = useRef(null);
+
+  const scrollByCard = (direction) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const card = track.querySelector('.rec-card');
+    const step = (card?.getBoundingClientRect().width || 300) + 16;
+    track.scrollBy({ left: direction * step, behavior: 'smooth' });
+  };
+
   return (
     <section id="recommendations" className="section section--tight recommendations section--muted">
       <div className="container">
@@ -224,10 +279,9 @@ const Recommendations = () => {
               <span className="text-accent">have said</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              Genuine comments from people who studied or worked with Sofonias —
-              posted in the writer’s own wording. Positive or critical feedback is
-              welcome; honest notes on delivery I refused are fine. New submissions
-              are reviewed before they appear here.
+              Genuine comments in the writer’s own wording. Positive or critical
+              feedback is welcome. Scroll the row — the page stays short even when
+              many people write.
             </p>
           </div>
           <a
@@ -245,31 +299,40 @@ const Recommendations = () => {
           </a>
         </Reveal>
 
-        <div className="recommendations__list">
-          {recommendations.map((item, i) => (
-            <Reveal key={item.id} className="recommendations__item" delay={i * 80} variant="up">
-              <blockquote className="recommendations__quote">
-                <div className="recommendations__person">
-                  <img
-                    src={item.photo}
-                    alt=""
-                    className="recommendations__avatar"
-                    width={56}
-                    height={56}
-                  />
-                  <div className="recommendations__meta">
-                    <p className="recommendations__name">{item.name}</p>
-                    <p className="recommendations__title">{item.title}</p>
-                    <p className="recommendations__context mono">
-                      {item.relationship} · {item.date} · via {item.source}
-                    </p>
-                  </div>
-                </div>
-                <p className="recommendations__text">“{item.quote}”</p>
-              </blockquote>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal delay={40}>
+          <div className="recommendations__toolbar">
+            <p className="band__meta mono">Swipe or use arrows · hover a box to glow</p>
+            <div className="recommendations__arrows">
+              <button
+                type="button"
+                className="recommendations__arrow"
+                onClick={() => scrollByCard(-1)}
+                aria-label="Previous comments"
+              >
+                <ChevronLeft size={20} strokeWidth={2.25} />
+              </button>
+              <button
+                type="button"
+                className="recommendations__arrow"
+                onClick={() => scrollByCard(1)}
+                aria-label="Next comments"
+              >
+                <ChevronRight size={20} strokeWidth={2.25} />
+              </button>
+            </div>
+          </div>
+
+          <div
+            ref={trackRef}
+            className="recommendations__track"
+            tabIndex={0}
+            aria-label="Colleague and manager comments"
+          >
+            {recommendations.map((item) => (
+              <CommentCard key={item.id} item={item} />
+            ))}
+          </div>
+        </Reveal>
 
         <Reveal className="recommendations__submit" delay={160}>
           <RecommendationForm />
