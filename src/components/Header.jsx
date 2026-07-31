@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useId, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { name: 'Addis', href: '#addis-ababa' },
   { name: 'Field', href: '#field' },
   { name: 'Work', href: '#work' },
+  { name: 'Products', href: '#products' },
   { name: 'About', href: '#about' },
   { name: 'Recs', href: '#recommendations' },
   { name: 'Pricing', href: '#pricing' },
@@ -13,10 +14,20 @@ const navLinks = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeHash, setActiveHash] = useState('#home');
+  const menuId = useId();
 
   useEffect(() => {
     document.body.classList.toggle('nav-open', isOpen);
     return () => document.body.classList.remove('nav-open');
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const onKey = (event) => {
+      if (event.key === 'Escape') setIsOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
   }, [isOpen]);
 
   useEffect(() => {
@@ -96,12 +107,13 @@ const Header = () => {
           onClick={() => setIsOpen((o) => !o)}
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isOpen}
+          aria-controls={menuId}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
         {isOpen && (
-          <nav className="nav-mobile" aria-label="Mobile">
+          <nav id={menuId} className="nav-mobile" aria-label="Mobile">
             {navLinks.map((link) => (
               <a
                 key={link.name}

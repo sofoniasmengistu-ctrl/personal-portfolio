@@ -114,7 +114,11 @@ const Work = () => {
                       <span className="work-card__cta mono">
                         View repo <ArrowUpRight size={12} />
                       </span>
-                    ) : null}
+                    ) : (
+                      <span className="work-card__cta mono work-card__cta--muted">
+                        Selected work · ask for access
+                      </span>
+                    )}
                   </>
                 );
 

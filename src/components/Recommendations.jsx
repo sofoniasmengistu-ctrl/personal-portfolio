@@ -1,54 +1,20 @@
-import { useEffect, useId, useRef, useState } from 'react';
-import { ArrowUpRight, ChevronLeft, ChevronRight, Send, X } from 'lucide-react';
+import { useId, useRef, useState } from 'react';
+import { ArrowUpRight, ChevronLeft, ChevronRight, Send } from 'lucide-react';
 import { credentials } from '../data/products';
 import { knowSofoniasOptions, recommendations } from '../data/recommendations';
 import { Reveal } from './Reveal';
 
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/sofoniasmengistu@gmail.com';
 const MAX_PHOTO_BYTES = 2.5 * 1024 * 1024;
-const LIVE_STORAGE_KEY = 'sofonias-live-comments-v1';
-const MANAGE_KEY = 'sofonias-comments-manage';
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const readLiveComments = () => {
-  try {
-    const raw = localStorage.getItem(LIVE_STORAGE_KEY);
-    const list = raw ? JSON.parse(raw) : [];
-    return Array.isArray(list) ? list : [];
-  } catch {
-    return [];
-  }
-};
-
-const writeLiveComments = (list) => {
-  localStorage.setItem(LIVE_STORAGE_KEY, JSON.stringify(list));
-};
-
-const fileToDataUrl = (file) =>
-  new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(String(reader.result || ''));
-    reader.onerror = () => reject(new Error('Could not read photo.'));
-    reader.readAsDataURL(file);
-  });
-
-const CommentCard = ({ item, canRemove, onRemove }) => {
+const CommentCard = ({ item }) => {
   const [expanded, setExpanded] = useState(false);
   const long = item.quote.length > 220;
 
   return (
-    <article className={`rec-card${item.isNew ? ' rec-card--new' : ''}`}>
+    <article className="rec-card">
       <span className="rec-card__glow" aria-hidden="true" />
-      {canRemove && (
-        <button
-          type="button"
-          className="rec-card__remove"
-          onClick={() => onRemove(item.id)}
-          aria-label={`Remove comment from ${item.name}`}
-          title="Remove this comment"
-        >
-          <X size={14} strokeWidth={2.5} />
-        </button>
-      )}
       <span className="rec-card__mark" aria-hidden="true">
         “
       </span>
@@ -87,7 +53,7 @@ const CommentCard = ({ item, canRemove, onRemove }) => {
   );
 };
 
-const RecommendationForm = ({ onPosted }) => {
+const RecommendationForm = () => {
   const photoId = useId();
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
@@ -123,28 +89,59 @@ const RecommendationForm = ({ onPosted }) => {
 
     const form = event.currentTarget;
     const data = new FormData(form);
+
+    if (String(data.get('company') || '').trim()) {
+      setStatus('idle');
+      return;
+    }
+
+    const name = String(data.get('name') || '').trim();
+    const email = String(data.get('email') || '').trim();
+    const knowFrom = String(data.get('knowFrom') || '').trim();
+    const quote = String(data.get('recommendation') || '').trim();
     const photo = data.get('photo');
 
+    if (!name || name.length < 2) {
+      setStatus('error');
+      setError('Please enter your full name.');
+      return;
+    }
+    if (!EMAIL_RE.test(email)) {
+      setStatus('error');
+      setError('Please enter a valid email so I can follow up if needed.');
+      return;
+    }
+    if (!knowFrom) {
+      setStatus('error');
+      setError('Please choose where you know Sofonias.');
+      return;
+    }
     if (!(photo instanceof File) || !photo.size) {
       setStatus('error');
       setError('A profile photo is required with your comment.');
       return;
     }
-
-    const name = String(data.get('name') || '').trim();
-    const knowFrom = String(data.get('knowFrom') || '').trim();
-    const quote = String(data.get('recommendation') || '').trim();
+    if (quote.length < 20) {
+      setStatus('error');
+      setError('Please write a bit more in your comment (at least a short paragraph).');
+      return;
+    }
 
     data.append('_subject', `Portfolio comment from ${name}`);
     data.append('_template', 'table');
     data.append('_captcha', 'false');
     data.set(
       'message',
-      [`Where we know each other: ${knowFrom}`, '', quote].join('\n'),
+      [
+        `Where we know each other: ${knowFrom}`,
+        '',
+        quote,
+        '',
+        'Note: Post for public review — publish on site after approval.',
+      ].join('\n'),
     );
 
     try {
-      const photoDataUrl = await fileToDataUrl(photo);
       const res = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: { Accept: 'application/json' },
@@ -155,22 +152,6 @@ const RecommendationForm = ({ onPosted }) => {
         throw new Error('Could not send. Try emailing sofoniasmengistu@gmail.com directly.');
       }
 
-      const entry = {
-        id: `live-${Date.now()}`,
-        name,
-        title: '',
-        relationship: knowFrom,
-        date: new Date().toLocaleDateString('en-US', {
-          month: 'long',
-          year: 'numeric',
-        }),
-        source: 'Site',
-        photo: photoDataUrl,
-        quote,
-        isNew: true,
-      };
-
-      onPosted(entry);
       form.reset();
       if (preview) URL.revokeObjectURL(preview);
       setPreview('');
@@ -184,13 +165,14 @@ const RecommendationForm = ({ onPosted }) => {
   if (status === 'sent') {
     return (
       <div className="contact-form contact-form--done" role="status">
-        <p className="contact-form__done-title">Your comment is live</p>
+        <p className="contact-form__done-title">Comment received</p>
         <p className="contact-form__done-body">
-          It just appeared in the row above, in your own wording. Sofonias can
-          remove a comment anytime.
+          Thanks. Sofonias reviews every comment and publishes approved ones in
+          the row above. You will not see it instantly for everyone — that is
+          intentional.
         </p>
         <button type="button" className="btn-dark" onClick={() => setStatus('idle')}>
-          Post another
+          Submit another
         </button>
       </div>
     );
@@ -201,14 +183,20 @@ const RecommendationForm = ({ onPosted }) => {
       className="contact-form recommendations__form"
       onSubmit={handleSubmit}
       encType="multipart/form-data"
-      noValidate
     >
       <p className="contact-form__title">Submit your comment</p>
       <p className="contact-form__note">
-        Any feedback is welcome on my work or my study ability. Tell us where you
-        know me, add your photo, and post. Your comment appears above. Sofonias can
-        remove it anytime.
+        Feedback on my work or study ability is welcome. Add your photo and
+        where you know me. Sofonias reviews submissions and posts approved
+        comments publicly here.
       </p>
+
+      <div className="contact-form__honeypot" aria-hidden="true">
+        <label>
+          Company
+          <input name="company" type="text" tabIndex={-1} autoComplete="off" />
+        </label>
+      </div>
 
       <div className="contact-form__row">
         <label className="contact-form__field">
@@ -267,6 +255,7 @@ const RecommendationForm = ({ onPosted }) => {
           name="recommendation"
           required
           rows={4}
+          minLength={20}
           placeholder="Any feedback on my work or study ability..."
         />
       </label>
@@ -279,10 +268,10 @@ const RecommendationForm = ({ onPosted }) => {
 
       <button type="submit" className="btn-primary contact-form__submit" disabled={status === 'sending'}>
         {status === 'sending' ? (
-          'Posting...'
+          'Sending...'
         ) : (
           <>
-            Post comment <Send size={16} />
+            Submit for review <Send size={16} />
           </>
         )}
       </button>
@@ -292,31 +281,6 @@ const RecommendationForm = ({ onPosted }) => {
 
 const Recommendations = () => {
   const trackRef = useRef(null);
-  const [live, setLive] = useState([]);
-  const [toast, setToast] = useState(false);
-  const [canManage, setCanManage] = useState(false);
-
-  useEffect(() => {
-    setLive(readLiveComments());
-    setCanManage(sessionStorage.getItem(MANAGE_KEY) === '1');
-  }, []);
-
-  useEffect(() => {
-    const onHash = () => {
-      if (window.location.hash !== '#recommendations-manage') return;
-      const ok = window.prompt('Enter manage passphrase to remove comments:') === 'sofonias';
-      if (ok) {
-        sessionStorage.setItem(MANAGE_KEY, '1');
-        setCanManage(true);
-      }
-      window.history.replaceState(null, '', '#recommendations');
-    };
-    onHash();
-    window.addEventListener('hashchange', onHash);
-    return () => window.removeEventListener('hashchange', onHash);
-  }, []);
-
-  const allComments = [...live, ...recommendations];
 
   const scrollByCard = (direction) => {
     const track = trackRef.current;
@@ -324,31 +288,6 @@ const Recommendations = () => {
     const card = track.querySelector('.rec-card');
     const step = (card?.getBoundingClientRect().width || 300) + 16;
     track.scrollBy({ left: direction * step, behavior: 'smooth' });
-  };
-
-  const handlePosted = (entry) => {
-    setLive((prev) => {
-      const next = [entry, ...prev];
-      writeLiveComments(next.map(({ isNew, ...rest }) => rest));
-      return next;
-    });
-    setToast(true);
-    window.setTimeout(() => setToast(false), 3200);
-    window.requestAnimationFrame(() => {
-      trackRef.current?.scrollTo({ left: 0, behavior: 'smooth' });
-    });
-  };
-
-  const handleRemove = (id) => {
-    if (!id.startsWith('live-')) {
-      window.alert('LinkedIn comments are curated in the site files. Ask to remove those from code.');
-      return;
-    }
-    setLive((prev) => {
-      const next = prev.filter((item) => item.id !== id);
-      writeLiveComments(next);
-      return next;
-    });
   };
 
   return (
@@ -362,8 +301,8 @@ const Recommendations = () => {
               <span className="text-accent">have said</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              Comments appear here when people post them. Sofonias can remove any
-              comment. Scroll the row so the page stays short.
+              Public comments are curated here. Submit below — Sofonias reviews
+              each one, then publishes approved feedback in this row.
             </p>
           </div>
           <a
@@ -410,27 +349,16 @@ const Recommendations = () => {
             tabIndex={0}
             aria-label="Colleague and manager comments"
           >
-            {allComments.map((item) => (
-              <CommentCard
-                key={item.id}
-                item={item}
-                canRemove={canManage && String(item.id).startsWith('live-')}
-                onRemove={handleRemove}
-              />
+            {recommendations.map((item) => (
+              <CommentCard key={item.id} item={item} />
             ))}
           </div>
         </Reveal>
 
         <Reveal className="recommendations__submit" delay={160}>
-          <RecommendationForm onPosted={handlePosted} />
+          <RecommendationForm />
         </Reveal>
       </div>
-
-      {toast && (
-        <div className="recommendations__toast" role="status">
-          Comment posted. It is in the row above.
-        </div>
-      )}
     </section>
   );
 };

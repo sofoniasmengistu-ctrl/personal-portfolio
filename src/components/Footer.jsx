@@ -117,7 +117,7 @@ const Footer = () => {
               </span>
             </a>
 
-            <p className="site-footer__label mono">05 Contact · Addis Ababa</p>
+            <p className="site-footer__label mono">06 Contact · Addis Ababa</p>
             <h2 className="site-footer__title">
               Make Sofonias your{' '}
               <span className="text-accent">first contact</span>

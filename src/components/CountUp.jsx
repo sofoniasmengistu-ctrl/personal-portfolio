@@ -26,6 +26,15 @@ export function CountUp({ end, suffix = '', duration = 1600 }) {
   useEffect(() => {
     if (!started) return undefined;
 
+    const reduceMotion =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (reduceMotion) {
+      setValue(end);
+      return undefined;
+    }
+
     let frame = 0;
     const start = performance.now();
 

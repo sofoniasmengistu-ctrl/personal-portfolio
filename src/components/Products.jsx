@@ -61,7 +61,7 @@ const Products = () => {
                   >
                     Open bot <Send size={14} />
                   </a>
-                  {product.web && (
+                  {product.web ? (
                     <a
                       href={product.web}
                       target="_blank"
@@ -70,7 +70,11 @@ const Products = () => {
                     >
                       {product.webLabel || 'Site'} <ExternalLink size={14} />
                     </a>
-                  )}
+                  ) : product.webSoon ? (
+                    <span className="btn-ghost product-panel__soon" aria-disabled="true">
+                      Site soon
+                    </span>
+                  ) : null}
                 </div>
               </article>
             ))}

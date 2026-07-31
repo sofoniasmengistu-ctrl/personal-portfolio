@@ -19,8 +19,9 @@ export const products = [
     tag: 'Bot live · Site building',
     description:
       'AuraPayGlobalBot is live on Telegram for payments. The website aurapayglobal.com is under construction.',
-    web: 'https://aurapayglobal.com',
-    webLabel: 'Site building',
+    web: null,
+    webLabel: null,
+    webSoon: true,
     bot: '@AuraPayGlobalBot',
     botUrl: 'https://t.me/AuraPayGlobalBot',
     community: 'https://t.me/AuraPayGlobalCommunity',
@@ -309,7 +310,7 @@ export const experienceHighlights = [
     outcome:
       'Azure data platforms end to end: medallion lakehouse (Bronze / Silver / Gold), Data Lake Gen2, Databricks, Data Factory, Key Vault, Terraform IaC, and PySpark ready pipelines. Also streaming pipelines with Kafka, Spark, and Airflow.',
     tags: ['ADF', 'Databricks', 'Data Lake', 'Terraform', 'PySpark'],
-    channel: 'Azure data platforms and pipelines',
+    channel: 'Consulting · Azure data platforms',
   },
   {
     title: 'Cloud Computing Trainer at GIZ',
@@ -409,8 +410,8 @@ export const githubFeatured = [
 ];
 
 /**
- * Client / Upwork style delivery framed from real delivery themes.
- * Replace hrefs with Upwork portfolio links when you share them.
+ * Client delivery themes from real engagements.
+ * Add portfolio URLs here when you want cards to deep-link out.
  */
 export const clientDeliveries = [
   {

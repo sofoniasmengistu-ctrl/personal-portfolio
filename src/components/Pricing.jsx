@@ -93,7 +93,7 @@ const Pricing = () => {
       <div className="container">
         <Reveal className="section-head section-head--row">
           <div className="section-head__copy">
-            <p className="section__label">Pricing</p>
+            <p className="section__label">06 Pricing</p>
             <h2 className="section__title">
               Clear rates.{' '}
               <span className="text-accent">15 minutes free.</span>

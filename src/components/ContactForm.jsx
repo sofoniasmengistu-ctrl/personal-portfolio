@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Send } from 'lucide-react';
 
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/sofoniasmengistu@gmail.com';
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const intentOptions = [
   { value: 'Free 15 minute consultation', label: 'Free 15 minute consultation' },
@@ -27,13 +28,44 @@ const ContactForm = () => {
     const form = event.currentTarget;
     const data = new FormData(form);
 
+    if (String(data.get('company') || '').trim()) {
+      setStatus('idle');
+      return;
+    }
+
+    const name = String(data.get('name') || '').trim();
+    const email = String(data.get('email') || '').trim();
+    const intent = String(data.get('intent') || '').trim();
+    const message = String(data.get('message') || '').trim();
+
+    if (!intent) {
+      setStatus('error');
+      setError('Please choose what you need help with.');
+      return;
+    }
+    if (!name || name.length < 2) {
+      setStatus('error');
+      setError('Please enter your name.');
+      return;
+    }
+    if (!EMAIL_RE.test(email)) {
+      setStatus('error');
+      setError('Please enter a valid email so I can reply.');
+      return;
+    }
+    if (message.length < 10) {
+      setStatus('error');
+      setError('Please add a short note about the project or role.');
+      return;
+    }
+
     const payload = {
-      name: data.get('name'),
-      email: data.get('email'),
-      phone: data.get('phone') || '',
-      intent: data.get('intent'),
-      message: data.get('message'),
-      _subject: `Portfolio inquiry: ${data.get('intent')}`,
+      name,
+      email,
+      phone: String(data.get('phone') || '').trim(),
+      intent,
+      message,
+      _subject: `Portfolio inquiry: ${intent}`,
       _template: 'table',
       _captcha: 'false',
     };
@@ -79,11 +111,18 @@ const ContactForm = () => {
   }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit} noValidate>
+    <form className="contact-form" onSubmit={handleSubmit}>
       <p className="contact-form__title">Send a message</p>
       <p className="contact-form__note">
         Include your email so I can reply. For roles, consulting, or builds.
       </p>
+
+      <div className="contact-form__honeypot" aria-hidden="true">
+        <label>
+          Company
+          <input name="company" type="text" tabIndex={-1} autoComplete="off" />
+        </label>
+      </div>
 
       <label className="contact-form__field">
         <span>I need help with</span>
@@ -127,6 +166,7 @@ const ContactForm = () => {
           name="message"
           required
           rows={5}
+          minLength={10}
           placeholder="Role, stack, timeline, or what you want built..."
         />
       </label>
