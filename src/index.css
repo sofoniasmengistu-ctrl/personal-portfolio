@@ -2170,18 +2170,17 @@ a.trust__item:hover .trust__value {
   z-index: 2;
 }
 
-/* Soft logo watermark — same quiet treatment as Network / DevOps backdrops */
+/* Soft logo watermark — light gray, quiet like Network / DevOps backdrops */
 .product-panel__mark {
   position: absolute;
-  right: -6%;
-  bottom: -8%;
-  width: min(68%, 11.5rem);
+  right: -4%;
+  bottom: -6%;
+  width: min(78%, 13.5rem);
   height: auto;
-  opacity: 0.11;
+  opacity: 0.42;
   pointer-events: none;
   user-select: none;
   z-index: 0;
-  filter: grayscale(1);
 }
 
 .product-panel > *:not(.product-panel__mark) {
