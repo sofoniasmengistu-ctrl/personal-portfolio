@@ -32,6 +32,15 @@ const Products = () => {
           <div className="h-track products__track">
             {products.map((product) => (
               <article key={product.id} className="product-panel h-track__item">
+                {product.mark ? (
+                  <img
+                    src={product.mark}
+                    alt=""
+                    className="product-panel__mark"
+                    aria-hidden="true"
+                    draggable="false"
+                  />
+                ) : null}
                 <p className="product-panel__tag">{product.tag}</p>
                 <h3 className="product-panel__title">{product.name}</h3>
                 <p className="product-panel__desc">{product.description}</p>

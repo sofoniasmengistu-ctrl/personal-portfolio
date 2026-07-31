@@ -11,6 +11,7 @@ export const products = [
     botUrl: 'https://t.me/WeRemoteITbot',
     community: 'https://t.me/WeRemoteIT',
     communityLabel: 'Community',
+    mark: '/products/weremoteit-mark.png',
   },
   {
     id: 'aurapay',
@@ -24,6 +25,7 @@ export const products = [
     botUrl: 'https://t.me/AuraPayGlobalBot',
     community: 'https://t.me/AuraPayGlobalCommunity',
     communityLabel: 'Community',
+    mark: '/products/aurapay-mark.png',
   },
   {
     id: 'nexusai',
