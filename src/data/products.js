@@ -39,6 +39,7 @@ export const products = [
     botUrl: 'https://t.me/NexusAIAggregatorBot',
     community: 'https://t.me/NexusAIPromo',
     communityLabel: 'Updates',
+    mark: '/products/nexusai-mark.png',
   },
 ];
 
