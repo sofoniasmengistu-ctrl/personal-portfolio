@@ -2171,18 +2171,18 @@ a.trust__item:hover .trust__value {
   z-index: 2;
 }
 
-/* Full logo inside the card — light gray watermark, not clipped */
+/* Full logo inside the card — light gray watermark, readable but quiet */
 .product-panel__mark {
   position: absolute;
   top: 50%;
-  right: 0.85rem;
-  transform: translateY(-52%);
-  width: min(58%, 10.5rem);
-  max-height: 58%;
+  left: 50%;
+  transform: translate(-42%, -48%);
+  width: min(72%, 12.5rem);
+  max-height: 68%;
   height: auto;
   object-fit: contain;
-  object-position: right center;
-  opacity: 0.14;
+  object-position: center;
+  opacity: 0.28;
   pointer-events: none;
   user-select: none;
   z-index: 0;
