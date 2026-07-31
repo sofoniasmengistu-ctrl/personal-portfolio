@@ -2143,10 +2143,11 @@ a.trust__item:hover .trust__value {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 1.5rem;
+  padding: 1.5rem 1.4rem 1.35rem;
   display: flex;
   flex-direction: column;
-  min-height: 270px;
+  min-height: 300px;
+  height: 100%;
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -2170,14 +2171,14 @@ a.trust__item:hover .trust__value {
   z-index: 2;
 }
 
-/* Soft logo watermark — light gray, quiet like Network / DevOps backdrops */
+/* Quiet corner mark — visible, but clear of copy and buttons */
 .product-panel__mark {
   position: absolute;
-  right: -4%;
-  bottom: -6%;
-  width: min(78%, 13.5rem);
+  top: 1.1rem;
+  right: -0.35rem;
+  width: min(42%, 7.25rem);
   height: auto;
-  opacity: 0.42;
+  opacity: 0.2;
   pointer-events: none;
   user-select: none;
   z-index: 0;
@@ -2194,29 +2195,37 @@ a.trust__item:hover .trust__value {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--magenta);
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.7rem;
+  min-height: 1rem;
+  line-height: 1;
 }
 
 .product-panel__title {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin: 0 0 0.55rem;
+  padding-right: 3.25rem; /* keep title clear of corner mark */
+  min-height: 1.6em;
 }
 
 .product-panel__desc {
   color: var(--text-secondary);
   font-size: 0.92rem;
-  margin-bottom: auto;
-  padding-bottom: 1.25rem;
+  margin: 0;
+  padding-bottom: 1.15rem;
   line-height: 1.55;
+  flex: 1 1 auto;
 }
 
 .product-panel__meta {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  margin-bottom: 1rem;
+  margin: 0 0 0.85rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1.1rem;
+  align-items: center;
+  gap: 0.55rem 1rem;
+  min-height: 1.1rem;
 }
 
 .product-panel__meta a {
@@ -2226,12 +2235,16 @@ a.trust__item:hover .trust__value {
 .product-panel__actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.5rem;
+  margin-top: auto;
+  min-height: 2.5rem;
 }
 
 .product-panel__actions .btn-ghost {
   border-color: var(--line);
   color: var(--ink);
+  background: var(--surface);
 }
 
 .product-panel__actions .btn-ghost:hover {
@@ -2241,8 +2254,17 @@ a.trust__item:hover .trust__value {
 
 .product-panel__actions .btn-primary,
 .product-panel__actions .btn-ghost {
-  padding: 0.6rem 1rem;
+  box-sizing: border-box;
+  min-height: 2.5rem;
+  padding: 0.55rem 1rem;
   font-size: 0.84rem;
+  line-height: 1;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.product-panel__actions .btn-primary {
+  border-color: var(--magenta);
 }
 
 /* ——— Work cards ——— */
