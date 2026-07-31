@@ -3,11 +3,12 @@ export const recommendations = [
   {
     id: 'ephrem-assefa',
     name: 'Ephrem Assefa',
-    title: '',
+    title:
+      'Chief Technology Officer (CTO) | Enterprise Architecture | Cloud & Platform Engineering | Digital Transformation | Technology Strategy',
     relationship: 'Other',
     date: 'July 2026',
     source: 'Site',
-    photo: '/recommendations/ephrem-assefa.svg',
+    photo: '/recommendations/ephrem-assefa.png',
     quote:
       'Sofonias is a highly motivated and technically capable professional with strong expertise in DevOps, cloud infrastructure, networking, and Kubernetes. He demonstrates a practical approach to solving complex technical challenges and a clear commitment to continuous learning and professional growth. His ability to work across cloud platforms, automation, infrastructure operations, and modern DevOps practices makes him a valuable contributor to any technology team. I appreciate his professionalism, technical curiosity, and dedication to delivering reliable solutions. I confidently recommend Sofonias for opportunities involving DevOps, cloud engineering, platform engineering, and infrastructure automation.',
   },
