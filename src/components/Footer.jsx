@@ -55,6 +55,8 @@ const jumpLinks = [
   { href: '/data-engineers-ethiopia/', label: 'Data Engineers Ethiopia' },
   { href: '/network-engineer-ethiopia/', label: 'Network Engineer Ethiopia' },
   { href: '/network-engineer-africa/', label: 'Network Engineer Africa' },
+  { href: '/cloud-architect-ethiopia/', label: 'Cloud Architect Ethiopia' },
+  { href: '/platform-engineer-ethiopia/', label: 'Platform Engineer Ethiopia' },
 ];
 
 const Footer = () => {

@@ -10,6 +10,8 @@ const urlList = [
   `https://${HOST}/`,
   `https://${HOST}/devops-engineer-ethiopia/`,
   `https://${HOST}/devops-engineers/`,
+  `https://${HOST}/cloud-architect-ethiopia/`,
+  `https://${HOST}/platform-engineer-ethiopia/`,
   `https://${HOST}/data-engineers-ethiopia/`,
   `https://${HOST}/network-engineer-ethiopia/`,
   `https://${HOST}/network-engineer-africa/`,
