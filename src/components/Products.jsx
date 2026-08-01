@@ -13,9 +13,10 @@ const Products = () => {
               Bots people can use <span className="text-accent">today</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              WeRemoteIT and NexusAI Aggregator are live. AuraPayGlobalBot is live
-              too while aurapayglobal.com is still building. I also want to
-              contribute to AI research and related initiatives.
+              WeRemoteIT and AuraPay Global are company products with live bots
+              and public sites. Company GitHub stays private. NexusAI Aggregator
+              is live on Telegram. I also want to contribute to AI research and
+              related initiatives.
             </p>
           </div>
           <a href="#approach" className="fancy-arrow" aria-label="Continue to approach">

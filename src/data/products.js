@@ -2,11 +2,11 @@ export const products = [
   {
     id: 'weremoteit',
     name: 'WeRemoteIT',
-    tag: 'Live · AI chat native',
+    tag: 'Live company · AI chat native',
     description:
-      'Live AI chat native product for remote IT talent. Open the Telegram bot and use it today.',
+      'WeRemoteIT company product for remote IT talent. Open the site or Telegram bot and use it today. Company GitHub stays private.',
     web: 'https://weremoteit.com',
-    webLabel: 'Site',
+    webLabel: 'Company site',
     bot: '@WeRemoteITbot',
     botUrl: 'https://t.me/WeRemoteITbot',
     community: 'https://t.me/WeRemoteIT',
@@ -16,12 +16,12 @@ export const products = [
   {
     id: 'aurapay',
     name: 'AuraPay Global',
-    tag: 'Bot live · Site building',
+    tag: 'Live company · Bot + site',
     description:
-      'AuraPayGlobalBot is live on Telegram for payments. The website aurapayglobal.com is under construction.',
-    web: null,
-    webLabel: null,
-    webSoon: true,
+      'AuraPay Global company product. Telegram bot is live for payments. Website aurapayglobal.com is the public company site (still being finished).',
+    web: 'https://aurapayglobal.com',
+    webLabel: 'Company site',
+    webSoon: false,
     bot: '@AuraPayGlobalBot',
     botUrl: 'https://t.me/AuraPayGlobalBot',
     community: 'https://t.me/AuraPayGlobalCommunity',
@@ -349,22 +349,8 @@ export const experienceHighlights = [
   },
 ];
 
-/** Featured GitHub engineering work, smart subset of 97+ repos */
+/** Featured GitHub engineering work (public repos only). Company products use private GitHub. */
 export const githubFeatured = [
-  {
-    name: 'KubeOptimia',
-    stack: 'Kubernetes cost monitoring',
-    description:
-      'Monitors cluster cost, idle capacity, and rightsizing so unused resources can be provisioned or reclaimed.',
-    href: null,
-  },
-  {
-    name: 'Akamai cloud app',
-    stack: 'Akamai · Linode',
-    description:
-      'Application work on Akamai Cloud (Linode): deploy and operate workloads on the Akamai platform.',
-    href: null,
-  },
   {
     name: 'AWS prod infra, FT360 / Aircall',
     stack: 'Terraform, AWS, CI',

@@ -104,40 +104,22 @@ const Work = () => {
               </a>
             </div>
             <div className="h-track">
-              {githubFeatured.map((repo) => {
-                const inner = (
-                  <>
-                    <span className="work-card__stack">{repo.stack}</span>
-                    <h3 className="work-card__title">{repo.name}</h3>
-                    <p className="work-card__desc">{repo.description}</p>
-                    {repo.href ? (
-                      <span className="work-card__cta mono">
-                        View repo <ArrowUpRight size={12} />
-                      </span>
-                    ) : (
-                      <span className="work-card__cta mono work-card__cta--muted">
-                        Selected work · ask for access
-                      </span>
-                    )}
-                  </>
-                );
-
-                return repo.href ? (
-                  <a
-                    key={repo.name}
-                    href={repo.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="work-card h-track__item"
-                  >
-                    {inner}
-                  </a>
-                ) : (
-                  <article key={repo.name} className="work-card h-track__item">
-                    {inner}
-                  </article>
-                );
-              })}
+              {githubFeatured.map((repo) => (
+                <a
+                  key={repo.name}
+                  href={repo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="work-card h-track__item"
+                >
+                  <span className="work-card__stack">{repo.stack}</span>
+                  <h3 className="work-card__title">{repo.name}</h3>
+                  <p className="work-card__desc">{repo.description}</p>
+                  <span className="work-card__cta mono">
+                    View public repo <ArrowUpRight size={12} />
+                  </span>
+                </a>
+              ))}
             </div>
           </Reveal>
         </div>

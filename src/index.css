@@ -2,7 +2,7 @@
 
 /*
   Corpay LP palette (from screenshots):
-  plum hero · magenta accent · white surfaces · black type/CTAs
+  plum hero � magenta accent � white surfaces � black type/CTAs
 */
 :root {
   --plum: #4a1539;
@@ -295,7 +295,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-mono);
 }
 
-/* ——— Horizontal peer tracks ——— */
+/* ??? Horizontal peer tracks ??? */
 .h-track {
   display: flex;
   gap: 1rem;
@@ -401,7 +401,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* ——— Header (white Corpay bar) ——— */
+/* ??? Header (white Corpay bar) ??? */
 .site-header {
   position: fixed;
   top: 0;
@@ -578,7 +578,7 @@ h1, h2, h3, h4 {
   .nav-toggle { display: none; }
 }
 
-/* ——— Hero (plum + white panel) ——— */
+/* ??? Hero (plum + white panel) ??? */
 .hero {
   min-height: 0;
   margin-top: var(--header-h);
@@ -894,7 +894,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* ——— Logo trust row ——— */
+/* ??? Logo trust row ??? */
 .logos {
   border-bottom: 1px solid var(--line);
   background: var(--surface);
@@ -964,7 +964,7 @@ h1, h2, h3, h4 {
   color: var(--text-muted);
 }
 
-/* ——— Reveal animations ——— */
+/* ??? Reveal animations ??? */
 .reveal {
   opacity: 0;
   transition:
@@ -1062,7 +1062,7 @@ h1, h2, h3, h4 {
   color: var(--plum);
 }
 
-/* ——— Pricing ——— */
+/* ??? Pricing ??? */
 .pricing {
   background: var(--surface-muted);
   border-block: 1px solid var(--line);
@@ -1216,7 +1216,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* ——— Addis Ababa first contact ——— */
+/* ??? Addis Ababa first contact ??? */
 .first-contact {
   background:
     linear-gradient(135deg, var(--plum-deep) 0%, var(--plum) 45%, var(--plum-mid) 100%);
@@ -1357,7 +1357,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* ——— Field engineer showcase ——— */
+/* ??? Field engineer showcase ??? */
 .field {
   background: var(--surface);
 }
@@ -1698,7 +1698,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* ——— Shared partitioned backdrop (Network / DevOps / Cloud) ——— */
+/* ??? Shared partitioned backdrop (Network / DevOps / Cloud) ??? */
 .partition-stage {
   position: relative;
   isolation: isolate;
@@ -1760,7 +1760,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* ——— Case study ——— */
+/* ??? Case study ??? */
 .case-study {
   background: var(--surface);
 }
@@ -1840,6 +1840,19 @@ h1, h2, h3, h4 {
   line-height: 1.55;
 }
 
+.case-study__psr {
+  display: grid;
+  gap: 0.7rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.case-study__psr strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .case-study__tools {
   margin-top: 1.75rem;
   padding-top: 1.35rem;
@@ -1859,7 +1872,7 @@ h1, h2, h3, h4 {
   margin-bottom: 0.75rem;
 }
 
-/* ——— Trust metrics ——— */
+/* ??? Trust metrics ??? */
 .trust {
   border-block: 1px solid var(--line);
   background: var(--surface);
@@ -2138,7 +2151,7 @@ a.trust__item:hover .trust__value {
   backdrop-filter: blur(6px);
 }
 
-/* ——— Products ——— */
+/* ??? Products ??? */
 .product-panel {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -2171,7 +2184,7 @@ a.trust__item:hover .trust__value {
   z-index: 2;
 }
 
-/* Full logo inside the card — light gray watermark, readable but quiet */
+/* Full logo inside the card ? light gray watermark, readable but quiet */
 .product-panel__mark {
   position: absolute;
   top: 50%;
@@ -2283,7 +2296,7 @@ a.trust__item:hover .trust__value {
   color: var(--ink);
 }
 
-/* ——— Work cards ——— */
+/* ??? Work cards ??? */
 .work-card {
   padding: 1.35rem 1.3rem;
   border: 1px solid var(--line);
@@ -2370,7 +2383,7 @@ a.work-card:hover {
   backdrop-filter: blur(8px);
 }
 
-/* ——— Approach ——— */
+/* ??? Approach ??? */
 .pillar {
   padding: 1.4rem 1.25rem;
   border: 1px solid var(--line);
@@ -2434,7 +2447,7 @@ a.work-card:hover {
   margin-top: 0.2rem;
 }
 
-/* ——— About ——— */
+/* ??? About ??? */
 .about {
   background: var(--surface-muted);
   border-block: 1px solid var(--line);
@@ -2585,7 +2598,7 @@ a.work-card:hover {
   color: var(--magenta);
 }
 
-/* ——— Contact / site footer ——— */
+/* ??? Contact / site footer ??? */
 .site-footer {
   position: relative;
   color: #fff;
@@ -2939,7 +2952,7 @@ a.work-card:hover {
   margin: 0;
 }
 
-/* ——— Recommendations ——— */
+/* ??? Recommendations ??? */
 .recommendations__toolbar {
   display: flex;
   align-items: center;
@@ -3384,6 +3397,19 @@ a.work-card:hover {
   margin-top: 0.35rem;
 }
 
+.contact-form__fallback {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.85rem;
+}
+
+.contact-form__fallback .btn-ghost {
+  flex: 1 1 auto;
+  justify-content: center;
+  min-height: 44px;
+}
+
 .contact-form__error {
   color: var(--magenta);
   font-size: 0.88rem;
@@ -3444,7 +3470,7 @@ a.work-card:hover {
   }
 }
 
-/* ——— SEO content ——— */
+/* ??? SEO content ??? */
 .seo__grid {
   display: grid;
   gap: 0.65rem;
@@ -3534,7 +3560,7 @@ a.work-card:hover {
 }
 
 .seo__faq-item[open] summary::after {
-  content: '� � ';
+  content: '? ? ';
 }
 
 .seo__faq-item p {
@@ -3551,7 +3577,7 @@ a.work-card:hover {
   display: none;
 }
 
-/* ——— Sticky CTA ——— */
+/* ??? Sticky CTA ??? */
 .sticky-cta {
   position: fixed;
   bottom: 0;

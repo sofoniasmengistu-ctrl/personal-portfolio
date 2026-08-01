@@ -129,6 +129,11 @@ const RecommendationForm = () => {
 
     data.append('_subject', `Portfolio comment from ${name}`);
     data.append('_template', 'table');
+    data.append('_replyto', email);
+    data.append(
+      '_autoresponse',
+      'Thanks for your comment for Sofonias Mengistu. It was received and will appear on the site after review.',
+    );
     data.append('_captcha', 'false');
     data.set(
       'message',
@@ -141,24 +146,39 @@ const RecommendationForm = () => {
       ].join('\n'),
     );
 
-    try {
+    const trySend = async () => {
       const res = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: { Accept: 'application/json' },
         body: data,
       });
-
+      const body = await res.json().catch(() => ({}));
       if (!res.ok) {
-        throw new Error('Could not send. Try emailing sofoniasmengistu@gmail.com directly.');
+        throw new Error(body.message || 'Could not send your comment.');
       }
+      return body;
+    };
 
+    try {
+      await trySend();
       form.reset();
       if (preview) URL.revokeObjectURL(preview);
       setPreview('');
       setStatus('sent');
-    } catch (err) {
-      setStatus('error');
-      setError(err.message || 'Something went wrong. Please try again.');
+    } catch (firstErr) {
+      try {
+        await new Promise((r) => setTimeout(r, 700));
+        await trySend();
+        form.reset();
+        if (preview) URL.revokeObjectURL(preview);
+        setPreview('');
+        setStatus('sent');
+      } catch {
+        setStatus('error');
+        setError(
+          `${firstErr.message || 'Send failed.'} Email sofoniasmengistu@gmail.com or WhatsApp +251 912 215 057 instead.`,
+        );
+      }
     }
   };
 

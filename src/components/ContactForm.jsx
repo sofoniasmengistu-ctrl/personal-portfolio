@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { Send } from 'lucide-react';
+import { Mail, MessageCircle, Send } from 'lucide-react';
 
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/sofoniasmengistu@gmail.com';
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const WHATSAPP = 'https://wa.me/251912215057?text=Hi%20Sofonias%2C%20I%20want%20a%20free%2015%20minute%20consultation';
+const MAILTO = 'mailto:sofoniasmengistu@gmail.com?subject=Portfolio%20inquiry';
 
 const intentOptions = [
   { value: 'Free 15 minute consultation', label: 'Free 15 minute consultation' },
@@ -15,6 +17,17 @@ const intentOptions = [
   { value: 'AI research or initiative', label: 'AI research or initiative' },
   { value: 'Other', label: 'Other' },
 ];
+
+const FallbackLinks = () => (
+  <div className="contact-form__fallback">
+    <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+      <MessageCircle size={16} /> WhatsApp
+    </a>
+    <a href={MAILTO} className="btn-ghost">
+      <Mail size={16} /> Email directly
+    </a>
+  </div>
+);
 
 const ContactForm = () => {
   const [status, setStatus] = useState('idle');
@@ -37,6 +50,7 @@ const ContactForm = () => {
     const email = String(data.get('email') || '').trim();
     const intent = String(data.get('intent') || '').trim();
     const message = String(data.get('message') || '').trim();
+    const phone = String(data.get('phone') || '').trim();
 
     if (!intent) {
       setStatus('error');
@@ -62,15 +76,19 @@ const ContactForm = () => {
     const payload = {
       name,
       email,
-      phone: String(data.get('phone') || '').trim(),
+      phone,
       intent,
       message,
       _subject: `Portfolio inquiry: ${intent}`,
       _template: 'table',
+      _replyto: email,
+      _autoresponse:
+        'Thanks for contacting Sofonias Mengistu. I received your message and will reply to this email. For faster reach use WhatsApp +251 912 215 057.',
+      // FormSubmit AJAX requires captcha off; honeypot + validation reduce spam.
       _captcha: 'false',
     };
 
-    try {
+    const trySend = async () => {
       const res = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: {
@@ -79,16 +97,29 @@ const ContactForm = () => {
         },
         body: JSON.stringify(payload),
       });
-
+      const body = await res.json().catch(() => ({}));
       if (!res.ok) {
-        throw new Error('Could not send. Try WhatsApp or email directly.');
+        throw new Error(body.message || 'Could not send through the form.');
       }
+      return body;
+    };
 
+    try {
+      await trySend();
       form.reset();
       setStatus('sent');
-    } catch (err) {
-      setStatus('error');
-      setError(err.message || 'Something went wrong. Please try again.');
+    } catch (firstErr) {
+      try {
+        await new Promise((r) => setTimeout(r, 700));
+        await trySend();
+        form.reset();
+        setStatus('sent');
+      } catch {
+        setStatus('error');
+        setError(
+          `${firstErr.message || 'Send failed.'} Use WhatsApp or email below so nothing is lost.`,
+        );
+      }
     }
   };
 
@@ -98,7 +129,9 @@ const ContactForm = () => {
         <p className="contact-form__done-title">Message sent</p>
         <p className="contact-form__done-body">
           I received your email and will reply to the address you submitted.
+          You should also get a short confirmation email from FormSubmit.
         </p>
+        <FallbackLinks />
         <button
           type="button"
           className="btn-dark"
@@ -111,10 +144,11 @@ const ContactForm = () => {
   }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form className="contact-form" onSubmit={handleSubmit} noValidate>
       <p className="contact-form__title">Send a message</p>
       <p className="contact-form__note">
-        Include your email so I can reply. For roles, consulting, or builds.
+        Include your email so I can reply. If the form fails, WhatsApp and email
+        below still reach me instantly.
       </p>
 
       <div className="contact-form__honeypot" aria-hidden="true">
@@ -184,6 +218,8 @@ const ContactForm = () => {
           </>
         )}
       </button>
+
+      <FallbackLinks />
     </form>
   );
 };
