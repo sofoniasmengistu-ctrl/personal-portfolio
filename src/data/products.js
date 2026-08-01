@@ -162,7 +162,7 @@ export const trustMetrics = [
   },
 ];
 
-/** Full cert picture for trust strip — Kubestronaut badges use official CNCF artwork */
+/** Full cert picture for trust strip · Kubestronaut badges use official CNCF artwork */
 export const trustKubestronautCerts = [
   {
     id: 'kcna',
@@ -293,7 +293,7 @@ export const trustAwsAndCiscoCertifications = [
   },
 ];
 
-/** @deprecated kept for any old imports — prefer trustAzureCertifications */
+/** @deprecated kept for any old imports · prefer trustAzureCertifications */
 export const trustPlatformCertifications = trustAwsAndCiscoCertifications;
 
 /** Selected roles from LinkedIn experience */

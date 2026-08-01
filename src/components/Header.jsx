@@ -66,7 +66,7 @@ const Header = () => {
   return (
     <header className="site-header">
       <div className="container site-header__inner">
-        <a href="#home" className="brand" aria-label="Sofonias Mengistu — Cloud Platform Architect">
+        <a href="#home" className="brand" aria-label="Sofonias Mengistu · Cloud Platform Architect">
           <img src="/brand-mark.svg" alt="" className="brand__mark" width="28" height="28" />
           <span className="brand__text">
             <span className="brand__name">

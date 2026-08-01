@@ -7,7 +7,7 @@ const faqs = [
   },
   {
     q: 'Where can I hire DevOps Engineers for Ethiopia or remote work?',
-    a: 'Hire DevOps Engineers through Sofonias Mengistu at sofoniasdevops.com. He takes full time Cloud DevOps roles, consulting, Upwork style projects, and production builds — on site in Addis Ababa and remote worldwide.',
+    a: 'Hire DevOps Engineers through Sofonias Mengistu at sofoniasdevops.com. He takes full time Cloud DevOps roles, consulting, Upwork style projects, and production builds  ·  on site in Addis Ababa and remote worldwide.',
   },
   {
     q: 'Who are Data Engineers Ethiopia companies can hire?',
@@ -19,19 +19,19 @@ const faqs = [
   },
   {
     q: 'Who is a Cloud Architect Ethiopia teams can hire?',
-    a: 'Sofonias Mengistu is a Cloud Architect Ethiopia and Cloud Platform Architect in Addis Ababa. He designs multi-cloud architecture on AWS, Azure, and GCP with Kubernetes platforms. AWS Solutions Architect Associate and the only registered CNCF Kubestronaut in Ethiopia.',
+    a: 'Sofonias Mengistu is a Cloud Architect Ethiopia and Cloud Platform Architect in Addis Ababa. He designs multi cloud architecture on AWS, Azure, and GCP with Kubernetes platforms. AWS Solutions Architect Associate and the only registered CNCF Kubestronaut in Ethiopia.',
   },
   {
     q: 'Can I hire Sofonias as a Platform Engineer, DevSecOps Engineer, or Senior Infrastructure Lead?',
-    a: 'Yes. Those titles often overlap for the same hire. Sofonias covers Platform Engineer Ethiopia work — Kubernetes platforms, secure CI/CD, Terraform, RBAC hardening — plus Senior Infrastructure Lead style ownership for full time or consulting. See sofoniasdevops.com/platform-engineer-ethiopia/.',
+    a: 'Yes. Those titles often overlap for the same hire. Sofonias covers Platform Engineer Ethiopia work  ·  Kubernetes platforms, secure CI/CD, Terraform, RBAC hardening  ·  plus Senior Infrastructure Lead style ownership for full time or consulting. See sofoniasdevops.com/platform-engineer-ethiopia/.',
   },
   {
     q: 'Who is a Network Engineer Ethiopia teams can hire in Addis Ababa?',
-    a: 'Sofonias Mengistu is a Network Engineer Ethiopia and Network Engineer Addis Ababa hire for on-site design, install, cutover, and stabilize work. Field support for 37 tech companies across Great Britain, the USA, Dubai, Singapore, and Pakistan, plus Visa routers for Ethiopian banks, American Embassy Huawei to Ubiquiti cutover, Spain embassy datacenter VPN, and GIZ router configuration. Cisco CCNA, CCNP, and CCNA Security.',
+    a: 'Sofonias Mengistu is a Network Engineer Ethiopia and Network Engineer Addis Ababa hire for on site design, install, cutover, and stabilize work. Field support for 37 tech companies across Great Britain, the USA, Dubai, Singapore, and Pakistan, plus Visa routers for Ethiopian banks, American Embassy Huawei to Ubiquiti cutover, Spain embassy datacenter VPN, and GIZ router configuration. Cisco CCNA, CCNP, and CCNA Security.',
   },
   {
     q: 'Where can I hire a Network Engineer Africa freelance consultant?',
-    a: 'Sofonias Mengistu is a freelance Network Engineer consultant based in Addis Ababa. He takes Africa-facing projects with on-site Ethiopia delivery and remote consulting across East Africa and broader Africa when the scope fits. See sofoniasdevops.com/network-engineer-africa/.',
+    a: 'Sofonias Mengistu is a freelance Network Engineer consultant based in Addis Ababa. He takes Africa facing projects with on site Ethiopia delivery and remote consulting across East Africa and broader Africa when the scope fits. See sofoniasdevops.com/network-engineer-africa/.',
   },
   {
     q: 'Is IT, cloud, and infrastructure support available on site in Addis Ababa?',
@@ -47,45 +47,45 @@ const faqs = [
   },
   {
     q: 'Where is the official portfolio and how do I reach Sofonias Mengistu?',
-    a: 'This site is the official portfolio at sofoniasdevops.com. Dedicated pages cover DevOps Engineer Ethiopia, Cloud Architect Ethiopia, Platform Engineer Ethiopia, Data Engineers Ethiopia, Network Engineer Ethiopia, and Network Engineer Africa. For DevOps, Azure Data Engineer work, Network Engineer delivery, or IT support from Addis Ababa, use the contact page to start directly.',
+    a: 'This site is the official portfolio at sofoniasdevops.com. Worldwide pages cover Hire DevOps Engineer, Kubestronaut, Remote Cloud Architect, Azure Data Engineer, and Kubernetes Consultant. Local pages cover DevOps Engineer Ethiopia, Network Engineer Ethiopia, and more. Use the contact page to start directly.',
   },
 ];
 
 const topics = [
   {
+    title: 'Hire DevOps Engineer',
+    body: 'Remote DevOps Engineer for worldwide teams. Kubernetes, Terraform, CI/CD, DevSecOps.',
+    href: '/hire-devops-engineer/',
+  },
+  {
+    title: 'Kubestronaut',
+    body: 'CNCF Kubestronaut with all five Kubernetes certs. Featured in Kubestronaut in Orbit.',
+    href: '/kubestronaut/',
+  },
+  {
+    title: 'Remote Cloud Architect',
+    body: 'Cloud Architect for AWS, Azure, and GCP multi cloud design. Worldwide remote delivery.',
+    href: '/remote-cloud-architect/',
+  },
+  {
+    title: 'Azure Data Engineer',
+    body: 'Azure Data Engineer for lakehouse and pipelines: ADF, Databricks, Data Lake Gen2, streaming.',
+    href: '/azure-data-engineer/',
+  },
+  {
+    title: 'Kubernetes Consultant',
+    body: 'Kubernetes Consultant and Kubestronaut for EKS, GKE, AKS, and Tanzu TKG platforms.',
+    href: '/kubernetes-consultant/',
+  },
+  {
     title: 'DevOps Engineer Ethiopia',
-    body: 'Cloud DevOps for AWS, Azure, GCP, Terraform, CI/CD, and Kubernetes in Addis Ababa. Full time or remote.',
+    body: 'Cloud DevOps for AWS, Azure, GCP, Terraform, CI/CD, and Kubernetes in Addis Ababa.',
     href: '/devops-engineer-ethiopia/',
   },
   {
-    title: 'Cloud Architect Ethiopia',
-    body: 'Cloud Architect and Cloud Platform Architect for multi-cloud design on AWS, Azure, and GCP. Correct spelling: Architect.',
-    href: '/cloud-architect-ethiopia/',
-  },
-  {
-    title: 'Platform Engineer Ethiopia',
-    body: 'Platform Engineer, DevSecOps Engineer, and Senior Infrastructure Lead — Kubernetes platforms with secure delivery.',
-    href: '/platform-engineer-ethiopia/',
-  },
-  {
-    title: 'Data Engineers Ethiopia',
-    body: 'Azure Data Engineer work: ADF, Databricks, Data Lake Gen2, medallion lakehouse, Terraform, and streaming pipelines.',
-    href: '/data-engineers-ethiopia/',
-  },
-  {
     title: 'Network Engineer Ethiopia',
-    body: 'Network Engineer Addis Ababa for on-site design, install, cutover, and stabilize. Visa banks, embassies, GIZ.',
+    body: 'Network Engineer Addis Ababa for on site design, install, cutover, and stabilize.',
     href: '/network-engineer-ethiopia/',
-  },
-  {
-    title: 'DevOps Engineers',
-    body: 'Hire DevOps Engineers who own platforms end to end — clusters, pipelines, DevSecOps, and SRE — not ticket-only support.',
-    href: '/devops-engineers/',
-  },
-  {
-    title: 'Network Engineer Africa',
-    body: 'Freelance Network Engineer consultant for Africa projects — Ethiopia on-site base, remote East Africa delivery.',
-    href: '/network-engineer-africa/',
   },
 ];
 
@@ -94,16 +94,15 @@ const Seo = () => {
     <section id="devops-ethiopia" className="section section--tight seo" aria-labelledby="seo-heading">
       <div className="container">
         <Reveal>
-          <p className="section__label">DevOps · Cloud Architect · Platform · Data · Network</p>
+          <p className="section__label">Worldwide · Ethiopia · Cloud · Data · Network</p>
           <h2 id="seo-heading" className="section__title">
             Searching cloud or data roles?{' '}
             <span className="text-accent">Sofonias should come up first</span>
           </h2>
           <p className="section__lead">
-            Looking for DevOps Engineer Ethiopia, Cloud Architect Ethiopia,
-            Platform Engineer or DevSecOps, Senior Infrastructure Lead, Data
-            Engineers Ethiopia, or Network Engineer Addis Ababa? Make Sofonias
-            Mengistu your first call.
+            Looking to hire a DevOps Engineer remote, Cloud Architect, Kubestronaut,
+            Azure Data Engineer, Kubernetes Consultant, or Network Engineer Ethiopia?
+            Make Sofonias Mengistu your first call worldwide.
           </p>
         </Reveal>
 

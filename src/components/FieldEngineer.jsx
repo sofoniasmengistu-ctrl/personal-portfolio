@@ -31,7 +31,7 @@ const projects = [
   {
     kicker: '03 Spain embassy',
     title: 'Datacenter VPN and full network infrastructure',
-    body: 'Configured the Spain embassy datacenter end to end: VPN, routers, switches, and core network — not patch cords.',
+    body: 'Configured the Spain embassy datacenter end to end: VPN, routers, switches, and core network · not patch cords.',
   },
   {
     kicker: '04 GIZ',
@@ -76,11 +76,11 @@ const FieldEngineer = () => {
 
                 <div className="field__intro-copy">
                   <h2 className="field__title">
-                    Network Engineer Ethiopia for on-site work in Addis Ababa
+                    Network Engineer Ethiopia for on site work in Addis Ababa
                   </h2>
                   <p className="field__lead">
-                    Network Engineer Addis Ababa delivery — design, install,
-                    cutover, stabilize — not ticket-only support. Managed source
+                    Network Engineer Addis Ababa delivery · design, install,
+                    cutover, stabilize · not ticket only support. Managed source
                     partners engaged Sofonias across five regions.
                   </p>
                 </div>

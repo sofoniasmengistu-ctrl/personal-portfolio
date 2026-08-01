@@ -3534,7 +3534,7 @@ a.work-card:hover {
 }
 
 .seo__faq-item[open] summary::after {
-  content: 'â€“';
+  content: 'Ã · ';
 }
 
 .seo__faq-item p {

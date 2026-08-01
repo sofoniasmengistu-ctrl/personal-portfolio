@@ -15,9 +15,9 @@ const Hero = () => {
               Sofonias<span className="text-accent">.</span>
             </span>
             <span className="hero__seo-line">
-              DevOps Engineer, Cloud Architect, Platform Engineer, DevSecOps,
-              Senior Infrastructure Lead, Data Engineers Ethiopia, Network Engineer,
-              and Kubestronaut in Addis Ababa
+              Hire DevOps Engineer remote, Cloud Architect, Platform Engineer,
+              DevSecOps, Azure Data Engineer, Kubernetes Consultant, Network Engineer,
+              and Kubestronaut. Addis Ababa base. Worldwide delivery.
             </span>
           </h1>
 

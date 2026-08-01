@@ -137,7 +137,7 @@ const RecommendationForm = () => {
         '',
         quote,
         '',
-        'Note: Post for public review — publish on site after approval.',
+        'Note: Post for public review · publish on site after approval.',
       ].join('\n'),
     );
 
@@ -168,7 +168,7 @@ const RecommendationForm = () => {
         <p className="contact-form__done-title">Comment received</p>
         <p className="contact-form__done-body">
           Thanks. Sofonias reviews every comment and publishes approved ones in
-          the row above. You will not see it instantly for everyone — that is
+          the row above. You will not see it instantly for everyone · that is
           intentional.
         </p>
         <button type="button" className="btn-dark" onClick={() => setStatus('idle')}>
@@ -301,7 +301,7 @@ const Recommendations = () => {
               <span className="text-accent">have said</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              Public comments are curated here. Submit below — Sofonias reviews
+              Public comments are curated here. Submit below · Sofonias reviews
               each one, then publishes approved feedback in this row.
             </p>
           </div>

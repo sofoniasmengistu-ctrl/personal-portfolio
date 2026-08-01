@@ -50,13 +50,14 @@ const jumpLinks = [
   { href: '#about', label: 'About' },
   { href: '#addis-ababa', label: 'Addis Ababa' },
   { href: '#products', label: 'Live products' },
+  { href: '/hire-devops-engineer/', label: 'Hire DevOps Engineer' },
+  { href: '/kubestronaut/', label: 'Kubestronaut' },
+  { href: '/remote-cloud-architect/', label: 'Remote Cloud Architect' },
+  { href: '/azure-data-engineer/', label: 'Azure Data Engineer' },
+  { href: '/kubernetes-consultant/', label: 'Kubernetes Consultant' },
   { href: '/devops-engineer-ethiopia/', label: 'DevOps Engineer Ethiopia' },
-  { href: '/devops-engineers/', label: 'DevOps Engineers' },
-  { href: '/data-engineers-ethiopia/', label: 'Data Engineers Ethiopia' },
   { href: '/network-engineer-ethiopia/', label: 'Network Engineer Ethiopia' },
-  { href: '/network-engineer-africa/', label: 'Network Engineer Africa' },
   { href: '/cloud-architect-ethiopia/', label: 'Cloud Architect Ethiopia' },
-  { href: '/platform-engineer-ethiopia/', label: 'Platform Engineer Ethiopia' },
 ];
 
 const Footer = () => {
@@ -99,7 +100,7 @@ const Footer = () => {
             <a
               href="#home"
               className="site-footer__brand"
-              aria-label="Sofonias Mengistu — Cloud Platform Architect"
+              aria-label="Sofonias Mengistu · Cloud Platform Architect"
             >
               <img
                 src="/brand-mark.svg"

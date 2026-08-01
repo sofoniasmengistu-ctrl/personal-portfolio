@@ -207,7 +207,7 @@ main strong { color: var(--ink); }
   font-weight: 700;
 }
 
-.lander-faq details[open] summary::before { content: '−'; }
+.lander-faq details[open] summary::before { content: '×'; }
 
 .lander-faq details p {
   margin: 0.65rem 0 0.25rem 1.1em;

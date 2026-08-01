@@ -14,7 +14,7 @@ const Work = () => {
           className="partition-visual"
           style={{ backgroundImage: "url('/work-cloud-bg.png')" }}
           role="img"
-          aria-label="Cloud engineering and multi-cloud operations background"
+          aria-label="Cloud engineering and multi cloud operations background"
         />
         <div className="partition-veil" aria-hidden="true" />
 

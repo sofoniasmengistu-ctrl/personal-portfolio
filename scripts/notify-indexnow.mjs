@@ -8,6 +8,11 @@ const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 
 const urlList = [
   `https://${HOST}/`,
+  `https://${HOST}/hire-devops-engineer/`,
+  `https://${HOST}/kubestronaut/`,
+  `https://${HOST}/remote-cloud-architect/`,
+  `https://${HOST}/azure-data-engineer/`,
+  `https://${HOST}/kubernetes-consultant/`,
   `https://${HOST}/devops-engineer-ethiopia/`,
   `https://${HOST}/devops-engineers/`,
   `https://${HOST}/cloud-architect-ethiopia/`,
