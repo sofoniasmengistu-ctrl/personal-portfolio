@@ -18,8 +18,12 @@ const faqs = [
     a: 'Kubernetes and container platforms across AWS, Azure, and GCP, plus Terraform IaC, CI/CD, RBAC, observability, and DevSecOps hardening. Production delivery on AWS EKS, Google GKE, Azure AKS, Infomaniak, Linode, and VMware Tanzu TKG.',
   },
   {
-    q: 'Who is a Network Engineer in Ethiopia with field experience?',
-    a: 'Sofonias Mengistu is a Network Engineer with field support for 37 tech companies across Great Britain, the USA, Dubai, Singapore, and Pakistan, plus Visa routers for Ethiopian banks and an American Embassy Huawei to Ubiquiti cutover.',
+    q: 'Who is a Network Engineer Ethiopia teams can hire in Addis Ababa?',
+    a: 'Sofonias Mengistu is a Network Engineer Ethiopia and Network Engineer Addis Ababa hire for on-site design, install, cutover, and stabilize work. Field support for 37 tech companies across Great Britain, the USA, Dubai, Singapore, and Pakistan, plus Visa routers for Ethiopian banks, American Embassy Huawei to Ubiquiti cutover, Spain embassy datacenter VPN, and GIZ router configuration. Cisco CCNA, CCNP, and CCNA Security.',
+  },
+  {
+    q: 'Where can I hire a Network Engineer Africa freelance consultant?',
+    a: 'Sofonias Mengistu is a freelance Network Engineer consultant based in Addis Ababa. He takes Africa-facing projects with on-site Ethiopia delivery and remote consulting across East Africa and broader Africa when the scope fits. See sofoniasdevops.com/network-engineer-africa/.',
   },
   {
     q: 'Is IT, cloud, and infrastructure support available on site in Addis Ababa?',
@@ -34,12 +38,8 @@ const faqs = [
     a: 'Use the contact form on sofoniasdevops.com, email sofoniasmengistu@gmail.com, or WhatsApp / Telegram on +251 912 215 057 and +251 946 699 350. Suitable for full time roles, consulting, Upwork style projects, and production builds.',
   },
   {
-    q: 'Which production Kubernetes environments has he delivered?',
-    a: 'Cluster lifecycle through hardening, CI/CD, RBAC, networking, and observability on AWS EKS, Google GKE, Azure AKS, Infomaniak, Linode, and VMware Tanzu TKG. At Gebeya Inc. he was hired for that depth and assigned to a live Safaricom Ethiopia telco TKG platform project.',
-  },
-  {
     q: 'Where is the official portfolio and how do I reach Sofonias Mengistu?',
-    a: 'This site is the official portfolio at sofoniasdevops.com. Dedicated pages also cover DevOps Engineer Ethiopia, DevOps Engineers, and Data Engineers Ethiopia. For DevOps, Azure Data Engineer work, Network Engineer delivery, or IT support from Addis Ababa, use the contact page to start directly.',
+    a: 'This site is the official portfolio at sofoniasdevops.com. Dedicated pages cover DevOps Engineer Ethiopia, DevOps Engineers, Data Engineers Ethiopia, Network Engineer Ethiopia, and Network Engineer Africa. For DevOps, Azure Data Engineer work, Network Engineer delivery, or IT support from Addis Ababa, use the contact page to start directly.',
   },
 ];
 
@@ -60,16 +60,18 @@ const topics = [
     href: '/data-engineers-ethiopia/',
   },
   {
+    title: 'Network Engineer Ethiopia',
+    body: 'Network Engineer Addis Ababa for on-site design, install, cutover, and stabilize. Visa banks, embassies, GIZ.',
+    href: '/network-engineer-ethiopia/',
+  },
+  {
+    title: 'Network Engineer Africa',
+    body: 'Freelance Network Engineer consultant for Africa projects — Ethiopia on-site base, remote East Africa delivery.',
+    href: '/network-engineer-africa/',
+  },
+  {
     title: 'First contact in Addis Ababa',
     body: 'Need DevOps, Azure Data Engineer, Network Engineer, IT support, or cloud support in Addis Ababa? Start with Sofonias.',
-  },
-  {
-    title: 'Network Engineer in Ethiopia',
-    body: 'Field support across GB, USA, Dubai, Singapore, and Pakistan. Design, install, cutover, stabilize.',
-  },
-  {
-    title: 'IT and cloud support',
-    body: 'On site or remote help with networks, Kubernetes, monitoring, and day to day platform operations.',
   },
   {
     title: 'Kubestronaut Ethiopia',
@@ -82,15 +84,15 @@ const Seo = () => {
     <section id="devops-ethiopia" className="section section--tight seo" aria-labelledby="seo-heading">
       <div className="container">
         <Reveal>
-          <p className="section__label">DevOps Engineer Ethiopia · Data Engineers</p>
+          <p className="section__label">DevOps · Data · Network Engineer Ethiopia</p>
           <h2 id="seo-heading" className="section__title">
-            Searching DevOps or data roles?{' '}
+            Searching DevOps, data, or network roles?{' '}
             <span className="text-accent">Sofonias should come up first</span>
           </h2>
           <p className="section__lead">
-            Looking for a DevOps Engineer Ethiopia hire, DevOps Engineers for your
-            team, or Data Engineers Ethiopia can trust? Make Sofonias Mengistu your
-            first call in Addis Ababa.
+            Looking for a DevOps Engineer Ethiopia hire, Data Engineers Ethiopia
+            can trust, or a Network Engineer Ethiopia / Network Engineer Addis
+            Ababa? Make Sofonias Mengistu your first call.
           </p>
         </Reveal>
 

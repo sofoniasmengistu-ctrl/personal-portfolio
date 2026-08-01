@@ -63,7 +63,7 @@ const FieldEngineer = () => {
 
         <div className="container field__inner">
           <Reveal>
-            <p className="field__label mono">Network Engineer and field support</p>
+            <p className="field__label mono">Network Engineer Ethiopia · Addis Ababa</p>
 
             <div className="field__layout">
               <div className="field__intro">
@@ -76,11 +76,12 @@ const FieldEngineer = () => {
 
                 <div className="field__intro-copy">
                   <h2 className="field__title">
-                    Network Engineer for on site support across five regions
+                    Network Engineer Ethiopia for on-site work in Addis Ababa
                   </h2>
                   <p className="field__lead">
-                    Managed source partners engaged me for enterprise network work.
-                    Full Network Engineer delivery, not ticket only support.
+                    Network Engineer Addis Ababa delivery — design, install,
+                    cutover, stabilize — not ticket-only support. Managed source
+                    partners engaged Sofonias across five regions.
                   </p>
                 </div>
               </div>
@@ -134,8 +135,8 @@ const FieldEngineer = () => {
                 </div>
               </div>
 
-              <a href="#contact" className="btn-primary field__cta">
-                Talk network engineering
+              <a href="/network-engineer-ethiopia/" className="btn-primary field__cta">
+                Network Engineer Ethiopia
                 <MoveRight size={16} />
               </a>
             </div>

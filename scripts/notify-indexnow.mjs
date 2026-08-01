@@ -11,6 +11,8 @@ const urlList = [
   `https://${HOST}/devops-engineer-ethiopia/`,
   `https://${HOST}/devops-engineers/`,
   `https://${HOST}/data-engineers-ethiopia/`,
+  `https://${HOST}/network-engineer-ethiopia/`,
+  `https://${HOST}/network-engineer-africa/`,
   `https://${HOST}/sitemap.xml`,
 ];
 

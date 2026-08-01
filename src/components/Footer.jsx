@@ -53,6 +53,8 @@ const jumpLinks = [
   { href: '/devops-engineer-ethiopia/', label: 'DevOps Engineer Ethiopia' },
   { href: '/devops-engineers/', label: 'DevOps Engineers' },
   { href: '/data-engineers-ethiopia/', label: 'Data Engineers Ethiopia' },
+  { href: '/network-engineer-ethiopia/', label: 'Network Engineer Ethiopia' },
+  { href: '/network-engineer-africa/', label: 'Network Engineer Africa' },
 ];
 
 const Footer = () => {
