@@ -8,14 +8,9 @@ const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 
 const urlList = [
   `https://${HOST}/`,
-  `https://${HOST}/#addis-ababa`,
-  `https://${HOST}/#field`,
-  `https://${HOST}/#case-study`,
-  `https://${HOST}/#work`,
-  `https://${HOST}/#devops-ethiopia`,
-  `https://${HOST}/#pricing`,
-  `https://${HOST}/#about`,
-  `https://${HOST}/#contact`,
+  `https://${HOST}/devops-engineer-ethiopia/`,
+  `https://${HOST}/devops-engineers/`,
+  `https://${HOST}/data-engineers-ethiopia/`,
   `https://${HOST}/sitemap.xml`,
 ];
 

@@ -50,6 +50,9 @@ const jumpLinks = [
   { href: '#about', label: 'About' },
   { href: '#addis-ababa', label: 'Addis Ababa' },
   { href: '#products', label: 'Live products' },
+  { href: '/devops-engineer-ethiopia/', label: 'DevOps Engineer Ethiopia' },
+  { href: '/devops-engineers/', label: 'DevOps Engineers' },
+  { href: '/data-engineers-ethiopia/', label: 'Data Engineers Ethiopia' },
 ];
 
 const Footer = () => {
@@ -123,8 +126,9 @@ const Footer = () => {
               <span className="text-accent">first contact</span>
             </h2>
             <p className="site-footer__lead">
-              DevOps, Network Engineer work, IT support, cloud support, or a build.
-              On site in Addis Ababa. Remote worldwide. First 15 minutes free.
+              DevOps Engineer Ethiopia, DevOps Engineers, Data Engineers Ethiopia,
+              Network Engineer work, IT support, or a build. On site in Addis Ababa.
+              Remote worldwide. First 15 minutes free.
             </p>
 
             <div className="site-footer__actions">

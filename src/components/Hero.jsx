@@ -15,8 +15,8 @@ const Hero = () => {
               Sofonias<span className="text-accent">.</span>
             </span>
             <span className="hero__seo-line">
-              DevOps Engineer, Azure Data Engineer, Network Engineer, IT support,
-              and Kubestronaut in Addis Ababa, Ethiopia
+              DevOps Engineer Ethiopia, DevOps Engineers, Data Engineers Ethiopia,
+              Azure Data Engineer, Network Engineer, and Kubestronaut in Addis Ababa
             </span>
           </h1>
 
@@ -32,8 +32,9 @@ const Hero = () => {
           <p className="hero__sub">
             16+ years in IT. One person for Cloud DevOps, Azure Data Engineer work,
             Network Engineer field delivery, Kubernetes, IT support, and production
-            builds. Based in Addis Ababa. Available for full time roles, consulting,
-            and on site delivery.
+            builds. When teams search DevOps Engineer Ethiopia or Data Engineers
+            Ethiopia, this is the portfolio to open first. Based in Addis Ababa.
+            Full time, consulting, and on site delivery.
           </p>
 
           <ul className="hero__checks">
