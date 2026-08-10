@@ -2,7 +2,7 @@
 
 /*
   Corpay LP palette (from screenshots):
-  plum hero ∑ magenta accent ∑ white surfaces ∑ black type/CTAs
+  plum hero ù magenta accent ù white surfaces ù black type/CTAs
 */
 :root {
   --plum: #4a1539;
@@ -396,8 +396,12 @@ h1, h2, h3, h4 {
 
 @media (min-width: 800px) {
   .split-row {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+
+  .split-row--3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -1779,8 +1783,14 @@ h1, h2, h3, h4 {
 
 @media (min-width: 720px) {
   .case-study__meta {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .case-study__meta {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -1806,7 +1816,7 @@ h1, h2, h3, h4 {
 
 @media (min-width: 900px) {
   .case-study__steps {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 }
@@ -2247,6 +2257,11 @@ a.trust__item:hover .trust__value {
 
 .product-panel__meta a {
   color: var(--magenta);
+}
+
+.product-panel__focus {
+  color: var(--muted);
+  letter-spacing: 0.02em;
 }
 
 .product-panel__actions {

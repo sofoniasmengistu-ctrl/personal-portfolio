@@ -21,6 +21,11 @@ const shell = `
     <p><strong>Stack.</strong> Tanzu TKG, Terraform, CI/CD, RBAC, NetworkPolicy, Prometheus, Grafana.</p>
     <p><strong>Result.</strong> Cluster lifecycle through hardening on a live telco assignment via Gebeya Inc.</p>
 
+    <h2>Case study: One year product build · FDE</h2>
+    <p><strong>Problem.</strong> Real products need live bots, a mobile app, company sites, and a Kubernetes FinOps cost loop — not demos.</p>
+    <p><strong>Stack.</strong> WeRemoteIT (web, Telegram bot, Android), AuraPay Global, NexusAI Aggregator, KubeOptimia, FinOps, Forward Deployed Engineer craft.</p>
+    <p><strong>Result.</strong> One year shipping the full suite, including KubeOptimia as cluster cost controller so cloud spend is a first class platform signal.</p>
+
     <h2>Case study: Azure Data Engineer lakehouse</h2>
     <p><strong>Problem.</strong> Teams needed medallion lakehouse platforms with secrets and IaC, not one off notebooks.</p>
     <p><strong>Stack.</strong> Data Lake Gen2, Databricks, ADF, Key Vault, Terraform, PySpark, Kafka, Airflow.</p>
@@ -33,9 +38,10 @@ const shell = `
 
     <h2>Live products</h2>
     <ul>
-      <li>WeRemoteIT · <a href="https://weremoteit.com">weremoteit.com</a> · <a href="https://t.me/WeRemoteITbot">Telegram bot</a></li>
+      <li>WeRemoteIT · <a href="https://weremoteit.com">weremoteit.com</a> · <a href="https://t.me/WeRemoteITbot">Telegram bot</a> · Android app</li>
       <li>AuraPay Global · <a href="https://aurapayglobal.com">aurapayglobal.com</a> · <a href="https://t.me/AuraPayGlobalBot">Telegram bot</a></li>
       <li>NexusAI Aggregator · <a href="https://t.me/NexusAIAggregatorBot">Telegram bot</a></li>
+      <li>KubeOptimia · Kubernetes cluster cost controller · cloud FinOps · Forward Deployed Engineer craft</li>
     </ul>
 
     <h2>Contact</h2>

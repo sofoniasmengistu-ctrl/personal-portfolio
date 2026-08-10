@@ -7,7 +7,13 @@ const timeline = [
     year: 'Now',
     role: 'DevOps at Gebeya, Safaricom TKG assignment',
     description:
-      'Tanzu Kubernetes Grid for Safaricom Ethiopia: clusters, Terraform, CI/CD, security, Prometheus/Grafana. Open to remote DevSecOps and SRE roles.',
+      'Tanzu Kubernetes Grid for Safaricom Ethiopia: clusters, Terraform, CI/CD, security, Prometheus/Grafana. Open to remote DevSecOps, SRE, and Forward Deployed Engineer roles.',
+  },
+  {
+    year: 'Products',
+    role: 'One year building apps, bots, Android, and FinOps',
+    description:
+      'Full year shipping WeRemoteIT (site, Telegram bot, Android app), AuraPay Global, NexusAI Aggregator, and KubeOptimia cluster cost controller for cloud FinOps. Core Forward Deployed Engineer craft.',
   },
   {
     year: '2018 to 23',
@@ -25,6 +31,11 @@ const timeline = [
 
 const highlights = [
   'Kubestronaut (KCNA KCSA CKA CKAD CKS)',
+  'Forward Deployed Engineer',
+  'WeRemoteIT Android app',
+  'Telegram bots',
+  'KubeOptimia FinOps',
+  'Cluster cost controller',
   'Azure Solutions Architect Expert',
   'Azure Data Engineer',
   'ADF, Databricks, Data Lake',
@@ -37,7 +48,6 @@ const highlights = [
   'Infomaniak',
   'Linode Kubernetes',
   'Akamai Cloud',
-  'KubeOptimia',
   'Kubernetes',
   'Terraform',
   'ArgoCD and GitOps',
@@ -63,10 +73,11 @@ const About = () => {
               <span className="text-accent">Sofonias Mengistu</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              DevSecOps Engineer, Cloud Engineer, Azure Data Engineer, Trainer, SRE
-              enthusiast. Kubestronaut. Runs live Telegram products (WeRemoteIT,
-              NexusAI, AuraPay bot) and is open to AI research and related
-              initiatives.
+              DevSecOps Engineer, Cloud Engineer, Azure Data Engineer, Forward
+              Deployed Engineer, Trainer, SRE enthusiast. Kubestronaut. One year
+              building live products: WeRemoteIT (bot + Android), AuraPay, NexusAI,
+              and KubeOptimia (Kubernetes FinOps / cluster cost controller). Open to
+              AI research and related initiatives.
             </p>
           </div>
           <a href="#contact" className="fancy-arrow" aria-label="Go to contact">
@@ -98,7 +109,8 @@ const About = () => {
 
           <Reveal className="about__bio" delay={100} variant="right">
             <p className="about__roles">
-              Cloud DevSecOps, Azure Data Engineer, Kubestronaut, Gebeya / Safaricom
+              Cloud DevSecOps, Azure Data Engineer, Kubestronaut, Gebeya / Safaricom,
+              product builder · FDE
             </p>
             <p>
               Based in Addis Ababa. Career path: IT support and networking into
@@ -111,13 +123,17 @@ const About = () => {
               I create and operate clusters from the ground up on AWS EKS,
               Google GKE, Azure AKS, Infomaniak, Linode, and VMware Tanzu TKG:
               provisioning, hardening, CI/CD, RBAC, networking, and observability.
-              On the data side I build Azure Data Engineer platforms: medallion
-              lakehouse, Data Lake Gen2, Databricks, Data Factory, and streaming
-              pipelines. Hired by Gebeya Inc. for Kubernetes depth and assigned to a
-              live telco TKG platform project. I also train teams (including GIZ)
-              and mentor on cloud, security, and cost optimization. Outside client
-              work I run live AI chat products and want to contribute to AI
-              research or any serious AI initiative. Featured in{' '}
+              One year of Forward Deployed Engineer craft building the full product
+              suite: WeRemoteIT (web, Telegram bot, Android app), AuraPay Global,
+              NexusAI Aggregator, and KubeOptimia — a Kubernetes cluster cost
+              controller for cloud FinOps (spend visibility, rightsizing, cost
+              governance). On the data side I build Azure Data Engineer platforms:
+              medallion lakehouse, Data Lake Gen2, Databricks, Data Factory, and
+              streaming pipelines. Hired by Gebeya Inc. for Kubernetes depth and
+              assigned to a live telco TKG platform project. I also train teams
+              (including GIZ) and mentor on cloud, security, and cost optimization.
+              Outside client work I run live AI chat products and want to contribute
+              to AI research or any serious AI initiative. Featured in{' '}
               <a href={credentials.cncfOrbit} target="_blank" rel="noopener noreferrer">
                 CNCF Kubestronaut in Orbit
               </a>

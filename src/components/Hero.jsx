@@ -61,6 +61,14 @@ const Hero = () => {
                 Kubernetes tasks
               </span>
             </li>
+            <li className="hero__check">
+              <Check size={14} strokeWidth={3} />
+              <span>
+                <strong>One year shipping products</strong> · WeRemoteIT
+                (bot + Android), AuraPay, NexusAI, and KubeOptimia FinOps —
+                Forward Deployed Engineer craft
+              </span>
+            </li>
           </ul>
 
           <div className="hero__actions">

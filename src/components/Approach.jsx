@@ -10,11 +10,16 @@ const pillars = [
   },
   {
     num: '02',
-    title: 'Production ownership',
-    body: 'I run live bots and products myself, including WeRemoteIT AI chat native, so I design infra the way operators actually need it.',
+    title: 'Product build and FDE craft',
+    body: 'One year shipping WeRemoteIT (web, bot, Android), AuraPay, NexusAI, and KubeOptimia FinOps — own the product, the mobile app, and the cluster cost loop.',
   },
   {
     num: '03',
+    title: 'Production ownership',
+    body: 'I run live bots and products myself, including WeRemoteIT AI chat native and Android, so I design infra the way operators actually need it.',
+  },
+  {
+    num: '04',
     title: 'Multi cloud and AI',
     body: 'AWS, Azure, GCP with Terraform, GitOps, and DevSecOps. Open to AI research and initiatives that need real platform craft.',
   },

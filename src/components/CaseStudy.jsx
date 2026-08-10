@@ -12,7 +12,25 @@ const cases = [
       'Owned cluster lifecycle through hardening on TKG: Terraform provisioning, CI/CD integration, RBAC and NetworkPolicy, plus Prometheus/Grafana observability for a production telco assignment.',
   },
   {
-    label: '02 Azure data platforms',
+    label: '02 Product build · FDE',
+    title: 'One year: bots, Android, and KubeOptimia FinOps',
+    problem:
+      'Building real products takes more than demos: live bots, a mobile app, company sites, and a Kubernetes FinOps cost loop. That is Forward Deployed Engineer craft — own what ships.',
+    stack: [
+      'WeRemoteIT',
+      'Android',
+      'Telegram bots',
+      'AuraPay Global',
+      'NexusAI Aggregator',
+      'KubeOptimia',
+      'FinOps',
+      'FDE',
+    ],
+    result:
+      'One year shipping the full suite: WeRemoteIT (web, Telegram bot, Android app), AuraPay Global (bot + site), NexusAI Aggregator bot, and KubeOptimia cluster cost controller for cloud FinOps — spend visibility and rightsizing on live Kubernetes.',
+  },
+  {
+    label: '03 Azure data platforms',
     title: 'Medallion lakehouse and streaming',
     problem:
       'Teams needed an Azure Data Engineer platform that could move from raw ingest to trusted gold layers, with secrets and IaC, not one off notebooks.',
@@ -21,7 +39,7 @@ const cases = [
       'Delivered medallion lakehouse (Bronze / Silver / Gold) on Data Lake Gen2 with Databricks and Data Factory, Key Vault backed secrets, Terraform IaC, and streaming patterns with Kafka, Spark, and Airflow when required.',
   },
   {
-    label: '03 Network field cutovers',
+    label: '04 Network field cutovers',
     title: 'Banks, embassies, and 37 companies',
     problem:
       'Enterprise sites needed Network Engineer delivery that finished in one pass: design, install, cutover, stabilize. Ticket only support was not enough.',
@@ -41,6 +59,10 @@ const tools = [
   'GKE',
   'AKS',
   'Tanzu TKG',
+  'KubeOptimia',
+  'FinOps',
+  'WeRemoteIT Android',
+  'Telegram bots',
   'Terraform',
   'Ansible',
   'Azure Data Factory',
@@ -71,10 +93,12 @@ const CaseStudy = () => {
                 <span className="text-accent">result</span>
               </h2>
               <p className="section__lead section__lead--tight">
-                Three delivery themes hiring managers ask for: production
-                Kubernetes at Safaricom Ethiopia via Gebeya, Azure data platforms,
-                and Network Engineer field cutovers. KodeKloud Senior DevOps and
-                ~2 years of hands on toolchain work sit behind the hire.
+                Four delivery themes hiring managers ask for: production
+                Kubernetes at Safaricom Ethiopia via Gebeya, one year shipping
+                products (WeRemoteIT web + bot + Android, AuraPay, NexusAI,
+                KubeOptimia FinOps · FDE craft), Azure data platforms, and Network
+                Engineer field cutovers. KodeKloud Senior DevOps and ~2 years of
+                hands on toolchain work sit behind the hire.
               </p>
             </div>
             <a href="#contact" className="fancy-arrow">
@@ -90,6 +114,10 @@ const CaseStudy = () => {
             <div className="case-study__meta-item">
               <p className="case-study__meta-label mono">Telco Kubernetes</p>
               <p className="case-study__meta-value">Gebeya · Safaricom TKG</p>
+            </div>
+            <div className="case-study__meta-item">
+              <p className="case-study__meta-label mono">Product build · FDE</p>
+              <p className="case-study__meta-value">1 year · bots + Android + FinOps</p>
             </div>
             <div className="case-study__meta-item">
               <p className="case-study__meta-label mono">Network field</p>

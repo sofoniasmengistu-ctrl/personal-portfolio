@@ -10,13 +10,14 @@ const Products = () => {
           <div className="section-head__copy">
             <p className="section__label">02 Live products</p>
             <h2 className="section__title">
-              Bots people can use <span className="text-accent">today</span>
+              Bots and FinOps people can use{' '}
+              <span className="text-accent">today</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              WeRemoteIT and AuraPay Global are company products with live bots
-              and public sites. Company GitHub stays private. NexusAI Aggregator
-              is live on Telegram. I also want to contribute to AI research and
-              related initiatives.
+              One year building the suite: WeRemoteIT (site, Telegram bot, Android
+              app), AuraPay Global, NexusAI Aggregator, and KubeOptimia — Kubernetes
+              cluster cost controller for cloud FinOps. Core Forward Deployed
+              Engineer value. Company GitHub stays private.
             </p>
           </div>
           <a href="#approach" className="fancy-arrow" aria-label="Continue to approach">
@@ -46,22 +47,36 @@ const Products = () => {
                 <h3 className="product-panel__title">{product.name}</h3>
                 <p className="product-panel__desc">{product.description}</p>
                 <div className="product-panel__meta">
-                  <a href={product.botUrl} target="_blank" rel="noopener noreferrer">
-                    {product.bot}
-                  </a>
-                  <a href={product.community} target="_blank" rel="noopener noreferrer">
-                    {product.communityLabel}
-                  </a>
+                  {product.botUrl ? (
+                    <a href={product.botUrl} target="_blank" rel="noopener noreferrer">
+                      {product.bot}
+                    </a>
+                  ) : null}
+                  {product.community ? (
+                    <a href={product.community} target="_blank" rel="noopener noreferrer">
+                      {product.communityLabel}
+                    </a>
+                  ) : null}
+                  {product.focus ? (
+                    <span className="product-panel__focus mono">{product.focus}</span>
+                  ) : null}
                 </div>
                 <div className="product-panel__actions">
-                  <a
-                    href={product.botUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary"
-                  >
-                    Open bot <Send size={14} />
-                  </a>
+                  {product.botUrl ? (
+                    <a
+                      href={product.botUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary"
+                    >
+                      Open bot <Send size={14} />
+                    </a>
+                  ) : null}
+                  {product.ctaHref ? (
+                    <a href={product.ctaHref} className="btn-primary">
+                      {product.ctaLabel || 'Learn more'} <MoveRight size={14} />
+                    </a>
+                  ) : null}
                   {product.web ? (
                     <a
                       href={product.web}

@@ -2,9 +2,9 @@ export const products = [
   {
     id: 'weremoteit',
     name: 'WeRemoteIT',
-    tag: 'Live company · AI chat native',
+    tag: 'Live company · Web, bot, Android',
     description:
-      'WeRemoteIT company product for remote IT talent. Open the site or Telegram bot and use it today. Company GitHub stays private.',
+      'WeRemoteIT company product for remote IT talent: live site, Telegram bot, and Android app. Open and use it today. Company GitHub stays private.',
     web: 'https://weremoteit.com',
     webLabel: 'Company site',
     bot: '@WeRemoteITbot',
@@ -41,6 +41,24 @@ export const products = [
     community: 'https://t.me/NexusAIPromo',
     communityLabel: 'Updates',
     mark: '/products/nexusai-mark.png',
+  },
+  {
+    id: 'kubeoptimia',
+    name: 'KubeOptimia',
+    tag: 'FinOps · Cluster cost controller',
+    description:
+      'Cloud FinOps for Kubernetes: cluster cost controller that makes spend visible, rightsizes workloads, and keeps cloud bills under control. Pure Forward Deployed Engineer craft — sit with production clusters and govern cost as a first class platform signal.',
+    web: null,
+    webLabel: null,
+    webSoon: false,
+    bot: null,
+    botUrl: null,
+    community: null,
+    communityLabel: null,
+    focus: 'Kubernetes cost · FinOps · FDE',
+    ctaHref: '#contact',
+    ctaLabel: 'Discuss FinOps',
+    mark: null,
   },
 ];
 
@@ -306,6 +324,13 @@ export const experienceHighlights = [
     channel: 'Aug 2023 to Present, Addis Ababa',
   },
   {
+    title: 'One year building live products (bots, Android, FinOps)',
+    outcome:
+      'One full year building and shipping the product suite end to end: WeRemoteIT (site, Telegram bot, Android app), AuraPay Global (bot + site), NexusAI Aggregator bot, and KubeOptimia — Kubernetes cluster cost controller for cloud FinOps. Pure Forward Deployed Engineer craft: own the product, the bots, the mobile app, and the platform cost loop.',
+    tags: ['WeRemoteIT', 'Android', 'AuraPay', 'NexusAI', 'KubeOptimia', 'FinOps', 'FDE'],
+    channel: '1 year · product + bots + Android',
+  },
+  {
     title: 'Azure Data Engineer',
     outcome:
       'Azure data platforms end to end: medallion lakehouse (Bronze / Silver / Gold), Data Lake Gen2, Databricks, Data Factory, Key Vault, Terraform IaC, and PySpark ready pipelines. Also streaming pipelines with Kafka, Spark, and Airflow.',
@@ -406,6 +431,13 @@ export const clientDeliveries = [
       'Via Gebeya: cluster lifecycle, Terraform provisioning, CI/CD integration, security policies, monitoring.',
     tags: ['Tanzu TKG', 'Safaricom', 'GitOps'],
     channel: 'Gebeya Inc., production',
+  },
+  {
+    title: 'Product suite · bots, Android, KubeOptimia FinOps',
+    outcome:
+      'One year shipping WeRemoteIT (web, bot, Android), AuraPay Global, NexusAI Aggregator, and KubeOptimia cluster cost controller — cloud FinOps and FDE-style ownership from product to platform cost.',
+    tags: ['WeRemoteIT Android', 'Telegram bots', 'FinOps', 'FDE'],
+    channel: '1 year · product build',
   },
   {
     title: 'Azure Data Engineer platforms',
