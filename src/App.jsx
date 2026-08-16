@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Trust from './components/Trust';
 import Logos from './components/Logos';
 import FirstContact from './components/FirstContact';
+import Location from './components/Location';
 import FieldEngineer from './components/FieldEngineer';
 import CaseStudy from './components/CaseStudy';
 import Work from './components/Work';
@@ -26,6 +27,7 @@ function App() {
         <Trust />
         <Logos />
         <FirstContact />
+        <Location />
         <FieldEngineer />
         <CaseStudy />
         <Work />

@@ -7,7 +7,11 @@ const Hero = () => {
       <div className="container hero__stage">
         <div className="hero__copy">
           <p className="hero__eyebrow">
-            Addis Ababa first contact. Remote worldwide.
+            <span className="hero__avail">
+              <span className="hero__avail-dot" aria-hidden="true" />
+              Available now
+            </span>
+            Addis Ababa first contact. Remote worldwide. EAT (UTC+3).
           </p>
 
           <h1 className="hero__title">

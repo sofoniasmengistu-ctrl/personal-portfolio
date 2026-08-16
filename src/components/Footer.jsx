@@ -7,7 +7,7 @@ import {
   MoveRight,
   Send,
 } from 'lucide-react';
-import { companyChannels, products } from '../data/products';
+import { companyChannels, professionalEmails, products } from '../data/products';
 import ContactForm from './ContactForm';
 import { Reveal } from './Reveal';
 
@@ -27,7 +27,7 @@ const channels = [
   {
     id: 'email',
     label: 'Email',
-    href: 'mailto:sofoniasmengistu@gmail.com',
+    href: 'mailto:sofonias_mengistu@sofoniasdevops.com',
     Icon: Mail,
   },
   {
@@ -47,6 +47,8 @@ const channels = [
 const jumpLinks = [
   { href: '#work', label: 'Work' },
   { href: '#pricing', label: 'Pricing' },
+  { href: '#location', label: 'Map' },
+  { href: '/privacy/', label: 'Privacy' },
   { href: '#about', label: 'About' },
   { href: '#addis-ababa', label: 'Addis Ababa' },
   { href: '#products', label: 'Live products' },
@@ -169,12 +171,30 @@ const Footer = () => {
               ))}
             </div>
 
+            <ul className="site-footer__emails" aria-label="Email addresses">
+              {professionalEmails.map((item) => (
+                <li key={item.id}>
+                  <a href={item.href}>{item.email}</a>
+                  <span>{item.note}</span>
+                </li>
+              ))}
+              <li>
+                <a href="mailto:sofoniasmengistu@gmail.com">sofoniasmengistu@gmail.com</a>
+                <span>Gmail backup</span>
+              </li>
+            </ul>
+
             <ul className="site-footer__offer">
               <li>Hourly consulting and monthly retainer</li>
               <li>Full time Cloud DevOps and Network Engineer roles</li>
               <li>AI research, AI initiatives, and live product builds</li>
               <li>On site Addis Ababa or remote delivery</li>
             </ul>
+            <p className="site-footer__legal">
+              <a href="/privacy/">Privacy</a>
+              <span aria-hidden="true"> · </span>
+              <a href="#location">Map</a>
+            </p>
           </Reveal>
 
           <Reveal className="site-footer__form-wrap" delay={100}>

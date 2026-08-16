@@ -94,17 +94,61 @@ export const credentials = {
   github: 'https://github.com/Sofoniasm',
   cncfOrbit:
     'https://www.cncf.io/blog/2024/12/31/kubestronaut-in-orbit-sofonias-mengistu/',
-  email: 'sofoniasmengistu@gmail.com',
+  email: 'sofonias_mengistu@sofoniasdevops.com',
+  emailGmail: 'sofoniasmengistu@gmail.com',
+};
+
+export const professionalEmails = [
+  {
+    id: 'portfolio',
+    email: 'sofonias_mengistu@sofoniasdevops.com',
+    href: 'mailto:sofonias_mengistu@sofoniasdevops.com',
+    note: 'Portfolio, jobs, consulting',
+  },
+  {
+    id: 'weremoteit',
+    email: 'sofonias_mengistu@weremoteit.com',
+    href: 'mailto:sofonias_mengistu@weremoteit.com',
+    note: 'WeRemoteIT',
+  },
+  {
+    id: 'aurapay',
+    email: 'sofonias_mengistu@aurapayglobal.com',
+    href: 'mailto:sofonias_mengistu@aurapayglobal.com',
+    note: 'AuraPay Global',
+  },
+];
+
+export const location = {
+  name: 'Sofonias Mengistu',
+  street: 'Africa Avenue',
+  city: 'Addis Ababa',
+  postalCode: '1000',
+  country: 'Ethiopia',
+  hours: 'By appointment · Addis Ababa on site · remote worldwide',
+  timezone: 'EAT (UTC+3)',
+  mapsQuery:
+    'https://www.google.com/maps/search/?api=1&query=Sofonias%20Mengistu%2C%20Africa%20Avenue%2C%20Addis%20Ababa',
+  mapsEmbed:
+    'https://maps.google.com/maps?q=Africa%20Avenue%2C%20Addis%20Ababa%201000&z=15&output=embed',
+  profileSearch: 'https://www.google.com/search?q=Sofonias+Mengistu',
 };
 
 /** Direct channels for hiring managers and personal clients */
 export const clientChannels = [
+  ...professionalEmails.map((item) => ({
+    id: `email-${item.id}`,
+    label: 'Email',
+    value: item.email,
+    href: item.href,
+    note: item.note,
+  })),
   {
-    id: 'email',
+    id: 'email-gmail',
     label: 'Email',
     value: 'sofoniasmengistu@gmail.com',
     href: 'mailto:sofoniasmengistu@gmail.com',
-    note: 'Jobs, consulting, product builds',
+    note: 'Gmail backup',
   },
   {
     id: 'wa-1',

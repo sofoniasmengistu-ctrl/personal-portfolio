@@ -43,7 +43,11 @@ const faqs = [
   },
   {
     q: 'How should hiring managers or clients start a conversation?',
-    a: 'Use the contact form on sofoniasdevops.com, email sofoniasmengistu@gmail.com, or WhatsApp / Telegram on +251 912 215 057 and +251 946 699 350. Suitable for full time roles, consulting, Upwork style projects, and production builds.',
+    a: 'Use the contact form on sofoniasdevops.com, email sofonias_mengistu@sofoniasdevops.com, sofonias_mengistu@weremoteit.com, or sofonias_mengistu@aurapayglobal.com, or WhatsApp / Telegram on +251 912 215 057 and +251 946 699 350. Suitable for full time roles, consulting, Upwork style projects, and production builds.',
+  },
+  {
+    q: 'How do I pay for consulting or a retainer?',
+    a: 'This website does not take card payments. After you agree on the work, Sofonias sends an invoice. Pay by bank transfer, cash in Addis Ababa, or the method listed on the invoice. Bank details are sent privately. The first 15 minute consultation is free.',
   },
   {
     q: 'Where is the official portfolio and how do I reach Sofonias Mengistu?',

@@ -4,7 +4,7 @@ import { Mail, MessageCircle, Send } from 'lucide-react';
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/sofoniasmengistu@gmail.com';
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const WHATSAPP = 'https://wa.me/251912215057?text=Hi%20Sofonias%2C%20I%20want%20a%20free%2015%20minute%20consultation';
-const MAILTO = 'mailto:sofoniasmengistu@gmail.com?subject=Portfolio%20inquiry';
+const MAILTO = 'mailto:sofonias_mengistu@sofoniasdevops.com?subject=Portfolio%20inquiry';
 
 const intentOptions = [
   { value: 'Free 15 minute consultation', label: 'Free 15 minute consultation' },
@@ -147,8 +147,11 @@ const ContactForm = () => {
     <form className="contact-form" onSubmit={handleSubmit} noValidate>
       <p className="contact-form__title">Send a message</p>
       <p className="contact-form__note">
-        Include your email so I can reply. If the form fails, WhatsApp and email
-        below still reach me instantly.
+        Include your email so I can reply. Write also to
+        sofonias_mengistu@sofoniasdevops.com, @weremoteit.com, or
+        @aurapayglobal.com. Paid work is invoiced after we agree — this form
+        does not take payments. If the form fails, WhatsApp and email below
+        still reach me instantly.
       </p>
 
       <div className="contact-form__honeypot" aria-hidden="true">

@@ -39,6 +39,9 @@ const FirstContact = () => {
             <a href="#pricing" className="btn-dark">
               See pricing
             </a>
+            <a href="#location" className="btn-dark">
+              Open map
+            </a>
             <a
               href="https://wa.me/251912215057"
               className="btn-dark"
