@@ -1,13 +1,15 @@
+import { useState } from 'react';
 import {
   Banknote,
   Briefcase,
   CalendarClock,
+  ChevronLeft,
+  ChevronRight,
   Clock3,
   FileText,
   Handshake,
   Landmark,
   MoveRight,
-  Receipt,
   Rocket,
   ShieldCheck,
 } from 'lucide-react';
@@ -99,7 +101,68 @@ const plans = [
   },
 ];
 
+const flowSteps = [
+  {
+    id: 'call',
+    num: '01',
+    label: 'Call',
+    title: 'Free 15 minutes',
+    body: 'WhatsApp, Telegram, or the contact form. We learn the need. No charge. No commitment.',
+    hint: 'This is the only free step.',
+    cta: 'Book free 15 min',
+    href: 'https://wa.me/251912215057?text=Hi%20Sofonias%2C%20I%20want%20a%20free%2015%20minute%20consultation',
+    external: true,
+    Icon: CalendarClock,
+  },
+  {
+    id: 'scope',
+    num: '02',
+    label: 'Scope',
+    title: 'Agree the work',
+    body: 'Rate, timeline, and deliverables in writing. NDA available on request before anything sensitive is shared.',
+    hint: 'Nothing is billed until this is clear.',
+    cta: 'Send the brief',
+    href: '#contact',
+    external: false,
+    Icon: FileText,
+  },
+  {
+    id: 'invoice',
+    num: '03',
+    label: 'Invoice',
+    title: 'Pay off this site',
+    body: 'I send an invoice with amount, currency, and payment details. This website does not take cards. Bank details stay private.',
+    hint: 'Bank transfer, cash in Addis Ababa, or the method on the invoice.',
+    methods: ['Bank transfer', 'Cash in Addis', 'Invoice method'],
+    cta: 'Ask for payment details',
+    href: '#contact',
+    external: false,
+    Icon: Landmark,
+  },
+  {
+    id: 'kickoff',
+    num: '04',
+    label: 'Kickoff',
+    title: 'Work starts',
+    body: 'After payment, or as agreed for retainers and full time hires. On site in Addis Ababa or remote worldwide.',
+    hint: 'Same person from first call through delivery.',
+    cta: 'Start the work',
+    href: '#contact',
+    external: false,
+    Icon: Rocket,
+  },
+];
+
 const Pricing = () => {
+  const [step, setStep] = useState(0);
+  const active = flowSteps[step];
+  const ActiveIcon = active.Icon;
+  const progress = (step / (flowSteps.length - 1)) * 100;
+
+  const go = (next) => {
+    setStep(Math.max(0, Math.min(flowSteps.length - 1, next)));
+  };
+
   return (
     <section id="pricing" className="section section--tight pricing">
       <div className="container">
@@ -172,91 +235,119 @@ const Pricing = () => {
           </p>
         </Reveal>
 
-        <Reveal className="pricing__pay" delay={80}>
-          <p className="pricing__pay-kicker mono">
-            <Banknote size={16} strokeWidth={2.25} />
-            How to pay
-          </p>
-          <h3 className="pricing__pay-title">
-            This site does not take card payments
-          </h3>
-          <p className="pricing__pay-lead">
-            After we agree on the work, I send an invoice. You pay separately —
-            not through this website or Google. Bank details stay private and
-            go out with the invoice.
-          </p>
-          <ol className="pricing__pay-steps">
-            <li>
-              <Receipt size={18} strokeWidth={2.25} aria-hidden="true" />
-              <span>
-                <strong>Agree on scope</strong>
-                Free 15 minute call, WhatsApp, or the contact form.
-              </span>
-            </li>
-            <li>
-              <Landmark size={18} strokeWidth={2.25} aria-hidden="true" />
-              <span>
-                <strong>Receive an invoice</strong>
-                Amount, currency, and payment details sent to you.
-              </span>
-            </li>
-            <li>
-              <Banknote size={18} strokeWidth={2.25} aria-hidden="true" />
-              <span>
-                <strong>Pay off site</strong>
-                Bank transfer, cash in Addis Ababa, or the method on the invoice.
-              </span>
-            </li>
-          </ol>
-          <a href="#contact" className="fancy-arrow">
-            <span className="fancy-arrow__label">Ask for payment details</span>
-            <span className="fancy-arrow__track" aria-hidden="true">
-              <span className="fancy-arrow__line" />
-              <MoveRight className="fancy-arrow__tip" size={22} strokeWidth={2.25} />
-            </span>
-          </a>
-        </Reveal>
-
-        <Reveal className="pricing__engage" delay={100}>
-          <p className="pricing__pay-kicker mono">
+        <Reveal className="pricing__flow" delay={80}>
+          <p className="pricing__flow-kicker mono">
             <Handshake size={16} strokeWidth={2.25} />
-            How an engagement starts
+            Delivery pipeline
           </p>
-          <h3 className="pricing__pay-title">Four steps. Then work begins.</h3>
-          <p className="pricing__pay-lead">
-            No card on this site. NDA available on request. Invoice details go
-            out privately after we agree on scope.
+          <h3 className="pricing__flow-title">
+            Click a stage.{' '}
+            <span className="text-accent">No card on this site.</span>
+          </h3>
+          <p className="pricing__flow-lead">
+            Same path for consulting, retainers, and hires. Pay by invoice after
+            we agree — never through this page or Google.
           </p>
-          <ol className="pricing__engage-steps">
-            <li>
-              <CalendarClock size={18} strokeWidth={2.25} aria-hidden="true" />
-              <span>
-                <strong>01 · Free 15 min</strong>
-                WhatsApp, Telegram, or the contact form. Clear next step.
-              </span>
-            </li>
-            <li>
-              <FileText size={18} strokeWidth={2.25} aria-hidden="true" />
-              <span>
-                <strong>02 · Scope</strong>
-                We agree the work, rate, and timeline. NDA if you need one.
-              </span>
-            </li>
-            <li>
-              <Receipt size={18} strokeWidth={2.25} aria-hidden="true" />
-              <span>
-                <strong>03 · Invoice</strong>
-                You receive amount, currency, and how to pay.
-              </span>
-            </li>
-            <li>
-              <Rocket size={18} strokeWidth={2.25} aria-hidden="true" />
-              <span>
-                <strong>04 · Kickoff</strong>
-                Work starts after payment or as agreed for retainers and hires.
-              </span>
-            </li>
-          </ol>
+
+          <div
+            className="pricing__rail"
+            role="tablist"
+            aria-label="How work and payment start"
+          >
+            <span className="pricing__rail-line" aria-hidden="true" />
+            <span
+              className="pricing__rail-fill"
+              aria-hidden="true"
+              style={{ width: `${progress}%` }}
+            />
+            {flowSteps.map((item, index) => {
+              const Icon = item.Icon;
+              const selected = index === step;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  role="tab"
+                  id={`flow-tab-${item.id}`}
+                  aria-selected={selected}
+                  aria-controls="flow-panel"
+                  className={`pricing__station${selected ? ' is-active' : ''}${index < step ? ' is-done' : ''}`}
+                  onClick={() => setStep(index)}
+                  onKeyDown={(event) => {
+                    if (event.key === 'ArrowRight') {
+                      event.preventDefault();
+                      go(step + 1);
+                    }
+                    if (event.key === 'ArrowLeft') {
+                      event.preventDefault();
+                      go(step - 1);
+                    }
+                  }}
+                >
+                  <span className="pricing__station-dot">
+                    <Icon size={16} strokeWidth={2.25} />
+                  </span>
+                  <span className="pricing__station-meta">
+                    <span className="mono">{item.num}</span>
+                    {item.label}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          <div
+            className="pricing__stage"
+            id="flow-panel"
+            role="tabpanel"
+            aria-labelledby={`flow-tab-${active.id}`}
+            key={active.id}
+          >
+            <p className="pricing__stage-num mono">{active.num} / 04</p>
+            <h4 className="pricing__stage-title">
+              <ActiveIcon size={22} strokeWidth={2.25} />
+              {active.title}
+            </h4>
+            <p className="pricing__stage-body">{active.body}</p>
+            <p className="pricing__stage-hint">{active.hint}</p>
+            {active.methods ? (
+              <ul className="pricing__methods">
+                {active.methods.map((method) => (
+                  <li key={method}>
+                    <Banknote size={14} strokeWidth={2.25} />
+                    {method}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            <div className="pricing__stage-nav">
+              <button
+                type="button"
+                className="pricing__nav-btn"
+                onClick={() => go(step - 1)}
+                disabled={step === 0}
+              >
+                <ChevronLeft size={16} /> Back
+              </button>
+              <a
+                href={active.href}
+                className="btn-primary"
+                target={active.external ? '_blank' : undefined}
+                rel={active.external ? 'noopener noreferrer' : undefined}
+              >
+                {active.cta}
+                <MoveRight size={16} />
+              </a>
+              <button
+                type="button"
+                className="pricing__nav-btn"
+                onClick={() => go(step + 1)}
+                disabled={step === flowSteps.length - 1}
+              >
+                Next <ChevronRight size={16} />
+              </button>
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>
