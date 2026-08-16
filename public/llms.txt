@@ -1,0 +1,34 @@
+# Sofonias Mengistu
+# https://www.sofoniasdevops.com/
+
+> Remote DevOps Engineer, Cloud Platform Architect, Azure Data Engineer, Network Engineer, DevSecOps / SRE, and Kubernetes Consultant. CNCF Kubestronaut. Based in Addis Ababa. Delivers worldwide.
+
+Sofonias Mengistu is a Cloud Platform Architect and Cloud DevOps engineer for hire. He takes full time roles, consulting hours ($200 USD), a monthly retainer ($3,600 for up to 20 hours), and scoped product builds. First 15 minutes are free. This website does not take card payments; work is invoiced.
+
+## Worldwide hire pages
+- [Hire DevOps Engineer remote](https://www.sofoniasdevops.com/hire-devops-engineer/): Kubernetes, Terraform, CI/CD, DevSecOps for worldwide teams
+- [Site Reliability Engineer](https://www.sofoniasdevops.com/site-reliability-engineer/): SRE, observability, on-call style platform reliability
+- [DevSecOps Engineer](https://www.sofoniasdevops.com/devsecops-engineer/): RBAC, hardening, secure CI/CD, CKS depth
+- [Platform Engineer](https://www.sofoniasdevops.com/platform-engineer/): Kubernetes platforms, GitOps, developer platforms
+- [Remote Cloud Architect](https://www.sofoniasdevops.com/remote-cloud-architect/): AWS, Azure, GCP multi cloud design
+- [Azure Data Engineer](https://www.sofoniasdevops.com/azure-data-engineer/): ADF, Databricks, Data Lake Gen2, lakehouse
+- [Kubernetes Consultant](https://www.sofoniasdevops.com/kubernetes-consultant/): EKS, GKE, AKS, Tanzu TKG
+- [Cloud FinOps](https://www.sofoniasdevops.com/cloud-finops/): Kubernetes cost control, KubeOptimia, cluster rightsizing
+- [Kubestronaut](https://www.sofoniasdevops.com/kubestronaut/): KCNA, KCSA, CKA, CKAD, CKS. Featured in CNCF Kubestronaut in Orbit
+- [DevOps Engineers](https://www.sofoniasdevops.com/devops-engineers/): hire Cloud DevOps talent
+
+## Ethiopia and Africa
+- [DevOps Engineer Ethiopia](https://www.sofoniasdevops.com/devops-engineer-ethiopia/)
+- [Cloud Architect Ethiopia](https://www.sofoniasdevops.com/cloud-architect-ethiopia/)
+- [Platform Engineer Ethiopia](https://www.sofoniasdevops.com/platform-engineer-ethiopia/)
+- [Data Engineers Ethiopia](https://www.sofoniasdevops.com/data-engineers-ethiopia/)
+- [Network Engineer Ethiopia](https://www.sofoniasdevops.com/network-engineer-ethiopia/)
+- [Network Engineer Africa](https://www.sofoniasdevops.com/network-engineer-africa/)
+
+## Contact
+- Site: https://www.sofoniasdevops.com/#contact
+- Email: sofonias_mengistu@sofoniasdevops.com
+- WhatsApp: +251 912 215 057
+- LinkedIn: https://www.linkedin.com/in/sofonias-mengistu-eng/
+- GitHub: https://github.com/Sofoniasm
+- CNCF: https://www.cncf.io/blog/2024/12/31/kubestronaut-in-orbit-sofonias-mengistu/

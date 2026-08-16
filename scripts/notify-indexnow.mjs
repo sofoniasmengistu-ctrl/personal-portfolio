@@ -9,6 +9,10 @@ const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const urlList = [
   `https://${HOST}/`,
   `https://${HOST}/hire-devops-engineer/`,
+  `https://${HOST}/site-reliability-engineer/`,
+  `https://${HOST}/devsecops-engineer/`,
+  `https://${HOST}/platform-engineer/`,
+  `https://${HOST}/cloud-finops/`,
   `https://${HOST}/kubestronaut/`,
   `https://${HOST}/remote-cloud-architect/`,
   `https://${HOST}/azure-data-engineer/`,
@@ -20,6 +24,8 @@ const urlList = [
   `https://${HOST}/data-engineers-ethiopia/`,
   `https://${HOST}/network-engineer-ethiopia/`,
   `https://${HOST}/network-engineer-africa/`,
+  `https://${HOST}/privacy/`,
+  `https://${HOST}/llms.txt`,
   `https://${HOST}/sitemap.xml`,
 ];
 

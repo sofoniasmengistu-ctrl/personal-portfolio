@@ -7,13 +7,19 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-User-agent: msnbot
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Slurp
 Allow: /
 
 Sitemap: https://www.sofoniasdevops.com/sitemap.xml

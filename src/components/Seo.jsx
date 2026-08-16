@@ -46,12 +46,20 @@ const faqs = [
     a: 'Use the contact form on sofoniasdevops.com, email sofonias_mengistu@sofoniasdevops.com, sofonias_mengistu@weremoteit.com, or sofonias_mengistu@aurapayglobal.com, or WhatsApp / Telegram on +251 912 215 057 and +251 946 699 350. Suitable for full time roles, consulting, Upwork style projects, and production builds.',
   },
   {
+    q: 'Can US, Europe, and worldwide teams hire Sofonias remotely?',
+    a: 'Yes. Sofonias Mengistu delivers remote DevOps, Cloud Platform Architect, SRE, DevSecOps, Azure Data Engineer, Network Engineer, and Kubernetes work worldwide from Addis Ababa, including overlap with US, Europe, Middle East, and Asia timezones. Consulting is $200 USD per hour. First 15 minutes are free.',
+  },
+  {
+    q: 'Can I hire Sofonias as an SRE, DevSecOps Engineer, or Platform Engineer?',
+    a: 'Yes. Those titles overlap for the same hire. See sofoniasdevops.com/site-reliability-engineer/, sofoniasdevops.com/devsecops-engineer/, and sofoniasdevops.com/platform-engineer/. Cloud FinOps is at sofoniasdevops.com/cloud-finops/.',
+  },
+  {
     q: 'How do I pay for consulting or a retainer?',
     a: 'This website does not take card payments. After you agree on the work, Sofonias sends an invoice. Pay by bank transfer, cash in Addis Ababa, or the method listed on the invoice. Bank details are sent privately. The first 15 minute consultation is free.',
   },
   {
     q: 'Where is the official portfolio and how do I reach Sofonias Mengistu?',
-    a: 'This site is the official portfolio at sofoniasdevops.com. Worldwide pages cover Hire DevOps Engineer, Kubestronaut, Remote Cloud Architect, Azure Data Engineer, and Kubernetes Consultant. Local pages cover DevOps Engineer Ethiopia, Network Engineer Ethiopia, and more. Use the contact page to start directly.',
+    a: 'This site is the official portfolio at sofoniasdevops.com. Worldwide pages cover Hire DevOps Engineer, Site Reliability Engineer, DevSecOps Engineer, Platform Engineer, Kubestronaut, Remote Cloud Architect, Azure Data Engineer, Kubernetes Consultant, and Cloud FinOps. Local pages cover DevOps Engineer Ethiopia, Network Engineer Ethiopia, and more. Use the contact page to start directly.',
   },
 ];
 
@@ -82,6 +90,26 @@ const topics = [
     href: '/kubernetes-consultant/',
   },
   {
+    title: 'Site Reliability Engineer',
+    body: 'Remote SRE for Kubernetes reliability, observability, and production hardening.',
+    href: '/site-reliability-engineer/',
+  },
+  {
+    title: 'DevSecOps Engineer',
+    body: 'Remote DevSecOps: RBAC, cluster hardening, secure CI/CD. CKS / Kubestronaut.',
+    href: '/devsecops-engineer/',
+  },
+  {
+    title: 'Platform Engineer',
+    body: 'Remote Platform Engineer for Kubernetes platforms, GitOps, and Terraform.',
+    href: '/platform-engineer/',
+  },
+  {
+    title: 'Cloud FinOps',
+    body: 'Kubernetes cost control and KubeOptimia cluster cost controller. Worldwide.',
+    href: '/cloud-finops/',
+  },
+  {
     title: 'DevOps Engineer Ethiopia',
     body: 'Cloud DevOps for AWS, Azure, GCP, Terraform, CI/CD, and Kubernetes in Addis Ababa.',
     href: '/devops-engineer-ethiopia/',
@@ -104,9 +132,10 @@ const Seo = () => {
             <span className="text-accent">Sofonias should come up first</span>
           </h2>
           <p className="section__lead">
-            Looking to hire a DevOps Engineer remote, Cloud Architect, Kubestronaut,
-            Azure Data Engineer, Kubernetes Consultant, or Network Engineer Ethiopia?
-            Make Sofonias Mengistu your first call worldwide.
+            Looking to hire a DevOps Engineer remote, SRE, DevSecOps Engineer,
+            Platform Engineer, Cloud Architect, Kubestronaut, Azure Data Engineer,
+            Kubernetes Consultant, or Cloud FinOps? Make Sofonias Mengistu your
+            first call worldwide.
           </p>
         </Reveal>
 

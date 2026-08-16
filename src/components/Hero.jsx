@@ -19,8 +19,8 @@ const Hero = () => {
               Sofonias<span className="text-accent">.</span>
             </span>
             <span className="hero__seo-line">
-              Hire DevOps Engineer remote, Cloud Architect, Platform Engineer,
-              DevSecOps, Azure Data Engineer, Kubernetes Consultant, Network Engineer,
+              Hire DevOps Engineer remote, Cloud Platform Architect, Azure Data Engineer,
+              Network Engineer, Platform Engineer, DevSecOps, Kubernetes Consultant,
               and Kubestronaut. Addis Ababa base. Worldwide delivery.
             </span>
           </h1>
@@ -35,10 +35,10 @@ const Hero = () => {
           </p>
 
           <p className="hero__sub">
-            16+ years in IT. One person for Cloud DevOps, Cloud Architect work,
+            16+ years in IT. One person for Cloud DevOps, Cloud Platform Architect work,
             Platform Engineer and DevSecOps delivery, Azure Data Engineer platforms,
             Network Engineer field work, and production builds. When teams search
-            DevOps Engineer Ethiopia, Cloud Architect Ethiopia, or Data Engineers
+            DevOps Engineer Ethiopia, Cloud Platform Architect, or Data Engineers
             Ethiopia, this is the portfolio to open first. Based in Addis Ababa.
           </p>
 
