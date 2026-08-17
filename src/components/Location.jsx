@@ -1,5 +1,7 @@
 import {
+  Award,
   Clock,
+  Cloud,
   Globe,
   Mail,
   MapPin,
@@ -11,10 +13,42 @@ import { credentials, location, professionalEmails } from '../data/products';
 import { Reveal } from './Reveal';
 
 const ticker = [
-  { icon: MapPin, label: 'On site · Addis Ababa' },
-  { icon: Globe, label: 'Remote worldwide' },
-  { icon: Clock, label: location.timezone },
-  { icon: Navigation, label: 'By appointment' },
+  {
+    icon: MapPin,
+    label: 'On site · Addis Ababa',
+    href: '/devops-engineer-ethiopia/',
+    title: 'DevOps Engineer Ethiopia',
+  },
+  {
+    icon: Globe,
+    label: 'Remote worldwide',
+    href: '/hire-devops-engineer/',
+    title: 'Hire remote DevOps Engineer',
+  },
+  {
+    icon: Clock,
+    label: location.timezone,
+    href: '#contact',
+    title: 'Contact Sofonias in EAT (UTC+3)',
+  },
+  {
+    icon: Navigation,
+    label: 'By appointment',
+    href: '#pricing',
+    title: 'Pricing and how to start',
+  },
+  {
+    icon: Cloud,
+    label: 'Cloud Platform Architect',
+    href: '/remote-cloud-architect/',
+    title: 'Remote Cloud Platform Architect',
+  },
+  {
+    icon: Award,
+    label: 'Kubestronaut',
+    href: '/kubestronaut/',
+    title: 'CNCF Kubestronaut',
+  },
 ];
 
 const Location = () => {
@@ -148,14 +182,18 @@ const Location = () => {
             </article>
           </div>
 
-          <ul className="location__ticker">
-            {ticker.map((item) => (
-              <li key={item.label}>
-                <item.icon size={14} strokeWidth={2.25} aria-hidden="true" />
-                {item.label}
-              </li>
-            ))}
-          </ul>
+          <nav className="location__ticker" aria-label="Location and hire pages">
+            <ul>
+              {ticker.map((item) => (
+                <li key={item.href}>
+                  <a href={item.href} title={item.title}>
+                    <item.icon size={14} strokeWidth={2.25} aria-hidden="true" />
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </Reveal>
       </div>
     </section>

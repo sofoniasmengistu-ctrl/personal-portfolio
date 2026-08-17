@@ -1868,32 +1868,49 @@ h1, h2, h3, h4 {
 }
 
 .location__ticker {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem 0.35rem;
   padding: 0.7rem 0.85rem;
-  margin: 0;
-  list-style: none;
   background: rgba(26, 10, 20, 0.94);
   border-top: 1px solid rgba(229, 0, 79, 0.22);
 }
 
-.location__ticker li {
+.location__ticker ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.location__ticker a {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  min-height: 40px;
   color: rgba(255, 255, 255, 0.86);
   font-size: 0.72rem;
   font-weight: 650;
   letter-spacing: 0.04em;
-  padding: 0.32rem 0.7rem;
+  padding: 0.32rem 0.75rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.05);
+  transition:
+    color 0.2s var(--ease),
+    border-color 0.2s var(--ease),
+    background 0.2s var(--ease);
+}
+
+.location__ticker a:hover,
+.location__ticker a:focus-visible {
+  color: #fff;
+  border-color: rgba(229, 0, 79, 0.7);
+  background: rgba(229, 0, 79, 0.2);
 }
 
 .location__ticker svg {
   color: var(--magenta);
+  flex-shrink: 0;
 }
 
 @keyframes location-pulse {
