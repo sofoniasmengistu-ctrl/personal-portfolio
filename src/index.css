@@ -902,6 +902,18 @@ h1, h2, h3, h4 {
   gap: 0.4rem;
 }
 
+.about__cta-row .btn-primary,
+.about__cta-row .btn-dark {
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+}
+
+.about__cta-row .btn-primary:hover,
+.about__cta-row .btn-dark:hover {
+  color: #fff;
+}
+
 @media (max-width: 640px) {
   .section {
     padding: 1.85rem 0;
@@ -3424,7 +3436,7 @@ a.work-card:hover {
   line-height: 1.55;
 }
 
-.about__bio a {
+.about__bio p a {
   font-family: var(--font-mono);
   font-size: 0.82rem;
   color: var(--magenta);

@@ -155,7 +155,7 @@ const About = () => {
             >
               {credentials.kubestronautNote}
             </a>
-            <p className="about__cta-row">
+            <div className="about__cta-row">
               <a
                 className="btn-primary"
                 href="/Sofonias_Mengistu_Resume.pdf"
@@ -175,7 +175,7 @@ const About = () => {
               <a className="btn-dark" href="#contact">
                 Contact for roles
               </a>
-            </p>
+            </div>
 
             <div className="about__skills" id="skills">
               <p className="band__title">Capabilities for Cloud DevOps roles</p>
