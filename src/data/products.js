@@ -127,11 +127,16 @@ export const location = {
   country: 'Ethiopia',
   hours: 'By appointment · Addis Ababa on site · remote worldwide',
   timezone: 'EAT (UTC+3)',
+  latLabel: '08.9942° N',
+  lngLabel: '038.7875° E',
+  iata: 'ADD',
   mapsQuery:
     'https://www.google.com/maps/search/?api=1&query=Sofonias%20Mengistu%2C%20Africa%20Avenue%2C%20Addis%20Ababa',
   mapsEmbed:
-    'https://maps.google.com/maps?q=Africa%20Avenue%2C%20Addis%20Ababa%201000&z=15&output=embed',
+    'https://maps.google.com/maps?q=Africa%20Avenue%2C%20Addis%20Ababa%201000&z=15&output=embed&hl=en',
   profileSearch: 'https://www.google.com/search?q=Sofonias+Mengistu',
+  whatsapp:
+    'https://wa.me/251912215057?text=Hi%20Sofonias%2C%20I%20saw%20your%20map%20listing',
 };
 
 /** Direct channels for hiring managers and personal clients */
