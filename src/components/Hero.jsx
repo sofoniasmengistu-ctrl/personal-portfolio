@@ -11,40 +11,34 @@ const Hero = () => {
               <span className="hero__avail-dot" aria-hidden="true" />
               Available now
             </span>
-            Addis Ababa first contact. Remote worldwide. EAT (UTC+3).
+            Addis Ababa base. Remote worldwide. EAT (UTC+3).
           </p>
 
-          <h1 className="hero__title">
-            <span className="hero__brand">
-              Sofonias<span className="text-accent">.</span>
-            </span>
-            <span className="hero__seo-line">
-              Hire DevOps Engineer remote, Cloud Platform Architect, Azure Data Engineer,
-              Network Engineer, Platform Engineer, DevSecOps, Kubernetes Consultant,
-              and Kubestronaut. Addis Ababa base. Worldwide delivery.
-            </span>
+          <p className="hero__brand">
+            Sofonias<span className="text-accent">.</span>
+          </p>
+
+          <h1 className="hero__headline">
+            Cloud Platform Architect in Addis Ababa.{' '}
+            <span className="text-accent">Remote worldwide.</span>
           </h1>
 
           <p className="hero__role-badge">
-            Your first call in Addis Ababa
-          </p>
-
-          <p className="hero__headline">
-            Need DevOps, network, or cloud support?{' '}
-            <span className="text-accent">Call Sofonias first.</span>
+            Current role · Addis Telco
           </p>
 
           <p className="hero__sub">
-            16+ years in IT. One person for Cloud DevOps, platform architecture,
-            Azure data, and network field work. Based in Addis Ababa. Remote worldwide.
+            Hire a remote DevOps Engineer for Kubernetes, CI/CD, and cloud
+            platforms. 16+ years in IT. Kubestronaut. Azure data when the
+            platform needs it.
           </p>
 
           <ul className="hero__checks">
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>Local in Addis Ababa</strong> for DevOps, network, and
-                IT support when you need someone on the ground
+                <strong>Remote Cloud DevOps</strong> from Addis Ababa, with
+                overlap for US, Europe, Middle East, and Asia
               </span>
             </li>
             <li className="hero__check">
@@ -75,8 +69,8 @@ const Hero = () => {
             >
               <Download size={16} /> Download CV
             </a>
-            <a href="#addis-ababa" className="btn-ghost">
-              Why Addis first <ArrowRight size={16} />
+            <a href="#recommendations" className="btn-ghost">
+              Recommendations <ArrowRight size={16} />
             </a>
           </div>
         </div>
@@ -95,12 +89,12 @@ const Hero = () => {
             </video>
           </div>
           <div className="hero__panel hero__panel--lift">
-            <p className="hero__panel-kicker mono">First contact in Addis Ababa</p>
+            <p className="hero__panel-kicker mono">Remote Cloud / DevOps hire</p>
             <p className="hero__panel-title">What you can ask for</p>
             <ul className="hero__panel-list">
               <li>
                 <strong>01</strong>
-                <span>DevOps, Kubernetes, CI/CD, and cloud platforms</span>
+                <span>Cloud Platform Architect, Kubernetes, CI/CD</span>
               </li>
               <li>
                 <strong>02</strong>
@@ -108,7 +102,7 @@ const Hero = () => {
               </li>
               <li>
                 <strong>03</strong>
-                <span>Network Engineer, IT support, consulting, and builds</span>
+                <span>Consulting, retainers, and production builds</span>
               </li>
             </ul>
             <div className="hero__panel-actions">

@@ -6,17 +6,21 @@ const cases = [
   {
     label: '01 Production Kubernetes',
     kicker: 'Telco Kubernetes',
-    metric: 'Gebeya · Safaricom TKG',
+    number: '1',
+    numberLabel: 'live telco TKG platform',
+    metric: '1 live telco platform',
     title: 'Gebeya → Safaricom Ethiopia TKG',
     problem:
       'Safaricom Ethiopia needed production Tanzu Kubernetes Grid capacity with secure lifecycle, not a lab cluster. Gebeya hired Sofonias for that Kubernetes depth and assigned him to the live telco platform.',
     stack: ['Tanzu TKG', 'Terraform', 'CI/CD', 'RBAC', 'NetworkPolicy', 'Prometheus', 'Grafana'],
     result:
-      'Owned cluster lifecycle through hardening on TKG: Terraform provisioning, CI/CD integration, RBAC and NetworkPolicy, plus Prometheus/Grafana observability for a production telco assignment.',
+      'Owned cluster lifecycle through hardening on TKG: Terraform provisioning, CI/CD integration, RBAC and NetworkPolicy, plus Prometheus/Grafana observability for one production telco platform.',
   },
   {
     label: '02 Azure data platforms',
     kicker: 'Upwork Azure',
+    number: '11+',
+    numberLabel: 'completed Azure data projects',
     metric: '11+ completed projects',
     title: 'Azure Data Engineer on Upwork',
     problem:
@@ -124,6 +128,10 @@ const CaseStudy = () => {
                 className="case-board__panel"
               >
                 <p className="case-board__label mono">{item.label}</p>
+                <p className="case-board__stat">
+                  <span className="case-board__stat-value">{item.number}</span>
+                  <span className="case-board__stat-label">{item.numberLabel}</span>
+                </p>
                 <h3 className="case-board__title">{item.title}</h3>
                 <div className="case-board__psr">
                   <div>

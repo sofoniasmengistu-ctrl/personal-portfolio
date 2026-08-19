@@ -4,15 +4,13 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Trust from './components/Trust';
 import Logos from './components/Logos';
+import Recommendations from './components/Recommendations';
 import FirstContact from './components/FirstContact';
 import Location from './components/Location';
-import FieldEngineer from './components/FieldEngineer';
 import CaseStudy from './components/CaseStudy';
 import Work from './components/Work';
 import Products from './components/Products';
-import Approach from './components/Approach';
 import About from './components/About';
-import Recommendations from './components/Recommendations';
 import Pricing from './components/Pricing';
 import Seo from './components/Seo';
 import Footer from './components/Footer';
@@ -26,15 +24,13 @@ function App() {
         <Hero />
         <Trust />
         <Logos />
+        <Recommendations />
         <FirstContact />
         <Location />
-        <FieldEngineer />
         <CaseStudy />
         <Work />
         <Products />
-        <Approach />
         <About />
-        <Recommendations />
         <Pricing />
         <Seo />
       </main>

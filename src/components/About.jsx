@@ -30,7 +30,7 @@ const About = () => {
       <div className="container">
         <Reveal className="section-head section-head--row">
           <div className="section-head__copy">
-            <p className="section__label">04 Profile</p>
+            <p className="section__label">03 Profile</p>
             <h2 className="section__title">
               Cloud DevOps Engineer{' '}
               <span className="text-accent">Sofonias Mengistu</span>

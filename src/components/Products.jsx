@@ -17,7 +17,7 @@ const Products = () => {
               Live companies and products I own. Company GitHub stays private.
             </p>
           </div>
-          <a href="#approach" className="fancy-arrow" aria-label="Continue to approach">
+          <a href="#about" className="fancy-arrow" aria-label="Continue to about">
             <span className="fancy-arrow__label">Next</span>
             <span className="fancy-arrow__track" aria-hidden="true">
               <span className="fancy-arrow__line" />

@@ -2,13 +2,11 @@ import { MoveRight, PhoneCall } from 'lucide-react';
 import { Reveal } from './Reveal';
 
 const needs = [
+  'Cloud Platform Architect',
   'DevOps Engineer',
-  'Network Engineer',
-  'IT support',
-  'Cloud support',
   'Kubernetes',
   'DevSecOps / SRE',
-  'Field engineer',
+  'Azure Data Engineer',
   'Consulting or build',
 ];
 
@@ -17,15 +15,16 @@ const FirstContact = () => {
     <section id="addis-ababa" className="first-contact" aria-labelledby="first-contact-heading">
       <div className="container first-contact__inner">
         <Reveal className="first-contact__copy">
-          <p className="first-contact__label mono">Addis Ababa first contact</p>
+          <p className="first-contact__label mono">Addis Ababa base · remote worldwide</p>
           <h2 id="first-contact-heading" className="first-contact__title">
-            If you need it in Addis Ababa,{' '}
-            <span className="text-accent">start with Sofonias</span>
+            Hire Cloud DevOps from Addis Ababa,{' '}
+            <span className="text-accent">for teams anywhere</span>
           </h2>
           <p className="first-contact__lead">
-            One local contact for DevOps, Network Engineer work, IT support, cloud
-            support, Kubernetes, and builds. On site in Addis Ababa. Remote for
-            teams worldwide. First 15 minutes are free.
+            Cloud Platform Architect and DevOps Engineer for Kubernetes, CI/CD,
+            and production platforms. Based in Addis Ababa. Remote worldwide.
+            First 15 minutes are free. On-site network work lives on the{' '}
+            <a href="/network-engineer-ethiopia/">Network Engineer Ethiopia</a> page.
           </p>
           <div className="first-contact__actions">
             <a
@@ -54,7 +53,7 @@ const FirstContact = () => {
         </Reveal>
 
         <Reveal className="first-contact__needs" delay={120}>
-          <p className="first-contact__needs-label mono">What people call for</p>
+          <p className="first-contact__needs-label mono">What people hire for</p>
           <ul className="first-contact__list">
             {needs.map((need) => (
               <li key={need} className="first-contact__item">

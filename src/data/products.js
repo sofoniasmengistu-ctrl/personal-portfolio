@@ -421,7 +421,7 @@ export const experienceHighlights = [
     era: 'Networks',
     title: 'Network Specialist and IT Support, ECX',
     outcome:
-      'Network Specialist and IT Support at Ethiopia Commodity Exchange: LAN/WAN, systems, and on site operations. Field cutovers for 37 tech companies sit in the Field section.',
+      'Network Specialist and IT Support at Ethiopia Commodity Exchange: LAN/WAN, systems, and on site operations. Network field work for 37 companies is on the Network Engineer Ethiopia page.',
     tags: ['ECX', 'Network specialist', 'IT support', 'Cisco'],
     channel: 'Ethiopia Commodity Exchange',
   },
