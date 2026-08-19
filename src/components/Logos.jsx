@@ -1,16 +1,19 @@
 import { Reveal } from './Reveal';
 
 const logos = [
-  { name: 'Gebeya', note: 'Hired as DevOps' },
-  { name: 'Safaricom', note: 'Assigned project' },
-  { name: 'Akamai', note: 'Cloud apps' },
-  { name: 'Linode', note: 'Akamai cloud' },
+  { name: 'Addis Telco', note: 'Current · Cloud Platform Architect' },
+  { name: 'WeRemoteIT', note: 'My company' },
+  { name: 'AuraPay', note: 'My company' },
+  { name: 'Gebeya', note: 'DevOps Engineer' },
+  { name: 'Safaricom', note: 'TKG assignment' },
+  { name: 'Tefer', note: 'Cloud DevOps' },
+  { name: 'Upwork', note: '11+ Azure data' },
+  { name: 'JSI', note: 'IT Specialist' },
+  { name: 'ECX', note: 'Network specialist' },
+  { name: 'Custor', note: 'Junior programmer' },
   { name: 'GIZ', note: 'Cloud trainer' },
   { name: 'KodeKloud', note: 'Senior DevOps' },
   { name: 'CNCF', note: 'Kubestronaut' },
-  { name: 'JSI', note: 'IT Specialist' },
-  { name: 'ECX', note: 'Network and systems' },
-  { name: 'Custor', note: 'Software internship' },
 ];
 
 const Logos = () => {

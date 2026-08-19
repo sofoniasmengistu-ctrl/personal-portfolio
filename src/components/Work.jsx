@@ -1,16 +1,8 @@
-import { useState } from 'react';
 import { ArrowUpRight, MoveRight } from 'lucide-react';
-import {
-  clientDeliveries,
-  experienceHighlights,
-  githubFeatured,
-} from '../data/products';
+import { experienceHighlights, githubFeatured } from '../data/products';
 import { Reveal } from './Reveal';
 
 const Work = () => {
-  const [activeJob, setActiveJob] = useState(0);
-  const featured = experienceHighlights[activeJob];
-
   return (
     <section id="work" className="work">
       <div className="partition-stage">
@@ -30,11 +22,10 @@ const Work = () => {
                 The work hiring managers <span className="text-accent">should see</span>
               </h2>
               <p className="section__lead section__lead--tight">
-                Real roles: Gebeya (Safaricom TKG), one year building live products
-                (WeRemoteIT web + bot + Android, AuraPay, NexusAI, KubeOptimia FinOps —
-                core FDE craft), one year KodeKloud Senior DevOps, ~2 years building
-                Git / Jenkins / Linux / Docker / Kubernetes tasks, Azure Data Engineer
-                platforms, and 16+ years from networks to cloud.
+                Current job: Cloud Platform Architect at Addis Telco. My companies:
+                WeRemoteIT (weremoteit.com) and AuraPay Global (aurapayglobal.com).
+                Also Gebeya DevOps, Tefer Cloud DevOps, 11+ Upwork Azure Data
+                Engineer projects, JSI, ECX, and Custor Computing PLC.
               </p>
             </div>
             <a
@@ -51,68 +42,31 @@ const Work = () => {
             </a>
           </Reveal>
 
-          <Reveal className="dossier" delay={60}>
-            <div className="dossier__head">
-              <h3 className="band__title">Experience highlights</h3>
-              <p className="band__meta mono">
-                {String(activeJob + 1).padStart(2, '0')} / {String(experienceHighlights.length).padStart(2, '0')}
-              </p>
-            </div>
-
-            <div className="dossier__layout">
-              <article className="dossier__stage" aria-live="polite">
-                <span className="dossier__index mono" aria-hidden="true">
-                  {String(activeJob + 1).padStart(2, '0')}
-                </span>
-                <p className="dossier__channel mono">{featured.channel}</p>
-                <h3 className="dossier__title">{featured.title}</h3>
-                <p className="dossier__body">{featured.outcome}</p>
-                <div className="dossier__tags">
-                  {featured.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
-                </div>
-              </article>
-
-              <div className="dossier__rail" role="listbox" aria-label="Experience highlights">
-                {experienceHighlights.map((job, i) => {
-                  const selected = i === activeJob;
-                  return (
-                    <button
-                      key={job.title}
-                      type="button"
-                      role="option"
-                      aria-selected={selected}
-                      className={`dossier__row${selected ? ' is-active' : ''}`}
-                      onClick={() => setActiveJob(i)}
-                    >
-                      <span className="dossier__row-num mono">{String(i + 1).padStart(2, '0')}</span>
-                      <span className="dossier__row-copy">
-                        <span className="dossier__row-title">{job.title}</span>
-                        <span className="dossier__row-meta">{job.channel}</span>
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal className="band band--next" delay={80}>
-            <div className="band__head">
-              <h3 className="band__title">Delivery themes</h3>
-              <span className="band__meta mono">Production + consulting</span>
-            </div>
-            <ul className="stamps">
-              {clientDeliveries.map((job) => (
-                <li key={job.title} className="stamp">
-                  <span className="stamp__stub">
-                    <span className="stamp__channel mono">{job.channel}</span>
-                  </span>
-                  <div className="stamp__body">
-                    <h3 className="stamp__title">{job.title}</h3>
-                    <p className="stamp__desc">{job.outcome}</p>
-                    <div className="stamp__tags">
+          <Reveal className="path">
+            <ol className="path__list">
+              {experienceHighlights.map((job) => (
+                <li key={job.title} className="path__item">
+                  <span className="path__era mono">{job.era}</span>
+                  <span className="path__dot" aria-hidden="true" />
+                  <div className="path__copy">
+                    <p className="path__when">{job.channel}</p>
+                    <h3 className="path__title">{job.title}</h3>
+                    <p className="path__body">{job.outcome}</p>
+                    {job.links ? (
+                      <p className="path__links">
+                        {job.links.map((link) => (
+                          <a
+                            key={link.href}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {link.label}
+                          </a>
+                        ))}
+                      </p>
+                    ) : null}
+                    <div className="path__tags">
                       {job.tags.map((tag) => (
                         <span key={tag}>{tag}</span>
                       ))}
@@ -120,10 +74,10 @@ const Work = () => {
                   </div>
                 </li>
               ))}
-            </ul>
+            </ol>
           </Reveal>
 
-          <Reveal className="band band--next" delay={100}>
+          <Reveal className="band band--next" delay={80}>
             <div className="band__head">
               <h3 className="band__title">GitHub selected engineering</h3>
               <a

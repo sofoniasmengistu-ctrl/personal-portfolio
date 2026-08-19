@@ -5,27 +5,19 @@ import { Reveal } from './Reveal';
 const timeline = [
   {
     year: 'Now',
-    role: 'DevOps at Gebeya, Safaricom TKG assignment',
-    description:
-      'Tanzu Kubernetes Grid for Safaricom Ethiopia: clusters, Terraform, CI/CD, security, Prometheus/Grafana. Open to remote DevSecOps, SRE, and Forward Deployed Engineer roles.',
+    role: 'Addis Telco · Architect',
   },
   {
-    year: 'Products',
-    role: 'One year building apps, bots, Android, and FinOps',
-    description:
-      'Full year shipping WeRemoteIT (site, Telegram bot, Android app), AuraPay Global, NexusAI Aggregator, and KubeOptimia cluster cost controller for cloud FinOps. Core Forward Deployed Engineer craft.',
+    year: 'Companies',
+    role: 'WeRemoteIT · AuraPay',
   },
   {
-    year: '2018 to 23',
-    role: 'Cloud, KodeKloud, and DevOps tool craft',
-    description:
-      'About two years building Git, Jenkins, Linux, Docker, and Kubernetes tasks; one year Senior DevOps at KodeKloud; AWS, Azure, GCP, GIZ trainer, consulting delivery.',
+    year: 'Cloud',
+    role: 'Gebeya · Tefer · Upwork',
   },
   {
-    year: '2010 to 18',
-    role: 'Network and systems at ECX and field',
-    description:
-      'Ethiopia Commodity Exchange and Network Engineer field support for 37 tech companies across GB, USA, Dubai, Singapore, and Pakistan.',
+    year: 'Start',
+    role: 'JSI · ECX · Custor',
   },
 ];
 
@@ -109,28 +101,36 @@ const About = () => {
 
           <Reveal className="about__bio" delay={100} variant="right">
             <p className="about__roles">
-              Cloud DevSecOps, Azure Data Engineer, Kubestronaut, Gebeya / Safaricom,
-              product builder · FDE
+              Cloud Platform Architect at Addis Telco. Founder of WeRemoteIT and
+              AuraPay Global. Kubestronaut.
             </p>
             <p>
-              Based in Addis Ababa. Career path: IT support and networking into
-              DevOps, cloud, and Azure Data Engineering. Network Engineer field
-              support for 37 tech companies across GB, USA, Dubai, Singapore, and
-              Pakistan, then six plus years designing and automating infrastructure
-              on AWS, Azure, GCP, and production Kubernetes end to end.
+              Based in Addis Ababa. Current job is Cloud Platform Architect at
+              Addis Telco. I also own two live companies:{' '}
+              <a href="https://weremoteit.com" target="_blank" rel="noopener noreferrer">
+                WeRemoteIT
+              </a>{' '}
+              and{' '}
+              <a href="https://aurapayglobal.com" target="_blank" rel="noopener noreferrer">
+                AuraPay Global
+              </a>
+              . Career path: junior programmer at Custor Computing PLC, Network
+              Specialist and IT Support at ECX, IT Specialist at JSI, Cloud DevOps
+              at Tefer, DevOps at Gebeya, then Addis Telco. More than 11 Upwork
+              Azure Data Engineer projects finished successfully. Network Engineer
+              field support for 37 tech companies across GB, USA, Dubai, Singapore,
+              and Pakistan.
             </p>
             <p>
               I create and operate clusters from the ground up on AWS EKS,
               Google GKE, Azure AKS, Infomaniak, Linode, and VMware Tanzu TKG:
               provisioning, hardening, CI/CD, RBAC, networking, and observability.
-              One year of Forward Deployed Engineer craft building the full product
-              suite: WeRemoteIT (web, Telegram bot, Android app), AuraPay Global,
-              NexusAI Aggregator, and KubeOptimia — a Kubernetes cluster cost
-              controller for cloud FinOps (spend visibility, rightsizing, cost
-              governance). On the data side I build Azure Data Engineer platforms:
-              medallion lakehouse, Data Lake Gen2, Databricks, Data Factory, and
-              streaming pipelines. Hired by Gebeya Inc. for Kubernetes depth and
-              assigned to a live telco TKG platform project. I also train teams
+              WeRemoteIT includes web, Telegram bot, and Android. AuraPay Global
+              is the payments company. I also ship NexusAI Aggregator and
+              KubeOptimia, a Kubernetes cluster cost controller for cloud FinOps.
+              Azure Data Engineer work on Upwork covers medallion lakehouse, Data
+              Lake Gen2, Databricks, and Data Factory. Gebeya DevOps includes a
+              live Safaricom Ethiopia TKG platform assignment. I also train teams
               (including GIZ) and mentor on cloud, security, and cost optimization.
               Outside client work I run live AI chat products and want to contribute
               to AI research or any serious AI initiative. Featured in{' '}
@@ -195,7 +195,6 @@ const About = () => {
             <Reveal key={item.year} className="timeline__item" delay={i * 80} variant="up">
               <span className="timeline__year">{item.year}</span>
               <h3 className="timeline__role">{item.role}</h3>
-              <p className="timeline__desc">{item.description}</p>
             </Reveal>
           ))}
         </div>

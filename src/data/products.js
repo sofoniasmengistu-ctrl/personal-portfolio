@@ -363,63 +363,75 @@ export const trustAwsAndCiscoCertifications = [
 /** @deprecated kept for any old imports · prefer trustAzureCertifications */
 export const trustPlatformCertifications = trustAwsAndCiscoCertifications;
 
-/** Selected roles from LinkedIn experience */
+/** Employer path · current roles first, each company once */
 export const experienceHighlights = [
   {
-    title: 'DevOps Engineer at Gebeya Inc.',
+    era: 'Now',
+    title: 'Cloud Platform Architect, Addis Telco',
     outcome:
-      'Assigned to Safaricom Ethiopia: Tanzu Kubernetes Grid clusters, lifecycle, Terraform IaC, CI/CD, RBAC, Prometheus/Grafana.',
-    tags: ['TKG', 'Terraform', 'CI/CD', 'Prometheus', 'RBAC'],
-    channel: 'Aug 2023 to Present, Addis Ababa',
+      'Current job: Cloud Platform Architect in Addis Ababa. Multi cloud design, Kubernetes platforms, and production architecture for telco systems.',
+    tags: ['Current role', 'Cloud architecture', 'Kubernetes', 'Telco'],
+    channel: 'Current job · Addis Telco',
   },
   {
-    title: 'One year building live products (bots, Android, FinOps)',
+    era: 'Companies',
+    title: 'Founder, WeRemoteIT and AuraPay Global',
     outcome:
-      'One full year building and shipping the product suite end to end: WeRemoteIT (site, Telegram bot, Android app), AuraPay Global (bot + site), NexusAI Aggregator bot, and KubeOptimia — Kubernetes cluster cost controller for cloud FinOps. Pure Forward Deployed Engineer craft: own the product, the bots, the mobile app, and the platform cost loop.',
-    tags: ['WeRemoteIT', 'Android', 'AuraPay', 'NexusAI', 'KubeOptimia', 'FinOps', 'FDE'],
-    channel: '1 year · product + bots + Android',
+      'These are my companies. WeRemoteIT is live at weremoteit.com (web, Telegram bot, Android). AuraPay Global is live at aurapayglobal.com (payments bot and company site). I also ship NexusAI Aggregator and KubeOptimia FinOps.',
+    tags: ['WeRemoteIT', 'AuraPay Global', 'Founder'],
+    channel: 'My companies · live',
+    links: [
+      { label: 'weremoteit.com', href: 'https://weremoteit.com' },
+      { label: 'aurapayglobal.com', href: 'https://aurapayglobal.com' },
+    ],
   },
   {
-    title: 'Azure Data Engineer',
+    era: 'DevOps',
+    title: 'DevOps Engineer, Gebeya',
     outcome:
-      'Azure data platforms end to end: medallion lakehouse (Bronze / Silver / Gold), Data Lake Gen2, Databricks, Data Factory, Key Vault, Terraform IaC, and PySpark ready pipelines. Also streaming pipelines with Kafka, Spark, and Airflow.',
-    tags: ['ADF', 'Databricks', 'Data Lake', 'Terraform', 'PySpark'],
-    channel: 'Consulting · Azure data platforms',
+      'DevOps Engineer at Gebeya Inc., assigned to Safaricom Ethiopia Tanzu Kubernetes Grid: cluster lifecycle, Terraform, CI/CD, RBAC, and Prometheus / Grafana.',
+    tags: ['Gebeya', 'TKG', 'Terraform', 'CI/CD', 'Safaricom'],
+    channel: 'Gebeya Inc.',
   },
   {
-    title: 'Cloud Computing Trainer at GIZ',
+    era: 'Cloud',
+    title: 'Cloud DevOps Engineer, Tefer',
     outcome:
-      'Trained teams on AWS, Azure, and GCP: architecture, security, serverless, and cost aware cloud practice.',
-    tags: ['AWS', 'Azure', 'GCP', 'Training'],
-    channel: 'Jul 2023 to Nov 2023, GIZ',
+      'Cloud DevOps Engineer at Tefer: AWS, Azure, GCP infrastructure, CI/CD, Docker and Kubernetes, monitoring, and cost aware delivery.',
+    tags: ['Tefer', 'AWS', 'Azure', 'GCP', 'Kubernetes'],
+    channel: 'Cloud DevOps · Tefer',
   },
   {
-    title: 'Senior DevOps at KodeKloud',
+    era: 'Upwork',
+    title: 'Azure Data Engineer, 11+ completed projects',
     outcome:
-      'One year as Senior DevOps on KodeKloud (Project Nautilus): Git, Jenkins, Linux, Docker, Kubernetes, Ansible, Terraform, and daily cross team delivery tasks.',
-    tags: ['Git', 'Jenkins', 'Linux', 'Docker', 'Kubernetes'],
-    channel: '1 year · KodeKloud Engineer path',
+      'More than 11 Upwork Azure Data Engineer projects delivered successfully: medallion lakehouse, Data Lake Gen2, Databricks, Data Factory, Key Vault, Terraform, and streaming when required.',
+    tags: ['Upwork', 'ADF', 'Databricks', 'Lakehouse', '11+ projects'],
+    channel: 'Freelance · Azure data',
   },
   {
-    title: 'Two years building DevOps tool tasks',
+    era: 'IT',
+    title: 'IT Specialist, JSI',
     outcome:
-      'About two years of hands on practice building and completing real DevOps tasks across Git, Jenkins, Linux, Docker, Kubernetes, CI/CD, and the wider toolchain before and alongside client delivery.',
-    tags: ['Git', 'Jenkins', 'Docker', 'Kubernetes', 'CI/CD'],
-    channel: '~2 years · hands on build time',
+      'IT Specialist at JSI: day to day systems, support, and infrastructure so teams could keep working.',
+    tags: ['JSI', 'IT specialist', 'Support'],
+    channel: 'JSI',
   },
   {
-    title: 'Cloud and DevOps multi client delivery',
+    era: 'Networks',
+    title: 'Network Specialist and IT Support, ECX',
     outcome:
-      'AWS, Azure, GCP IaC, CI/CD, Docker/Kubernetes, monitoring, security, and cost optimization for consulting clients.',
-    tags: ['AWS', 'Azure', 'GCP', 'Kubernetes'],
-    channel: 'Tefer, Excis, Tech Source, Orion',
+      'Network Specialist and IT Support at Ethiopia Commodity Exchange: LAN/WAN, systems, and on site operations. Field cutovers for 37 tech companies sit in the Field section.',
+    tags: ['ECX', 'Network specialist', 'IT support', 'Cisco'],
+    channel: 'Ethiopia Commodity Exchange',
   },
   {
-    title: 'Network and systems at ECX and field',
+    era: 'Start',
+    title: 'Junior Programmer, Custor Computing PLC',
     outcome:
-      'Network Engineer field support for 37 tech companies across GB, USA, Dubai, Singapore, and Pakistan via managed source partners; network admin and IT support at Ethiopia Commodity Exchange.',
-    tags: ['Cisco', 'LAN/WAN', 'Security', 'On prem'],
-    channel: '2010 to 2018, ECX and field',
+      'Junior programmer at Custor Computing PLC: software work that started the path from code into networks, cloud, and platform architecture.',
+    tags: ['Custor Computing', 'Junior programmer'],
+    channel: 'Custor Computing PLC',
   },
 ];
 

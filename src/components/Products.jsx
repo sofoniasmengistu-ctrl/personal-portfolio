@@ -8,16 +8,22 @@ const Products = () => {
       <div className="container">
         <Reveal className="section-head section-head--row">
           <div className="section-head__copy">
-            <p className="section__label">02 Live products</p>
+            <p className="section__label">02 My companies</p>
             <h2 className="section__title">
-              Bots and FinOps people can use{' '}
-              <span className="text-accent">today</span>
+              WeRemoteIT and AuraPay{' '}
+              <span className="text-accent">are mine</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              One year building the suite: WeRemoteIT (site, Telegram bot, Android
-              app), AuraPay Global, NexusAI Aggregator, and KubeOptimia — Kubernetes
-              cluster cost controller for cloud FinOps. Core Forward Deployed
-              Engineer value. Company GitHub stays private.
+              I founded and run{' '}
+              <a href="https://weremoteit.com" target="_blank" rel="noopener noreferrer">
+                weremoteit.com
+              </a>{' '}
+              (web, Telegram bot, Android) and{' '}
+              <a href="https://aurapayglobal.com" target="_blank" rel="noopener noreferrer">
+                aurapayglobal.com
+              </a>
+              . NexusAI Aggregator and KubeOptimia FinOps ship alongside them.
+              Company GitHub stays private.
             </p>
           </div>
           <a href="#approach" className="fancy-arrow" aria-label="Continue to approach">

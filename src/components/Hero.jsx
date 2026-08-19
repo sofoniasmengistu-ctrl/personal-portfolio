@@ -60,17 +60,23 @@ const Hero = () => {
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>Gebeya + KodeKloud</strong> hire and one year Senior
-                DevOps, plus ~2 years building Git, Jenkins, Linux, Docker, and
-                Kubernetes tasks
+                <strong>Current: Addis Telco</strong> Cloud Platform Architect.
+                Founder of WeRemoteIT and AuraPay Global. Gebeya DevOps, Tefer
+                Cloud DevOps, and 11+ completed Upwork Azure Data Engineer projects
               </span>
             </li>
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
               <span>
-                <strong>One year shipping products</strong> · WeRemoteIT
-                (bot + Android), AuraPay, NexusAI, and KubeOptimia FinOps —
-                Forward Deployed Engineer craft
+                <strong>My companies</strong> ·{' '}
+                <a href="https://weremoteit.com" target="_blank" rel="noopener noreferrer">
+                  weremoteit.com
+                </a>
+                {' '}and{' '}
+                <a href="https://aurapayglobal.com" target="_blank" rel="noopener noreferrer">
+                  aurapayglobal.com
+                </a>
+                , plus NexusAI and KubeOptimia FinOps
               </span>
             </li>
           </ul>

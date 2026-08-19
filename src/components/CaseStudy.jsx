@@ -36,14 +36,14 @@ const cases = [
   },
   {
     label: '03 Azure data platforms',
-    kicker: 'Azure data',
-    metric: 'Medallion lakehouse',
-    title: 'Medallion lakehouse and streaming',
+    kicker: 'Upwork Azure',
+    metric: '11+ completed projects',
+    title: 'Azure Data Engineer on Upwork',
     problem:
-      'Teams needed an Azure Data Engineer platform that could move from raw ingest to trusted gold layers, with secrets and IaC, not one off notebooks.',
+      'Clients needed an Azure Data Engineer who could finish real projects: raw ingest to trusted gold layers, with secrets and IaC, not one off notebooks.',
     stack: ['Data Lake Gen2', 'Databricks', 'ADF', 'Key Vault', 'Terraform', 'PySpark', 'Kafka', 'Airflow'],
     result:
-      'Delivered medallion lakehouse (Bronze / Silver / Gold) on Data Lake Gen2 with Databricks and Data Factory, Key Vault backed secrets, Terraform IaC, and streaming patterns with Kafka, Spark, and Airflow when required.',
+      'Finished more than 11 Upwork Azure Data Engineer projects: medallion lakehouse (Bronze / Silver / Gold) on Data Lake Gen2 with Databricks and Data Factory, Key Vault backed secrets, Terraform IaC, and streaming patterns with Kafka, Spark, and Airflow when required.',
   },
   {
     label: '04 Network field cutovers',
@@ -111,12 +111,11 @@ const CaseStudy = () => {
                 <span className="text-accent">result</span>
               </h2>
               <p className="section__lead section__lead--tight">
-                Four delivery themes hiring managers ask for: production
-                Kubernetes at Safaricom Ethiopia via Gebeya, one year shipping
-                products (WeRemoteIT web + bot + Android, AuraPay, NexusAI,
-                KubeOptimia FinOps · FDE craft), Azure data platforms, and Network
-                Engineer field cutovers. KodeKloud Senior DevOps and ~2 years of
-                hands on toolchain work sit behind the hire.
+                Four proofs, not one employer: Cloud Platform Architect work at
+                Addis Telco, DevOps at Gebeya including Safaricom Ethiopia TKG,
+                11+ completed Upwork Azure Data Engineer projects, product shipping,
+                and Network Engineer field cutovers. Tefer Cloud DevOps, JSI, ECX,
+                and Custor Computing sit on the career path in Work.
               </p>
             </div>
             <a href="#contact" className="fancy-arrow">
