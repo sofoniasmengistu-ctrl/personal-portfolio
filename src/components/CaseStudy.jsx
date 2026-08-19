@@ -15,8 +15,8 @@ const cases = [
       'Owned cluster lifecycle through hardening on TKG: Terraform provisioning, CI/CD integration, RBAC and NetworkPolicy, plus Prometheus/Grafana observability for a production telco assignment.',
   },
   {
-    label: '02 Product build · FDE',
-    kicker: 'Product build · FDE',
+    label: '02 Product build',
+    kicker: 'Product build',
     metric: '1 year · bots + Android + FinOps',
     title: 'One year: bots, Android, and KubeOptimia FinOps',
     problem:

@@ -397,7 +397,7 @@ export const experienceHighlights = [
     era: 'Cloud',
     title: 'Cloud DevOps Engineer, Tefer',
     outcome:
-      'Cloud DevOps Engineer at Tefer: AWS, Azure, GCP infrastructure, CI/CD, Docker and Kubernetes, monitoring, and cost aware delivery.',
+      'Cloud DevOps Engineer at Tefer: AWS, Azure, GCP infrastructure, CI/CD, Docker and Kubernetes, monitoring, and cost-aware delivery.',
     tags: ['Tefer', 'AWS', 'Azure', 'GCP', 'Kubernetes'],
     channel: 'Cloud DevOps · Tefer',
   },
@@ -413,7 +413,7 @@ export const experienceHighlights = [
     era: 'IT',
     title: 'IT Specialist, JSI',
     outcome:
-      'IT Specialist at JSI: day to day systems, support, and infrastructure so teams could keep working.',
+      'IT Specialist at JSI: day-to-day systems, support, and infrastructure so teams could keep working.',
     tags: ['JSI', 'IT specialist', 'Support'],
     channel: 'JSI',
   },

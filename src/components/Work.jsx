@@ -46,31 +46,28 @@ const Work = () => {
             <ol className="path__list">
               {experienceHighlights.map((job) => (
                 <li key={job.title} className="path__item">
-                  <span className="path__era mono">{job.era}</span>
-                  <span className="path__dot" aria-hidden="true" />
-                  <div className="path__copy">
-                    <p className="path__when">{job.channel}</p>
-                    <h3 className="path__title">{job.title}</h3>
-                    <p className="path__body">{job.outcome}</p>
-                    {job.links ? (
-                      <p className="path__links">
-                        {job.links.map((link) => (
-                          <a
-                            key={link.href}
-                            href={link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {link.label}
-                          </a>
-                        ))}
-                      </p>
-                    ) : null}
-                    <div className="path__tags">
-                      {job.tags.map((tag) => (
-                        <span key={tag}>{tag}</span>
+                  <p className="path__era mono">{job.era}</p>
+                  <p className="path__when">{job.channel}</p>
+                  <h3 className="path__title">{job.title}</h3>
+                  <p className="path__body">{job.outcome}</p>
+                  {job.links ? (
+                    <p className="path__links">
+                      {job.links.map((link) => (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {link.label}
+                        </a>
                       ))}
-                    </div>
+                    </p>
+                  ) : null}
+                  <div className="path__tags">
+                    {job.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
                   </div>
                 </li>
               ))}

@@ -48,7 +48,7 @@ const highlights = [
   'Prometheus and Grafana',
   'CI/CD and DevSecOps',
   'AI chat products',
-  'AI research interest',
+  'AI research',
   'Trainer / mentor',
   'Networking',
 ];
@@ -176,19 +176,19 @@ const About = () => {
                 Contact for roles
               </a>
             </div>
-
-            <div className="about__skills" id="skills">
-              <p className="band__title">Capabilities for Cloud DevOps roles</p>
-              <div className="skills__chips">
-                {highlights.map((skill) => (
-                  <span key={skill} className="skill-chip">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
           </Reveal>
         </div>
+
+        <Reveal className="about__skills" id="skills" delay={80}>
+          <p className="band__title">Capabilities for Cloud DevOps roles</p>
+          <div className="skills__chips">
+            {highlights.map((skill) => (
+              <span key={skill} className="skill-chip">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </Reveal>
 
         <div className="timeline">
           {timeline.map((item, i) => (

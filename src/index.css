@@ -2550,6 +2550,7 @@ h1, h2, h3, h4 {
 
   .partition-visual {
     background-position: center;
+    transform: none;
   }
 }
 
@@ -3245,25 +3246,10 @@ a.work-card:hover {
   list-style: none;
   margin: 0;
   padding: 0;
-  position: relative;
-}
-
-.path__list::before {
-  content: '';
-  position: absolute;
-  left: 4.55rem;
-  top: 1rem;
-  bottom: 1rem;
-  width: 1px;
-  background: color-mix(in srgb, var(--magenta) 28%, var(--line));
 }
 
 .path__item {
-  display: grid;
-  grid-template-columns: 4.1rem 0.9rem minmax(0, 1fr);
-  gap: 0.55rem;
-  align-items: start;
-  padding: 0.9rem 0;
+  padding: 0.95rem 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -3276,23 +3262,7 @@ a.work-card:hover {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--magenta);
-  padding-top: 0.15rem;
-}
-
-.path__dot {
-  width: 0.55rem;
-  height: 0.55rem;
-  margin-top: 0.28rem;
-  border-radius: 999px;
-  background: #fff;
-  border: 1.5px solid var(--magenta);
-  justify-self: center;
-  z-index: 1;
-}
-
-.path__copy {
-  min-width: 0;
-  padding-left: 0.35rem;
+  margin-bottom: 0.2rem;
 }
 
 .path__when {
@@ -3305,13 +3275,17 @@ a.work-card:hover {
   font-size: 1.05rem;
   margin-bottom: 0.3rem;
   letter-spacing: -0.02em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .path__body {
   color: var(--text-secondary);
   font-size: 0.88rem;
   line-height: 1.5;
-  max-width: 42rem;
+  max-width: 46rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .path__links {
@@ -3342,34 +3316,6 @@ a.work-card:hover {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.88);
   color: var(--ink);
-}
-
-@media (max-width: 700px) {
-  .path__list::before {
-    left: 0.42rem;
-  }
-
-  .path__item {
-    grid-template-columns: 0.9rem minmax(0, 1fr);
-    gap: 0.65rem 0.7rem;
-  }
-
-  .path__era {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .path__dot {
-    grid-column: 1;
-    grid-row: 1;
-    margin-top: 0.2rem;
-  }
-
-  .path__copy {
-    grid-column: 2;
-    grid-row: 2;
-    padding-left: 0;
-  }
 }
 
 .repolist {
@@ -3793,10 +3739,15 @@ a.work-card:hover {
   margin-top: 1.75rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--line);
+  width: 100%;
 }
 
 .about__skills .band__title {
   margin-bottom: 0.85rem;
+}
+
+.about .skills__chips {
+  max-width: none;
 }
 
 .timeline {
@@ -3804,6 +3755,7 @@ a.work-card:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.65rem;
+  width: 100%;
 }
 
 @media (min-width: 860px) {
@@ -4789,6 +4741,7 @@ a.work-card:hover {
   align-items: center;
   gap: 0.55rem;
   min-height: 2.6rem;
+  max-width: 100%;
   padding: 0.45rem 0.95rem;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -5127,6 +5080,18 @@ a.work-card:hover {
   .serp__hit {
     grid-template-columns: 1.4rem minmax(0, 1fr);
   }
+
+  .serp__query {
+    width: 100%;
+  }
+
+  .case-board__tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .repolist {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ??? Sticky CTA ??? */
@@ -5185,6 +5150,26 @@ a.work-card:hover {
   .container {
     padding-left: max(1rem, env(safe-area-inset-left));
     padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  .work,
+  .seo,
+  .path,
+  .serp,
+  .brief,
+  .case-board,
+  .repolist,
+  .timeline {
+    text-align: left;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .section-head--row,
+  .fancy-arrow {
+    align-self: stretch;
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .section {
@@ -5396,9 +5381,9 @@ a.work-card:hover {
   }
 
   .h-track {
-    margin-inline: -1rem;
-    padding-inline: 1rem;
-    scroll-padding-inline: 1rem;
+    margin-inline: 0;
+    padding-inline: 0;
+    scroll-padding-inline: 0;
   }
 
   .h-track__item {
