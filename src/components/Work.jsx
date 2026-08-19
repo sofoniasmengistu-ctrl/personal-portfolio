@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { ArrowUpRight, MoveRight } from 'lucide-react';
 import {
   clientDeliveries,
@@ -7,6 +8,9 @@ import {
 import { Reveal } from './Reveal';
 
 const Work = () => {
+  const [activeJob, setActiveJob] = useState(0);
+  const featured = experienceHighlights[activeJob];
+
   return (
     <section id="work" className="work">
       <div className="partition-stage">
@@ -47,26 +51,50 @@ const Work = () => {
             </a>
           </Reveal>
 
-          <Reveal className="band" delay={60}>
-            <div className="band__head">
+          <Reveal className="dossier" delay={60}>
+            <div className="dossier__head">
               <h3 className="band__title">Experience highlights</h3>
-              <p className="band__meta mono h-track-hint">Swipe for more</p>
+              <p className="band__meta mono">
+                {String(activeJob + 1).padStart(2, '0')} / {String(experienceHighlights.length).padStart(2, '0')}
+              </p>
             </div>
-            <div className="h-track">
-              {experienceHighlights.map((job) => (
-                <article key={job.title} className="work-card h-track__item">
-                  <span className="work-card__channel">{job.channel}</span>
-                  <h3 className="work-card__title">{job.title}</h3>
-                  <p className="work-card__desc">{job.outcome}</p>
-                  <div className="work-card__tags">
-                    {job.tags.map((tag) => (
-                      <span key={tag} className="work-card__tag">
-                        {tag}
+
+            <div className="dossier__layout">
+              <article className="dossier__stage" aria-live="polite">
+                <span className="dossier__index mono" aria-hidden="true">
+                  {String(activeJob + 1).padStart(2, '0')}
+                </span>
+                <p className="dossier__channel mono">{featured.channel}</p>
+                <h3 className="dossier__title">{featured.title}</h3>
+                <p className="dossier__body">{featured.outcome}</p>
+                <div className="dossier__tags">
+                  {featured.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </article>
+
+              <div className="dossier__rail" role="listbox" aria-label="Experience highlights">
+                {experienceHighlights.map((job, i) => {
+                  const selected = i === activeJob;
+                  return (
+                    <button
+                      key={job.title}
+                      type="button"
+                      role="option"
+                      aria-selected={selected}
+                      className={`dossier__row${selected ? ' is-active' : ''}`}
+                      onClick={() => setActiveJob(i)}
+                    >
+                      <span className="dossier__row-num mono">{String(i + 1).padStart(2, '0')}</span>
+                      <span className="dossier__row-copy">
+                        <span className="dossier__row-title">{job.title}</span>
+                        <span className="dossier__row-meta">{job.channel}</span>
                       </span>
-                    ))}
-                  </div>
-                </article>
-              ))}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </Reveal>
 
@@ -75,22 +103,24 @@ const Work = () => {
               <h3 className="band__title">Delivery themes</h3>
               <span className="band__meta mono">Production + consulting</span>
             </div>
-            <div className="h-track">
+            <ul className="stamps">
               {clientDeliveries.map((job) => (
-                <article key={job.title} className="work-card h-track__item">
-                  <span className="work-card__channel">{job.channel}</span>
-                  <h3 className="work-card__title">{job.title}</h3>
-                  <p className="work-card__desc">{job.outcome}</p>
-                  <div className="work-card__tags">
-                    {job.tags.map((tag) => (
-                      <span key={tag} className="work-card__tag">
-                        {tag}
-                      </span>
-                    ))}
+                <li key={job.title} className="stamp">
+                  <span className="stamp__stub">
+                    <span className="stamp__channel mono">{job.channel}</span>
+                  </span>
+                  <div className="stamp__body">
+                    <h3 className="stamp__title">{job.title}</h3>
+                    <p className="stamp__desc">{job.outcome}</p>
+                    <div className="stamp__tags">
+                      {job.tags.map((tag) => (
+                        <span key={tag}>{tag}</span>
+                      ))}
+                    </div>
                   </div>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </Reveal>
 
           <Reveal className="band band--next" delay={100}>
@@ -105,24 +135,26 @@ const Work = () => {
                 97+ projects <ArrowUpRight size={14} />
               </a>
             </div>
-            <div className="h-track">
+            <ul className="repolist">
               {githubFeatured.map((repo) => (
-                <a
-                  key={repo.name}
-                  href={repo.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="work-card h-track__item"
-                >
-                  <span className="work-card__stack">{repo.stack}</span>
-                  <h3 className="work-card__title">{repo.name}</h3>
-                  <p className="work-card__desc">{repo.description}</p>
-                  <span className="work-card__cta mono">
-                    View public repo <ArrowUpRight size={12} />
-                  </span>
-                </a>
+                <li key={repo.name}>
+                  <a
+                    href={repo.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="repolist__row"
+                  >
+                    <span className="repolist__dot" aria-hidden="true" />
+                    <span className="repolist__copy">
+                      <span className="repolist__name">{repo.name}</span>
+                      <span className="repolist__desc">{repo.description}</span>
+                    </span>
+                    <span className="repolist__stack mono">{repo.stack}</span>
+                    <ArrowUpRight className="repolist__go" size={14} aria-hidden="true" />
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </Reveal>
         </div>
       </div>
