@@ -377,7 +377,7 @@ export const experienceHighlights = [
     era: 'Companies',
     title: 'Founder, WeRemoteIT and AuraPay Global',
     outcome:
-      'These are my companies. WeRemoteIT is live at weremoteit.com (web, Telegram bot, Android). AuraPay Global is live at aurapayglobal.com (payments bot and company site). I also ship NexusAI Aggregator and KubeOptimia FinOps.',
+      'I founded and run WeRemoteIT and AuraPay Global. Product details, bots, and sites sit in My companies.',
     tags: ['WeRemoteIT', 'AuraPay Global', 'Founder'],
     channel: 'My companies · live',
     links: [
@@ -389,7 +389,7 @@ export const experienceHighlights = [
     era: 'DevOps',
     title: 'DevOps Engineer, Gebeya',
     outcome:
-      'DevOps Engineer at Gebeya Inc., assigned to Safaricom Ethiopia Tanzu Kubernetes Grid: cluster lifecycle, Terraform, CI/CD, RBAC, and Prometheus / Grafana.',
+      'DevOps Engineer at Gebeya Inc., assigned to Safaricom Ethiopia Tanzu Kubernetes Grid. The case study has the full stack and result.',
     tags: ['Gebeya', 'TKG', 'Terraform', 'CI/CD', 'Safaricom'],
     channel: 'Gebeya Inc.',
   },
@@ -405,7 +405,7 @@ export const experienceHighlights = [
     era: 'Upwork',
     title: 'Azure Data Engineer, 11+ completed projects',
     outcome:
-      'More than 11 Upwork Azure Data Engineer projects delivered successfully: medallion lakehouse, Data Lake Gen2, Databricks, Data Factory, Key Vault, Terraform, and streaming when required.',
+      'More than 11 Upwork Azure Data Engineer projects delivered successfully. The case study has the lakehouse stack and result.',
     tags: ['Upwork', 'ADF', 'Databricks', 'Lakehouse', '11+ projects'],
     channel: 'Freelance · Azure data',
   },

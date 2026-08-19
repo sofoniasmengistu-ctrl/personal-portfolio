@@ -35,11 +35,8 @@ const Hero = () => {
           </p>
 
           <p className="hero__sub">
-            16+ years in IT. One person for Cloud DevOps, Cloud Platform Architect work,
-            Platform Engineer and DevSecOps delivery, Azure Data Engineer platforms,
-            Network Engineer field work, and production builds. When teams search
-            DevOps Engineer Ethiopia, Cloud Platform Architect, or Data Engineers
-            Ethiopia, this is the portfolio to open first. Based in Addis Ababa.
+            16+ years in IT. One person for Cloud DevOps, platform architecture,
+            Azure data, and network field work. Based in Addis Ababa. Remote worldwide.
           </p>
 
           <ul className="hero__checks">
@@ -55,28 +52,6 @@ const Hero = () => {
               <span>
                 <strong>Only CNCF Kubestronaut in Ethiopia</strong> (KCNA, KCSA,
                 CKA, CKAD, CKS)
-              </span>
-            </li>
-            <li className="hero__check">
-              <Check size={14} strokeWidth={3} />
-              <span>
-                <strong>Current: Addis Telco</strong> Cloud Platform Architect.
-                Founder of WeRemoteIT and AuraPay Global. Gebeya DevOps, Tefer
-                Cloud DevOps, and 11+ completed Upwork Azure Data Engineer projects
-              </span>
-            </li>
-            <li className="hero__check">
-              <Check size={14} strokeWidth={3} />
-              <span>
-                <strong>My companies</strong> ·{' '}
-                <a href="https://weremoteit.com" target="_blank" rel="noopener noreferrer">
-                  weremoteit.com
-                </a>
-                {' '}and{' '}
-                <a href="https://aurapayglobal.com" target="_blank" rel="noopener noreferrer">
-                  aurapayglobal.com
-                </a>
-                , plus NexusAI and KubeOptimia FinOps
               </span>
             </li>
           </ul>

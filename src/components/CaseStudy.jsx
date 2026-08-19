@@ -15,27 +15,7 @@ const cases = [
       'Owned cluster lifecycle through hardening on TKG: Terraform provisioning, CI/CD integration, RBAC and NetworkPolicy, plus Prometheus/Grafana observability for a production telco assignment.',
   },
   {
-    label: '02 Product build',
-    kicker: 'Product build',
-    metric: '1 year · bots + Android + FinOps',
-    title: 'One year: bots, Android, and KubeOptimia FinOps',
-    problem:
-      'Building real products takes more than demos: live bots, a mobile app, company sites, and a Kubernetes FinOps cost loop. That is Forward Deployed Engineer craft — own what ships.',
-    stack: [
-      'WeRemoteIT',
-      'Android',
-      'Telegram bots',
-      'AuraPay Global',
-      'NexusAI Aggregator',
-      'KubeOptimia',
-      'FinOps',
-      'FDE',
-    ],
-    result:
-      'One year shipping the full suite: WeRemoteIT (web, Telegram bot, Android app), AuraPay Global (bot + site), NexusAI Aggregator bot, and KubeOptimia cluster cost controller for cloud FinOps — spend visibility and rightsizing on live Kubernetes.',
-  },
-  {
-    label: '03 Azure data platforms',
+    label: '02 Azure data platforms',
     kicker: 'Upwork Azure',
     metric: '11+ completed projects',
     title: 'Azure Data Engineer on Upwork',
@@ -45,40 +25,6 @@ const cases = [
     result:
       'Finished more than 11 Upwork Azure Data Engineer projects: medallion lakehouse (Bronze / Silver / Gold) on Data Lake Gen2 with Databricks and Data Factory, Key Vault backed secrets, Terraform IaC, and streaming patterns with Kafka, Spark, and Airflow when required.',
   },
-  {
-    label: '04 Network field cutovers',
-    kicker: 'Network field',
-    metric: '37 companies · 5 regions',
-    title: 'Banks, embassies, and 37 companies',
-    problem:
-      'Enterprise sites needed Network Engineer delivery that finished in one pass: design, install, cutover, stabilize. Ticket only support was not enough.',
-    stack: ['Cisco', 'Visa connectivity', 'Ubiquiti', 'VPN', 'LAN/WAN', 'Field support'],
-    result:
-      'Field support for 37 tech companies across GB, USA, Dubai, Singapore, and Pakistan. Standouts: Visa routers across Ethiopian banks, American Embassy Huawei to Ubiquiti cutover, Spain embassy datacenter VPN, and GIZ router configuration.',
-  },
-];
-
-const tools = [
-  'Git',
-  'Jenkins',
-  'Linux',
-  'Docker',
-  'Kubernetes',
-  'AWS EKS',
-  'GKE',
-  'AKS',
-  'Tanzu TKG',
-  'KubeOptimia',
-  'FinOps',
-  'WeRemoteIT Android',
-  'Telegram bots',
-  'Terraform',
-  'Ansible',
-  'Azure Data Factory',
-  'Databricks',
-  'Prometheus',
-  'Grafana',
-  'Cisco',
 ];
 
 const CaseStudy = () => {
@@ -111,11 +57,8 @@ const CaseStudy = () => {
                 <span className="text-accent">result</span>
               </h2>
               <p className="section__lead section__lead--tight">
-                Four proofs, not one employer: Cloud Platform Architect work at
-                Addis Telco, DevOps at Gebeya including Safaricom Ethiopia TKG,
-                11+ completed Upwork Azure Data Engineer projects, product shipping,
-                and Network Engineer field cutovers. Tefer Cloud DevOps, JSI, ECX,
-                and Custor Computing sit on the career path in Work.
+                Production TKG at Safaricom via Gebeya, and Azure Data Engineer
+                platforms on Upwork.
               </p>
             </div>
             <a href="#contact" className="fancy-arrow">
@@ -202,17 +145,6 @@ const CaseStudy = () => {
                 </div>
               </article>
             ))}
-          </Reveal>
-
-          <Reveal className="case-study__tools" delay={120}>
-            <p className="case-study__tools-label mono">Stack across engagements</p>
-            <div className="skills__chips">
-              {tools.map((tool) => (
-                <span key={tool} className="skill-chip">
-                  {tool}
-                </span>
-              ))}
-            </div>
           </Reveal>
         </div>
       </div>

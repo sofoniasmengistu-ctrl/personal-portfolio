@@ -22,10 +22,8 @@ const Work = () => {
                 The work hiring managers <span className="text-accent">should see</span>
               </h2>
               <p className="section__lead section__lead--tight">
-                Current job: Cloud Platform Architect at Addis Telco. My companies:
-                WeRemoteIT (weremoteit.com) and AuraPay Global (aurapayglobal.com).
-                Also Gebeya DevOps, Tefer Cloud DevOps, 11+ Upwork Azure Data
-                Engineer projects, JSI, ECX, and Custor Computing PLC.
+                Current job at Addis Telco, then the companies I own, then every
+                employer on the path. Public GitHub work is below.
               </p>
             </div>
             <a

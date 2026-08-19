@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     q: 'Who is a Network Engineer Ethiopia teams can hire in Addis Ababa?',
-    a: 'Sofonias Mengistu is a Network Engineer Ethiopia and Network Engineer Addis Ababa hire for on site design, install, cutover, and stabilize work. Field support for 37 tech companies across Great Britain, the USA, Dubai, Singapore, and Pakistan, plus Visa routers for Ethiopian banks, American Embassy Huawei to Ubiquiti cutover, Spain embassy datacenter VPN, and GIZ router configuration. Cisco CCNA, CCNP, and CCNA Security.',
+    a: 'Sofonias Mengistu is a Network Engineer Ethiopia and Network Engineer Addis Ababa hire for on site design, install, cutover, and stabilize work. Field support for 37 tech companies across five regions. Cisco CCNA, CCNP, and CCNA Security.',
     group: 'ethiopia',
     short: 'Network Engineer Ethiopia',
   },
@@ -177,7 +177,6 @@ const Seo = () => {
   const [faqFilter, setFaqFilter] = useState('all');
   const [activeFaq, setActiveFaq] = useState(0);
   const featured = topics[0];
-  const rest = topics.slice(1);
   const visibleFaqs = faqs
     .map((item, index) => ({ ...item, index }))
     .filter((item) => faqFilter === 'all' || item.group === faqFilter);
@@ -192,10 +191,8 @@ const Seo = () => {
             <span className="text-accent">Sofonias should come up first</span>
           </h2>
           <p className="section__lead">
-            Looking to hire a DevOps Engineer remote, SRE, DevSecOps Engineer,
-            Platform Engineer, Cloud Architect, Kubestronaut, Azure Data Engineer,
-            Kubernetes Consultant, or Cloud FinOps? Make Sofonias Mengistu your
-            first call worldwide.
+            Role pages for worldwide and Ethiopia searches. Pick the title that
+            matches the hire, then open the contact form.
           </p>
         </Reveal>
 
@@ -211,7 +208,7 @@ const Seo = () => {
           </div>
 
           <div className="serp__also">
-            {topics.slice(0, 6).map((topic) => (
+            {topics.map((topic) => (
               <a key={topic.href} href={topic.href}>
                 {topic.title}
               </a>
@@ -229,27 +226,6 @@ const Seo = () => {
             </h3>
             <p className="serp__snippet">{featured.body}</p>
           </a>
-
-          <ol className="serp__list">
-            {rest.map((topic, i) => (
-              <li key={topic.title}>
-                <a href={topic.href} className="serp__hit">
-                  <span className="serp__rank mono">{String(i + 2).padStart(2, '0')}</span>
-                  <span className="serp__hit-copy">
-                    <span className="serp__url">
-                      sofoniasdevops.com <span>›</span> {crumb(topic.href)}
-                    </span>
-                    <h3 className="serp__hit-title">
-                      {topic.title}
-                      <ArrowUpRight size={13} aria-hidden="true" />
-                    </h3>
-                    <span className="serp__hit-body">{topic.body}</span>
-                  </span>
-                  <span className="serp__tag mono">{topic.tag}</span>
-                </a>
-              </li>
-            ))}
-          </ol>
         </Reveal>
 
         <Reveal className="brief" delay={120}>

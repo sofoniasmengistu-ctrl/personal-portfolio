@@ -14,16 +14,7 @@ const Products = () => {
               <span className="text-accent">are mine</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              I founded and run{' '}
-              <a href="https://weremoteit.com" target="_blank" rel="noopener noreferrer">
-                weremoteit.com
-              </a>{' '}
-              (web, Telegram bot, Android) and{' '}
-              <a href="https://aurapayglobal.com" target="_blank" rel="noopener noreferrer">
-                aurapayglobal.com
-              </a>
-              . NexusAI Aggregator and KubeOptimia FinOps ship alongside them.
-              Company GitHub stays private.
+              Live companies and products I own. Company GitHub stays private.
             </p>
           </div>
           <a href="#approach" className="fancy-arrow" aria-label="Continue to approach">
