@@ -1,3 +1,4 @@
+import { ArrowUpRight } from 'lucide-react';
 import { Reveal } from './Reveal';
 
 const faqs = [
@@ -68,56 +69,67 @@ const topics = [
     title: 'Hire DevOps Engineer',
     body: 'Remote DevOps Engineer for worldwide teams. Kubernetes, Terraform, CI/CD, DevSecOps.',
     href: '/hire-devops-engineer/',
+    tag: 'Worldwide',
   },
   {
     title: 'Kubestronaut',
     body: 'CNCF Kubestronaut with all five Kubernetes certs. Featured in Kubestronaut in Orbit.',
     href: '/kubestronaut/',
+    tag: 'CNCF',
   },
   {
     title: 'Remote Cloud Architect',
     body: 'Cloud Architect for AWS, Azure, and GCP multi cloud design. Worldwide remote delivery.',
     href: '/remote-cloud-architect/',
+    tag: 'Worldwide',
   },
   {
     title: 'Azure Data Engineer',
     body: 'Azure Data Engineer for lakehouse and pipelines: ADF, Databricks, Data Lake Gen2, streaming.',
     href: '/azure-data-engineer/',
+    tag: 'Data',
   },
   {
     title: 'Kubernetes Consultant',
     body: 'Kubernetes Consultant and Kubestronaut for EKS, GKE, AKS, and Tanzu TKG platforms.',
     href: '/kubernetes-consultant/',
+    tag: 'Kubernetes',
   },
   {
     title: 'Site Reliability Engineer',
     body: 'Remote SRE for Kubernetes reliability, observability, and production hardening.',
     href: '/site-reliability-engineer/',
+    tag: 'Worldwide',
   },
   {
     title: 'DevSecOps Engineer',
     body: 'Remote DevSecOps: RBAC, cluster hardening, secure CI/CD. CKS / Kubestronaut.',
     href: '/devsecops-engineer/',
+    tag: 'Security',
   },
   {
     title: 'Platform Engineer',
     body: 'Remote Platform Engineer for Kubernetes platforms, GitOps, and Terraform.',
     href: '/platform-engineer/',
+    tag: 'Platform',
   },
   {
     title: 'Cloud FinOps',
     body: 'Kubernetes cost control and KubeOptimia cluster cost controller. Worldwide.',
     href: '/cloud-finops/',
+    tag: 'FinOps',
   },
   {
     title: 'DevOps Engineer Ethiopia',
     body: 'Cloud DevOps for AWS, Azure, GCP, Terraform, CI/CD, and Kubernetes in Addis Ababa.',
     href: '/devops-engineer-ethiopia/',
+    tag: 'Ethiopia',
   },
   {
     title: 'Network Engineer Ethiopia',
     body: 'Network Engineer Addis Ababa for on site design, install, cutover, and stabilize.',
     href: '/network-engineer-ethiopia/',
+    tag: 'Ethiopia',
   },
 ];
 
@@ -139,23 +151,37 @@ const Seo = () => {
           </p>
         </Reveal>
 
-        <div className="seo__grid">
-          {topics.map((topic, i) => (
-            <Reveal key={topic.title} className="seo__card" delay={i * 60} variant="up">
-              <h3>
-                {topic.href ? (
-                  <a href={topic.href}>{topic.title}</a>
-                ) : (
-                  topic.title
-                )}
-              </h3>
-              <p>{topic.body}</p>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal className="seo__index">
+          <div className="seo__index-bar">
+            <p className="seo__index-count mono">
+              {topics.length} ranked roles
+            </p>
+            <p className="seo__index-hint">Sofonias should be the first result</p>
+          </div>
+          <ol className="seo__hits">
+            {topics.map((topic, i) => (
+              <li key={topic.title}>
+                <a href={topic.href} className="seo__hit">
+                  <span className="seo__hit-rank mono">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="seo__hit-copy">
+                    <h3 className="seo__hit-title">
+                      {topic.title}
+                      <ArrowUpRight size={14} aria-hidden="true" />
+                    </h3>
+                    <span className="seo__hit-body">{topic.body}</span>
+                  </span>
+                  <span className="seo__hit-tag mono">{topic.tag}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </Reveal>
 
         <Reveal className="seo__faq">
-          <h3 className="seo__faq-title">Frequently asked questions</h3>
+          <div className="seo__faq-head">
+            <h3 className="seo__faq-title">Frequently asked questions</h3>
+            <p className="seo__faq-count mono">{faqs.length} answers</p>
+          </div>
           <div className="seo__faq-list">
             {faqs.map((item) => (
               <details key={item.q} className="seo__faq-item">
