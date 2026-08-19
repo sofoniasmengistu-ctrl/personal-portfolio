@@ -13,39 +13,28 @@ const shell = `
 <div id="root">
   <main class="prerender-shell" data-prerender="true">
     <p class="prerender-shell__brand">Sofonias Mengistu</p>
-    <h1>DevOps Engineer, Cloud Architect, Platform Engineer, Azure Data Engineer, Network Engineer, and Kubestronaut in Addis Ababa</h1>
-    <p>Hire Sofonias Mengistu for Cloud DevOps, Cloud Architect work, Platform Engineer and DevSecOps delivery, Azure Data Engineer platforms, Network Engineer field work, and Kubernetes. Based in Addis Ababa. Remote worldwide. CNCF Kubestronaut.</p>
+    <h1>Cloud Platform Architect in Addis Ababa. Remote worldwide.</h1>
+    <p>Hire Sofonias Mengistu as a remote DevOps Engineer and Cloud Platform Architect. CNCF Kubestronaut. Kubernetes, CI/CD, and Azure data when the platform needs it. Current role: Cloud Platform Architect at Addis Telco. Based in Addis Ababa. Remote worldwide.</p>
 
     <h2>Case study: Gebeya → Safaricom Ethiopia TKG</h2>
-    <p><strong>Problem.</strong> Production Tanzu Kubernetes Grid for Safaricom Ethiopia needed secure lifecycle, not a lab cluster.</p>
-    <p><strong>Stack.</strong> Tanzu TKG, Terraform, CI/CD, RBAC, NetworkPolicy, Prometheus, Grafana.</p>
-    <p><strong>Result.</strong> Cluster lifecycle through hardening on a live telco assignment via Gebeya Inc.</p>
-
-    <h2>Case study: One year product build · FDE</h2>
-    <p><strong>Problem.</strong> Real products need live bots, a mobile app, company sites, and a Kubernetes FinOps cost loop — not demos.</p>
-    <p><strong>Stack.</strong> WeRemoteIT (web, Telegram bot, Android), AuraPay Global, NexusAI Aggregator, KubeOptimia, FinOps, Forward Deployed Engineer craft.</p>
-    <p><strong>Result.</strong> One year shipping the full suite, including KubeOptimia as cluster cost controller so cloud spend is a first class platform signal.</p>
+    <p><strong>1 live telco TKG platform.</strong> Production Tanzu Kubernetes Grid for Safaricom Ethiopia. Stack: Tanzu TKG, Terraform, CI/CD, RBAC, NetworkPolicy, Prometheus, Grafana. Result: cluster lifecycle through hardening on a live telco assignment via Gebeya Inc.</p>
 
     <h2>Case study: Azure Data Engineer lakehouse</h2>
-    <p><strong>Problem.</strong> Teams needed medallion lakehouse platforms with secrets and IaC, not one off notebooks.</p>
-    <p><strong>Stack.</strong> Data Lake Gen2, Databricks, ADF, Key Vault, Terraform, PySpark, Kafka, Airflow.</p>
-    <p><strong>Result.</strong> Bronze / Silver / Gold lakehouse with production ready pipelines and streaming when required.</p>
-
-    <h2>Case study: Network Engineer field cutovers</h2>
-    <p><strong>Problem.</strong> Enterprise sites needed design, install, cutover, stabilize in one pass.</p>
-    <p><strong>Stack.</strong> Cisco, Visa connectivity, Ubiquiti, VPN, LAN/WAN.</p>
-    <p><strong>Result.</strong> Field support for 37 tech companies across five regions, plus Visa bank routers, embassy cutovers, and GIZ configuration.</p>
+    <p><strong>11+ completed projects.</strong> Medallion lakehouse on Data Lake Gen2 with Databricks, ADF, Key Vault, Terraform, and streaming when required.</p>
 
     <h2>Live products</h2>
     <ul>
       <li>WeRemoteIT · <a href="https://weremoteit.com">weremoteit.com</a> · <a href="https://t.me/WeRemoteITbot">Telegram bot</a> · Android app</li>
       <li>AuraPay Global · <a href="https://aurapayglobal.com">aurapayglobal.com</a> · <a href="https://t.me/AuraPayGlobalBot">Telegram bot</a></li>
       <li>NexusAI Aggregator · <a href="https://t.me/NexusAIAggregatorBot">Telegram bot</a></li>
-      <li>KubeOptimia · Kubernetes cluster cost controller · cloud FinOps · Forward Deployed Engineer craft</li>
+      <li>KubeOptimia · Kubernetes cluster cost controller · cloud FinOps</li>
     </ul>
 
+    <h2>On-site network work</h2>
+    <p>Field support for 37 companies lives on <a href="/network-engineer-ethiopia/">Network Engineer Ethiopia</a>.</p>
+
     <h2>Contact</h2>
-    <p>Email <a href="mailto:sofoniasmengistu@gmail.com">sofoniasmengistu@gmail.com</a>. WhatsApp <a href="https://wa.me/251912215057">+251 912 215 057</a>. Portfolio <a href="https://www.sofoniasdevops.com/#contact">contact form</a>.</p>
+    <p>Email <a href="mailto:sofoniasmengistu@gmail.com">sofoniasmengistu@gmail.com</a>. WhatsApp <a href="https://wa.me/251912215057">+251 912 215 057</a>. Portfolio <a href="https://www.sofoniasdevops.com/#contact">contact form</a>. Consulting is $200 USD per hour. Full-time employment conversations use $20 per hour. First 15 minutes are free.</p>
 
     <p>Related pages:
       <a href="/hire-devops-engineer/">Hire DevOps Engineer</a>,

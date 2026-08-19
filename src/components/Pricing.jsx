@@ -38,7 +38,7 @@ const plans = [
     name: 'Free consultation',
     price: '15 min',
     priceNote: 'No charge',
-    blurb: 'Quick call to understand your need in Addis Ababa or remote. DevOps, network, IT support, or a build.',
+    blurb: 'Quick call to understand a Cloud DevOps, Kubernetes, or hire need. Remote or Addis Ababa.',
     points: [
       'WhatsApp, Telegram, or scheduled call',
       'Clear next step in one conversation',
@@ -55,11 +55,11 @@ const plans = [
     name: 'Consultation hour',
     price: `$${pricingRates.consultationHourly}`,
     priceNote: `per hour, ${pricingRates.currency}`,
-    blurb: 'Paid consulting for focused work: architecture, Kubernetes, pipelines, network cutovers, or expert advice.',
+    blurb: 'Paid consulting for architecture, Kubernetes, pipelines, or expert advice. This is not the employment rate.',
     points: [
       'DevOps and Kubernetes delivery',
-      'Network Engineer field support',
-      'IT and cloud support blocks',
+      'Azure data platforms when needed',
+      'Expert hour, not a salary rate',
     ],
     cta: 'Book consulting hour',
     href: '#contact',
@@ -89,7 +89,7 @@ const plans = [
     name: 'Full time role',
     price: `$${pricingRates.fullTimeHourly}`,
     priceNote: `per hour, ${pricingRates.currency} employment`,
-    blurb: 'For full time Cloud DevOps / Network Engineer employment offers. About $3,200 per month at a standard 160 hour month.',
+    blurb: 'Salary-style rate for a full time Cloud DevOps hire, about $3,200 per month at 160 hours. Not the $200 consulting hour.',
     points: [
       'Full time hire conversations',
       'Addis Ababa on site or remote',
@@ -174,8 +174,9 @@ const Pricing = () => {
               <span className="text-accent">15 minutes free.</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              Free intro call, then consulting at $200/hr, a discounted monthly
-              retainer, or full time employment at $20/hr.
+              $200/hr is consulting. $20/hr is full-time employment. They are
+              different contracts, not two prices for the same hour. First 15
+              minutes are free.
             </p>
           </div>
           <a href="#contact" className="fancy-arrow">
@@ -228,10 +229,11 @@ const Pricing = () => {
 
         <Reveal className="pricing__footnote">
           <p>
-            Consulting hour is $200 USD. Monthly retainer is $3,600 for up to 20
-            hours (about 10% below $4,000 at the hourly consulting rate). Full time
-            employment conversations use $20/hr. Larger cutovers or dedicated on
-            site weeks get a custom quote after the free 15 minute call.
+            $200/hr is a consulting / advisory hour. $20/hr is full-time
+            employment (about $3,200/month at 160 hours). Monthly retainer is
+            $3,600 for up to 20 hours, about 10% below 20 consulting hours.
+            Larger cutovers or dedicated on-site weeks get a custom quote after
+            the free 15 minute call.
           </p>
         </Reveal>
 
