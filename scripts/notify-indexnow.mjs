@@ -26,6 +26,7 @@ const urlList = [
   `https://${HOST}/network-engineer-africa/`,
   `https://${HOST}/privacy/`,
   `https://${HOST}/llms.txt`,
+  `https://${HOST}/llms-full.txt`,
   `https://${HOST}/sitemap.xml`,
 ];
 

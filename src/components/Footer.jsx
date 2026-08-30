@@ -198,6 +198,8 @@ const Footer = () => {
               <a href="/privacy/">Privacy</a>
               <span aria-hidden="true"> · </span>
               <a href="#location">Map</a>
+              <span aria-hidden="true"> · </span>
+              <a href="/llms.txt">AI / cite</a>
             </p>
           </Reveal>
 

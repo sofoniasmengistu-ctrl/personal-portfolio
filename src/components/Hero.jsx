@@ -18,7 +18,7 @@ const Hero = () => {
             Sofonias<span className="text-accent">.</span>
           </p>
 
-          <h1 className="hero__headline">
+          <h1 id="geo-headline" className="hero__headline">
             Cloud Platform Architect in Addis Ababa.{' '}
             <span className="text-accent">Remote worldwide.</span>
           </h1>
@@ -27,7 +27,7 @@ const Hero = () => {
             Current role · Addis Telco
           </p>
 
-          <p className="hero__sub">
+          <p id="geo-summary" className="hero__sub">
             Hire a remote DevOps Engineer for Kubernetes, CI/CD, and cloud
             platforms. 16+ years in IT. Kubestronaut. Azure data when the
             platform needs it.
@@ -43,7 +43,7 @@ const Hero = () => {
             </li>
             <li className="hero__check">
               <Check size={14} strokeWidth={3} />
-              <span>
+              <span id="geo-claim">
                 <strong>Only CNCF Kubestronaut in Ethiopia</strong> (KCNA, KCSA,
                 CKA, CKAD, CKS)
               </span>
