@@ -27,6 +27,7 @@ const shell = `
       <li>WeRemoteIT · <a href="https://weremoteit.com">weremoteit.com</a> · <a href="https://t.me/WeRemoteITbot">Telegram bot</a> · Android app</li>
       <li>AuraPay Global · <a href="https://aurapayglobal.com">aurapayglobal.com</a> · <a href="https://t.me/AuraPayGlobalBot">Telegram bot</a></li>
       <li>NexusAI Aggregator · <a href="https://t.me/NexusAIAggregatorBot">Telegram bot</a></li>
+      <li>PAPO Leather · lightweight ecommerce · <a href="https://papoleather.com">papoleather.com</a></li>
       <li>KubeOptimia · Kubernetes cluster cost controller · cloud FinOps</li>
     </ul>
 

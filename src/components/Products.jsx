@@ -14,7 +14,8 @@ const Products = () => {
               <span className="text-accent">are mine</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              Live companies and products I own. Company GitHub stays private.
+              Live companies and products I built end to end. Company GitHub stays
+              private.
             </p>
           </div>
           <a href="#about" className="fancy-arrow" aria-label="Continue to about">
@@ -79,7 +80,9 @@ const Products = () => {
                       href={product.web}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-ghost"
+                      className={
+                        product.botUrl || product.ctaHref ? 'btn-ghost' : 'btn-primary'
+                      }
                     >
                       {product.webLabel || 'Site'} <ExternalLink size={14} />
                     </a>

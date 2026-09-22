@@ -110,6 +110,7 @@ Open to AI research and related initiatives.
 - WeRemoteIT — remote IT talent: site, Telegram bot, Android app. https://weremoteit.com
 - AuraPay Global — payments bot and company site. https://aurapayglobal.com
 - NexusAI Aggregator — multi-model AI Telegram bot. https://t.me/NexusAIAggregatorBot
+- PAPO Leather — full lightweight ecommerce site built end to end (catalog, shop, showroom, multi-language, WhatsApp commerce). https://papoleather.com
 - KubeOptimia — Kubernetes FinOps / cluster cost controller. Discuss via contact form.
 
 ## Pages to cite by intent

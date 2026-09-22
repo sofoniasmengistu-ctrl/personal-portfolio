@@ -43,6 +43,20 @@ export const products = [
     mark: '/products/nexusai-mark.png',
   },
   {
+    id: 'papoleather',
+    name: 'PAPO Leather',
+    tag: 'Live · Lightweight ecommerce',
+    description:
+      'Full lightweight ecommerce site I designed and built end to end for PAPO Leather Goods — catalog, shop, showroom visit flow, multi-language storefront, and WhatsApp commerce. Live and selling today.',
+    web: 'https://papoleather.com',
+    webLabel: 'Live store',
+    bot: null,
+    botUrl: null,
+    community: 'https://www.instagram.com/leathergoods101',
+    communityLabel: 'Instagram',
+    mark: '/products/papoleather-mark.png',
+  },
+  {
     id: 'kubeoptimia',
     name: 'KubeOptimia',
     tag: 'FinOps · Cluster cost controller',
@@ -494,10 +508,10 @@ export const clientDeliveries = [
     channel: 'Gebeya Inc., production',
   },
   {
-    title: 'Product suite · bots, Android, KubeOptimia FinOps',
+    title: 'Product suite · bots, Android, ecommerce, KubeOptimia FinOps',
     outcome:
-      'One year shipping WeRemoteIT (web, bot, Android), AuraPay Global, NexusAI Aggregator, and KubeOptimia cluster cost controller — cloud FinOps and FDE-style ownership from product to platform cost.',
-    tags: ['WeRemoteIT Android', 'Telegram bots', 'FinOps', 'FDE'],
+      'One year shipping WeRemoteIT (web, bot, Android), AuraPay Global, NexusAI Aggregator, PAPO Leather (full lightweight ecommerce at papoleather.com), and KubeOptimia cluster cost controller — cloud FinOps and FDE-style ownership from product to platform cost.',
+    tags: ['WeRemoteIT Android', 'Telegram bots', 'Ecommerce', 'FinOps', 'FDE'],
     channel: '1 year · product build',
   },
   {

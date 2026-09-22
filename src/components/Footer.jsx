@@ -76,12 +76,14 @@ const Footer = () => {
       href: link.href,
       external: false,
     })),
-    ...products.map((product) => ({
-      id: `bot-${product.id}`,
-      label: product.bot,
-      href: product.botUrl,
-      external: true,
-    })),
+    ...products
+      .filter((product) => product.botUrl || product.web)
+      .map((product) => ({
+        id: `bot-${product.id}`,
+        label: product.bot || product.name,
+        href: product.botUrl || product.web,
+        external: true,
+      })),
     ...companyChannels.map((channel) => ({
       id: `channel-${channel.id}`,
       label: channel.label,
