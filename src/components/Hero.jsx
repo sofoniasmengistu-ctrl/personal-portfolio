@@ -1,5 +1,5 @@
-import { Check, Download, Linkedin, MoveRight } from 'lucide-react';
-import { credentials } from '../data/products';
+import { useEffect, useRef, useState } from 'react';
+import { Check, Download, MoveRight, Volume2, VolumeX } from 'lucide-react';
 
 const askFor = [
   'Cloud Platform · Kubernetes · CI/CD',
@@ -8,17 +8,57 @@ const askFor = [
 ];
 
 const Hero = () => {
+  const videoRef = useRef(null);
+  const [muted, setMuted] = useState(true);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+    video.muted = true;
+    const play = video.play();
+    if (play?.catch) play.catch(() => {});
+    return undefined;
+  }, []);
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    const next = !muted;
+    video.muted = next;
+    setMuted(next);
+    if (!next) {
+      video.play().catch(() => {});
+    }
+  };
+
   return (
-    <section id="home" className="hero">
-      <div className="hero__ambient" aria-hidden="true" />
-      <div className="container hero__stage">
+    <section id="home" className="hero hero--reel">
+      <div className="hero__reel-wrap" aria-hidden="false">
+        <video
+          ref={videoRef}
+          className="hero__reel"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/sofonias-intro-poster.jpg"
+          aria-label="Sofonias Mengistu introduction video"
+        >
+          <source src="/sofonias-intro.mp4" type="video/mp4" />
+        </video>
+        <div className="hero__reel-veil" aria-hidden="true" />
+        <div className="hero__reel-grain" aria-hidden="true" />
+      </div>
+
+      <div className="container hero__overlay">
         <div className="hero__copy">
           <p className="hero__eyebrow hero__stagger hero__stagger--1">
             <span className="hero__avail">
               <span className="hero__avail-dot" aria-hidden="true" />
               Available now
             </span>
-            Addis Ababa base. Remote worldwide. EAT (UTC+3).
+            Addis Ababa · Remote worldwide · EAT (UTC+3)
           </p>
 
           <p className="hero__brand hero__stagger hero__stagger--2">
@@ -36,8 +76,7 @@ const Hero = () => {
 
           <p id="geo-summary" className="hero__sub hero__stagger hero__stagger--5">
             Hire a remote DevOps Engineer for Kubernetes, CI/CD, and cloud
-            platforms. 16+ years in IT. Kubestronaut. Azure data when the
-            platform needs it.
+            platforms. 16+ years in IT. Kubestronaut.
           </p>
 
           <ul className="hero__proof hero__stagger hero__stagger--6">
@@ -62,7 +101,7 @@ const Hero = () => {
             </a>
             <a
               href="https://wa.me/251912215057"
-              className="btn-ghost"
+              className="btn-ghost hero__ghost-on-dark"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -71,43 +110,28 @@ const Hero = () => {
             <a
               href="/Sofonias_Mengistu_Resume.pdf"
               download="Sofonias_Mengistu_Resume.pdf"
-              className="btn-ghost"
+              className="btn-ghost hero__ghost-on-dark"
             >
               <Download size={16} /> Download CV
             </a>
-          </div>
-        </div>
-
-        <aside className="hero__aside hero__stagger hero__stagger--8">
-          <div className="hero__media">
-            <video
-              className="hero__video"
-              controls
-              playsInline
-              preload="metadata"
-              poster="/sofonias-intro-poster.jpg"
-              aria-label="Sofonias Mengistu short introduction video"
+            <button
+              type="button"
+              className="hero__sound"
+              onClick={toggleMute}
+              aria-pressed={!muted}
+              aria-label={muted ? 'Unmute introduction video' : 'Mute introduction video'}
             >
-              <source src="/sofonias-intro.mp4" type="video/mp4" />
-            </video>
-            <div className="hero__media-rail">
-              <p className="hero__media-kicker mono">Ask for</p>
-              <ul className="hero__ask">
-                {askFor.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <a
-                href={credentials.linkedIn}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero__media-link"
-              >
-                <Linkedin size={15} /> LinkedIn
-              </a>
-            </div>
+              {muted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+              {muted ? 'Unmute' : 'Mute'}
+            </button>
           </div>
-        </aside>
+
+          <ul className="hero__ask hero__stagger hero__stagger--8" aria-label="What you can ask for">
+            {askFor.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

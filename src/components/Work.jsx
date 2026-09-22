@@ -4,24 +4,34 @@ import { Reveal } from './Reveal';
 
 const Work = () => {
   return (
-    <section id="work" className="section section--tight work work--flat">
-      <div className="container work__inner">
+    <section id="work" className="work work--loud">
+      <div className="partition-stage">
+        <div
+          className="partition-visual"
+          style={{ backgroundImage: "url('/work-cloud-bg.png')" }}
+          role="img"
+          aria-label="Cloud engineering and multi cloud operations background"
+        />
+        <div className="partition-veil partition-veil--deep" aria-hidden="true" />
+
+        <div className="container partition-inner work__inner">
           <Reveal className="section-head section-head--row">
             <div className="section-head__copy">
-              <p className="section__label">03 Path</p>
-              <h2 className="section__title">
-                The work hiring managers <span className="text-accent">should see</span>
+              <p className="section__label section__label--on-dark">03 Path</p>
+              <h2 className="section__title section__title--display section__title--on-dark">
+                The work hiring managers{' '}
+                <span className="text-accent">should see</span>
               </h2>
-              <p className="section__lead section__lead--tight">
+              <p className="section__lead section__lead--tight section__lead--on-dark">
                 Current job at Addis Telco, then the companies I own, then every
-                employer on the path. Public GitHub work is below.
+                employer on the path.
               </p>
             </div>
             <a
               href="https://www.linkedin.com/in/sofonias-mengistu-eng/"
               target="_blank"
               rel="noopener noreferrer"
-              className="fancy-arrow"
+              className="fancy-arrow fancy-arrow--on-dark"
             >
               <span className="fancy-arrow__label">LinkedIn</span>
               <span className="fancy-arrow__track" aria-hidden="true">
@@ -31,7 +41,7 @@ const Work = () => {
             </a>
           </Reveal>
 
-          <Reveal className="path">
+          <Reveal className="path path--on-dark">
             <ol className="path__list">
               {experienceHighlights.map((job) => (
                 <li key={job.title} className="path__item">
@@ -62,8 +72,12 @@ const Work = () => {
               ))}
             </ol>
           </Reveal>
+        </div>
+      </div>
 
-          <Reveal className="band band--next" delay={80}>
+      <div className="work__github section section--tight section--muted">
+        <div className="container">
+          <Reveal className="band">
             <div className="band__head">
               <h3 className="band__title">GitHub selected engineering</h3>
               <a
@@ -97,6 +111,7 @@ const Work = () => {
             </ul>
           </Reveal>
         </div>
+      </div>
     </section>
   );
 };
