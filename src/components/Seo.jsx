@@ -176,16 +176,18 @@ const faqFilters = [
 const Seo = () => {
   const [faqFilter, setFaqFilter] = useState('all');
   const [activeFaq, setActiveFaq] = useState(0);
+  const [showAllFaqs, setShowAllFaqs] = useState(false);
   const featured = topics[0];
   const visibleFaqs = faqs
     .map((item, index) => ({ ...item, index }))
     .filter((item) => faqFilter === 'all' || item.group === faqFilter);
+  const previewFaqs = showAllFaqs ? visibleFaqs : visibleFaqs.slice(0, 4);
 
   return (
     <section id="devops-ethiopia" className="section section--tight seo" aria-labelledby="seo-heading">
       <div className="container">
         <Reveal>
-          <p className="section__label">Worldwide · Ethiopia · Cloud · Data · Network</p>
+          <p className="section__label">Role pages · FAQ</p>
           <h2 id="seo-heading" className="section__title">
             Searching cloud or data roles?{' '}
             <span className="text-accent">Sofonias should come up first</span>
@@ -242,6 +244,7 @@ const Seo = () => {
                 className={`brief__chip${faqFilter === filter.id ? ' is-active' : ''}`}
                 onClick={() => {
                   setFaqFilter(filter.id);
+                  setShowAllFaqs(false);
                   const next = faqs.findIndex(
                     (item) => filter.id === 'all' || item.group === filter.id,
                   );
@@ -255,7 +258,7 @@ const Seo = () => {
 
           <div className="brief__layout">
             <div className="brief__qs" role="listbox" aria-label="Questions">
-              {visibleFaqs.map((item) => (
+              {previewFaqs.map((item) => (
                 <button
                   key={item.q}
                   type="button"
@@ -280,6 +283,19 @@ const Seo = () => {
               </article>
             ))}
           </div>
+
+          {visibleFaqs.length > 4 ? (
+            <button
+              type="button"
+              className="brief__more mono"
+              aria-expanded={showAllFaqs}
+              onClick={() => setShowAllFaqs((v) => !v)}
+            >
+              {showAllFaqs
+                ? 'Show fewer answers'
+                : `Show all ${visibleFaqs.length} answers`}
+            </button>
+          ) : null}
         </Reveal>
       </div>
     </section>

@@ -8,7 +8,7 @@ const Products = () => {
       <div className="container">
         <Reveal className="section-head section-head--row">
           <div className="section-head__copy">
-            <p className="section__label">02 My companies</p>
+            <p className="section__label">04 Products</p>
             <h2 className="section__title">
               WeRemoteIT and AuraPay{' '}
               <span className="text-accent">are mine</span>
@@ -31,7 +31,12 @@ const Products = () => {
           <p className="band__meta mono h-track-hint">Swipe cards on mobile</p>
           <div className="h-track products__track">
             {products.map((product) => (
-              <article key={product.id} className="product-panel h-track__item">
+              <article
+                key={product.id}
+                className={`product-panel h-track__item${
+                  product.id === 'papoleather' ? ' product-panel--store' : ''
+                }`}
+              >
                 {product.mark ? (
                   <img
                     src={product.mark}

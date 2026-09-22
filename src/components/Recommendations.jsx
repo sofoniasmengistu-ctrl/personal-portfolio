@@ -315,14 +315,14 @@ const Recommendations = () => {
       <div className="container">
         <Reveal className="section-head section-head--row">
           <div className="section-head__copy">
-            <p className="section__label">05 Recommendations</p>
+            <p className="section__label">01 Recommendations</p>
             <h2 className="section__title">
               What colleagues and managers{' '}
               <span className="text-accent">have said</span>
             </h2>
             <p className="section__lead section__lead--tight">
-              Public comments are curated here. Submit below · Sofonias reviews
-              each one, then publishes approved feedback in this row.
+              Public comments are curated here. Leave one below · Sofonias
+              reviews each submission, then publishes approved feedback.
             </p>
           </div>
           <a
@@ -376,7 +376,12 @@ const Recommendations = () => {
         </Reveal>
 
         <Reveal className="recommendations__submit" delay={160}>
-          <RecommendationForm />
+          <details className="recommendations__details">
+            <summary className="recommendations__summary mono">
+              Leave a comment
+            </summary>
+            <RecommendationForm />
+          </details>
         </Reveal>
       </div>
     </section>

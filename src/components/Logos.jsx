@@ -17,20 +17,28 @@ const logos = [
 ];
 
 const Logos = () => {
+  const loop = [...logos, ...logos];
+
   return (
     <section className="logos section--tight" aria-label="Organizations and affiliations">
-      <div className="container">
+      <div className="container logos__head">
         <Reveal>
           <p className="logos__eyebrow mono">Experience includes</p>
-          <div className="logos__track">
-            {logos.map((logo) => (
-              <div key={logo.name} className="logos__item">
-                <span className="logos__name">{logo.name}</span>
-                <span className="logos__note">{logo.note}</span>
-              </div>
-            ))}
-          </div>
         </Reveal>
+      </div>
+      <div className="logos__marquee" aria-hidden="false">
+        <div className="logos__marquee-track">
+          {loop.map((logo, i) => (
+            <div
+              key={`${logo.name}-${i}`}
+              className="logos__item"
+              aria-hidden={i >= logos.length ? true : undefined}
+            >
+              <span className="logos__name">{logo.name}</span>
+              <span className="logos__note">{logo.note}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -55,7 +55,7 @@ const CaseStudy = () => {
         <div className="container partition-inner case-study__inner">
           <Reveal className="section-head section-head--row">
             <div className="section-head__copy">
-              <p className="section__label">Flagship case studies</p>
+              <p className="section__label">02 Case studies</p>
               <h2 className="section__title">
                 Problem, stack,{' '}
                 <span className="text-accent">result</span>

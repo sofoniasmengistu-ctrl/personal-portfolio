@@ -4,20 +4,11 @@ import { Reveal } from './Reveal';
 
 const Work = () => {
   return (
-    <section id="work" className="work">
-      <div className="partition-stage">
-        <div
-          className="partition-visual"
-          style={{ backgroundImage: "url('/work-cloud-bg.png')" }}
-          role="img"
-          aria-label="Cloud engineering and multi cloud operations background"
-        />
-        <div className="partition-veil" aria-hidden="true" />
-
-        <div className="container partition-inner work__inner">
+    <section id="work" className="section section--tight work work--flat">
+      <div className="container work__inner">
           <Reveal className="section-head section-head--row">
             <div className="section-head__copy">
-              <p className="section__label">01 Cloud DevOps and Engineering</p>
+              <p className="section__label">03 Path</p>
               <h2 className="section__title">
                 The work hiring managers <span className="text-accent">should see</span>
               </h2>
@@ -106,7 +97,6 @@ const Work = () => {
             </ul>
           </Reveal>
         </div>
-      </div>
     </section>
   );
 };

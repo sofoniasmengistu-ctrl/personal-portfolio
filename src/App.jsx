@@ -9,17 +9,19 @@ import CaseStudy from './components/CaseStudy';
 import Work from './components/Work';
 import Products from './components/Products';
 import About from './components/About';
-import FirstContact from './components/FirstContact';
+import HireStrip from './components/HireStrip';
 import Location from './components/Location';
 import Pricing from './components/Pricing';
 import Seo from './components/Seo';
 import Footer from './components/Footer';
 import StickyCta from './components/StickyCta';
+import ChapterNav from './components/ChapterNav';
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <ChapterNav />
       <main>
         <Hero />
         <Trust />
@@ -29,8 +31,8 @@ function App() {
         <Work />
         <Products />
         <About />
-        <FirstContact />
         <Location />
+        <HireStrip />
         <Pricing />
         <Seo />
       </main>

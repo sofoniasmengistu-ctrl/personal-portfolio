@@ -1,12 +1,19 @@
-import { ArrowRight, Check, Download, Linkedin, MoveRight } from 'lucide-react';
+import { Check, Download, Linkedin, MoveRight } from 'lucide-react';
 import { credentials } from '../data/products';
+
+const askFor = [
+  'Cloud Platform · Kubernetes · CI/CD',
+  'Azure Data · ADF · Databricks',
+  'Consulting · retainers · builds',
+];
 
 const Hero = () => {
   return (
     <section id="home" className="hero">
+      <div className="hero__ambient" aria-hidden="true" />
       <div className="container hero__stage">
         <div className="hero__copy">
-          <p className="hero__eyebrow">
+          <p className="hero__eyebrow hero__stagger hero__stagger--1">
             <span className="hero__avail">
               <span className="hero__avail-dot" aria-hidden="true" />
               Available now
@@ -14,43 +21,42 @@ const Hero = () => {
             Addis Ababa base. Remote worldwide. EAT (UTC+3).
           </p>
 
-          <p className="hero__brand">
+          <p className="hero__brand hero__stagger hero__stagger--2">
             Sofonias<span className="text-accent">.</span>
           </p>
 
-          <h1 id="geo-headline" className="hero__headline">
+          <h1 id="geo-headline" className="hero__headline hero__stagger hero__stagger--3">
             Cloud Platform Architect in Addis Ababa.{' '}
             <span className="text-accent">Remote worldwide.</span>
           </h1>
 
-          <p className="hero__role-badge">
+          <p className="hero__role-badge hero__stagger hero__stagger--4">
             Current role · Addis Telco
           </p>
 
-          <p id="geo-summary" className="hero__sub">
+          <p id="geo-summary" className="hero__sub hero__stagger hero__stagger--5">
             Hire a remote DevOps Engineer for Kubernetes, CI/CD, and cloud
             platforms. 16+ years in IT. Kubestronaut. Azure data when the
             platform needs it.
           </p>
 
-          <ul className="hero__checks">
-            <li className="hero__check">
-              <Check size={14} strokeWidth={3} />
+          <ul className="hero__proof hero__stagger hero__stagger--6">
+            <li>
+              <Check size={14} strokeWidth={3} aria-hidden="true" />
               <span>
-                <strong>Remote Cloud DevOps</strong> from Addis Ababa, with
-                overlap for US, Europe, Middle East, and Asia
+                <strong>Remote Cloud DevOps</strong> · US, Europe, Middle East,
+                Asia overlap
               </span>
             </li>
-            <li className="hero__check">
-              <Check size={14} strokeWidth={3} />
+            <li>
+              <Check size={14} strokeWidth={3} aria-hidden="true" />
               <span id="geo-claim">
-                <strong>Only CNCF Kubestronaut in Ethiopia</strong> (KCNA, KCSA,
-                CKA, CKAD, CKS)
+                <strong>Only CNCF Kubestronaut in Ethiopia</strong>
               </span>
             </li>
           </ul>
 
-          <div className="hero__actions">
+          <div className="hero__actions hero__stagger hero__stagger--7">
             <a href="#contact" className="btn-primary">
               Contact Sofonias <MoveRight size={18} strokeWidth={2.25} />
             </a>
@@ -69,14 +75,11 @@ const Hero = () => {
             >
               <Download size={16} /> Download CV
             </a>
-            <a href="#recommendations" className="btn-ghost">
-              Recommendations <ArrowRight size={16} />
-            </a>
           </div>
         </div>
 
-        <aside className="hero__aside">
-          <div className="hero__media hero__visual--lift">
+        <aside className="hero__aside hero__stagger hero__stagger--8">
+          <div className="hero__media">
             <video
               className="hero__video"
               controls
@@ -87,35 +90,20 @@ const Hero = () => {
             >
               <source src="/sofonias-intro.mp4" type="video/mp4" />
             </video>
-          </div>
-          <div className="hero__panel hero__panel--lift">
-            <p className="hero__panel-kicker mono">Remote Cloud / DevOps hire</p>
-            <p className="hero__panel-title">What you can ask for</p>
-            <ul className="hero__panel-list">
-              <li>
-                <strong>01</strong>
-                <span>Cloud Platform Architect, Kubernetes, CI/CD</span>
-              </li>
-              <li>
-                <strong>02</strong>
-                <span>Azure Data Engineer: ADF, Databricks, lakehouse</span>
-              </li>
-              <li>
-                <strong>03</strong>
-                <span>Consulting, retainers, and production builds</span>
-              </li>
-            </ul>
-            <div className="hero__panel-actions">
-              <a href="#contact" className="btn-primary">
-                Make Sofonias your first call <MoveRight size={16} />
-              </a>
+            <div className="hero__media-rail">
+              <p className="hero__media-kicker mono">Ask for</p>
+              <ul className="hero__ask">
+                {askFor.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
               <a
                 href={credentials.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero__panel-link"
+                className="hero__media-link"
               >
-                <Linkedin size={16} /> LinkedIn profile
+                <Linkedin size={15} /> LinkedIn
               </a>
             </div>
           </div>

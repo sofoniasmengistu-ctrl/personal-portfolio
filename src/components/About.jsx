@@ -3,34 +3,23 @@ import { credentials } from '../data/products';
 import { Reveal } from './Reveal';
 
 const highlights = [
+  'Kubernetes platforms',
+  'Terraform · GitOps',
+  'AWS · Azure · GCP',
+  'CI/CD · DevSecOps',
+  'ADF · Databricks',
   'Forward Deployed Engineer',
   'Trainer / mentor',
-  'Tanzu TKG',
-  'AWS EKS',
-  'GKE',
-  'AKS',
-  'Infomaniak',
-  'Linode Kubernetes',
-  'Akamai Cloud',
-  'Kubernetes',
-  'Terraform',
-  'ArgoCD and GitOps',
-  'Ansible',
-  'AWS, Azure, GCP',
-  'Prometheus and Grafana',
-  'CI/CD and DevSecOps',
-  'ADF, Databricks, Data Lake',
-  'Networking',
   'AI research',
 ];
 
 const About = () => {
   return (
-    <section id="about" className="section section--tight about">
+    <section id="about" className="section section--tight about about--chapter">
       <div className="container">
         <Reveal className="section-head section-head--row">
           <div className="section-head__copy">
-            <p className="section__label">03 Profile</p>
+            <p className="section__label">05 Profile</p>
             <h2 className="section__title">
               Cloud DevOps Engineer{' '}
               <span className="text-accent">Sofonias Mengistu</span>
