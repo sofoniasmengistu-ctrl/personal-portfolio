@@ -6394,6 +6394,27 @@ a.work-card:hover {
   margin-top: 0.55rem;
 }
 
+.product-shot__channels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0.15rem 0 0;
+  padding: 0;
+}
+
+.product-shot__channels li {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--plum);
+  border: 1px solid color-mix(in srgb, var(--plum) 22%, var(--line));
+  background: color-mix(in srgb, var(--plum) 6%, #fff);
+  border-radius: 999px;
+  padding: 0.22rem 0.55rem;
+}
+
 .chapter-nav__progress {
   position: absolute;
   left: 50%;
