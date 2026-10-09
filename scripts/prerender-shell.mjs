@@ -1,5 +1,7 @@
 /**
  * Post-build: inject crawlable HTML into dist/index.html #root.
+ * The branded boot stays on screen. The text shell is in the HTML for crawlers
+ * and is clipped off screen so a refresh does not flash the plain page.
  * React still mounts and replaces this shell. No Puppeteer required (Vercel safe).
  */
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -11,6 +13,12 @@ const indexPath = resolve(root, 'dist', 'index.html');
 
 const shell = `
 <div id="root">
+  <div class="boot" role="status" aria-live="polite" aria-label="Loading Sofonias Mengistu">
+    <img class="boot__mark" src="/brand-mark.svg" width="36" height="36" alt="" />
+    <p class="boot__brand">Sofonias Mengistu<img src="/ckad-helm.svg" width="15" height="15" alt="" /></p>
+    <p class="boot__meta">Cloud Platform Architect · Addis Ababa · Remote worldwide</p>
+    <div class="boot__bar" aria-hidden="true"><span class="boot__bar-fill"></span></div>
+  </div>
   <main class="prerender-shell" data-prerender="true">
     <p class="prerender-shell__brand">Sofonias Mengistu</p>
     <h1>Cloud Platform Architect in Addis Ababa. Remote worldwide.</h1>
@@ -52,13 +60,8 @@ const shell = `
 
 const shellCss = `
 <style id="prerender-shell-css">
-.prerender-shell{box-sizing:border-box;min-height:100vh;padding:2rem 1.25rem 3rem;max-width:720px;margin:0 auto;font-family:"DM Sans",system-ui,sans-serif;color:#111;background:#fff;line-height:1.55}
-.prerender-shell__brand{font-weight:700;color:#4a1539;margin:0 0 .75rem}
-.prerender-shell h1{font-size:clamp(1.35rem,4vw,1.85rem);line-height:1.25;margin:0 0 1rem;letter-spacing:-.02em}
-.prerender-shell h2{font-size:1.15rem;margin:1.75rem 0 .65rem}
-.prerender-shell p,.prerender-shell li{color:#555;margin:0 0 .75rem;font-size:.95rem}
-.prerender-shell a{color:#e5004f}
-.prerender-shell ul{margin:0 0 1rem 1.1rem;padding:0}
+/* Crawlable copy stays in the HTML. Sighted visitors keep the branded boot until React mounts. */
+.prerender-shell{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0}
 </style>
 `.trim();
 
