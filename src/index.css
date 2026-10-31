@@ -205,10 +205,6 @@ img {
   color: #fff;
 }
 
-.section__lead--on-dark {
-  color: rgba(255, 255, 255, 0.78);
-}
-
 .section__lead {
   color: var(--text-secondary);
   max-width: 34rem;
@@ -219,6 +215,11 @@ img {
 
 .section__lead--tight {
   margin-bottom: 0;
+}
+
+/* After .section__lead so on-dark wins same-specificity cascade */
+.section__lead.section__lead--on-dark {
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .section-head--row {
@@ -2832,7 +2833,9 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 720px) {
-  .partition-veil {
+  /* Light veil for light-text sections only — do not override --deep,
+     or white on-dark copy (Work / Trust) becomes invisible on phones. */
+  .partition-veil:not(.partition-veil--deep) {
     background:
       linear-gradient(
         180deg,
@@ -2842,9 +2845,74 @@ h1, h2, h3, h4 {
       );
   }
 
+  /* Atmospheric deep veil: keep contrast, let photo + magenta show through */
+  .partition-veil--deep {
+    background:
+      radial-gradient(130% 80% at 100% -10%, rgba(229, 0, 79, 0.38) 0%, transparent 52%),
+      radial-gradient(90% 55% at 0% 110%, rgba(92, 28, 71, 0.55) 0%, transparent 48%),
+      linear-gradient(
+        168deg,
+        rgba(18, 5, 14, 0.72) 0%,
+        rgba(42, 12, 32, 0.66) 38%,
+        rgba(58, 15, 44, 0.58) 72%,
+        rgba(26, 8, 20, 0.74) 100%
+      );
+  }
+
   .partition-visual {
-    background-position: center;
-    transform: none;
+    background-position: center 30%;
+    transform: scale(1.08);
+    filter: saturate(1.2) contrast(1.06) brightness(0.92);
+  }
+
+  .work--loud .work__inner,
+  .trust--loud .trust__inner {
+    padding-block: clamp(2.85rem, 9vw, 3.85rem);
+  }
+
+  .section__title--on-dark {
+    text-wrap: balance;
+  }
+
+  .section__title--on-dark .text-accent {
+    color: #ff4d7d;
+  }
+
+  .path--on-dark .path__list {
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .path--on-dark .path__item {
+    margin: 0;
+    padding: 1rem 1.05rem 1.1rem;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 12px 28px rgba(8, 2, 6, 0.22);
+  }
+
+  .path--on-dark .path__item:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  .path--on-dark .path__era {
+    color: #ff4d7d;
+  }
+
+  .path--on-dark .path__tags span {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+
+  .fancy-arrow--on-dark {
+    padding-top: 0.15rem;
+  }
+
+  .fancy-arrow--on-dark .fancy-arrow__line {
+    background: linear-gradient(90deg, rgba(255, 77, 125, 0.85), rgba(255, 255, 255, 0.35));
   }
 }
 
@@ -5556,6 +5624,14 @@ a.work-card:hover {
   :root {
     --header-h: 68px;
     --sticky-cta-h: calc(64px + env(safe-area-inset-bottom));
+  }
+
+  html {
+    scroll-padding-top: calc(var(--header-h) + env(safe-area-inset-top) + 0.5rem);
+  }
+
+  section[id] {
+    scroll-margin-top: calc(var(--header-h) + env(safe-area-inset-top) + 0.5rem);
   }
 
   body {
